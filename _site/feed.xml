@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    
+    <title>LJO's Blog</title>
+    
+    
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+      <item>
+        <title>Markdown 語法測試</title>
+        <description>
+          check markdown syntax on site - 
+          h1 heading 粗體字 條列式 one another the other Italics font Strikethrough 這是^上標^ 這是~下標~ ==Marked text== Table example : Number Next number Previous number Five Six Four Ten Eleven Nine Seven Eight Six Two Three One Code with syntax highlighting: #define int long long #define INF 1e9 singed main(){ priority_queue&amp;lt;int&amp;gt; pq;...
+        </description>
+        <pubDate>Tue, 01 Feb 2022 14:52:00 +0000</pubDate>
+        <link>http://localhost:4000/2022-02-01-markdown-tutorial01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022-02-01-markdown-tutorial01/</guid>
+      </item>
+    
+      <item>
+        <title>Test 01</title>
+        <description>
+          check my setting - 
+          This is a demo post to show you how to write blog posts with markdown. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc. Here is some bold text Here is a secondary...
+        </description>
+        <pubDate>Tue, 01 Feb 2022 13:16:43 +0000</pubDate>
+        <link>http://localhost:4000/2022-02-01-test01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022-02-01-test01/</guid>
+      </item>
+    
+  </channel>
+</rss>
