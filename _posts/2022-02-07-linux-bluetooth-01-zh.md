@@ -16,7 +16,7 @@ comments: true
 layout: post
 readtime: true
 
-# test local : bundle exec kyll serve
+# test local : bundle exec jekyll serve
 ---
 # 如何在Ubuntu系統連接airpods
 

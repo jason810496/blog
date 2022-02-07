@@ -16,5 +16,5 @@ comments: true
 layout: post
 readtime: true
 
-# test local : bundle exec kyll serve
+# test local : bundle exec jekyll serve
 ---
