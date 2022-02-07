@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<link href="assets/img/icon02.ico" rel="shortcut icon" >
 <html lang="en">
-  
-<!--href="assets/img/icon02.ico" rel="shortcut icon"-->
 <!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
 
 <head>
@@ -87,7 +84,7 @@
   <meta property="og:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
 
   
-  <meta property="og:image" content="http://localhost:4000/assets/img/profile_img02.jpg">
+  <meta property="og:image" content="http://localhost:4000/assets/img/profile_img04.jpg">
   
 
   
@@ -106,7 +103,7 @@
   <meta property="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
 
   
-  <meta name="twitter:image" content="http://localhost:4000/assets/img/profile_img02.jpg">
+  <meta name="twitter:image" content="http://localhost:4000/assets/img/profile_img04.jpg">
   
 
   
@@ -159,7 +156,7 @@
     <div class="avatar-container">
       <div class="avatar-img-border">
         <a href="http://localhost:4000/">
-          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/profile_img02.jpg" />
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/profile_img04.jpg" />
         </a>
       </div>
     </div>
@@ -178,6 +175,34 @@
   <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
   <script>
     var searchjson = '[ \
+       \
+        { \
+          "title"    : "在linux連接藍芽裝置", \
+          "category" : "linuxnote", \
+          "url"      : "/2022-02-07-linux-bluetooth-01-zh/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Connect bluetooth device on Linux", \
+          "category" : "linuxnoteeng", \
+          "url"      : "/2022-02-07-linux-bluetooth-01-eng/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "SEO setting of Github.io Blog", \
+          "category" : "linuxnoteeng", \
+          "url"      : "/2022-02-07-blog-static-setting01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Github subdirectories", \
+          "category" : "githubnote", \
+          "url"      : "/2022-02-07-github-subdir01/", \
+          "date"     : "February  7, 2022" \
+        }, \
        \
         { \
           "title"    : "Markdown 語法測試", \
@@ -209,7 +234,7 @@
         }, \
        \
         { \
-          "title"    : "Hi! I&#39;m LiuZheYou", \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
           "category" : "page", \
           "url"      : "/", \
           "date"     : "January 1, 1970" \
@@ -219,6 +244,13 @@
           "title"    : "Tag Index", \
           "category" : "page", \
           "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page2/", \
           "date"     : "January 1, 1970" \
         } \
        \
@@ -272,7 +304,49 @@
     <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
       
 
-      <a href="#markdown" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;markdown&nbsp;(1)</a><a href="#note" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;note&nbsp;(1)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(1)</a><div id="full-tags-list"><h2 id="markdown" class="linked-section">
+      <a href="#eng" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;eng&nbsp;(2)</a><a href="#github" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;github&nbsp;(1)</a><a href="#linux" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;linux&nbsp;(3)</a><a href="#markdown" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;markdown&nbsp;(1)</a><a href="#note" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;note&nbsp;(5)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(1)</a><div id="full-tags-list"><h2 id="eng" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;eng&nbsp;(2)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-02-07-linux-bluetooth-01-eng/">Connect bluetooth device on Linux</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T11:45:00+00:00">February 7, 2022</time>
+                </div>
+            </div><div class="tag-entry">
+                <a href="/2022-02-07-blog-static-setting01/">SEO setting of Github.io Blog</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T07:40:00+00:00">February 7, 2022</time>
+                </div>
+            </div></div><h2 id="github" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;github&nbsp;(1)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-02-07-github-subdir01/">Github subdirectories</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T07:23:00+00:00">February 7, 2022</time>
+                </div>
+            </div></div><h2 id="linux" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;linux&nbsp;(3)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-02-07-linux-bluetooth-01-zh/">在linux連接藍芽裝置</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T12:16:00+00:00">February 7, 2022</time>
+                </div>
+            </div><div class="tag-entry">
+                <a href="/2022-02-07-linux-bluetooth-01-eng/">Connect bluetooth device on Linux</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T11:45:00+00:00">February 7, 2022</time>
+                </div>
+            </div><div class="tag-entry">
+                <a href="/2022-02-07-blog-static-setting01/">SEO setting of Github.io Blog</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T07:40:00+00:00">February 7, 2022</time>
+                </div>
+            </div></div><h2 id="markdown" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
         &nbsp;markdown&nbsp;(1)
     </h2>
@@ -283,9 +357,29 @@
                 </div>
             </div></div><h2 id="note" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
-        &nbsp;note&nbsp;(1)
+        &nbsp;note&nbsp;(5)
     </h2>
     <div class="post-list"><div class="tag-entry">
+                <a href="/2022-02-07-linux-bluetooth-01-zh/">在linux連接藍芽裝置</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T12:16:00+00:00">February 7, 2022</time>
+                </div>
+            </div><div class="tag-entry">
+                <a href="/2022-02-07-linux-bluetooth-01-eng/">Connect bluetooth device on Linux</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T11:45:00+00:00">February 7, 2022</time>
+                </div>
+            </div><div class="tag-entry">
+                <a href="/2022-02-07-blog-static-setting01/">SEO setting of Github.io Blog</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T07:40:00+00:00">February 7, 2022</time>
+                </div>
+            </div><div class="tag-entry">
+                <a href="/2022-02-07-github-subdir01/">Github subdirectories</a>
+                <div class="entry-date">
+                    <time datetime="2022-02-07T07:23:00+00:00">February 7, 2022</time>
+                </div>
+            </div><div class="tag-entry">
                 <a href="/2022-02-01-markdown-tutorial01/">Markdown 語法測試</a>
                 <div class="entry-date">
                     <time datetime="2022-02-01T14:52:00+00:00">February 1, 2022</time>

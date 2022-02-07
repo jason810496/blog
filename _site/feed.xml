@@ -10,6 +10,52 @@
     
     
       <item>
+        <title>在linux連接藍芽裝置</title>
+        <description>
+          如何在Ubuntu系統連接airopds? - 
+          如何在Ubuntu系統連接airpods 我 : 後來才發現超簡單ㄉ，其實是在連線的時候我沒有按著airpods充電盒子後面的按鈕才連不上 = = 害我搞了一個下午（怒 UI界面 提示: 記得先按著盒子後面的設定按鈕等它閃白燈時再連線！ 1. 打開電腦的藍芽設定 ( Ubuntu的界面很user friendly應該不會找不到ㄅ) 2. 確認airpods充電盒的燈有閃白光 3. 從設定選取自己的裝置! 終端機 身為linux使用者，用UI界面來連藍芽裝置太弱了（誤 無論如何，從終端機連上藍芽裝置超帥ㄉ😎(肯定是要在朋友面前秀一波操作！！ bluez BlueZ 是官方 Linux Bluetooth 棧，由多層協定、服務以及配置工具組成。 ( from https://www.easyatm.com.tw/wiki/BlueZ ) 在Ubuntu安裝bluez sudo apt install bluez 用 bluetoothctl 管理藍芽裝置 在終端機執行bluetoothctl bluetoothctl 結果 : 問它可以做什麼 ! 👉 執行 help 來詢問...
+        </description>
+        <pubDate>Mon, 07 Feb 2022 12:16:00 +0000</pubDate>
+        <link>http://localhost:4000/2022-02-07-linux-bluetooth-01-zh/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022-02-07-linux-bluetooth-01-zh/</guid>
+      </item>
+    
+      <item>
+        <title>Connect bluetooth device on Linux</title>
+        <description>
+          connect airpods on Ubuntu OS - 
+          How to connect airpods on Ubuntu OS auther: It’s quite eazy , but I forget to push the setup button while connecting to PC , which makes me confused for a afternoon LOL … UI interface Hint: Make sure push the setup button on the back of charging case until...
+        </description>
+        <pubDate>Mon, 07 Feb 2022 11:45:00 +0000</pubDate>
+        <link>http://localhost:4000/2022-02-07-linux-bluetooth-01-eng/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022-02-07-linux-bluetooth-01-eng/</guid>
+      </item>
+    
+      <item>
+        <title>SEO setting of Github.io Blog</title>
+        <description>
+          Set up dynamic static on Github blog with jekyll - 
+          
+
+        </description>
+        <pubDate>Mon, 07 Feb 2022 07:40:00 +0000</pubDate>
+        <link>http://localhost:4000/2022-02-07-blog-static-setting01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022-02-07-blog-static-setting01/</guid>
+      </item>
+    
+      <item>
+        <title>Github subdirectories</title>
+        <description>
+          在github.io設定子資料夾 - 
+          
+
+        </description>
+        <pubDate>Mon, 07 Feb 2022 07:23:00 +0000</pubDate>
+        <link>http://localhost:4000/2022-02-07-github-subdir01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022-02-07-github-subdir01/</guid>
+      </item>
+    
+      <item>
         <title>Markdown 語法測試</title>
         <description>
           check markdown syntax on site - 
