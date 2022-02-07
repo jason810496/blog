@@ -76,8 +76,8 @@ social-network-links:
 # Select which social network share links to show in posts
 share-links-active:
 #  twitter: true
-  facebook: true
-  linkedin: true
+#  facebook: true
+#  linkedin: true
 #  vk: false
 
 # How to display the link to your website in the footer
@@ -135,16 +135,16 @@ mobile-theme-col: "#0085A1"
 # --- Web Analytics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "G-R44VVX682B"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-#google_analytics: ""
+google_analytics: "UA-219638882-1"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "GTM-TM99SLZ"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
@@ -157,7 +157,7 @@ mobile-theme-col: "#0085A1"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-#disqus: ""
+disqus: "ljo424"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
