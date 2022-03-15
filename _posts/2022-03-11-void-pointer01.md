@@ -1,13 +1,13 @@
 ---
-title:void pointer之純C的噩夢
+title: void pointer之純C的噩夢
 subtitle: 搞了一整天的insertion sort QQ
 date:   2022-03-11 15:50:00 +0800
 
 tag: [freelance,note]
 
-thumbnail-img: "/assets/img/markdown-img02.png" #1:1 (450:450)
+thumbnail-img: "https://i.imgur.com/Kxil1A3.png" #1:1 (450:450)
 
-cover-img: "/assets/img/markdown-turtorial-bg01.png"
+cover-img: "https://i.imgur.com/k0ouwUg.png"
 
 comments: true
 
