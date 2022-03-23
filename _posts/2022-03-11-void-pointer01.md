@@ -1,5 +1,5 @@
 ---
-title: void pointer之純C的噩夢
+title: C系列void pointer之噩夢
 subtitle: 搞了一整天的insertion sort QQ
 date:   2022-03-11 15:50:00 +0800
 
