@@ -83,3 +83,7 @@ singed main(){
 
 {: .box-error}
 **Error:** This is an error box.
+
+---
+
+---
