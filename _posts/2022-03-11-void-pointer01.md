@@ -1,5 +1,5 @@
 ---
-title: C系列void pointer之噩夢
+title: C系列 void pointer之噩夢
 subtitle: 搞了一整天的insertion sort QQ
 date:   2022-03-11 15:50:00 +0800
 
@@ -15,7 +15,7 @@ comments: true
 layout: post
 readtime: true
 
-# test local : bundle exec jekyll serve
+# test local : bundle exec jekyll server
 ---
 
 # 區區一個Insertion sort ...
