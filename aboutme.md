@@ -13,10 +13,9 @@ subtitle: Introduction of myself
 ### 專長：
 - 演算法程式競賽
 - C/C++
+- Python
+- 程式接案
 
 ### 興趣：
 - Coding
-- Drawing
 - Fitness
-- Indie music
-
