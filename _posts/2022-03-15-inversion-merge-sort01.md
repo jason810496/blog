@@ -1,7 +1,7 @@
 ---
 title: 逆序數對(Array Inversion)
 subtitle: Merge sort 順便計算逆序數對
-date:   2022-03-015 22:52:00 +0800
+date:   2022-03-024 19:08:00 +0800
 
 tag: [algorithm,note]
 
@@ -16,7 +16,7 @@ comments: true
 layout: post
 readtime: true
 
-# test local : bundle exec jekyll serve
+# test local : bundle exec jekyll server
 ---
 
 # 逆序數對
