@@ -3,7 +3,7 @@ title: C系列 void pointer之噩夢
 subtitle: 搞了一整天的insertion sort QQ
 date:   2022-03-11 15:50:00 +0800
 
-tag: [freelance,note]
+tag: [c++/c,notes]
 
 thumbnail-img: "https://i.imgur.com/Kxil1A3.png" #1:1 (450:450)
 

@@ -3,7 +3,7 @@ title:  在linux連接藍芽裝置
 subtitle: 如何在Ubuntu系統連接airopds? 
 date:   2022-02-07 20:16:00 +0800
 
-tag: [linux,note]
+tag: [linux,notes]
 
 thumbnail-img: "https://i.imgur.com/VIQ7IAF.png" #1:1 (450:450)
 

@@ -3,7 +3,7 @@ title: Markdown 語法測試
 subtitle: check markdown syntax on site
 date:   2022-02-01 22:52:00 +0800
 
-tag: [markdown,note]
+tag: [test]
 
 thumbnail-img: "/assets/img/markdown-img02.png" #1:1 (450:450)
 

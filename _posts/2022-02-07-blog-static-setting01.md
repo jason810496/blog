@@ -3,7 +3,7 @@ title: SEO setting of Github.io Blog
 subtitle: Set up dynamic static on Github blog with jekyll
 date:   2022-02-07 15:40:00 +0800
 
-tag: [linux,note,eng]
+tag: [github,notes,eng]
 
 thumbnail-img: "https://i.imgur.com/VIQ7IAF.png" #1:1 (450:450)
 

@@ -3,7 +3,7 @@ title: 逆序數對(Array Inversion)
 subtitle: Merge sort 順便計算逆序數對
 date:   2022-03-24 20:07:00 +0800
 
-tag: [algorithm,note]
+tag: [c++/c,algorithm,notes]
 
 thumbnail-img: "https://i.imgur.com/Kxil1A3.png"
 

@@ -3,7 +3,7 @@ title: Github subdirectories
 subtitle: 在github.io設定子資料夾
 date:   2022-02-07 15:23:00 +0800
 
-tag: [github,note]
+tag: [github,notes]
 
 thumbnail-img: "/assets/img/markdown-img02.png" #1:1 (450:450)
 

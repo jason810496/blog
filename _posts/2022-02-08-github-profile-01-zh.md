@@ -3,7 +3,7 @@ title:  打造好看的Github Profile
 subtitle: 如何把Github首頁改得很潮！
 date:   2022-02-08 19:16:00 +0800
 
-tag: [github,note]
+tag: [github,notes]
 
 thumbnail-img: "https://i.imgur.com/fj8HzX8.png" #1:1 (450:450)
 
