@@ -15,7 +15,7 @@ comments: true
 layout: post
 readtime: true
 
-# test local : bundle exec jekyll server
+# test local : bundle exec jekyll serve
 ---
 # 程式競賽中的數論
 

@@ -16,7 +16,7 @@ comments: true
 layout: post
 readtime: true
 
-# test local : bundle exec jekyll server
+# test local : bundle exec jekyll serve
 ---
 
 ## 只有uername.github.io能當網站？

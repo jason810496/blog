@@ -1,7 +1,7 @@
 ---
 title: 288th LeetCode Weekly Contest
 subtitle: Leetcode 288th 週賽
-date:   2022-04-10 15:50:00 +0800
+date:   2022-04-10 16:50:00 +0800
 
 tag: [c++/c,notes,Leetcode]
 
@@ -15,7 +15,7 @@ comments: true
 layout: post
 readtime: true
 
-# test local : bundle exec jekyll server
+# test local : bundle exec jekyll serve
 ---
 # 288th LeetCode Weekly Contest
 
