@@ -36,9 +36,9 @@ readtime: true
 
 - [Minimize Result by Adding Parentheses to Expression](https://leetcode.com/contest/weekly-contest-288/problems/minimize-result-by-adding-parentheses-to-expression/)
 
-- [Maximum Product After K Increments5](https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/)
+- [Maximum Product After K Increments](https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/)
 
-- Maximum Total Beauty of the Gardens
+- [Maximum Total Beauty of the Gardens](https://leetcode.com/contest/weekly-contest-288/problems/maximum-total-beauty-of-the-gardens/)
 
 ## Largest Number After Digit Swaps by Parity3
 
@@ -446,3 +446,45 @@ public:
 priority_queue<int,vector<int> ,greater<int> > pq( nums.begin() , nums.end() );
 ```
 
+
+
+## Maximum Total Beauty of the Gardens 
+
+[Maximum Total Beauty of the Gardens](https://leetcode.com/contest/weekly-contest-288/problems/maximum-total-beauty-of-the-gardens/)
+
+### Description :
+Alice is a caretaker of n gardens and she wants to plant flowers to maximize the total beauty of all her gardens.
+
+You are given a 0-indexed integer array flowers of size n, where flowers[i] is the number of flowers already planted in the ith garden. Flowers that are already planted cannot be removed. You are then given another integer newFlowers, which is the maximum number of flowers that Alice can additionally plant. You are also given the integers target, full, and partial.
+
+A garden is considered complete if it has at least target flowers. The total beauty of the gardens is then determined as the sum of the following:
+
+- The number of complete gardens multiplied by full.
+- The minimum number of flowers in any of the incomplete gardens multiplied by partial. If there are no incomplete gardens, then this value will be 0.
+
+Return the maximum total beauty that Alice can obtain after planting at most newFlowers flowers.
+
+### Example:
+
+```
+Input: flowers = [1,3,1,1], newFlowers = 7, target = 6, full = 12, partial = 1
+Output: 14
+Explanation: Alice can plant
+- 2 flowers in the 0th garden
+- 3 flowers in the 1st garden
+- 1 flower in the 2nd garden
+- 1 flower in the 3rd garden
+The gardens will then be [3,6,2,2]. She planted a total of 2 + 3 + 1 + 1 = 7 flowers.
+There is 1 garden that is complete.
+The minimum number of flowers in the incomplete gardens is 2.
+Thus, the total beauty is 1 * 12 + 2 * 1 = 12 + 2 = 14.
+No other way of planting flowers can obtain a total beauty higher than 14.
+```
+
+### Concept:
+
+比賽時感覺有點DP，但是完全沒有頭緒
+
+也還沒看懂
+
+解法待補...
