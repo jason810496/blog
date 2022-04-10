@@ -3,11 +3,11 @@ title: 程式競賽中的數論
 subtitle: Math theory in CP
 date:   2022-04-10 15:50:00 +0800
 
-tag: [c++/c,notes]
+tag: [c++/c,notes,Math]
 
-thumbnail-img: "https://i.imgur.com/hXlAxLq.png" #1:1 (450:450)
+thumbnail-img: "https://i.imgur.com/ugI4COy.png" #1:1 (450:450)
 
-cover-img: "https://i.imgur.com/k0ouwUg.png"
+cover-img: "https://i.imgur.com/ugI4COy.png"
 
 comments: true
 
@@ -18,4 +18,7 @@ readtime: true
 # test local : bundle exec jekyll server
 ---
 # 程式競賽中的數論
+
+## MOD
+## GCD / LCM
 
