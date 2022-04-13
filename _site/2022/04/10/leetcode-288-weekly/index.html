@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+
+<head>
+
+  <link rel="shortcut icon" href="/assets/img/coding01.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>288th LeetCode Weekly Contest</title>
+
+  
+  <meta name="author" content="Jason Liu">
+  
+
+  <meta name="description" content="Leetcode 288th 週賽">
+
+  
+  <meta name="theme-color" content="#0085A1">
+  
+
+  
+  <meta name="keywords" content="algorithmc++cppcdata structurelinuxcompetitive programmingfront endhtmlcssjavascriptAPCS">
+  
+
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R44VVX682B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R44VVX682B');
+</script>
+
+
+  
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TM99SLZ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+  
+<!-- Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-219638882-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="LJO's Blog">
+  <meta property="og:title" content="288th LeetCode Weekly Contest">
+  <meta property="og:description" content="Leetcode 288th 週賽">
+
+  
+  <meta property="og:image" content="https://i.imgur.com/Zp6EhUO.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Jason Liu">
+  <meta property="og:article:published_time" content="2022-04-10T08:50:00+00:00">
+  <meta property="og:url" content="http://localhost:4000/2022/04/10/leetcode-288-weekly/">
+  <link rel="canonical" href="http://localhost:4000/2022/04/10/leetcode-288-weekly/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="288th LeetCode Weekly Contest">
+  <meta property="twitter:description" content="Leetcode 288th 週賽">
+
+  
+  <meta name="twitter:image" content="https://i.imgur.com/Zp6EhUO.png">
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM99SLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">LJO's Blog</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/achievement">Achievement</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/tags/#algorithm">Algorithm</a>
+                  <a class="dropdown-item" href="/tags/#project">Project</a>
+                  <a class="dropdown-item" href="/tags/#notes">Notes</a>
+            </div>
+          </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="http://localhost:4000/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/Profile.png" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "288th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/10/leetcode-288-weekly/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "程式競賽中的數論", \
+          "category" : "c++/cnotesMath", \
+          "url"      : "/2022/04/10/math-theory-01-zh/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "動態顯示的Zerojudge stats！", \
+          "category" : "project", \
+          "url"      : "/2022/03/24/ZJstats0/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "逆序數對(Array Inversion)", \
+          "category" : "c++/calgorithmnotes", \
+          "url"      : "/2022/03/24/inversion-merge-sort01/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "C系列 void pointer之噩夢", \
+          "category" : "c++/cnotes", \
+          "url"      : "/2022/03/11/void-pointer01/", \
+          "date"     : "March 11, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "打造好看的Github Profile", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/08/github-profile-01-zh/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Build a eye-catching Github Profile !", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/08/github-profile-01-eng/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "在linux連接藍芽裝置", \
+          "category" : "linuxnotes", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-zh/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Connect bluetooth device on Linux", \
+          "category" : "linuxnoteseng", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-eng/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "SEO setting of Github.io Blog", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/07/blog-static-setting01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Github subdirectories", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/07/github-subdir01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Markdown 語法測試", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/markdown-tutorial01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Test 01", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/test01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Achievement", \
+          "category" : "page", \
+          "url"      : "/achievement/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page3/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="https://i.imgur.com/Zp6EhUO.png"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>288th LeetCode Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 288th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 10, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 6 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>288th LeetCode Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 288th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 10, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 6 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <h1 id="288th-leetcode-weekly-contest">288th LeetCode Weekly Contest</h1>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-288">288th LeetCode Weekly Contest</a></p>
+
+<p>真的太久沒有解題打程競，今天只有解出一題…</p>
+
+<p>在補題目發現其實精神分數有<strong>三題</strong></p>
+
+<p>第二題實做到一半就不寫了（因為忘記有<code class="language-plaintext highlighter-rouge">substr</code>這種好東西，被字串操作搞瘋）</p>
+
+<p>第三題只是忘記開<code class="language-plaintext highlighter-rouge">long long</code>…</p>
+
+<p><strong>這次週賽的四個題目：</strong></p>
+
+<ul>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-288/problems/largest-number-after-digit-swaps-by-parity/">Largest Number After Digit Swaps by Parity</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-288/problems/minimize-result-by-adding-parentheses-to-expression/">Minimize Result by Adding Parentheses to Expression</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/">Maximum Product After K Increments</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-288/problems/maximum-total-beauty-of-the-gardens/">Maximum Total Beauty of the Gardens</a></p>
+  </li>
+</ul>
+
+<h2 id="largest-number-after-digit-swaps-by-parity3">Largest Number After Digit Swaps by Parity3</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-288/problems/largest-number-after-digit-swaps-by-parity/">Largest Number After Digit Swaps by Parity</a></p>
+
+<h3 id="description">Description:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You are given a positive integer num. You may swap any two digits of num that have the same parity (i.e. both odd digits or both even digits).
+
+Return the largest possible value of num after any number of swaps.
+</code></pre></div></div>
+
+<h3 id="example">example:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: num = 1234
+Output: 3412
+Explanation: Swap the digit 3 with the digit 1, this results in the number 3214.
+Swap the digit 2 with the digit 4, this results in the number 3412.
+Note that there may be other sequences of swaps but it can be shown that 3412 is the largest possible number.
+Also note that we may not swap the digit 4 with the digit 1 since they are of different parities.
+</code></pre></div></div>
+
+<p>簡單來說，你可以對input中<strong>相同性質</strong>(這邊指的是都是<strong>奇數</strong>或都是<strong>偶數</strong>)的數字進行交換，要求經過交換後(也有可能不需要交換)可以達到的<strong>最大值</strong></p>
+
+<h3 id="concept">Concept：</h3>
+
+<p>所以，我們可以將input中的數字分為：<code class="language-plaintext highlighter-rouge">Odd</code>跟<code class="language-plaintext highlighter-rouge">Even</code></p>
+
+<p>又因為<code class="language-plaintext highlighter-rouge">Odd</code>只能跟<code class="language-plaintext highlighter-rouge">Odd</code>換，<code class="language-plaintext highlighter-rouge">Even</code>只能跟<code class="language-plaintext highlighter-rouge">Even</code>換</p>
+
+<p>為了達到最大值，勢必要將<strong>大的數字擺在小的數字前面</strong></p>
+
+<h2 id="solution">Solution：</h2>
+
+<p>將input拆成<code class="language-plaintext highlighter-rouge">Odd</code>跟<code class="language-plaintext highlighter-rouge">Even</code>，各自<strong>sort</strong>之後再組合成Answer</p>
+
+<p><strong>Solution</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">largestInteger</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">orig</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">Odd</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">Even</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">num</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">Type</span> <span class="o">=</span><span class="n">num</span><span class="o">%</span><span class="mi">2</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">Type</span><span class="p">){</span>
+                <span class="n">Odd</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">Even</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">orig</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Type</span><span class="p">);</span>
+            <span class="n">num</span><span class="o">/=</span><span class="mi">10</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">Odd</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="p">,</span> <span class="n">Odd</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">Even</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="p">,</span> <span class="n">Even</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        
+        <span class="n">n</span><span class="o">=</span> <span class="n">orig</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">reverse</span><span class="p">(</span><span class="n">orig</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="p">,</span> <span class="n">orig</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+        <span class="kt">int</span> <span class="n">Ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">I</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">J</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">:</span> <span class="n">orig</span><span class="p">){</span>
+            <span class="n">Ans</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">t</span> <span class="p">){</span>
+                <span class="n">Ans</span><span class="o">-=</span><span class="n">Odd</span><span class="p">[</span><span class="n">I</span><span class="o">++</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">Ans</span><span class="o">-=</span><span class="n">Even</span><span class="p">[</span><span class="n">J</span><span class="o">++</span><span class="p">];</span>
+            <span class="p">}</span>
+            
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">Ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>其中將每一位數字<code class="language-plaintext highlighter-rouge">push_back</code>到<code class="language-plaintext highlighter-rouge">vector</code>中的時候，我將數字乘一個<strong>負號</strong>，因為<code class="language-plaintext highlighter-rouge">algorithm</code>預設是小大到排序，而<strong>負號</strong>可以取代<code class="language-plaintext highlighter-rouge">compare function</code>的作用（但sort完記得再取一次負號將數字轉正）</p>
+
+<p>當然sort的部份可以寫成<code class="language-plaintext highlighter-rouge">counting sort</code>，但是範圍不大用一般的sort也不會差太多。</p>
+
+<h2 id="minimize-result-by-adding-parentheses-to-expression">Minimize Result by Adding Parentheses to Expression</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-288/problems/minimize-result-by-adding-parentheses-to-expression/">Minimize Result by Adding Parentheses to Expression</a></p>
+
+<h3 id="description-1">Description:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You are given a 0-indexed string expression of the form "&lt;num1&gt;+&lt;num2&gt;" where &lt;num1&gt; and &lt;num2&gt; represent positive integers.
+
+Add a pair of parentheses to expression such that after the addition of parentheses, expression is a valid mathematical expression and evaluates to the smallest possible value. The left parenthesis must be added to the left of '+' and the right parenthesis must be added to the right of '+'.
+
+Return expression after adding a pair of parentheses such that expression evaluates to the smallest possible value. If there are multiple answers that yield the same result, return any of them.
+
+The input has been generated such that the original value of expression, and the value of expression after adding any pair of parentheses that meets the requirements fits within a signed 32-bit integer
+</code></pre></div></div>
+
+<h3 id="example-1">example:</h3>
+
+<p><strong>Example 1:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: expression = "247+38"
+Output: "2(47+38)"
+Explanation: The expression evaluates to 2 * (47 + 38) = 2 * 85 = 170.
+Note that "2(4)7+38" is invalid because the right parenthesis must be to the right of the '+'.
+It can be shown that 170 is the smallest possible value.
+</code></pre></div></div>
+<p><strong>Example 3:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: expression = "12+34"
+Output: "1(2+3)4"
+Explanation: The expression evaluates to 1 * (2 + 3) * 4 = 1 * 5 * 4 = 20.
+</code></pre></div></div>
+
+<p><strong>Example 3:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: expression = "999+999"
+Output: "(999+999)"
+Explanation: The expression evaluates to 999 + 999 = 1998.
+</code></pre></div></div>
+
+<p>將括號插入運算式中，並求出插入後運算結果最小值的運算式</p>
+
+<h3 id="concept-1">Concept：</h3>
+
+<p>雖然當時沒有寫出來，不過那時候的解題思路算是對的（字串操作的部份一直寫爛）</p>
+
+<p>可以將第一個數字（叫第一個數字<code class="language-plaintext highlighter-rouge">A</code>）和第二個數字（叫第二個數字<code class="language-plaintext highlighter-rouge">B</code>）都各拆成兩半如：</p>
+
+<p>題目：<code class="language-plaintext highlighter-rouge">"247+38"</code></p>
+
+<p>247:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>247 0
+24 7
+2 47
+0 247
+</code></pre></div></div>
+<p>38:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>38 0
+3 8
+0 38
+</code></pre></div></div>
+
+<p>而題目要求的就是：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A第一部份*( A第二部份 + B第一部份 ) * B第二部份
+</code></pre></div></div>
+
+<p>所以將兩個數字都拆成兩個部份後，再經過兩層for迴圈枚舉就好了</p>
+
+<p>還有記得<code class="language-plaintext highlighter-rouge">A第一部份</code>或<code class="language-plaintext highlighter-rouge">B第二部份</code>為<code class="language-plaintext highlighter-rouge">0</code>時要改成<code class="language-plaintext highlighter-rouge">1</code>下去乘</p>
+<h2 id="solution-1">Solution：</h2>
+
+<p>當時因為實做一直爛掉，而且沒有用<strong><code class="language-plaintext highlighter-rouge">substr</code></strong>這種好用的工具，一開始就將<code class="language-plaintext highlighter-rouge">string</code>轉成<code class="language-plaintext highlighter-rouge">vector&lt;int&gt;</code>，最後才看到答案是要<code class="language-plaintext highlighter-rouge">string</code>就<del>崩潰不寫了</del></p>
+
+<p>在賽後還是有實做出來，不過真的寫的又臭又長…
+<strong>Solution</strong></p>
+
+<p>沒用<code class="language-plaintext highlighter-rouge">substr</code>或<code class="language-plaintext highlighter-rouge">atoi</code>寫出來的版本：</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+
+    <span class="n">string</span> <span class="n">to_str</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+        <span class="n">string</span> <span class="n">res</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">){</span>
+            <span class="n">res</span><span class="o">+=</span><span class="kt">char</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">10</span><span class="o">+</span><span class="sc">'0'</span><span class="p">);</span>
+            <span class="n">n</span><span class="o">/=</span><span class="mi">10</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">reverse</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">res</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">string</span> <span class="n">minimizeResult</span><span class="p">(</span><span class="n">string</span> <span class="n">expression</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">numA</span><span class="p">,</span><span class="n">numB</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">f</span><span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">char</span> <span class="n">i</span><span class="o">:</span><span class="n">expression</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="sc">'+'</span><span class="p">){</span>
+                <span class="n">f</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span>
+                <span class="k">continue</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">){</span>
+                <span class="n">numB</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="sc">'0'</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">numA</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="sc">'0'</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">vector</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">vecA</span> <span class="p">,</span> <span class="n">vecB</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">nA</span> <span class="o">=</span> <span class="n">numA</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>  <span class="p">,</span><span class="n">nB</span> <span class="o">=</span> <span class="n">numB</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">nA</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Front</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Back</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">Front</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+                <span class="n">Front</span><span class="o">+=</span><span class="n">numA</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+            <span class="p">}</span>
+
+            <span class="k">for</span><span class="p">(;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">nA</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">Back</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+                <span class="n">Back</span><span class="o">+=</span><span class="n">numA</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="n">vecA</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="p">{</span><span class="n">Front</span><span class="p">,</span><span class="n">Back</span><span class="p">}</span> <span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">nB</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Front</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Back</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">Front</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+                <span class="n">Front</span><span class="o">+=</span><span class="n">numB</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+            <span class="p">}</span>
+
+            <span class="k">for</span><span class="p">(;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">nB</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">Back</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+                <span class="n">Back</span><span class="o">+=</span><span class="n">numB</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="n">vecB</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="p">{</span><span class="n">Front</span><span class="p">,</span><span class="n">Back</span><span class="p">}</span> <span class="p">);</span>
+        <span class="p">}</span>
+        
+
+        <span class="kt">int</span> <span class="n">Ans</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+        <span class="n">string</span> <span class="n">Result</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">vecA</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">vecB</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">auto</span> <span class="n">A</span> <span class="o">=</span> <span class="n">vecA</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                <span class="k">auto</span> <span class="n">B</span> <span class="o">=</span> <span class="n">vecB</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                <span class="kt">int</span> <span class="n">A_Front</span> <span class="o">=</span>  <span class="p">(</span><span class="n">A</span><span class="p">.</span><span class="n">first</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span><span class="o">:</span><span class="n">A</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">A_Back</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">B_Front</span> <span class="o">=</span> <span class="n">B</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">B_Back</span> <span class="o">=</span> <span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">second</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span><span class="o">:</span><span class="n">B</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+
+                <span class="k">if</span><span class="p">(</span> <span class="n">A_Back</span><span class="o">==</span><span class="mi">0</span> <span class="o">||</span> <span class="n">B_Front</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">A_Front</span><span class="o">*</span><span class="p">(</span> <span class="n">A_Back</span> <span class="o">+</span> <span class="n">B_Front</span> <span class="p">)</span><span class="o">*</span><span class="n">B_Back</span><span class="p">;</span>
+                
+                <span class="k">if</span><span class="p">(</span> <span class="n">res</span><span class="o">&lt;</span><span class="n">Ans</span><span class="p">){</span>
+                    <span class="n">Ans</span><span class="o">=</span><span class="n">res</span><span class="p">;</span>
+                    <span class="n">Result</span><span class="o">=</span><span class="p">(</span><span class="n">A</span><span class="p">.</span><span class="n">first</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="s">""</span><span class="o">:</span><span class="n">to_str</span><span class="p">(</span><span class="n">A_Front</span><span class="p">))</span><span class="o">+</span><span class="s">"("</span><span class="o">+</span><span class="n">to_str</span><span class="p">(</span><span class="n">A_Back</span><span class="p">)</span><span class="o">+</span><span class="s">"+"</span><span class="o">+</span><span class="n">to_str</span><span class="p">(</span><span class="n">B_Front</span><span class="p">)</span><span class="o">+</span><span class="s">")"</span><span class="o">+</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">second</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="s">""</span><span class="o">:</span><span class="n">to_str</span><span class="p">(</span><span class="n">B_Back</span><span class="p">));</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">Ans</span><span class="o">&lt;&lt;</span><span class="sc">'\n'</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">Result</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<p>簡潔很多的版本：</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">to_int</span><span class="p">(</span><span class="n">string</span> <span class="n">str</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">ret</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">char</span> <span class="n">i</span><span class="o">:</span><span class="n">str</span><span class="p">){</span>
+            <span class="n">ret</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+            <span class="n">ret</span><span class="o">+=</span><span class="kt">int</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="sc">'0'</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">string</span> <span class="n">minimizeResult</span><span class="p">(</span><span class="n">string</span> <span class="n">exp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">exp_len</span> <span class="o">=</span> <span class="n">exp</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">add_idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">char</span> <span class="n">i</span><span class="o">:</span><span class="n">exp</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="sc">'+'</span><span class="p">){</span>
+                <span class="k">break</span> <span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">add_idx</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="n">string</span> <span class="n">numA</span> <span class="o">=</span> <span class="n">exp</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">add_idx</span><span class="p">);</span>
+        <span class="n">string</span> <span class="n">numB</span> <span class="o">=</span> <span class="n">exp</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">add_idx</span><span class="o">+</span><span class="mi">1</span> <span class="p">,</span> <span class="n">exp_len</span><span class="o">-</span><span class="n">add_idx</span><span class="p">);</span>
+
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">numA</span><span class="o">&lt;&lt;</span><span class="sc">' '</span><span class="o">&lt;&lt;</span><span class="n">numB</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">nA</span> <span class="o">=</span> <span class="n">numA</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>  <span class="p">,</span><span class="n">nB</span> <span class="o">=</span> <span class="n">numB</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">vecA</span> <span class="p">,</span> <span class="n">vecB</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">nA</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">vecA</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="p">{</span><span class="n">numA</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="p">,</span> <span class="n">numA</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">nA</span><span class="o">-</span><span class="n">i</span><span class="p">)}</span> <span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">nB</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">vecB</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="p">{</span><span class="n">numB</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="p">,</span> <span class="n">numB</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">nB</span><span class="o">-</span><span class="n">i</span><span class="p">)}</span> <span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">vecA</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">vecB</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+        <span class="kt">int</span> <span class="n">Min</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+        <span class="n">string</span> <span class="n">Ans</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">i</span><span class="o">:</span><span class="n">vecA</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">j</span><span class="o">:</span><span class="n">vecB</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">i</span><span class="p">.</span><span class="n">second</span><span class="o">==</span><span class="s">""</span> <span class="o">||</span> <span class="n">j</span><span class="p">.</span><span class="n">first</span><span class="o">==</span><span class="s">""</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+                <span class="kt">int</span> <span class="n">A_Front</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="o">==</span><span class="s">""</span> <span class="o">?</span> <span class="mi">1</span><span class="o">:</span><span class="n">to_int</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">));</span>
+                <span class="kt">int</span> <span class="n">A_Back</span> <span class="o">=</span> <span class="n">to_int</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">B_Front</span> <span class="o">=</span> <span class="n">to_int</span><span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">B_Back</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">second</span><span class="o">==</span><span class="s">""</span> <span class="o">?</span> <span class="mi">1</span><span class="o">:</span><span class="n">to_int</span><span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">second</span><span class="p">));</span>
+                <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">A_Front</span><span class="o">*</span><span class="p">(</span><span class="n">A_Back</span><span class="o">+</span><span class="n">B_Front</span><span class="p">)</span><span class="o">*</span><span class="n">B_Back</span><span class="p">;</span>
+
+                <span class="k">if</span><span class="p">(</span> <span class="n">cur</span> <span class="o">&lt;</span> <span class="n">Min</span><span class="p">){</span>
+                    <span class="n">Min</span><span class="o">=</span><span class="n">cur</span><span class="p">;</span>
+                    <span class="n">Ans</span><span class="o">=</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="o">+</span><span class="s">"("</span><span class="o">+</span><span class="n">i</span><span class="p">.</span><span class="n">second</span><span class="o">+</span><span class="s">"+"</span><span class="o">+</span><span class="n">j</span><span class="p">.</span><span class="n">first</span><span class="o">+</span><span class="s">")"</span><span class="o">+</span><span class="n">j</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">Ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h2 id="maximum-product-after-k-increments">Maximum Product After K Increments</h2>
+
+<ul>
+  <li><a href="https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/">Maximum Product After K Increments</a></li>
+</ul>
+
+<h3 id="description-">Description :</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You are given an array of non-negative integers nums and an integer k. In one operation, you may choose any element from nums and increment it by 1.
+
+Return the maximum product of nums after at most k operations. Since the answer may be very large, return it modulo 109 + 7.
+</code></pre></div></div>
+
+<h3 id="exmample">Exmample:</h3>
+
+<p><strong>Example 1:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [0,4], k = 5
+Output: 20
+Explanation: Increment the first number 5 times.
+Now nums = [5, 4], with a product of 5 * 4 = 20.
+It can be shown that 20 is maximum product possible, so we return 20.
+Note that there may be other ways to increment nums to have the maximum product.
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [6,3,3,2], k = 2
+Output: 216
+Explanation: Increment the second number 1 time and increment the fourth number 1 time.
+Now nums = [6, 4, 3, 3], with a product of 6 * 4 * 3 * 3 = 216.
+It can be shown that 216 is maximum product possible, so we return 216.
+Note that there may be other ways to increment nums to have the maximum product.
+</code></pre></div></div>
+
+<p>可以進行<code class="language-plaintext highlighter-rouge">K</code>次操作，每次操作都可以將任意的元素<code class="language-plaintext highlighter-rouge">+1</code>。</p>
+
+<p>要求進行完K次操作後，所有元素的<strong>乘積</strong>（並<code class="language-plaintext highlighter-rouge">mod 1e9+7</code>）</p>
+
+<h3 id="concept-2">Concept：</h3>
+
+<p>一看到題目的時候就很<strong>Greedy</strong>的想：「總共可以加K次，那就每次都抓出最小的來加！」</p>
+
+<p>要可以動態的插入資料，而且取出的資料都是最小值的資料結構…</p>
+
+<p>也只有<code class="language-plaintext highlighter-rouge">priority_queue</code>了！( 這邊指的是Min Heap )</p>
+
+<p>但是為什麼這樣會是乘積最大值？（<del>我也不會證明</del>）</p>
+<h3 id="solution-2">Solution:</h3>
+
+<p>結果打比賽時忘記開<code class="language-plaintext highlighter-rouge">long long</code>…</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">maximumProduct</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="p">,</span><span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">pq</span><span class="p">;</span>
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">Mod</span> <span class="o">=</span> <span class="mf">1e9</span><span class="o">+</span><span class="mi">7</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">:</span> <span class="n">nums</span><span class="p">){</span>
+            <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span><span class="p">(</span><span class="n">k</span><span class="o">--</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+            <span class="n">pq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">(</span> <span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">ans</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">pq</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+            <span class="n">ans</span><span class="o">=</span><span class="p">(</span> <span class="n">ans</span><span class="o">*</span><span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="p">)</span><span class="o">%</span><span class="n">Mod</span><span class="p">;</span>
+            <span class="n">pq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="kt">int</span><span class="p">(</span><span class="n">ans</span><span class="p">);</span>
+    
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>而將所有<code class="language-plaintext highlighter-rouge">nums</code>的元素丟入<code class="language-plaintext highlighter-rouge">priority_queue</code>的部份可以這樣初始化（看別人的code看到的）</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="p">,</span><span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">pq</span><span class="p">(</span> <span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="p">,</span> <span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="maximum-total-beauty-of-the-gardens">Maximum Total Beauty of the Gardens</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-288/problems/maximum-total-beauty-of-the-gardens/">Maximum Total Beauty of the Gardens</a></p>
+
+<h3 id="description--1">Description :</h3>
+<p>Alice is a caretaker of n gardens and she wants to plant flowers to maximize the total beauty of all her gardens.</p>
+
+<p>You are given a 0-indexed integer array flowers of size n, where flowers[i] is the number of flowers already planted in the ith garden. Flowers that are already planted cannot be removed. You are then given another integer newFlowers, which is the maximum number of flowers that Alice can additionally plant. You are also given the integers target, full, and partial.</p>
+
+<p>A garden is considered complete if it has at least target flowers. The total beauty of the gardens is then determined as the sum of the following:</p>
+
+<ul>
+  <li>The number of complete gardens multiplied by full.</li>
+  <li>The minimum number of flowers in any of the incomplete gardens multiplied by partial. If there are no incomplete gardens, then this value will be 0.</li>
+</ul>
+
+<p>Return the maximum total beauty that Alice can obtain after planting at most newFlowers flowers.</p>
+
+<h3 id="example-2">Example:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: flowers = [1,3,1,1], newFlowers = 7, target = 6, full = 12, partial = 1
+Output: 14
+Explanation: Alice can plant
+- 2 flowers in the 0th garden
+- 3 flowers in the 1st garden
+- 1 flower in the 2nd garden
+- 1 flower in the 3rd garden
+The gardens will then be [3,6,2,2]. She planted a total of 2 + 3 + 1 + 1 = 7 flowers.
+There is 1 garden that is complete.
+The minimum number of flowers in the incomplete gardens is 2.
+Thus, the total beauty is 1 * 12 + 2 * 1 = 12 + 2 = 14.
+No other way of planting flowers can obtain a total beauty higher than 14.
+</code></pre></div></div>
+
+<h3 id="concept-3">Concept:</h3>
+
+<p>比賽時感覺有點DP，但是完全沒有頭緒</p>
+
+<p>也還沒看懂</p>
+
+<p>解法待補…</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#c++/c">c++/c</a>
+          
+            <a href="/tags#notes">notes</a>
+          
+            <a href="/tags#Leetcode">Leetcode</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2022/04/10/math-theory-01-zh/" data-toggle="tooltip" data-placement="top" title="程式競賽中的數論">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'ljo424';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:ljo424@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.facebook.com/profile.php?id=100010981865378" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/jason810496" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.instagram.com/jason2004424" title="Instagram">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Instagram</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Jason Liu
+        &nbsp;&bull;&nbsp;
+      
+      2022
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">https://github.com/jason810496</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        <!-- Powered by -->
+        <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjason810496.github.io%2Fblog%2F&count_bg=%23999A97&title_bg=%23211919&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

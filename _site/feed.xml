@@ -10,14 +10,96 @@
     
     
       <item>
+        <title>288th LeetCode Weekly Contest</title>
+        <description>
+          Leetcode 288th 週賽 - 
+          288th LeetCode Weekly Contest 288th LeetCode Weekly Contest 真的太久沒有解題打程競，今天只有解出一題… 在補題目發現其實精神分數有三題 第二題實做到一半就不寫了（因為忘記有substr這種好東西，被字串操作搞瘋） 第三題只是忘記開long long… 這次週賽的四個題目： Largest Number After Digit Swaps by Parity Minimize Result by Adding Parentheses to Expression Maximum Product After K Increments Maximum Total Beauty of the Gardens Largest Number After Digit Swaps by Parity3 Largest Number After Digit...
+        </description>
+        <pubDate>Sun, 10 Apr 2022 08:50:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/04/10/leetcode-288-weekly/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/04/10/leetcode-288-weekly/</guid>
+      </item>
+    
+      <item>
+        <title>程式競賽中的數論</title>
+        <description>
+          Math theory in CP - 
+          程式競賽中的數論
+
+MOD
+GCD / LCM
+
+
+        </description>
+        <pubDate>Sun, 10 Apr 2022 07:50:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/04/10/math-theory-01-zh/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/04/10/math-theory-01-zh/</guid>
+      </item>
+    
+      <item>
+        <title>動態顯示的Zerojudge stats！</title>
+        <description>
+          在Github Profile顯示當前Zerojudge解題紀錄！ - 
+          Zerojudge stats 動機 繼上篇如何打造好看的Github Profile，就是看到許多大佬的GH首頁都很炫炮的統計紀錄！ 又翻了翻GH，發現各大解題平台如：leetcode、codeforce(但我覺得沒有到很好看)、TIOJ等都有人做過專門放在GH首頁好看的解題統計了 唯獨我刷最多水題的Zerojudge沒有 那只好自己做一個了(⊙ω⊙) 如何辦到的？ 但是仔細看一下發現：Profile page竟然是一個README.md，那他們是怎麼在靜態的頁面顯示即時的資料的？ 接著看一下他們的raw markdown，可以看到那些統計紀錄都是一個個圖片，而圖片的src則是連到某個網站的url。 如：這個可以顯示在Github活動狀態的project 他的使用方法： ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=DenverCoder1&amp;amp;theme=dark) 大概揣摩一下，應該是： 當瀏覽者訪問作者頁面時，將上面的url當作圖片source，並且透過GET parameter來查詢用戶資料或指定主題。而他的server在收到request後，就向Github查詢用戶資料再包成一個SVG顯示在頁面上，並且頁面的content-type要指定為SVG（這樣才能當成圖檔來用）。 為什麼Zerojudge沒有人做？ 我猜想應該是： Zerojudge需要登入才能查詢用戶資料 如：leetcode、TIOJ不需要登入，而codeforce則是提供API查詢 Zerojudge的登入方式 目前ZJ的登入方式有兩種： 通過recaptcha 2驗證(防機器人ㄉ那個驗證) 登入google帳戶 大佬都不想寫Zerojudge(畢竟題目太雜了) 而要讓server登入Zerojudge並讓某一個帳號持續維持登入狀態是最大的困難點 整體架構概念 所以我要先搭建一個app能夠即時查詢Zerojudge的資料，並將統計資料包成SVG回傳，還有要能夠方便地登入Zerojudge並維持登入狀態。 又因為比起PHP(我還沒學過)、Javascript(我沒有學過他的後端，也比較不熟悉它的語法)、Ruby(也沒學過)等我比較熟悉Python 所以就用flask來寫這個專案的後端 登入Zerojudge 通過recaptcha驗證 目前要破解recaptcha最有效率的方式是透過音檔辨識(畢竟圖像辨識的技術沒有到音檔辨識那麼精準？而且還需要額外訓練一個模型才有辦法) 音檔辨識的python library有SpeechRecognition(它可以接到Google Cloud Speech API，算是以其人之道，還治其人之身) 登入google帳號 要透過python登入google帳號，我有試過beautifulsoup 4但是一直會有bug.. 另一種方式是透過selenium + webdriver(可以算是透過程式操控一個瀏覽器)但是也很容易被擋 嗯…...
+        </description>
+        <pubDate>Thu, 24 Mar 2022 13:02:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/03/24/ZJstats0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/03/24/ZJstats0/</guid>
+      </item>
+    
+      <item>
+        <title>逆序數對(Array Inversion)</title>
+        <description>
+          Merge sort 順便計算逆序數對 - 
+          逆序數對 在Merge sort的時候計算逆序數對 先來觀察Merge sort 的過程： 分治 一直重複從中點把陣列切成兩半直到子陣列剩單個元素 合併 我覺得Merge sort 的關鍵就在Merge的過程 用圖演示Merge sort都無法把Merge 的精髓畫出來 條列式 one another the other Italics font Strikethrough 這是^上標^ 這是~下標~ ==Marked text== Table example : Number Next number Previous number Five Six Four Ten Eleven Nine Seven Eight Six Two Three One Code with syntax...
+        </description>
+        <pubDate>Thu, 24 Mar 2022 12:07:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/03/24/inversion-merge-sort01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/03/24/inversion-merge-sort01/</guid>
+      </item>
+    
+      <item>
+        <title>C系列 void pointer之噩夢</title>
+        <description>
+          搞了一整天的insertion sort QQ - 
+          區區一個Insertion sort … 接到一個單純實作出Insertion sort的case，原本預計10-20min解決掉，沒想到花了一整天QQ 題目： 作出一個通用類別的insertion sort function // InsertionSort algorithm for arrays of a generic type // the function gets an array of length n of objects of given size // it also get a compare function // and sorts the array using the compare function int Insertion_sort(void...
+        </description>
+        <pubDate>Fri, 11 Mar 2022 07:50:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/03/11/void-pointer01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/03/11/void-pointer01/</guid>
+      </item>
+    
+      <item>
+        <title>打造好看的Github Profile</title>
+        <description>
+          如何把Github首頁改得很潮！ - 
+          Github Profile 當我點開大神的Github首頁都會先看到有一堆炫炮徽章、activity統計紀錄的card… 看起來就很專業，也可以提供一些簡單的個人資訊（最常使用哪個語言、commit次數、連續活躍天數… 一方面是讓別人對自己有初步的了解，另一方面是自己看了很開心 預處理： 首先，要知道在Github個人首頁顯示的頁面是在username的repository 例如： 我的用戶名稱是jason810496 那我的github首頁的ur;會是https://github.com/jason810496 而這個特別的repository的url會在https://github.com/jason810496/jason810496 所以需要先建一個跟你username一樣名字的repository 像這樣： (他有在右邊提示說這是一個特別的repository，其中的README.md會在個人首頁被看到) 好用的工具 Hackmd 我們已經知道其實個人首頁是一個README.md 就是以Markdown寫的 如果不會Markdown？ 語法教學： Markdown語法教學(Hackmd) （個人覺得不同種的Markdown都大同小異，常用的標題大小、url連結、圖片連結、列點式標題都是相通的 那就可以開始把重要的個人資訊寫成MD，並放在username的respository了！ 編寫MD我推薦Hackmd 原因如下： 線上編輯 只要登入hackmd的帳號，無論在電腦還是手機都可以即時編輯檔案 同時預覽 如下圖所示，可以同時編輯、預覽該MD的結果 Github profile readme generator Github首頁產生器 真的沒什麼想法、不知道如何下手或單純有點懶 這是一個非常簡便的工具，只要將欄位都填好再勾選技能樹 如圖： 不到5分鐘就完成你的Github Profile了 結果： 那card呢？ 回歸今天的主題： 在首頁顯示有炫炮統計資料的卡片 而剛剛README中下方三個卡片的markdown如下： ![LJO's GitHub stats](https://github-readme-stats.vercel.app/api?username=jason810496&amp;amp;show_icons=true&amp;amp;theme=tokyonight&amp;amp;hide_border=true) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jason810496&amp;amp;layout=compact&amp;amp;theme=tokyonight&amp;amp;hide_border=true) [![GitHub...
+        </description>
+        <pubDate>Tue, 08 Feb 2022 11:16:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/02/08/github-profile-01-zh/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/08/github-profile-01-zh/</guid>
+      </item>
+    
+      <item>
+        <title>Build a eye-catching Github Profile !</title>
+        <description>
+          How to make Github profile fancy ! - 
+          Github Profile 當我點開大神的Github首頁都會先看到有一堆炫炮徽章、activity統計紀錄的card… 看起來就很專業，也可以提供一些簡單的個人資訊（最常使用哪個語言、commit次數、連續活躍天數… 一方面是讓別人對自己有初步的了解，另一方面是自己看了很開心 預處理： 首先，要知道在Github個人首頁顯示的頁面是在username的repository 例如： 我的用戶名稱是jason810496 那我的github首頁的ur;會是https://github.com/jason810496 而這個特別的repository的url會在https://github.com/jason810496/jason810496 所以需要先建一個跟你username一樣名字的repository 像這樣： (他有在右邊提示說這是一個特別的repository，其中的README.md會在個人首頁被看到) 好用的工具 Hackmd 我們已經知道其實個人首頁是一個README.md 就是以Markdown寫的 如果不會Markdown？ 語法教學： Markdown語法教學(Hackmd) （個人覺得不同種的Markdown都大同小異，常用的標題大小、url連結、圖片連結、列點式標題都是相通的 那就可以開始把重要的個人資訊寫成MD，並放在username的respository了！ 編寫MD我推薦Hackmd 原因如下： 線上編輯 只要登入hackmd的帳號，無論在電腦還是手機都可以即時編輯檔案 同時預覽 如下圖所示，可以同時編輯、預覽該MD的結果 Github profile readme generator Github首頁產生器 真的沒什麼想法、不知道如何下手或單純有點懶 這是一個非常簡便的工具，只要將欄位都填好再勾選技能樹 如圖： 不到5分鐘就完成你的Github Profile了 結果： 那card呢？ 回歸今天的主題： 在首頁顯示有炫炮統計資料的卡片 而剛剛README中下方三個卡片的markdown如下： ![LJO's GitHub stats](https://github-readme-stats.vercel.app/api?username=jason810496&amp;amp;show_icons=true&amp;amp;theme=tokyonight&amp;amp;hide_border=true) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jason810496&amp;amp;layout=compact&amp;amp;theme=tokyonight&amp;amp;hide_border=true) [![GitHub...
+        </description>
+        <pubDate>Tue, 08 Feb 2022 11:16:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/02/08/github-profile-01-eng/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/08/github-profile-01-eng/</guid>
+      </item>
+    
+      <item>
         <title>在linux連接藍芽裝置</title>
         <description>
           如何在Ubuntu系統連接airopds? - 
           如何在Ubuntu系統連接airpods 我 : 後來才發現超簡單ㄉ，其實是在連線的時候我沒有按著airpods充電盒子後面的按鈕才連不上 = = 害我搞了一個下午（怒 UI界面 提示: 記得先按著盒子後面的設定按鈕等它閃白燈時再連線！ 1. 打開電腦的藍芽設定 ( Ubuntu的界面很user friendly應該不會找不到ㄅ) 2. 確認airpods充電盒的燈有閃白光 3. 從設定選取自己的裝置! 終端機 身為linux使用者，用UI界面來連藍芽裝置太弱了（誤 無論如何，從終端機連上藍芽裝置超帥ㄉ😎(肯定是要在朋友面前秀一波操作！！ bluez BlueZ 是官方 Linux Bluetooth 棧，由多層協定、服務以及配置工具組成。 ( from https://www.easyatm.com.tw/wiki/BlueZ ) 在Ubuntu安裝bluez sudo apt install bluez 用 bluetoothctl 管理藍芽裝置 在終端機執行bluetoothctl bluetoothctl 結果 : 問它可以做什麼 ! 👉 執行 help 來詢問...
         </description>
         <pubDate>Mon, 07 Feb 2022 12:16:00 +0000</pubDate>
-        <link>http://localhost:4000/2022-02-07-linux-bluetooth-01-zh/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-07-linux-bluetooth-01-zh/</guid>
+        <link>http://localhost:4000/2022/02/07/linux-bluetooth-01-zh/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/07/linux-bluetooth-01-zh/</guid>
       </item>
     
       <item>
@@ -27,8 +109,8 @@
           How to connect airpods on Ubuntu OS auther: It’s quite eazy , but I forget to push the setup button while connecting to PC , which makes me confused for a afternoon LOL … UI interface Hint: Make sure push the setup button on the back of charging case until...
         </description>
         <pubDate>Mon, 07 Feb 2022 11:45:00 +0000</pubDate>
-        <link>http://localhost:4000/2022-02-07-linux-bluetooth-01-eng/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-07-linux-bluetooth-01-eng/</guid>
+        <link>http://localhost:4000/2022/02/07/linux-bluetooth-01-eng/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/07/linux-bluetooth-01-eng/</guid>
       </item>
     
       <item>
@@ -39,20 +121,22 @@
 
         </description>
         <pubDate>Mon, 07 Feb 2022 07:40:00 +0000</pubDate>
-        <link>http://localhost:4000/2022-02-07-blog-static-setting01/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-07-blog-static-setting01/</guid>
+        <link>http://localhost:4000/2022/02/07/blog-static-setting01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/07/blog-static-setting01/</guid>
       </item>
     
       <item>
         <title>Github subdirectories</title>
         <description>
           在github.io設定子資料夾 - 
-          
+          只有uername.github.io能當網站？
+
+在網路
 
         </description>
         <pubDate>Mon, 07 Feb 2022 07:23:00 +0000</pubDate>
-        <link>http://localhost:4000/2022-02-07-github-subdir01/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-07-github-subdir01/</guid>
+        <link>http://localhost:4000/2022/02/07/github-subdir01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/07/github-subdir01/</guid>
       </item>
     
       <item>
@@ -62,8 +146,8 @@
           h1 heading 粗體字 條列式 one another the other Italics font Strikethrough 這是^上標^ 這是~下標~ ==Marked text== Table example : Number Next number Previous number Five Six Four Ten Eleven Nine Seven Eight Six Two Three One Code with syntax highlighting: #define int long long #define INF 1e9 singed main(){ priority_queue&amp;lt;int&amp;gt; pq;...
         </description>
         <pubDate>Tue, 01 Feb 2022 14:52:00 +0000</pubDate>
-        <link>http://localhost:4000/2022-02-01-markdown-tutorial01/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-01-markdown-tutorial01/</guid>
+        <link>http://localhost:4000/2022/02/01/markdown-tutorial01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/01/markdown-tutorial01/</guid>
       </item>
     
       <item>
@@ -73,8 +157,8 @@
           This is a demo post to show you how to write blog posts with markdown. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc. Here is some bold text Here is a secondary...
         </description>
         <pubDate>Tue, 01 Feb 2022 13:16:43 +0000</pubDate>
-        <link>http://localhost:4000/2022-02-01-test01/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-01-test01/</guid>
+        <link>http://localhost:4000/2022/02/01/test01/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/01/test01/</guid>
       </item>
     
   </channel>
