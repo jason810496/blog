@@ -22,6 +22,7 @@ readtime: true
 
 ## Github Profile
 
+When I browse over expert's Github profile page , I see numerous elaborate
 當我點開大神的Github首頁都會先看到有一堆炫炮徽章、activity統計紀錄的card...
 
 看起來就很專業，也可以提供一些簡單的個人資訊（最常使用哪個語言、commit次數、連續活躍天數...
