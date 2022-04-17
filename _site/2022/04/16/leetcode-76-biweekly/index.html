@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+
+<head>
+
+  <link rel="shortcut icon" href="/assets/img/coding01.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>76th LeetCode Bi-Weekly Contest</title>
+
+  
+  <meta name="author" content="Jason Liu">
+  
+
+  <meta name="description" content="Leetcode 76th 週賽">
+
+  
+  <meta name="theme-color" content="#0085A1">
+  
+
+  
+  <meta name="keywords" content="algorithmc++cppcdata structurelinuxcompetitive programmingfront endhtmlcssjavascriptAPCS">
+  
+
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R44VVX682B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R44VVX682B');
+</script>
+
+
+  
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TM99SLZ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+  
+<!-- Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-219638882-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="LJO's Blog">
+  <meta property="og:title" content="76th LeetCode Bi-Weekly Contest">
+  <meta property="og:description" content="Leetcode 76th 週賽">
+
+  
+  <meta property="og:image" content="https://i.imgur.com/wcIo3iO.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Jason Liu">
+  <meta property="og:article:published_time" content="2022-04-16T17:30:00+00:00">
+  <meta property="og:url" content="http://localhost:4000/2022/04/16/leetcode-76-biweekly/">
+  <link rel="canonical" href="http://localhost:4000/2022/04/16/leetcode-76-biweekly/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="76th LeetCode Bi-Weekly Contest">
+  <meta property="twitter:description" content="Leetcode 76th 週賽">
+
+  
+  <meta name="twitter:image" content="https://i.imgur.com/wcIo3iO.png">
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM99SLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">LJO's Blog</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/achievement">Achievement</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/tags/#algorithm">Algorithm</a>
+                  <a class="dropdown-item" href="/tags/#project">Project</a>
+                  <a class="dropdown-item" href="/tags/#notes">Notes</a>
+            </div>
+          </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="http://localhost:4000/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/Profile.png" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "76th LeetCode Bi-Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/16/leetcode-76-biweekly/", \
+          "date"     : "April 16, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "我如何開始打Code的？", \
+          "category" : "notesAPCSIONCamp", \
+          "url"      : "/2022/04/13/coding-road0/", \
+          "date"     : "April 13, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "288th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/10/leetcode-288-weekly/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "程式競賽中的數論", \
+          "category" : "c++/cnotesMath", \
+          "url"      : "/2022/04/10/math-theory-01-zh/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "動態顯示的Zerojudge stats！", \
+          "category" : "project", \
+          "url"      : "/2022/03/24/ZJstats0/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "逆序數對(Array Inversion)", \
+          "category" : "c++/calgorithmnotes", \
+          "url"      : "/2022/03/24/inversion-merge-sort01/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "C系列 void pointer之噩夢", \
+          "category" : "c++/cnotes", \
+          "url"      : "/2022/03/11/void-pointer01/", \
+          "date"     : "March 11, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "打造好看的Github Profile", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/08/github-profile-01-zh/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Build a eye-catching Github Profile !", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/08/github-profile-01-eng/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "在linux連接藍芽裝置", \
+          "category" : "linuxnotes", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-zh/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Connect bluetooth device on Linux", \
+          "category" : "linuxnoteseng", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-eng/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "SEO setting of Github.io Blog", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/07/blog-static-setting01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Github subdirectories", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/07/github-subdir01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Markdown 語法測試", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/markdown-tutorial01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Test 01", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/test01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Achievement", \
+          "category" : "page", \
+          "url"      : "/achievement/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page3/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="https://i.imgur.com/wcIo3iO.png"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>76th LeetCode Bi-Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 76th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 16, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 6 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>76th LeetCode Bi-Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 76th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 16, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 6 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <h1 id="76th-leetcode-bi-weekly-contest">76th LeetCode Bi-Weekly Contest</h1>
+
+<p><a href="https://leetcode.com/contest/biweekly-contest-76">76th LeetCode Weekly Contest</a></p>
+
+<p>上週週賽解出一題，在學校也有開始刷刷題（不過效率不高就是了，都是解daily challange或是tag是<code class="language-plaintext highlighter-rouge">dp</code>,<code class="language-plaintext highlighter-rouge">kth-element</code>的）</p>
+
+<p>這次雙週賽解出<strong>兩題</strong></p>
+
+<p>第三題是水題，但是<del>寫爛吃兩個WA就沒有再送了</del></p>
+
+<p>第四題沒想法</p>
+
+<p>精神分數<strong>三題</strong></p>
+
+<p><strong>這次雙週賽的四個題目：</strong></p>
+
+<ul>
+  <li>
+    <p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/find-closest-number-to-zero/">Find Closest Number to Zero</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/number-of-ways-to-buy-pens-and-pencils/">Number of Ways to Buy Pens and Pencils</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/design-an-atm-machine/">Design an ATM Machine</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/maximum-score-of-a-node-sequence/">Maximum Score of a Node Sequence</a></p>
+  </li>
+</ul>
+
+<h2 id="find-closest-number-to-zero">Find Closest Number to Zero</h2>
+
+<p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/find-closest-number-to-zero/">Find Closest Number to Zero</a></p>
+
+<h3 id="description">Description:</h3>
+
+<p>Given an integer array <code class="language-plaintext highlighter-rouge">nums</code> of size <code class="language-plaintext highlighter-rouge">n</code>, return the number with the value <strong>closest</strong> to <code class="language-plaintext highlighter-rouge">0</code> in <code class="language-plaintext highlighter-rouge">nums</code>. If there are multiple answers, return the number with the <strong>largest</strong> value.</p>
+
+<h3 id="example">example:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [-4,-2,1,4,8]
+Output: 1
+Explanation:
+The distance from -4 to 0 is |-4| = 4.
+The distance from -2 to 0 is |-2| = 2.
+The distance from 1 to 0 is |1| = 1.
+The distance from 4 to 0 is |4| = 4.
+The distance from 8 to 0 is |8| = 8.
+Thus, the closest number to 0 in the array is 1.
+</code></pre></div></div>
+
+<p>要找出陣列中<strong>與0的差</strong>的元素，如果有兩個元素距離0都一樣近則選<strong>較大</strong>的</p>
+
+<h3 id="concept">Concept：</h3>
+
+<p><code class="language-plaintext highlighter-rouge">O(n)</code>掃過去，開三個變數紀錄：</p>
+
+<p>之前最小的差：<code class="language-plaintext highlighter-rouge">dif</code></p>
+
+<p>當前最佳解：<code class="language-plaintext highlighter-rouge">ans</code></p>
+
+<p>計算當前元素與0的差：<code class="language-plaintext highlighter-rouge">cur</code></p>
+
+<p>並更新最小差，如果當前差（<code class="language-plaintext highlighter-rouge">cur</code>）與之前最小差（<code class="language-plaintext highlighter-rouge">dif</code>）相同，則選較大的<code class="language-plaintext highlighter-rouge">ans</code></p>
+
+<h2 id="solution">Solution：</h2>
+
+<p><strong>Solution</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">findClosestNumber</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">dif</span><span class="o">=</span><span class="n">INF</span><span class="p">,</span> <span class="n">ans</span><span class="o">=-</span><span class="n">INF</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">:</span><span class="n">nums</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">abs</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">cur</span> <span class="o">&lt;</span> <span class="n">dif</span><span class="p">){</span>
+                <span class="n">ans</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+                <span class="n">dif</span> <span class="o">=</span> <span class="n">cur</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">dif</span> <span class="o">==</span> <span class="n">cur</span> <span class="o">&amp;&amp;</span> <span class="n">i</span><span class="o">&gt;</span><span class="n">ans</span><span class="p">){</span>
+                <span class="n">ans</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="number-of-ways-to-buy-pens-and-pencils">Number of Ways to Buy Pens and Pencils</h2>
+
+<p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/number-of-ways-to-buy-pens-and-pencils/">Number of Ways to Buy Pens and Pencils</a></p>
+<h3 id="description-1">Description:</h3>
+
+<p>You are given an integer <code class="language-plaintext highlighter-rouge">total</code> indicating the amount of money you have. You are also given two integers <code class="language-plaintext highlighter-rouge">cost1</code> and <code class="language-plaintext highlighter-rouge">cost2</code> indicating the price of a pen and pencil respectively. You can spend <strong>part or all</strong> of your money to buy multiple quantities (or none) of each kind of writing utensil.</p>
+
+<p>Return the <strong>number of distinct ways</strong> you can buy some number of pens and pencils.</p>
+
+<h3 id="example-1">example:</h3>
+
+<p><strong>Example 1:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: total = 20, cost1 = 10, cost2 = 5
+Output: 9
+Explanation: The price of a pen is 10 and the price of a pencil is 5.
+- If you buy 0 pens, you can buy 0, 1, 2, 3, or 4 pencils.
+- If you buy 1 pen, you can buy 0, 1, or 2 pencils.
+- If you buy 2 pens, you cannot buy any pencils.
+The total number of ways to buy pens and pencils is 5 + 3 + 1 = 9.
+</code></pre></div></div>
+<p><strong>Example 2:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: total = 5, cost1 = 10, cost2 = 10
+Output: 1
+Explanation: The price of both pens and pencils are 10, which cost more than total, so you cannot buy any writing utensils. Therefore, there is only 1 way: buy 0 pens and 0 pencils.
+</code></pre></div></div>
+
+<p>給兩種筆的價格（<code class="language-plaintext highlighter-rouge">cost1</code> , <code class="language-plaintext highlighter-rouge">cost2</code>）和可以購買的金額(<code class="language-plaintext highlighter-rouge">total</code>)。</p>
+
+<p>要求出<strong>所有購買組合</strong>的可能</p>
+
+<h3 id="concept-1">Concept：</h3>
+
+<p>一看到的時候被<code class="language-plaintext highlighter-rouge">dp</code>綁住了</p>
+
+<p>一直從<code class="language-plaintext highlighter-rouge">knapsack problem</code>或是<code class="language-plaintext highlighter-rouge">coin change</code>的方向去想</p>
+
+<p>不過這題只需要枚舉其中一個數量，並判斷金額有沒有超過限制</p>
+
+<p>而可能的組數用乘法、除法記算就可以了</p>
+
+<p><del>完全不用DP…</del></p>
+
+<h2 id="solution-1">Solution：</h2>
+
+<p><strong>Solution</strong></p>
+
+<p>不過當時忘記把debug的<code class="language-plaintext highlighter-rouge">cout</code>拿掉，吃了一個TLE….</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">long</span> <span class="kt">long</span> <span class="n">waysToBuyPensPencils</span><span class="p">(</span><span class="kt">int</span> <span class="n">total</span><span class="p">,</span> <span class="kt">int</span> <span class="n">cost1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">cost2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">i</span><span class="o">*</span><span class="n">cost1</span> <span class="o">&gt;</span> <span class="n">total</span> <span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+            
+            <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">total</span> <span class="o">-</span> <span class="n">i</span><span class="o">*</span><span class="n">cost1</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">cur</span><span class="o">/</span><span class="n">cost2</span><span class="p">;</span>
+
+            <span class="n">ans</span><span class="o">+=</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+            
+            <span class="c1">// cout&lt;&lt;j+1&lt;&lt;'\n';</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">ans</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="mi">1</span><span class="o">:</span><span class="n">ans</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="maximum-product-after-k-increments">Maximum Product After K Increments</h2>
+
+<p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/design-an-atm-machine/">Design an ATM Machine</a></p>
+
+<h3 id="description-">Description :</h3>
+<p>There is an ATM machine that stores banknotes of <code class="language-plaintext highlighter-rouge">5</code> denominations: <code class="language-plaintext highlighter-rouge">20</code>, <code class="language-plaintext highlighter-rouge">50</code>, <code class="language-plaintext highlighter-rouge">100</code>, <code class="language-plaintext highlighter-rouge">200</code>, and 500 dollars. Initially the ATM is empty. The user can use the machine to deposit or withdraw any amount of money.</p>
+
+<p>When withdrawing, the machine prioritizes using banknotes of <strong>larger</strong> values.</p>
+
+<ul>
+  <li>
+    <p>For example, if you want to withdraw <code class="language-plaintext highlighter-rouge">$300</code> and there are <code class="language-plaintext highlighter-rouge">2</code> <code class="language-plaintext highlighter-rouge">$50</code> banknotes, <code class="language-plaintext highlighter-rouge">1</code> <code class="language-plaintext highlighter-rouge">$100</code> banknote, and <code class="language-plaintext highlighter-rouge">1</code> <code class="language-plaintext highlighter-rouge">$200</code> banknote, then the machine will use the <code class="language-plaintext highlighter-rouge">$100</code> and <code class="language-plaintext highlighter-rouge">$200</code> banknotes.</p>
+  </li>
+  <li>
+    <p>However, if you try to withdraw <code class="language-plaintext highlighter-rouge">$600</code> and there are <code class="language-plaintext highlighter-rouge">3</code> <code class="language-plaintext highlighter-rouge">$200</code> banknotes and <code class="language-plaintext highlighter-rouge">1</code> <code class="language-plaintext highlighter-rouge">$500</code> banknote, then the withdraw request will be rejected because the machine will first try to use the <code class="language-plaintext highlighter-rouge">$500</code> banknote and then be unable to use banknotes to complete the remaining <code class="language-plaintext highlighter-rouge">$100</code>. Note that the machine is <strong>not</strong> allowed to use the <code class="language-plaintext highlighter-rouge">$200</code> banknotes instead of the <code class="language-plaintext highlighter-rouge">$500</code> banknote.</p>
+  </li>
+</ul>
+
+<p>Implement the ATM class:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ATM()</code> Initializes the ATM object.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">void deposit(int[] banknotesCount)</code> Deposits new banknotes in the order <code class="language-plaintext highlighter-rouge">$20</code>, <code class="language-plaintext highlighter-rouge">$50</code>, <code class="language-plaintext highlighter-rouge">$100</code>, <code class="language-plaintext highlighter-rouge">$200</code>, and <code class="language-plaintext highlighter-rouge">$500</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">int[] withdraw(int amount)</code> Returns an array of length <code class="language-plaintext highlighter-rouge">5</code> of the number of banknotes that will be handed to the user in the order <code class="language-plaintext highlighter-rouge">$20</code>, <code class="language-plaintext highlighter-rouge">$50</code>, <code class="language-plaintext highlighter-rouge">$100</code>, <code class="language-plaintext highlighter-rouge">$200</code>, and <code class="language-plaintext highlighter-rouge">$500</code>, and update the number of banknotes in the ATM after withdrawing. Returns <code class="language-plaintext highlighter-rouge">[-1]</code> if it is not possible (do not withdraw any banknotes in this case).</p>
+    <h3 id="exmample">Exmample:</h3>
+  </li>
+</ul>
+
+<p><strong>Example 1:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input
+["ATM", "deposit", "withdraw", "deposit", "withdraw", "withdraw"]
+[[], [[0,0,1,2,1]], [600], [[0,1,0,1,1]], [600], [550]]
+Output
+[null, null, [0,0,1,0,1], null, [-1], [0,1,0,0,1]]
+</code></pre></div></div>
+
+<p>設計一個提款機，可以<strong>存款</strong>、<strong>提領</strong></p>
+
+<p>提領方式是：由<strong>大的</strong>幣值開始取</p>
+
+<h3 id="concept-2">Concept：</h3>
+
+<p>沒想到紀錄幣值數量的陣列要開<code class="language-plaintext highlighter-rouge">long long</code>（因為至多有<code class="language-plaintext highlighter-rouge">5000</code>次 call ）</p>
+
+<p>還有原本寫成:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">amount</span><span class="o">/</span><span class="n">coin</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">last</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>應該是如果需要該幣值的數量大於剩餘的數量：還是先扣除剩餘的數量</p>
+
+<h3 id="solution-2">Solution:</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ATM</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">ATM</span><span class="p">()</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+    
+    <span class="kt">int</span> <span class="n">coin</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">500</span><span class="p">}</span> <span class="p">;</span>
+    <span class="kt">long</span> <span class="kt">long</span> <span class="n">last</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="p">{};</span>
+    <span class="kt">void</span> <span class="n">deposit</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">banknotesCount</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">last</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">banknotesCount</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">withdraw</span><span class="p">(</span><span class="kt">int</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kt">int</span> <span class="n">cur</span><span class="o">=</span> <span class="n">amount</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">cur</span> <span class="o">&lt;</span> <span class="n">coin</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            
+            <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span> <span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)(</span><span class="n">cur</span><span class="o">/</span><span class="n">coin</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">,</span> <span class="n">last</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">);</span>
+            <span class="n">cur</span><span class="o">-=</span> <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">coin</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+
+
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">cur</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">return</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">last</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-=</span><span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h2 id="maximum-score-of-a-node-sequence">Maximum Score of a Node Sequence</h2>
+
+<p><a href="https://leetcode.com/contest/biweekly-contest-76/problems/maximum-score-of-a-node-sequence/">Maximum Score of a Node Sequence</a></p>
+
+<h3 id="description--1">Description :</h3>
+
+<p>There is an <strong>undirected</strong> graph with <code class="language-plaintext highlighter-rouge">n</code> nodes, numbered from <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">n - 1</code>.</p>
+
+<p>You are given a <code class="language-plaintext highlighter-rouge">0-indexed</code> integer array <code class="language-plaintext highlighter-rouge">scores</code> of length <code class="language-plaintext highlighter-rouge">n</code> where <code class="language-plaintext highlighter-rouge">scores[i]</code> denotes the score of node <code class="language-plaintext highlighter-rouge">i</code>. You are also given a 2D integer array <code class="language-plaintext highlighter-rouge">edges</code> where <code class="language-plaintext highlighter-rouge">edges[i] = [ai, bi]</code> denotes that there exists an <strong>undirected</strong> edge connecting nodes <code class="language-plaintext highlighter-rouge">ai</code> and <code class="language-plaintext highlighter-rouge">bi</code>.</p>
+
+<p>A node sequence is <strong>valid</strong> if it meets the following conditions:</p>
+
+<ul>
+  <li>
+    <p>There is an edge connecting every pair of <strong>adjacent</strong> nodes in the sequence.</p>
+  </li>
+  <li>
+    <p>No node appears more than once in the sequence.</p>
+  </li>
+</ul>
+
+<p>The score of a node sequence is defined as the <strong>sum</strong> of the scores of the nodes in the sequence.</p>
+
+<p>Return the <strong>maximum score</strong> of a valid node sequence with a length of <code class="language-plaintext highlighter-rouge">4</code>. If no such sequence exists, return <code class="language-plaintext highlighter-rouge">-1</code>.</p>
+
+<h3 id="example-2">Example:</h3>
+
+<p><strong>Example 1:</strong></p>
+
+<p><img src="https://i.imgur.com/sVsVN5g.png" alt=" leetcode biwwely 76-4-1" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Input: scores = [5,2,9,8,4], edges = [[0,1],[1,2],[2,3],[0,2],[1,3],[2,4]]
+Output: 24
+Explanation: The figure above shows the graph and the chosen node sequence [0,1,2,3].
+The score of the node sequence is 5 + 2 + 9 + 8 = 24.
+It can be shown that no other node sequence has a score of more than 24.
+Note that the sequences [3,1,2,0] and [1,0,2,3] are also valid and have a score of 24.
+The sequence [0,3,2,4] is not valid since no edge connects nodes 0 and 3.
+
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+
+<p><img src="https://i.imgur.com/N30G3V1.png" alt=" leetcode biwwely 76-4-2" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Input: scores = [9,20,6,4,11,12], edges = [[0,3],[5,3],[2,4],[1,3]]
+Output: -1
+Explanation: The figure above shows the graph.
+There are no valid node sequences of length 4, so we return -1.
+
+</code></pre></div></div>
+
+<p>給無相圖中的所有<strong>邊</strong>，要找出<strong>節點和最大</strong>且<strong>長度 = 4</strong>（有<strong>4</strong>個節點）的一條<strong>鍊</strong></p>
+
+<p>回傳符合條件的<strong>節點最大和</strong></p>
+
+<p>太久沒寫圖論（這應該是學測後寫的第一題…</p>
+
+<p>都被之前<code class="language-plaintext highlighter-rouge">DFS</code>或<code class="language-plaintext highlighter-rouge">BFS</code>的框架綁住</p>
+
+<p>當時是枚舉所有鍊的開頭，再DFS長度為4的鍊</p>
+
+<p>但顯然超時</p>
+
+<h3 id="concept-3">Concept:</h3>
+
+<p>我看了這幾篇題解才看懂ㄉ</p>
+
+<p><a href="https://leetcode.com/problems/maximum-score-of-a-node-sequence/discuss/1953669/Python3-Explanation-with-pictures-top-3-neighbors">https://leetcode.com/problems/maximum-score-of-a-node-sequence/discuss/1953669/Python3-Explanation-with-pictures-top-3-neighbors</a></p>
+
+<p><a href="https://leetcode.com/problems/maximum-score-of-a-node-sequence/discuss/1953670/C%2B%2B-O(E)-edge-traverse">https://leetcode.com/problems/maximum-score-of-a-node-sequence/discuss/1953670/C%2B%2B-O(E)-edge-traverse</a></p>
+
+<p><a href="https://leetcode.com/problems/maximum-score-of-a-node-sequence/discuss/1953905/C%2B%2B-Simple-Edge-traversal-O(ElogE)">https://leetcode.com/problems/maximum-score-of-a-node-sequence/discuss/1953905/C%2B%2B-Simple-Edge-traversal-O(ElogE)</a></p>
+
+<ul>
+  <li><strong>找出符合條件的鍊</strong>
+要找到<strong>長度 = 4</strong>的一條<strong>鍊</strong></li>
+</ul>
+
+<p>我們可以先抓一條<strong>邊</strong>(假設叫邊<code class="language-plaintext highlighter-rouge">a-b</code>)</p>
+
+<p>我們只要再找出與<code class="language-plaintext highlighter-rouge">a</code>節點相連的<code class="language-plaintext highlighter-rouge">c</code>節點</p>
+
+<p>再找出與<code class="language-plaintext highlighter-rouge">b</code>節點相連的<code class="language-plaintext highlighter-rouge">d</code>節點</p>
+
+<p>看起來會像：<code class="language-plaintext highlighter-rouge">c-a-b-d</code></p>
+
+<p>(並且<code class="language-plaintext highlighter-rouge">c!=b</code> <code class="language-plaintext highlighter-rouge">a!=d</code> <code class="language-plaintext highlighter-rouge">c!=d</code>)</p>
+
+<ul>
+  <li><strong>找出最大值</strong></li>
+</ul>
+
+<p>建立圖後，可以將<strong>有連結</strong>的節點按照<code class="language-plaintext highlighter-rouge">score</code><strong>排序</strong></p>
+
+<p>這樣枚舉該邊（一樣叫邊<code class="language-plaintext highlighter-rouge">a-b</code>）成功就會是以邊<code class="language-plaintext highlighter-rouge">a-b</code>當中心的<strong>最大值</strong></p>
+
+<p>像是這樣<code class="language-plaintext highlighter-rouge"> ( ci ,cj ,ck ...) - a - b - ( di , dj ,dk ...) </code></p>
+
+<p><code class="language-plaintext highlighter-rouge">( ci ,cj ,ck ...)</code>代表與<code class="language-plaintext highlighter-rouge">a</code>節點<strong>相連</strong>並按照<code class="language-plaintext highlighter-rouge">score</code>排序</p>
+
+<p><code class="language-plaintext highlighter-rouge">( di ,dj ,dk ...)</code>代表與<code class="language-plaintext highlighter-rouge">b</code>節點<strong>相連</strong>並按照<code class="language-plaintext highlighter-rouge">score</code>排序</p>
+
+<p>一旦枚舉到符合條件的<code class="language-plaintext highlighter-rouge"> ci - a - b - di </code>就會是以<code class="language-plaintext highlighter-rouge">a-b</code>為中心的<strong>最大值</strong></p>
+
+<h3 id="solution-3">Solution:</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">maximumScore</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">scores</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">scores</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">G</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">e</span><span class="o">:</span> <span class="n">edges</span><span class="p">){</span>
+            <span class="n">G</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">PB</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+            <span class="n">G</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">PB</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">G</span><span class="p">){</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">,</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">u</span><span class="p">,</span><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">){</span>
+                <span class="k">return</span> <span class="n">scores</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">scores</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">ans</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="n">e</span><span class="o">:</span><span class="n">edges</span><span class="p">){</span>
+            <span class="c1">// a-u-v-b </span>
+            <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="n">sum</span><span class="o">=</span><span class="n">scores</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">scores</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+            
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">:</span><span class="n">G</span><span class="p">[</span><span class="n">u</span><span class="p">]){</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">a</span><span class="o">==</span><span class="n">v</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+                <span class="kt">bool</span> <span class="n">flag</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">b</span><span class="o">:</span><span class="n">G</span><span class="p">[</span><span class="n">v</span><span class="p">]){</span>
+                    
+                    <span class="k">if</span><span class="p">(</span> <span class="n">b</span><span class="o">==</span><span class="n">u</span> <span class="o">||</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+                    <span class="n">ans</span><span class="o">=</span><span class="n">max</span><span class="p">(</span> <span class="n">ans</span><span class="p">,</span> <span class="n">sum</span><span class="o">+</span><span class="n">scores</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">+</span><span class="n">scores</span><span class="p">[</span><span class="n">b</span><span class="p">]);</span>
+                    
+                    <span class="n">flag</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="k">if</span><span class="p">(</span> <span class="n">flag</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#c++/c">c++/c</a>
+          
+            <a href="/tags#notes">notes</a>
+          
+            <a href="/tags#Leetcode">Leetcode</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2022/04/13/coding-road0/" data-toggle="tooltip" data-placement="top" title="我如何開始打Code的？">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'ljo424';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:ljo424@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.facebook.com/profile.php?id=100010981865378" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/jason810496" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.instagram.com/jason2004424" title="Instagram">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Instagram</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Jason Liu
+        &nbsp;&bull;&nbsp;
+      
+      2022
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">https://github.com/jason810496</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        <!-- Powered by -->
+        <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjason810496.github.io%2Fblog%2F&count_bg=%23999A97&title_bg=%23211919&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
