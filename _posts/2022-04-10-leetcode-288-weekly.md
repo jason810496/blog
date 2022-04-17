@@ -363,7 +363,7 @@ public:
 
 ## Maximum Product After K Increments
 
-- [Maximum Product After K Increments](https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/)
+[Maximum Product After K Increments](https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/)
 
 ### Description :
 ```
