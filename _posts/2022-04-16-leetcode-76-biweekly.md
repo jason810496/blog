@@ -371,9 +371,9 @@ There are no valid node sequences of length 4, so we return -1.
 
 像是這樣` ( ci ,cj ,ck ...) - a - b - ( di , dj ,dk ...) `
 
-`( ci ,cj ,ck ...)`代表與`a`節點**相連**並按照`score`排序
+`( ci ,cj ,ck ...)`代表與`a`節點**相連**並按照`score`排序的節點
 
-`( di ,dj ,dk ...)`代表與`b`節點**相連**並按照`score`排序
+`( di ,dj ,dk ...)`代表與`b`節點**相連**並按照`score`排序的節點
 
 一旦枚舉到符合條件的` ci - a - b - di `就會是以`a-b`為中心的**最大值**
 
