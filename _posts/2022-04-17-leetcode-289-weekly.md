@@ -29,7 +29,7 @@ readtime: true
 
 - [Calculate Digit Sum of a String](https://leetcode.com/contest/weekly-contest-289/problems/calculate-digit-sum-of-a-string/)
 
-- [Minimize Result by Adding Parentheses to Expression](https://leetcode.com/contest/weekly-contest-288/problems/minimize-result-by-adding-parentheses-to-expression/)
+- [Minimum Rounds to Complete All Tasks](https://leetcode.com/contest/weekly-contest-289/problems/minimum-rounds-to-complete-all-tasks/)
 
 - [Maximum Product After K Increments](https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/)
 
@@ -42,135 +42,159 @@ readtime: true
 
 ### Description:
 
-```
-You are given a positive integer num. You may swap any two digits of num that have the same parity (i.e. both odd digits or both even digits).
+You are given a string `s` consisting of digits and an integer `k`.
 
-Return the largest possible value of num after any number of swaps.
+A **round** can be completed if the length of `s` is greater than `k`. In one round, do the following:
+
+1. **Divide** `s` into **consecutive groups** of size `k` such that the first `k` characters are in the first group, the next `k` characters are in the second group, and so on. **Note** that the size of the last group can be smaller than `k`.
+2. **Replace** each group of `s` with a string representing the sum of all its digits. For Example, `"346"` is replaced with `"13"` because `3 + 4 + 6 = 13`.
+3. **Merge** consecutive groups together to form a new string. If the length of the string is greater than k, repeat from step `1`.
+Return `s` after all rounds have been completed.
+
+
+
+### Example:
+
+```
+Input: s = "11111222223", k = 3
+Output: "135"
+Explanation: 
+- For the first round, we divide s into groups of size 3: "111", "112", "222", and "23".
+  ​​​​​Then we calculate the digit sum of each group: 1 + 1 + 1 = 3, 1 + 1 + 2 = 4, 2 + 2 + 2 = 6, and 2 + 3 = 5. 
+  So, s becomes "3" + "4" + "6" + "5" = "3465" after the first round.
+- For the second round, we divide s into "346" and "5".
+  Then we calculate the digit sum of each group: 3 + 4 + 6 = 13, 5 = 5. 
+  So, s becomes "13" + "5" = "135" after second round. 
+Now, s.length <= k, so we return "135" as the answer.
 ```
 
-### example:
-
-```
-Input: num = 1234
-Output: 3412
-Explanation: Swap the digit 3 with the digit 1, this results in the number 3214.
-Swap the digit 2 with the digit 4, this results in the number 3412.
-Note that there may be other sequences of swaps but it can be shown that 3412 is the largest possible number.
-Also note that we may not swap the digit 4 with the digit 1 since they are of different parities.
-```
-
-簡單來說，你可以對input中**相同性質**(這邊指的是都是**奇數**或都是**偶數**)的數字進行交換，要求經過交換後(也有可能不需要交換)可以達到的**最大值**
+將原本的數字字串不斷分切成`k`等分，並將每等分都**依照各位數加總**，再將加總後的結果**組成新字串**，直到最後的字串長度**小於等於k**
 
 ### Concept：
 
-所以，我們可以將input中的數字分為：`Odd`跟`Even`
-
-又因為`Odd`只能跟`Odd`換，`Even`只能跟`Even`換
-
-為了達到最大值，勢必要將**大的數字擺在小的數字前面**
+就照著題意暴力硬做
 
 ## Solution：
-
-將input拆成`Odd`跟`Even`，各自**sort**之後再組合成Answer
 
 **Solution**
 
 ```cpp
+#define range(x) x.begin(),x.end()
+
 class Solution {
 public:
-    int largestInteger(int num) {
-        vector<int> orig(0) ;
-        vector<int> Odd(0) , Even(0);
-        int n;
-        while(num){
-            int v = num%10;
-            int Type =num%2;
-            if(Type){
-                Odd.push_back(-v);
-            }
-            else{
-                Even.push_back(-v);
-            }
-            orig.push_back(Type);
-            num/=10;
+    int to_int(string s){
+        int ret=0;
+        for(int i=0;i<s.size();i++){
+            ret+=s[i]-'0';
         }
-        sort(Odd.begin() , Odd.end());
-        sort(Even.begin() , Even.end());
+        return ret;
+    }
+    string to_str(int n){
+        string ret= "";
         
-        n= orig.size();
-        reverse(orig.begin() , orig.end());
+        while(n){
+            ret+=char('0'+n%10);
+            n/=10;
+        }
+        
+        if(ret=="") return "0";
+        reverse(range(ret));
+        return ret;
+    }
 
-        int Ans=0;
-        int I=0,J=0;
+    string digitSum(string s, int k) {
+        
+        while( s.size() > k ){
+            int last=0,next=k, n = s.size();
 
-        for(int t : orig){
-            Ans*=10;
-            if( t ){
-                Ans-=Odd[I++];
+            vector<string> Sub;
+            while(last+k <= n){
+                Sub.push_back(s.substr(last,k) );
+                last+=k;
             }
-            else{
-                Ans-=Even[J++];
+            if(last<n){
+                Sub.push_back(s.substr(last,s.size()-last));
+            }
+            
+
+            for(string &i:Sub){
+                i = to_str( to_int(i) );
+            }
+            
+            s.clear();
+            
+            for(string &i:Sub){
+                s+=i;
             }
             
         }
-        return Ans;
+
+        return s;
     }
 };
 ```
 
-其中將每一位數字`push_back`到`vector`中的時候，我將數字乘一個**負號**，因為`algorithm`預設是小大到排序，而**負號**可以取代`compare function`的作用（但sort完記得再取一次負號將數字轉正）
+## Minimum Rounds to Complete All Tasks
 
-當然sort的部份可以寫成`counting sort`，但是範圍不大用一般的sort也不會差太多。
-
-## Minimize Result by Adding Parentheses to Expression 
-
-[Minimize Result by Adding Parentheses to Expression](https://leetcode.com/contest/weekly-contest-288/problems/minimize-result-by-adding-parentheses-to-expression/)
+[Minimum Rounds to Complete All Tasks](https://leetcode.com/contest/weekly-contest-289/problems/minimum-rounds-to-complete-all-tasks/)
 
 ### Description:
 
-```
-You are given a 0-indexed string expression of the form "<num1>+<num2>" where <num1> and <num2> represent positive integers.
+You are given a **0-indexed** integer array `tasks`, where `tasks[i]` represents the difficulty level of a task. In each round, you can complete either 2 or 3 tasks of the **same difficulty level**.
 
-Add a pair of parentheses to expression such that after the addition of parentheses, expression is a valid mathematical expression and evaluates to the smallest possible value. The left parenthesis must be added to the left of '+' and the right parenthesis must be added to the right of '+'.
+Return the **minimum** rounds required to complete all the tasks, or `-1` if it is not possible to complete all the tasks.
 
-Return expression after adding a pair of parentheses such that expression evaluates to the smallest possible value. If there are multiple answers that yield the same result, return any of them.
-
-The input has been generated such that the original value of expression, and the value of expression after adding any pair of parentheses that meets the requirements fits within a signed 32-bit integer
-```
-
-### example:
+### Example:
 
 **Example 1:**
 ```
-Input: expression = "247+38"
-Output: "2(47+38)"
-Explanation: The expression evaluates to 2 * (47 + 38) = 2 * 85 = 170.
-Note that "2(4)7+38" is invalid because the right parenthesis must be to the right of the '+'.
-It can be shown that 170 is the smallest possible value.
+Input: tasks = [2,2,3,3,2,4,4,4,4,4]
+Output: 4
+Explanation: To complete all the tasks, a possible plan is:
+- In the first round, you complete 3 tasks of difficulty level 2. 
+- In the second round, you complete 2 tasks of difficulty level 3. 
+- In the third round, you complete 3 tasks of difficulty level 4. 
+- In the fourth round, you complete 2 tasks of difficulty level 4.  
+It can be shown that all the tasks cannot be completed in fewer than 4 rounds, so the answer is 4.
 ```
-**Example 3:**
+**Example 2:**
 ```
-Input: expression = "12+34"
-Output: "1(2+3)4"
-Explanation: The expression evaluates to 1 * (2 + 3) * 4 = 1 * 5 * 4 = 20.
-```
-
-**Example 3:**
-```
-Input: expression = "999+999"
-Output: "(999+999)"
-Explanation: The expression evaluates to 999 + 999 = 1998.
+Input: tasks = [2,3,3]
+Output: -1
+Explanation: There is only 1 task of difficulty level 2, but in each round, you can only complete either 2 or 3 tasks of the same difficulty level. Hence, you cannot complete all the tasks, and the answer is -1.
 ```
 
-將括號插入運算式中，並求出插入後運算結果最小值的運算式
+轉換題意就是：在一次操作中，可以**刪除 2 或 3 個**陣列中**相同的數字**，並求出清空陣列的最少操作次數（如果不能將陣列中所有數字刪除回傳`-1`）
 
 ### Concept：
 
-雖然當時沒有寫出來，不過那時候的解題思路算是對的（字串操作的部份一直寫爛）
+1. 討論無法達成的情況
+經過簡單的觀察可以發現，如果某個數字**出現次數小於 2**就**無法被消除**
 
-可以將第一個數字（叫第一個數字`A`）和第二個數字（叫第二個數字`B`）都各拆成兩半如：
+而 2 跟 3 可以組合出所有的質數（`5=3+2` , `7=3+2+2` ... ）所以**出現次數大於等於 2 的**數字都可以被刪除
 
-題目：`"247+38"`
+2. 求畜最小操作次數
+要求出清空該數字的最小操作數量，也就是盡可能的用**3**來表示該數字**出現的次數**
+
+又一個數字`mod 3`可以分成以下 3 個情況：
+
+這邊設某個數字的出現次數為`Count`
+- `Count%3 == 0 `
+
+每次都刪去 3 個就是最小操作次數
+
+也就是刪除該數字需要 `Count/3` 次
+- `Count%3 == 2 `
+
+我覺得`%3==2`的情況比較顯見
+
+
+
+最小操作次數就是`Count/3 + 1`
+
+- `Count%3 == 1 `
+
 
 247:
 ```
