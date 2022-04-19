@@ -189,193 +189,60 @@ Explanation: There is only 1 task of difficulty level 2, but in each round, you 
 
 我覺得`%3==2`的情況比較顯見
 
+最小操作次數是`Count/3 + 1`
 
+因為最後餘`2`，而每次操作只能刪掉 2 或 3 個數字
 
-最小操作次數就是`Count/3 + 1`
+所以最後`+1` (代表刪除最後剩餘的 2 個數字)
 
 - `Count%3 == 1 `
 
+這種情況代表`Count`可以被看成：
 
-247:
-```
-247 0
-24 7
-2 47
-0 247
-```
-38:
-```
-38 0
-3 8
-0 38
-```
+`Count = (3+3+3...3) + (3+1)`
 
-而題目要求的就是：
-```
-A第一部份*( A第二部份 + B第一部份 ) * B第二部份
-```
+而最後的`(3+1)`可以拆成`2+2`
 
-所以將兩個數字都拆成兩個部份後，再經過兩層for迴圈枚舉就好了
+數量剛好是`Count/3 +1 `
 
-還有記得`A第一部份`或`B第二部份`為`0`時要改成`1`下去乘
+**綜合以上：**
+
+- `Count%3 == 1` or `Count%3 == 2` 
+最小操作次數：都是`Count/3 + 1`次
+
+- `Count% == 0 `
+最小操作次數：`Count/3`次
+
 ## Solution：
 
-當時因為實做一直爛掉，而且沒有用**`substr`**這種好用的工具，一開始就將`string`轉成`vector<int>`，最後才看到答案是要`string`就~~崩潰不寫了~~
-
-在賽後還是有實做出來，不過真的寫的又臭又長...
-**Solution**
-
-沒用`substr`或`atoi`寫出來的版本：
+一開始用`unordered_map`(Hash table)紀錄每個數字出現幾次
 
 ```cpp
+
 class Solution {
 public:
-
-    string to_str(int n){
-        string res;
-        while(n){
-            res+=char(n%10+'0');
-            n/=10;
-        }
-        reverse(res.begin(),res.end());
-        return res;
-    }
-    string minimizeResult(string expression) {
-        vector<int> numA,numB;
-        bool f= false;
-
-        for(char i:expression){
-            if(i=='+'){
-                f=true;
-                continue;
-            }
-            if(f){
-                numB.push_back(i-'0');
-            }
-            else{
-                numA.push_back(i-'0');
-            }
-        }
-        vector< pair<int,int> > vecA , vecB;
-        int nA = numA.size()  ,nB = numB.size();
-
-        for(int i=nA; i>=0 ;i--){
-            int j=0,Front=0,Back=0;
-            for(;j<i;j++){
-                Front*=10;
-                Front+=numA[j];
-            }
-
-            for(;j<nA;j++){
-                Back*=10;
-                Back+=numA[j];
-            }
-            vecA.push_back( {Front,Back} );
+    int minimumRounds(vector<int>& tasks) {
+        unordered_map<int,int> M;
+        for(int i:tasks){
+            M[i]++;
         }
 
-        for(int i=nB; i>=0 ;i--){
-            int j=0,Front=0,Back=0;
-            for(;j<i;j++){
-                Front*=10;
-                Front+=numB[j];
+        int ans=0;
+        for(auto i:M){
+            int cur = i.second;
+            if( cur <2) return -1;
+
+            int last = cur%3;
+
+            if(last==1 || last==2 ){
+                ans+=cur/3+1;
             }
-
-            for(;j<nB;j++){
-                Back*=10;
-                Back+=numB[j];
-            }
-            vecB.push_back( {Front,Back} );
-        }
-        
-
-        int Ans = INT_MAX;
-        string Result;
-        for(int i=0;i<vecA.size();i++){
-            for(int j=0;j<vecB.size();j++){
-                auto A = vecA[i];
-                auto B = vecB[j];
-                int A_Front =  (A.first==0 ? 1:A.first);
-                int A_Back = A.second;
-                int B_Front = B.first;
-                int B_Back = (B.second==0 ? 1:B.second);
-
-                if( A_Back==0 || B_Front==0) continue;
-                int res = A_Front*( A_Back + B_Front )*B_Back;
-                
-                if( res<Ans){
-                    Ans=res;
-                    Result=(A.first==0 ? "":to_str(A_Front))+"("+to_str(A_Back)+"+"+to_str(B_Front)+")"+(B.second==0 ? "":to_str(B_Back));
-                }
+            else {
+                ans+=cur/3;
             }
         }
 
-
-        cout<<Ans<<'\n';
-        return Result;
-    }
-};
-
-```
-
-簡潔很多的版本：
-```cpp
-class Solution {
-public:
-    int to_int(string str){
-        int ret=0;
-        for(char i:str){
-            ret*=10;
-            ret+=int(i-'0');
-        }
-        return ret;
-    }
-    string minimizeResult(string exp) {
-        int exp_len = exp.size();
-        int add_idx = 0;
-        for(char i:exp){
-            if(i=='+'){
-                break ;
-            }
-            add_idx++;
-        }
-        
-        string numA = exp.substr(0,add_idx);
-        string numB = exp.substr(add_idx+1 , exp_len-add_idx);
-
-        cout<<numA<<' '<<numB;
-        int nA = numA.size()  ,nB = numB.size();
-
-        vector<pair<string,string> > vecA , vecB;
-
-        for(int i=0;i<=nA;i++){
-            vecA.push_back( {numA.substr(0,i) , numA.substr(i,nA-i)} );
-        }
-
-        for(int i=0;i<=nB;i++){
-            vecB.push_back( {numB.substr(0,i) , numB.substr(i,nB-i)} );
-        }
-
-        int n = vecA.size() , m = vecB.size();
-
-        int Min = INT_MAX;
-        string Ans;
-        for(auto i:vecA){
-            for(auto j:vecB){
-                if( i.second=="" || j.first=="") continue;
-
-                int A_Front = (i.first=="" ? 1:to_int(i.first));
-                int A_Back = to_int(i.second);
-                int B_Front = to_int(j.first);
-                int B_Back = (j.second=="" ? 1:to_int(j.second));
-                int cur = A_Front*(A_Back+B_Front)*B_Back;
-
-                if( cur < Min){
-                    Min=cur;
-                    Ans=i.first+"("+i.second+"+"+j.first+")"+j.second;
-                }
-            }
-        }
-        return Ans;
+        return ans;
     }
 };
 
