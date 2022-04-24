@@ -1,7 +1,7 @@
 ---
 title: 290th LeetCode Weekly Contest
 subtitle: Leetcode 290th 週賽
-date:   2022-04-24 17:30:00 +0800
+date:   2022-04-24 17:20:00 +0800
 
 tag: [c++/c,notes,Leetcode]
 
