@@ -33,7 +33,7 @@ readtime: true
 
 - [Maximum Trailing Zeros in a Cornered Path](https://leetcode.com/contest/weekly-contest-289/problems/maximum-trailing-zeros-in-a-cornered-path/)
 
-- [Maximum Total Beauty of the Gardens](https://leetcode.com/contest/weekly-contest-288/problems/maximum-total-beauty-of-the-gardens/)
+- [Longest Path With Different Adjacent Characters](https://leetcode.com/contest/weekly-contest-289/problems/longest-path-with-different-adjacent-characters/)
 
 ## Calculate Digit Sum of a String
 
@@ -268,6 +268,7 @@ Note:
 ### Exmample:
 
 **Example 1:**
+
 ![Ex 1](https://assets.leetcode.com/uploads/2022/03/23/ex1new2.jpg)
 ```
 Input: grid = [[23,17,15,3,20],[8,1,20,27,11],[9,4,6,2,21],[40,9,1,10,6],[22,7,4,5,3]]
@@ -281,6 +282,7 @@ The grid on the right is not a cornered path as it requires a return to a previo
 ```
 
 **Example 2:**
+
 ![Ex 2](https://assets.leetcode.com/uploads/2022/03/25/ex2.jpg)
 ```
 Input: grid = [[4,3,2],[7,6,1],[8,8,8]]
@@ -289,59 +291,157 @@ Explanation: The grid is shown in the figure above.
 There are no cornered paths in the grid that result in a product with a trailing zero.
 ```
 
-可以進行`K`次操作，每次操作都可以將任意的元素`+1`。
+**cornered path**：是在 grid 上最多轉一次彎的路徑
 
-要求進行完K次操作後，所有元素的**乘積**（並`mod 1e9+7`）
+題目要求合法的路經中的乘積**尾數最多有幾個 0**
+
+例如：
+
+路徑上有`10 20 3 7 5 19`
+
+這些的乘積是`399000`
+
+所以要回傳 `3` （尾數有 3 個零）
+
+~~比賽時完全沒有想法~~
 
 ### Concept：
 
-一看到題目的時候就很**Greedy**的想：「總共可以加K次，那就每次都抓出最小的來加！」
+1. 位數要有 0 的條件
 
-要可以動態的插入資料，而且取出的資料都是最小值的資料結構...
+尾數要有 0 ，勢必乘積中要有`2`和`5`，並且`2`和`5`以外的數字相乘並不會影響答案
 
-也只有`priority_queue`了！( 這邊指的是Min Heap )
+所以對於每一個的數字，只需要紀錄`2`和`5`的因數數量
 
-但是為什麼這樣會是乘積最大值？（~~我也不會證明~~）
+如：這格數字是`1500`可以紀錄成`{2,3}`（我用`pair`來表示：`first`是`2`的數量，`second`是`5`的數量）
+
+2. 要如何知道一條路徑的尾數有幾個 0 ?
+
+看了高手的解法，關鍵是：
+
+**前綴合**
+
+開 2 個 `mxn` 的陣列紀錄從**上方**累加的和從**左方**累加的前綴合
+
+紀錄從上個位置累加過來的`2`和`5`的數量
+
+3. 枚舉合法路徑
+
+合法路徑可以是 ：
+
+(以下`(i,j)`都代表座標)
+- Up-Left :
+
+`(0,j)`到`(i,j)`在從`(i,j)`到`(i,0)` 
+- Up-right :
+
+`(0,j)`到`(i,j)`在從`(i,j)`到`(i,n-1)` 
+- Down-Left :
+
+`(m-1,j)`到`(i,j)`在從`(i,j)`到`(i,0)`
+- Down-Right :
+
+`(m-1,j)`到`(i,j)`在從`(i,j)`到`(i,n-1)`
+
+然後雙層迴圈枚舉所有中間座標`( i , j )`
+
+(並且要注意標界限制，對於`i==0`或是`j==0`需要特判)
+
+3. 尾數最多 0 的合法路徑
+
+藉由`2.`和`3.`的技巧：
+
+尾數最多`0`的合法 path 是枚舉到的`( i , j )`中
+
+- `Up-Left`
+- `Up-Right`
+- `Down-Left`
+- `Down-Right`
+
+這 4 個路經的`max( min( factor 5 of ith path , factor 2 of ith path ) )`
+
 ### Solution:
 
-結果打比賽時忘記開`long long`...
+就算了解概念後，實做還是挺麻煩...（ 尤其是邊界的限制 ）
+
+也可以`overload operator`來降低實做的雜度（在做`pair`的前綴合的時候）
 
 ```cpp
+#define pii pair<int,int>
+#define F first
+#define S second
+
 class Solution {
 public:
-    int maximumProduct(vector<int>& nums, int k) {
-        priority_queue<int,vector<int> ,greater<int> > pq;
-        long long Mod = 1e9+7;
-        for(const int i : nums){
-            pq.push(i);
+    pii Get(int x){
+        int factor2=0 ,factor5=0;
+        while( x%5==0 ){
+            factor5++;
+            x/=5;
         }
-
-        while(k--){
-            int v = pq.top();
-            pq.pop();
-            pq.push( v+1);
+        while( x%2==0 ){
+            factor2++;
+            x/=2;
         }
-
-        long long ans=1;
-        while(pq.size()){
-            ans=( ans*pq.top() )%Mod;
-            pq.pop();
+        return { factor2 , factor5 } ;// factor: 2,5 
+    }
+    int maxTrailingZeros(vector<vector<int>>& grid) {
+        int  m = grid.size() , n = grid[0].size() ; 
+        vector< vector< pii > > Hor(m, vector<pii>(n) ) , Ver(m,vector<pii>(n) ) ;
+        
+        for(int j=0;j<n;j++){
+            Hor[0][j] = Get( grid[0][j] );
         }
-
-        return int(ans);
-    
+        // prefix sum
+        for(int i=1;i<m;i++){
+            for(int j=0;j<n;j++){
+                pii cur = Get(grid[i][j]);
+                Hor[i][j].F = Hor[i-1][j].F + cur.F;
+                Hor[i][j].S = Hor[i-1][j].S + cur.S;
+            }
+        }
+        
+        for(int i=0;i<m;i++){
+            Ver[i][0] = Get( grid[i][0] );
+        }
+        
+        for(int i=0;i<m;i++){
+            for(int j=1;j<n;j++){
+                pii cur = Get(grid[i][j]);
+                Ver[i][j].F = Ver[i][j-1].F + cur.F;
+                Ver[i][j].S = Ver[i][j-1].S + cur.S;
+            }
+        }
+        
+        
+        int ans=0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                int Up_2 = Hor[i][j].F;
+                int Down_2 = (i==0 ? Hor[m-1][j].F :Hor[m-1][j].F - Hor[i-1][j].F);
+                int Left_2 = (j==0 ? 0:Ver[i][j-1].F);
+                int Right_2 = Ver[i][n-1].F - Ver[i][j].F;
+                
+                int Up_5 = Hor[i][j].S;
+                int Down_5 = (i==0 ? Hor[m-1][j].S :Hor[m-1][j].S - Hor[i-1][j].S);
+                int Left_5 = (j==0 ? 0:Ver[i][j-1].S);
+                int Right_5 = Ver[i][n-1].S - Ver[i][j].S;
+                
+                int UL=min(Up_2+Left_2,Up_5+Left_5);
+                int UR=min(Up_2+Right_2,Up_5+Right_5);
+                int DL=min(Down_2+Left_2,Down_5+Left_5);
+                int DR=min(Down_2+Right_2,Down_5+Right_5);
+                
+                ans=max(ans, max(max(UL,UR),max(DL,DR) ));
+                
+            }
+        }
+        
+        return ans;
     }
 };
+
 ```
-
-而將所有`nums`的元素丟入`priority_queue`的部份可以這樣初始化（看別人的code看到的）
-
-```cpp
-
-priority_queue<int,vector<int> ,greater<int> > pq( nums.begin() , nums.end() );
-```
-
-
 
 ## Maximum Total Beauty of the Gardens 
 
