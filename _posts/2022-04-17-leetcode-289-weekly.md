@@ -364,7 +364,7 @@ There are no cornered paths in the grid that result in a product with a trailing
 
 就算了解概念後，實做還是挺麻煩...（ 尤其是邊界的限制 ）
 
-也可以`overload operator`來降低實做的雜度（在做`pair`的前綴合的時候）
+也可以`overload operator`來降低實做的複雜度（在做`pair`的前綴合的時候）
 
 ```cpp
 #define pii pair<int,int>
@@ -443,43 +443,114 @@ public:
 
 ```
 
-## Maximum Total Beauty of the Gardens 
+## Longest Path With Different Adjacent Characters
 
-[Maximum Total Beauty of the Gardens](https://leetcode.com/contest/weekly-contest-288/problems/maximum-total-beauty-of-the-gardens/)
+[Longest Path With Different Adjacent Characters](https://leetcode.com/contest/weekly-contest-289/problems/longest-path-with-different-adjacent-characters/)
 
 ### Description :
-Alice is a caretaker of n gardens and she wants to plant flowers to maximize the total beauty of all her gardens.
 
-You are given a 0-indexed integer array flowers of size n, where flowers[i] is the number of flowers already planted in the ith garden. Flowers that are already planted cannot be removed. You are then given another integer newFlowers, which is the maximum number of flowers that Alice can additionally plant. You are also given the integers target, full, and partial.
+You are given a **tree** (i.e. a connected, undirected graph that has no cycles) **rooted** at node `0` consisting of `n` nodes numbered from `0` to `n - 1`. The tree is represented by a **0-indexed** array `parent` of size `n`, where `parent[i]` is the parent of node `i`. Since node `0` is the root, `parent[0] == -1`.
 
-A garden is considered complete if it has at least target flowers. The total beauty of the gardens is then determined as the sum of the following:
+You are also given a string `s` of length `n`, where `s[i]` is the character assigned to node `i`.
 
-- The number of complete gardens multiplied by full.
-- The minimum number of flowers in any of the incomplete gardens multiplied by partial. If there are no incomplete gardens, then this value will be 0.
+Return the length of the **longest path** in the tree such that no pair of **adjacent** nodes on the path have the same character assigned to them.
 
-Return the maximum total beauty that Alice can obtain after planting at most newFlowers flowers.
+
 
 ### Example:
 
+**Example 1:**
+
+![Ex 1 ](https://assets.leetcode.com/uploads/2022/03/25/testingdrawio.png)
+
 ```
-Input: flowers = [1,3,1,1], newFlowers = 7, target = 6, full = 12, partial = 1
-Output: 14
-Explanation: Alice can plant
-- 2 flowers in the 0th garden
-- 3 flowers in the 1st garden
-- 1 flower in the 2nd garden
-- 1 flower in the 3rd garden
-The gardens will then be [3,6,2,2]. She planted a total of 2 + 3 + 1 + 1 = 7 flowers.
-There is 1 garden that is complete.
-The minimum number of flowers in the incomplete gardens is 2.
-Thus, the total beauty is 1 * 12 + 2 * 1 = 12 + 2 = 14.
-No other way of planting flowers can obtain a total beauty higher than 14.
+Input: parent = [-1,0,0,1,1,2], s = "abacbe"
+Output: 3
+Explanation: The longest path where each two adjacent nodes have different characters in the tree is the path: 0 -> 1 -> 3. The length of this path is 3, so 3 is returned.
+It can be proven that there is no longer path that satisfies the conditions. 
 ```
+
+**Example 2:**
+
+![ Ex 2](https://assets.leetcode.com/uploads/2022/03/25/graph2drawio.png)
+
+```
+Input: parent = [-1,0,0,0], s = "aabc"
+Output: 3
+Explanation: The longest path where each two adjacent nodes have different characters is the path: 2 -> 0 -> 3. The length of this path is 3, so 3 is returned.
+```
+
+**Constraints:**
+
+- `n == parent.length == s.length`
+- `1 <= n <= 105`
+- `0 <= parent[i] <= n - 1` for all `i >= 1`
+- `parent[0] == -1`
+- `parent` represents a valid tree.
+- `s` consists of only lowercase English letters.
+
+給一棵**Tree**，並且每個node都是char，又求由**沒有相同char相鄰**的**最長路徑**
 
 ### Concept:
 
-比賽時感覺有點DP，但是完全沒有頭緒
+有想到`DFS`但是沒有想到完整的架構
 
-也還沒看懂
+反而想到`樹壓平`＋`Sliding Window`的奇怪操作（但這是錯ㄉ ）
 
-解法待補...
+看了別人的解法，其中的關鍵是：
+
+一棵**樹**中**最長的合法路徑**是：
+
+**「由該節點最長的兩個合法路徑所組成」**
+
+(好像很理所當然，但是知道這個關鍵就不需要將 `DFS` 的所有子path都枚舉過一遍)
+
+
+1. 建立 Tree
+
+原本只有給`parent`的關係，先還原成`Tree`（`Parent`指向`child`）
+
+2. DFS 
+
+`First`和`Second`分別紀錄的是對於該節點的**最長路徑**和**次長路徑**
+
+並且要更新答案時要順變考慮**子節點與當前節點是否為相同字元**（題目要求要不同字元）
+
+`ans`是開在 `class`的變數，紀錄DFS到當前`Max Path Length`
+
+而`DFS`回傳的是**包含當前節點的最長路徑**
+
+### Solution:
+
+```cpp
+class Solution {
+public:
+    
+    int ans=0 , n ;
+    vector< vector<int> > G;
+    int DFS(int cur,string &s){
+        int First=0 , Second=0;
+        
+        for(int nxt:G[cur] ){
+            int res = DFS(nxt , s);
+            if( s[cur]==s[nxt] ) continue;
+            if( res > Second) Second = res;
+            if( Second > First ) swap(First,Second);
+        }
+        
+        ans = max( ans , First+Second+1);
+        return First+1;
+    }
+    int longestPath(vector<int>& parent, string s) {
+        n = parent.size();
+        G.resize(n);
+        
+        for(int i=1;i<n;i++){
+            G[ parent[i] ].push_back(i);
+        }
+        DFS(0,s);
+        
+        return ans;
+    }
+};
+```
