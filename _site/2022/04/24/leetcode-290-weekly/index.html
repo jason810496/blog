@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+
+<head>
+
+  <link rel="shortcut icon" href="/assets/img/coding01.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>290th LeetCode Weekly Contest</title>
+
+  
+  <meta name="author" content="Jason Liu">
+  
+
+  <meta name="description" content="Leetcode 290th 週賽">
+
+  
+  <meta name="theme-color" content="#0085A1">
+  
+
+  
+  <meta name="keywords" content="algorithmc++cppcdata structurelinuxcompetitive programmingfront endhtmlcssjavascriptAPCS">
+  
+
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R44VVX682B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R44VVX682B');
+</script>
+
+
+  
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TM99SLZ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+  
+<!-- Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-219638882-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="LJO's Blog">
+  <meta property="og:title" content="290th LeetCode Weekly Contest">
+  <meta property="og:description" content="Leetcode 290th 週賽">
+
+  
+  <meta property="og:image" content="https://i.imgur.com/ovHLF6X.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Jason Liu">
+  <meta property="og:article:published_time" content="2022-04-24T09:20:00+00:00">
+  <meta property="og:url" content="http://localhost:4000/2022/04/24/leetcode-290-weekly/">
+  <link rel="canonical" href="http://localhost:4000/2022/04/24/leetcode-290-weekly/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="290th LeetCode Weekly Contest">
+  <meta property="twitter:description" content="Leetcode 290th 週賽">
+
+  
+  <meta name="twitter:image" content="https://i.imgur.com/ovHLF6X.png">
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM99SLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">LJO's Blog</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/achievement">Achievement</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/tags/#algorithm">Algorithm</a>
+                  <a class="dropdown-item" href="/tags/#project">Project</a>
+                  <a class="dropdown-item" href="/tags/#notes">Notes</a>
+            </div>
+          </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="http://localhost:4000/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/Profile.png" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "290th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/24/leetcode-290-weekly/", \
+          "date"     : "April 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "289th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/18/leetcode-289-weekly/", \
+          "date"     : "April 18, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "76th LeetCode Bi-Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/16/leetcode-76-biweekly/", \
+          "date"     : "April 16, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "我如何開始打Code的？", \
+          "category" : "notesAPCSIONCamp", \
+          "url"      : "/2022/04/13/coding-road0/", \
+          "date"     : "April 13, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "288th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/10/leetcode-288-weekly/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "程式競賽中的數論", \
+          "category" : "c++/cnotesMath", \
+          "url"      : "/2022/04/10/math-theory-01-zh/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "動態顯示的Zerojudge stats！", \
+          "category" : "project", \
+          "url"      : "/2022/03/24/ZJstats0/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "逆序數對(Array Inversion)", \
+          "category" : "c++/calgorithmnotes", \
+          "url"      : "/2022/03/24/inversion-merge-sort01/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "C系列 void pointer之噩夢", \
+          "category" : "c++/cnotes", \
+          "url"      : "/2022/03/11/void-pointer01/", \
+          "date"     : "March 11, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "打造好看的Github Profile", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/08/github-profile-01-zh/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Build a eye-catching Github Profile !", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/08/github-profile-01-eng/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "在linux連接藍芽裝置", \
+          "category" : "linuxnotes", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-zh/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Connect bluetooth device on Linux", \
+          "category" : "linuxnoteseng", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-eng/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "SEO setting of Github.io Blog", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/07/blog-static-setting01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Github subdirectories", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/07/github-subdir01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Markdown 語法測試", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/markdown-tutorial01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Test 01", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/test01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Achievement", \
+          "category" : "page", \
+          "url"      : "/achievement/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page3/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page4/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="https://i.imgur.com/ovHLF6X.png"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>290th LeetCode Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 290th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 24, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 6 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>290th LeetCode Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 290th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 24, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 6 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <h1 id="290th-leetcode-weekly-contest">290th LeetCode Weekly Contest</h1>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-290">290th LeetCode Weekly Contest</a></p>
+
+<p>這次解出 <strong>3</strong> 題啦</p>
+
+<p>(不過是解出第四題的<code class="language-plaintext highlighter-rouge">Hard</code>而不是第三題的<code class="language-plaintext highlighter-rouge">Medium</code> www)</p>
+
+<p>但整題還算有進步ㄅ</p>
+
+<p><strong>這次週賽的四個題目：</strong></p>
+
+<ul>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-290/problems/intersection-of-multiple-arrays">Intersection of Multiple Arrays</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-290/problems/count-lattice-points-inside-a-circle/">Count Lattice Points Inside a Circle</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-290/problems/count-number-of-rectangles-containing-each-point/">Count Number of Rectangles Containing Each Point</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-290/problems/number-of-flowers-in-full-bloom/">Number of Flowers in Full Bloom</a></p>
+  </li>
+</ul>
+
+<h2 id="intersection-of-multiple-arrays">Intersection of Multiple Arrays</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-290/problems/intersection-of-multiple-arrays">Intersection of Multiple Arrays</a></p>
+
+<h3 id="description">Description:</h3>
+
+<p>Given a 2D integer array <code class="language-plaintext highlighter-rouge">nums</code> where <code class="language-plaintext highlighter-rouge">nums[i]</code> is a non-empty array of <strong>distinct</strong> positive integers, return the list of integers that are present in <strong>each array</strong> of <code class="language-plaintext highlighter-rouge">nums</code> sorted in <strong>ascending order.</strong></p>
+
+<h3 id="example">Example:</h3>
+
+<p><strong>Example 1:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]
+Output: [3,4]
+Explanation: 
+The only integers present in each of nums[0] = [3,1,2,4,5], nums[1] = [1,2,3,4], and nums[2] = [3,4,5,6] are 3 and 4, so we return [3,4].
+</code></pre></div></div>
+<p><strong>Example 2:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [[1,2,3],[4,5,6]]
+Output: []
+Explanation: 
+There does not exist any integer present both in nums[0] and nums[1], so we return an empty list [].
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= nums.length &lt;= 1000</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= sum(nums[i].length) &lt;= 1000</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= nums[i][j] &lt;= 1000</code></li>
+  <li>All the values of <code class="language-plaintext highlighter-rouge">nums[i]</code> are <strong>unique</strong>.</li>
+</ul>
+
+<p>給一個 2D 陣列要找出在每個每個<code class="language-plaintext highlighter-rouge">子陣列</code>都有出現過的數字，並且數字要以升序排好</p>
+
+<h3 id="concept">Concept：</h3>
+
+<p>直接開一個<code class="language-plaintext highlighter-rouge">map</code>紀錄<strong>這個數字出現過幾次</strong>（這邊也可以用<code class="language-plaintext highlighter-rouge">unordered_map</code>不過符合的數字還要 sort 過 ）</p>
+
+<p>如果該數字<strong>出現的次數</strong>與<strong>子陣列數量</strong>相同：就是符合的數字</p>
+
+<h2 id="solution">Solution：</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define F first
+#define S second
+#define PB push_back
+</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">intersection</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">M</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">nums</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">j</span><span class="o">:</span><span class="n">i</span><span class="p">){</span>
+                <span class="n">M</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">M</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">S</span><span class="o">==</span><span class="n">n</span><span class="p">)</span> <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">F</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+
+</code></pre></div></div>
+
+<h2 id="count-lattice-points-inside-a-circle">Count Lattice Points Inside a Circle</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-290/problems/count-lattice-points-inside-a-circle/">Count Lattice Points Inside a Circle</a></p>
+
+<h3 id="description-1">Description:</h3>
+
+<p>Given a 2D integer array <code class="language-plaintext highlighter-rouge">circles</code> where <code class="language-plaintext highlighter-rouge">circles[i] = [xi, yi, ri]</code> represents the center <code class="language-plaintext highlighter-rouge">(xi, yi)</code> and radius <code class="language-plaintext highlighter-rouge">ri</code> of the <code class="language-plaintext highlighter-rouge">ith</code> circle drawn on a grid, return the <code class="language-plaintext highlighter-rouge">number of lattice point</code>s that are present inside <code class="language-plaintext highlighter-rouge">at least one</code> circle.</p>
+
+<p><strong>Note:</strong></p>
+
+<ul>
+  <li>A <code class="language-plaintext highlighter-rouge">lattice point</code> is a point with integer coordinates.</li>
+  <li>Points that lie <code class="language-plaintext highlighter-rouge">on the circumference</code> of a circle are also considered to be inside it.</li>
+</ul>
+
+<h3 id="example-1">Example:</h3>
+
+<p><strong>Example 1:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/02/exa-11.png" alt="Ex 1" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: circles = [[2,2,1]]
+Output: 5
+Explanation:
+The figure above shows the given circle.
+The lattice points present inside the circle are (1, 2), (2, 1), (2, 2), (2, 3), and (3, 2) and are shown in green.
+Other points such as (1, 1) and (1, 3), which are shown in red, are not considered inside the circle.
+Hence, the number of lattice points present inside at least one circle is 5.
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/02/exa-22.png" alt="Ex 2" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: circles = [[2,2,2],[3,4,1]]
+Output: 16
+Explanation:
+The figure above shows the given circles.
+There are exactly 16 lattice points which are present inside at least one circle. 
+Some of them are (0, 2), (2, 0), (2, 4), (3, 2), and (4, 4).
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= circles.length &lt;= 200</code></li>
+  <li><code class="language-plaintext highlighter-rouge">circles[i].length == 3</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= xi, yi &lt;= 100</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= ri &lt;= min(xi, yi)</code></li>
+</ul>
+
+<p>題目給出很多個圓，每個原有給出中心座標<code class="language-plaintext highlighter-rouge">(x,y)</code>和半徑<code class="language-plaintext highlighter-rouge">r</code></p>
+
+<p>要求出每個圓<code class="language-plaintext highlighter-rouge">聯集中</code>的<code class="language-plaintext highlighter-rouge">整數座標點</code>有幾個</p>
+
+<h3 id="concept-1">Concept：</h3>
+
+<ol>
+  <li>要如何求出在一個圓中的整數座標點？</li>
+</ol>
+
+<ul>
+  <li>
+    <p>枚舉座標點</p>
+  </li>
+  <li>
+    <p>畢氏定理</p>
+  </li>
+</ul>
+
+<p>對於每個中心座標為<code class="language-plaintext highlighter-rouge">(X,Y)</code>的圓，先枚舉在<code class="language-plaintext highlighter-rouge">(i,j)</code></p>
+
+<p>並且<code class="language-plaintext highlighter-rouge">i</code> in range:<code class="language-plaintext highlighter-rouge">[X-R,X+R]</code>、<code class="language-plaintext highlighter-rouge">j</code> in range:<code class="language-plaintext highlighter-rouge">[Y-R,Y+R]</code></p>
+
+<p>再判斷<code class="language-plaintext highlighter-rouge">(i,j)</code>與<code class="language-plaintext highlighter-rouge">(X,Y)</code>的距離是否小於等於<code class="language-plaintext highlighter-rouge">r</code></p>
+
+<p>(用<code class="language-plaintext highlighter-rouge">dx*dx + dy*dy &lt;= r*r </code>可以避免小數點誤差)</p>
+
+<ol>
+  <li>圓的聯集</li>
+</ol>
+
+<p>用<code class="language-plaintext highlighter-rouge">set</code>紀錄所有符合的該圓的座標點</p>
+
+<p>這樣可以去除<code class="language-plaintext highlighter-rouge">交集</code>的部份</p>
+
+<p>而聯集的大小恰好會是<code class="language-plaintext highlighter-rouge">Set</code>的<code class="language-plaintext highlighter-rouge">Size</code></p>
+
+<h2 id="solution-1">Solution：</h2>
+
+<p>一開始用<code class="language-plaintext highlighter-rouge">unordered_map</code>(Hash table)紀錄每個數字出現幾次</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pii</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">countLatticePoints</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">circles</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">set</span><span class="o">&lt;</span><span class="n">pii</span><span class="o">&gt;</span> <span class="n">Set</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">circles</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">X</span><span class="o">=</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="n">Y</span><span class="o">=</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">R</span><span class="o">=</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="o">-</span><span class="n">R</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">X</span><span class="o">+</span><span class="n">R</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">y</span><span class="o">=</span><span class="n">Y</span><span class="o">-</span><span class="n">R</span><span class="p">;</span><span class="n">y</span><span class="o">&lt;=</span><span class="n">Y</span><span class="o">+</span><span class="n">R</span><span class="p">;</span><span class="n">y</span><span class="o">++</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">X</span><span class="p">;</span>
+                    <span class="kt">int</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">y</span><span class="o">-</span><span class="n">Y</span><span class="p">;</span>
+
+                    <span class="k">if</span><span class="p">(</span><span class="n">dx</span><span class="o">*</span><span class="n">dx</span><span class="o">+</span><span class="n">dy</span><span class="o">*</span><span class="n">dy</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="o">*</span><span class="n">R</span> <span class="p">){</span>
+                        <span class="n">Set</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">});</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">Set</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h2 id="count-number-of-rectangles-containing-each-point">Count Number of Rectangles Containing Each Point</h2>
+
+<ul>
+  <li><a href="https://leetcode.com/contest/weekly-contest-290/problems/count-number-of-rectangles-containing-each-point/">Count Number of Rectangles Containing Each Point</a></li>
+</ul>
+
+<h3 id="description-">Description :</h3>
+
+<p>You are given a 2D integer array <code class="language-plaintext highlighter-rouge">rectangles</code> where <code class="language-plaintext highlighter-rouge">rectangles[i] = [li, hi]</code> indicates that <code class="language-plaintext highlighter-rouge">ith</code> rectangle has a length of <code class="language-plaintext highlighter-rouge">li</code> and a height of <code class="language-plaintext highlighter-rouge">hi</code>. You are also given a 2D integer array <code class="language-plaintext highlighter-rouge">points</code> where <code class="language-plaintext highlighter-rouge">points[j] = [xj, yj]</code> is a point with coordinates <code class="language-plaintext highlighter-rouge">(xj, yj)</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">ith</code> rectangle has its <strong>bottom-left</strong> corner point at the coordinates <code class="language-plaintext highlighter-rouge">(0, 0)</code> and its <strong>top-right</strong> corner point at <code class="language-plaintext highlighter-rouge">(li, hi)</code>.</p>
+
+<p>Return an integer array <code class="language-plaintext highlighter-rouge">count</code> of length <code class="language-plaintext highlighter-rouge">points.length</code> where <code class="language-plaintext highlighter-rouge">count[j]</code> is the number of rectangles that <strong>contain</strong> the <code class="language-plaintext highlighter-rouge">jth</code> point.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">ith</code> rectangle <strong>contains</strong> the <code class="language-plaintext highlighter-rouge">jth</code> point if <code class="language-plaintext highlighter-rouge">0 &lt;= xj &lt;= li</code> and <code class="language-plaintext highlighter-rouge">0 &lt;= yj &lt;= hi</code>. Note that points that lie on the <strong>edges</strong> of a rectangle are also considered to be contained by that rectangle.</p>
+
+<h3 id="exmample">Exmample:</h3>
+
+<p><strong>Example 1:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/02/example1.png" alt="Ex 1" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: rectangles = [[1,2],[2,3],[2,5]], points = [[2,1],[1,4]]
+Output: [2,1]
+Explanation: 
+The first rectangle contains no points.
+The second rectangle contains only the point (2, 1).
+The third rectangle contains the points (2, 1) and (1, 4).
+The number of rectangles that contain the point (2, 1) is 2.
+The number of rectangles that contain the point (1, 4) is 1.
+Therefore, we return [2, 1].
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/02/example2.png" alt="Ex 2" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: rectangles = [[1,1],[2,2],[3,3]], points = [[1,3],[1,1]]
+Output: [1,3]
+Explanation:
+The first rectangle contains only the point (1, 1).
+The second rectangle contains only the point (1, 1).
+The third rectangle contains the points (1, 3) and (1, 1).
+The number of rectangles that contain the point (1, 3) is 1.
+The number of rectangles that contain the point (1, 1) is 3.
+Therefore, we return [1, 3].
+</code></pre></div></div>
+
+<p>Constraints:</p>
+
+<ul>
+  <li><strong>1 &lt;= rectangles.length, points.length &lt;= 5 * 10^4</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">rectangles[i].length == points[j].length == 2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= li, xj &lt;= 10^9</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= hi, yj &lt;= 100</code></li>
+  <li>All the <code class="language-plaintext highlighter-rouge">rectangles</code> are <strong>unique</strong>.</li>
+  <li>All the <code class="language-plaintext highlighter-rouge">points</code> are <strong>unique</strong>.</li>
+</ul>
+
+<p>有<code class="language-plaintext highlighter-rouge">rectangles</code>和<code class="language-plaintext highlighter-rouge">points</code>兩個陣列，要求出每個<code class="language-plaintext highlighter-rouge">points</code>被（ be contained by rectangles）幾個<code class="language-plaintext highlighter-rouge">rectangles</code>包含</p>
+
+<h3 id="concept-2">Concept：</h3>
+
+<p>雖然沒有解出來，不過比賽時的分析是對的</p>
+
+<ol>
+  <li>分析題目範圍：</li>
+</ol>
+
+<p>先看題目的範圍：</p>
+
+<p>` 1&lt;= posX &lt;= 10^9`</p>
+
+<p>` 1&lt;= posY &lt;= 100 `</p>
+
+<p>所以針對<code class="language-plaintext highlighter-rouge">X</code>座標應該要<code class="language-plaintext highlighter-rouge">Binary Search</code>，針對<code class="language-plaintext highlighter-rouge">Y</code>座標應該<code class="language-plaintext highlighter-rouge">Bucket sort</code>就可以了 ( 到這邊為止的分析都是正確的！ )</p>
+
+<p>（但是後來一直被<code class="language-plaintext highlighter-rouge">2D Rank Finding</code>的想法綁住，想到需要分治…<del>又感覺<code class="language-plaintext highlighter-rouge">Leetcode Mudium</code>不會出到那麼難</del>）</p>
+
+<p>看了大佬的code，找到實做關鍵：</p>
+
+<ol>
+  <li>以 Y 座標做 Bucket sort</li>
+</ol>
+
+<p>開一個<code class="language-plaintext highlighter-rouge">2D vector</code>並且<code class="language-plaintext highlighter-rouge">index</code>(row)是<code class="language-plaintext highlighter-rouge">Y</code>座標</p>
+
+<p>在以該<code class="language-plaintext highlighter-rouge">Y</code>座標作為<code class="language-plaintext highlighter-rouge">index</code>的<code class="language-plaintext highlighter-rouge">vector</code>推入<code class="language-plaintext highlighter-rouge">X</code>座標</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">bucketY</span><span class="p">(</span><span class="mi">101</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">P</span> <span class="o">:</span> <span class="n">rect</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">bucketY</span><span class="p">[</span> <span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">].</span><span class="n">push_back</span><span class="p">(</span> <span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<p>在將每列以<code class="language-plaintext highlighter-rouge">X</code>座標sort過（為了之後的<code class="language-plaintext highlighter-rouge">二分搜</code>）</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">v</span> <span class="o">:</span> <span class="n">bucketY</span><span class="p">)</span> <span class="n">sort</span><span class="p">(</span> <span class="n">range</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">);</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<ol>
+  <li>符合的矩形條件：</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">rectangle</code>要包含該<code class="language-plaintext highlighter-rouge">point</code> :</p>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">posY</code>大於等於<code class="language-plaintext highlighter-rouge">point.Y</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">posX</code>大於等於<code class="language-plaintext highlighter-rouge">point.X</code></p>
+  </li>
+</ul>
+
+<p>而該<code class="language-plaintext highlighter-rouge">point</code>被包含的<code class="language-plaintext highlighter-rouge">rectangles</code>數量會是要符合以上兩個條件的所有<code class="language-plaintext highlighter-rouge">rectangles</code></p>
+
+<p>所以<code class="language-plaintext highlighter-rouge">Y</code>座標的起始點是<code class="language-plaintext highlighter-rouge">point.Y</code>，然後繼續往比<code class="language-plaintext highlighter-rouge">point.Y</code>大的檢查</p>
+
+<p>而<code class="language-plaintext highlighter-rouge">X</code>座標就以<code class="language-plaintext highlighter-rouge">Binary-Search</code>找到符合的<code class="language-plaintext highlighter-rouge">X</code></p>
+
+<p>而在該<code class="language-plaintext highlighter-rouge">Y</code>座標符合條件的矩形數量剛好是：</p>
+
+<p><code class="language-plaintext highlighter-rouge">bucketY[k].end() - lower_bound( range( bucketY[k] ), posX );</code> ( <code class="language-plaintext highlighter-rouge">k in [point.Y , 100 ]</code>)</p>
+
+<h3 id="solution-2">Solution:</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define range(x) x.begin(),x.end()
+</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">countRectangles</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">rect</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">points</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">bucketY</span><span class="p">(</span><span class="mi">101</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">P</span> <span class="o">:</span> <span class="n">rect</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">bucketY</span><span class="p">[</span> <span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">].</span><span class="n">push_back</span><span class="p">(</span> <span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">v</span> <span class="o">:</span> <span class="n">bucketY</span><span class="p">)</span> <span class="n">sort</span><span class="p">(</span> <span class="n">range</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">);</span>
+
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">(</span><span class="n">points</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">P</span> <span class="o">:</span> <span class="n">points</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">posX</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">posY</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+            <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">posY</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sum</span> <span class="o">+=</span> <span class="n">bucketY</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">end</span><span class="p">()</span> <span class="o">-</span> <span class="n">lower_bound</span><span class="p">(</span> <span class="n">range</span><span class="p">(</span> <span class="n">bucketY</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">),</span> <span class="n">posX</span> <span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h2 id="number-of-flowers-in-full-bloom">Number of Flowers in Full Bloom</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-290/problems/number-of-flowers-in-full-bloom/">Number of Flowers in Full Bloom</a></p>
+
+<h3 id="description--1">Description :</h3>
+
+<p>You are given a <strong>0-indexed</strong> 2D integer array <code class="language-plaintext highlighter-rouge">flowers</code>, where <code class="language-plaintext highlighter-rouge">flowers[i] = [starti, endi]</code> means the <code class="language-plaintext highlighter-rouge">ith</code> flower will be in <strong>full bloom</strong> from <code class="language-plaintext highlighter-rouge">starti</code> to <code class="language-plaintext highlighter-rouge">endi</code> (<strong>inclusive</strong>). You are also given a <strong>0-indexed integer</strong> array <code class="language-plaintext highlighter-rouge">persons</code> of size <code class="language-plaintext highlighter-rouge">n</code>, where <code class="language-plaintext highlighter-rouge">persons[i]</code> is the time that the <code class="language-plaintext highlighter-rouge">ith</code> person will arrive to see the flowers.</p>
+
+<p>Return an integer array <code class="language-plaintext highlighter-rouge">answer</code> of size <code class="language-plaintext highlighter-rouge">n</code>, where <code class="language-plaintext highlighter-rouge">answer[i]</code> is the <strong>number</strong> of flowers that are in full bloom when the <code class="language-plaintext highlighter-rouge">ith</code> person arrives.</p>
+
+<h3 id="example-2">Example:</h3>
+
+<p><strong>Example 1:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/02/ex1new.jpg" alt="Ex 1 " /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: flowers = [[1,6],[3,7],[9,12],[4,13]], persons = [2,3,7,11]
+Output: [1,2,2,2]
+Explanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.
+For each person, we return the number of flowers in full bloom during their arrival.
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/02/ex2new.jpg" alt=" Ex 2" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: flowers = [[1,10],[3,3]], persons = [3,3,2]
+Output: [2,2,1]
+Explanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.
+For each person, we return the number of flowers in full bloom during their arrival.
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= flowers.length &lt;= 5 * 10^4</code></li>
+  <li><code class="language-plaintext highlighter-rouge">flowers[i].length == 2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= starti &lt;= endi &lt;= 10^9</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= persons.length &lt;= 5 * 10^4</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= persons[i] &lt;= 10^9</code></li>
+</ul>
+
+<p>可以看成：給很多線段（每個線段的座標範圍是[st,ed]包含端點），給一個查詢陣列<code class="language-plaintext highlighter-rouge">arr</code>（要求出在<code class="language-plaintext highlighter-rouge">arr[i]</code>座標<strong>有多少個線段覆蓋</strong></p>
+
+<h3 id="concept-3">Concept:</h3>
+
+<p>算是經典的線段覆蓋，但是比賽的時候我有點忘記<code class="language-plaintext highlighter-rouge">sweep line</code>的作法ㄌ</p>
+
+<p>但是反而想到<code class="language-plaintext highlighter-rouge">Sort</code> + <code class="language-plaintext highlighter-rouge">Heap</code>的方法：</p>
+
+<ol>
+  <li>Sort</li>
+</ol>
+
+<p>先對線段<code class="language-plaintext highlighter-rouge">flowers</code>和查詢點<code class="language-plaintext highlighter-rouge">people</code>先排序</p>
+
+<ol>
+  <li>Heap</li>
+</ol>
+
+<p>這邊的<code class="language-plaintext highlighter-rouge">Heap</code>是<code class="language-plaintext highlighter-rouge">Min Heap</code>，紀錄的是線段的<strong>結束座標</strong></p>
+
+<p>（因為會有開始座標很早且結束座標很晚的長線段，有可能會包含較晚開始且較早結束的短線段，如果指比對較早開始的線段的結束座標會有沒有pop到的情況，所以需要<code class="language-plaintext highlighter-rouge">Heap</code>來動態取出最早結束的線段座標，並檢查結束座標是否小於當前的查詢座標）</p>
+
+<ul>
+  <li>加入<code class="language-plaintext highlighter-rouge">Min Heap</code>的時機點：</li>
+</ul>
+
+<p>當前線段的起始座標<strong>小於等於</strong>當前查詢座標並且結束時間點<strong>大於等於</strong>查詢座標（線段覆蓋住查詢點）</p>
+
+<ol>
+  <li>pop 時間點</li>
+</ol>
+
+<ul>
+  <li>當<code class="language-plaintext highlighter-rouge">Heap</code>的<code class="language-plaintext highlighter-rouge">top</code>的結束時間點比當前查詢座標還小：</li>
+</ul>
+
+<p>代表整個線段已經在查詢座標之前了，這個線段不會覆蓋到查詢點</p>
+
+<h3 id="solution-3">Solution:</h3>
+
+<p>實做的時候把<code class="language-plaintext highlighter-rouge">people</code>陣列當作回傳<code class="language-plaintext highlighter-rouge">answer</code>的陣列（因為已經把值複製到<code class="language-plaintext highlighter-rouge">temp</code>陣列了，不需要再用到<code class="language-plaintext highlighter-rouge">people</code>陣列，省一些空間）</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define F first
+#define S second
+</span><span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pii</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">fullBloomFlowers</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">flowers</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">people</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">flowers</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">,</span> <span class="n">p_size</span><span class="o">=</span> <span class="n">people</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+        <span class="n">sort</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">flowers</span><span class="p">));</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">pii</span><span class="o">&gt;</span> <span class="n">temp</span><span class="p">(</span><span class="n">p_size</span><span class="p">);</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">p_size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">temp</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="p">{</span><span class="n">people</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">,</span> <span class="n">i</span> <span class="p">}</span> <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">temp</span><span class="p">));</span>
+
+        <span class="kt">int</span> <span class="n">L_idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">Contain</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">priority_queue</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="p">,</span> <span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">pq</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">pii</span> <span class="o">&amp;</span><span class="n">P</span> <span class="o">:</span> <span class="n">temp</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">posX</span> <span class="o">=</span> <span class="n">P</span><span class="p">.</span><span class="n">F</span><span class="p">;</span>
+            
+            <span class="k">while</span><span class="p">(</span> <span class="n">pq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">posX</span> <span class="p">){</span>
+                <span class="n">pq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                <span class="n">Contain</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">while</span><span class="p">(</span> <span class="n">L_idx</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">flowers</span><span class="p">[</span><span class="n">L_idx</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">posX</span> <span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">flowers</span><span class="p">[</span><span class="n">L_idx</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">posX</span> <span class="p">){</span>
+                    <span class="n">L_idx</span><span class="o">++</span><span class="p">;</span>
+                    <span class="k">continue</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">(</span> <span class="n">flowers</span><span class="p">[</span><span class="n">L_idx</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
+                <span class="n">L_idx</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">Contain</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">people</span><span class="p">[</span> <span class="n">P</span><span class="p">.</span><span class="n">S</span> <span class="p">]</span> <span class="o">=</span> <span class="n">Contain</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">people</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#c++/c">c++/c</a>
+          
+            <a href="/tags#notes">notes</a>
+          
+            <a href="/tags#Leetcode">Leetcode</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2022/04/18/leetcode-289-weekly/" data-toggle="tooltip" data-placement="top" title="289th LeetCode Weekly Contest">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'ljo424';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:ljo424@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.facebook.com/profile.php?id=100010981865378" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/jason810496" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.instagram.com/jason2004424" title="Instagram">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Instagram</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Jason Liu
+        &nbsp;&bull;&nbsp;
+      
+      2022
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">https://github.com/jason810496</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        <!-- Powered by -->
+        <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjason810496.github.io%2Fblog%2F&count_bg=%23999A97&title_bg=%23211919&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

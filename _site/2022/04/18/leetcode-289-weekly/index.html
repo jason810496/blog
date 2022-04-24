@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+
+<head>
+
+  <link rel="shortcut icon" href="/assets/img/coding01.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>289th LeetCode Weekly Contest</title>
+
+  
+  <meta name="author" content="Jason Liu">
+  
+
+  <meta name="description" content="Leetcode 289th 週賽">
+
+  
+  <meta name="theme-color" content="#0085A1">
+  
+
+  
+  <meta name="keywords" content="algorithmc++cppcdata structurelinuxcompetitive programmingfront endhtmlcssjavascriptAPCS">
+  
+
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R44VVX682B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R44VVX682B');
+</script>
+
+
+  
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TM99SLZ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+  
+<!-- Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-219638882-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="LJO's Blog">
+  <meta property="og:title" content="289th LeetCode Weekly Contest">
+  <meta property="og:description" content="Leetcode 289th 週賽">
+
+  
+  <meta property="og:image" content="https://i.imgur.com/MBxEay3.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Jason Liu">
+  <meta property="og:article:published_time" content="2022-04-18T14:30:00+00:00">
+  <meta property="og:url" content="http://localhost:4000/2022/04/18/leetcode-289-weekly/">
+  <link rel="canonical" href="http://localhost:4000/2022/04/18/leetcode-289-weekly/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="289th LeetCode Weekly Contest">
+  <meta property="twitter:description" content="Leetcode 289th 週賽">
+
+  
+  <meta name="twitter:image" content="https://i.imgur.com/MBxEay3.png">
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM99SLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">LJO's Blog</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/achievement">Achievement</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/tags/#algorithm">Algorithm</a>
+                  <a class="dropdown-item" href="/tags/#project">Project</a>
+                  <a class="dropdown-item" href="/tags/#notes">Notes</a>
+            </div>
+          </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="http://localhost:4000/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/Profile.png" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "290th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/24/leetcode-290-weekly/", \
+          "date"     : "April 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "289th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/18/leetcode-289-weekly/", \
+          "date"     : "April 18, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "76th LeetCode Bi-Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/16/leetcode-76-biweekly/", \
+          "date"     : "April 16, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "我如何開始打Code的？", \
+          "category" : "notesAPCSIONCamp", \
+          "url"      : "/2022/04/13/coding-road0/", \
+          "date"     : "April 13, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "288th LeetCode Weekly Contest", \
+          "category" : "c++/cnotesLeetcode", \
+          "url"      : "/2022/04/10/leetcode-288-weekly/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "程式競賽中的數論", \
+          "category" : "c++/cnotesMath", \
+          "url"      : "/2022/04/10/math-theory-01-zh/", \
+          "date"     : "April 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "動態顯示的Zerojudge stats！", \
+          "category" : "project", \
+          "url"      : "/2022/03/24/ZJstats0/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "逆序數對(Array Inversion)", \
+          "category" : "c++/calgorithmnotes", \
+          "url"      : "/2022/03/24/inversion-merge-sort01/", \
+          "date"     : "March 24, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "C系列 void pointer之噩夢", \
+          "category" : "c++/cnotes", \
+          "url"      : "/2022/03/11/void-pointer01/", \
+          "date"     : "March 11, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "打造好看的Github Profile", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/08/github-profile-01-zh/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Build a eye-catching Github Profile !", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/08/github-profile-01-eng/", \
+          "date"     : "February  8, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "在linux連接藍芽裝置", \
+          "category" : "linuxnotes", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-zh/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Connect bluetooth device on Linux", \
+          "category" : "linuxnoteseng", \
+          "url"      : "/2022/02/07/linux-bluetooth-01-eng/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "SEO setting of Github.io Blog", \
+          "category" : "githubnoteseng", \
+          "url"      : "/2022/02/07/blog-static-setting01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Github subdirectories", \
+          "category" : "githubnotes", \
+          "url"      : "/2022/02/07/github-subdir01/", \
+          "date"     : "February  7, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Markdown 語法測試", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/markdown-tutorial01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "Test 01", \
+          "category" : "test", \
+          "url"      : "/2022/02/01/test01/", \
+          "date"     : "February  1, 2022" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Achievement", \
+          "category" : "page", \
+          "url"      : "/achievement/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page3/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Hi! I&#39;m LiuZheYu", \
+          "category" : "page", \
+          "url"      : "/page4/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="https://i.imgur.com/MBxEay3.png"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>289th LeetCode Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 289th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 18, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 8 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>289th LeetCode Weekly Contest</h1>
+          
+            
+              <h2 class="post-subheading">Leetcode 289th 週賽</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on April 18, 2022</span>
+            
+            
+              <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 8 minute read</span>
+
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <h1 id="289th-leetcode-weekly-contest">289th LeetCode Weekly Contest</h1>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-289">289th LeetCode Weekly Contest</a></p>
+
+<p>一樣解出前兩題</p>
+
+<p>第三、四題真的很有深度（對我而言啦…</p>
+
+<p><strong>這次週賽的四個題目：</strong></p>
+
+<ul>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-289/problems/calculate-digit-sum-of-a-string/">Calculate Digit Sum of a String</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-289/problems/minimum-rounds-to-complete-all-tasks/">Minimum Rounds to Complete All Tasks</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-289/problems/maximum-trailing-zeros-in-a-cornered-path/">Maximum Trailing Zeros in a Cornered Path</a></p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com/contest/weekly-contest-289/problems/longest-path-with-different-adjacent-characters/">Longest Path With Different Adjacent Characters</a></p>
+  </li>
+</ul>
+
+<h2 id="calculate-digit-sum-of-a-string">Calculate Digit Sum of a String</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-289/problems/calculate-digit-sum-of-a-string/">Calculate Digit Sum of a String</a></p>
+
+<h3 id="description">Description:</h3>
+
+<p>You are given a string <code class="language-plaintext highlighter-rouge">s</code> consisting of digits and an integer <code class="language-plaintext highlighter-rouge">k</code>.</p>
+
+<p>A <strong>round</strong> can be completed if the length of <code class="language-plaintext highlighter-rouge">s</code> is greater than <code class="language-plaintext highlighter-rouge">k</code>. In one round, do the following:</p>
+
+<ol>
+  <li><strong>Divide</strong> <code class="language-plaintext highlighter-rouge">s</code> into <strong>consecutive groups</strong> of size <code class="language-plaintext highlighter-rouge">k</code> such that the first <code class="language-plaintext highlighter-rouge">k</code> characters are in the first group, the next <code class="language-plaintext highlighter-rouge">k</code> characters are in the second group, and so on. <strong>Note</strong> that the size of the last group can be smaller than <code class="language-plaintext highlighter-rouge">k</code>.</li>
+  <li><strong>Replace</strong> each group of <code class="language-plaintext highlighter-rouge">s</code> with a string representing the sum of all its digits. For Example, <code class="language-plaintext highlighter-rouge">"346"</code> is replaced with <code class="language-plaintext highlighter-rouge">"13"</code> because <code class="language-plaintext highlighter-rouge">3 + 4 + 6 = 13</code>.</li>
+  <li><strong>Merge</strong> consecutive groups together to form a new string. If the length of the string is greater than k, repeat from step <code class="language-plaintext highlighter-rouge">1</code>.
+Return <code class="language-plaintext highlighter-rouge">s</code> after all rounds have been completed.</li>
+</ol>
+
+<h3 id="example">Example:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s = "11111222223", k = 3
+Output: "135"
+Explanation: 
+- For the first round, we divide s into groups of size 3: "111", "112", "222", and "23".
+  ​​​​​Then we calculate the digit sum of each group: 1 + 1 + 1 = 3, 1 + 1 + 2 = 4, 2 + 2 + 2 = 6, and 2 + 3 = 5. 
+  So, s becomes "3" + "4" + "6" + "5" = "3465" after the first round.
+- For the second round, we divide s into "346" and "5".
+  Then we calculate the digit sum of each group: 3 + 4 + 6 = 13, 5 = 5. 
+  So, s becomes "13" + "5" = "135" after second round. 
+Now, s.length &lt;= k, so we return "135" as the answer.
+</code></pre></div></div>
+
+<p>將原本的數字字串不斷分切成<code class="language-plaintext highlighter-rouge">k</code>等分，並將每等分都<strong>依照各位數加總</strong>，再將加總後的結果<strong>組成新字串</strong>，直到最後的字串長度<strong>小於等於k</strong></p>
+
+<h3 id="concept">Concept：</h3>
+
+<p>就照著題意暴力硬做</p>
+
+<h2 id="solution">Solution：</h2>
+
+<p><strong>Solution</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define range(x) x.begin(),x.end()
+</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">to_int</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">ret</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">ret</span><span class="o">+=</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">'0'</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">string</span> <span class="n">to_str</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+        <span class="n">string</span> <span class="n">ret</span><span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        
+        <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">){</span>
+            <span class="n">ret</span><span class="o">+=</span><span class="kt">char</span><span class="p">(</span><span class="sc">'0'</span><span class="o">+</span><span class="n">n</span><span class="o">%</span><span class="mi">10</span><span class="p">);</span>
+            <span class="n">n</span><span class="o">/=</span><span class="mi">10</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span><span class="p">(</span><span class="n">ret</span><span class="o">==</span><span class="s">""</span><span class="p">)</span> <span class="k">return</span> <span class="s">"0"</span><span class="p">;</span>
+        <span class="n">reverse</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="n">ret</span><span class="p">));</span>
+        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">string</span> <span class="n">digitSum</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="k">while</span><span class="p">(</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">k</span> <span class="p">){</span>
+            <span class="kt">int</span> <span class="n">last</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">next</span><span class="o">=</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+            <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">Sub</span><span class="p">;</span>
+            <span class="k">while</span><span class="p">(</span><span class="n">last</span><span class="o">+</span><span class="n">k</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">){</span>
+                <span class="n">Sub</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">last</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="p">);</span>
+                <span class="n">last</span><span class="o">+=</span><span class="n">k</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">last</span><span class="o">&lt;</span><span class="n">n</span><span class="p">){</span>
+                <span class="n">Sub</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">last</span><span class="p">,</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="n">last</span><span class="p">));</span>
+            <span class="p">}</span>
+            
+
+            <span class="k">for</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">Sub</span><span class="p">){</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">to_str</span><span class="p">(</span> <span class="n">to_int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">);</span>
+            <span class="p">}</span>
+            
+            <span class="n">s</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+            
+            <span class="k">for</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">Sub</span><span class="p">){</span>
+                <span class="n">s</span><span class="o">+=</span><span class="n">i</span><span class="p">;</span>
+            <span class="p">}</span>
+            
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">s</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="minimum-rounds-to-complete-all-tasks">Minimum Rounds to Complete All Tasks</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-289/problems/minimum-rounds-to-complete-all-tasks/">Minimum Rounds to Complete All Tasks</a></p>
+
+<h3 id="description-1">Description:</h3>
+
+<p>You are given a <strong>0-indexed</strong> integer array <code class="language-plaintext highlighter-rouge">tasks</code>, where <code class="language-plaintext highlighter-rouge">tasks[i]</code> represents the difficulty level of a task. In each round, you can complete either 2 or 3 tasks of the <strong>same difficulty level</strong>.</p>
+
+<p>Return the <strong>minimum</strong> rounds required to complete all the tasks, or <code class="language-plaintext highlighter-rouge">-1</code> if it is not possible to complete all the tasks.</p>
+
+<h3 id="example-1">Example:</h3>
+
+<p><strong>Example 1:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: tasks = [2,2,3,3,2,4,4,4,4,4]
+Output: 4
+Explanation: To complete all the tasks, a possible plan is:
+- In the first round, you complete 3 tasks of difficulty level 2. 
+- In the second round, you complete 2 tasks of difficulty level 3. 
+- In the third round, you complete 3 tasks of difficulty level 4. 
+- In the fourth round, you complete 2 tasks of difficulty level 4.  
+It can be shown that all the tasks cannot be completed in fewer than 4 rounds, so the answer is 4.
+</code></pre></div></div>
+<p><strong>Example 2:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: tasks = [2,3,3]
+Output: -1
+Explanation: There is only 1 task of difficulty level 2, but in each round, you can only complete either 2 or 3 tasks of the same difficulty level. Hence, you cannot complete all the tasks, and the answer is -1.
+</code></pre></div></div>
+
+<p>轉換題意就是：在一次操作中，可以<strong>刪除 2 或 3 個</strong>陣列中<strong>相同的數字</strong>，並求出清空陣列的最少操作次數（如果不能將陣列中所有數字刪除回傳<code class="language-plaintext highlighter-rouge">-1</code>）</p>
+
+<h3 id="concept-1">Concept：</h3>
+
+<ol>
+  <li>討論無法達成的情況
+經過簡單的觀察可以發現，如果某個數字<strong>出現次數小於 2</strong>就<strong>無法被消除</strong></li>
+</ol>
+
+<p>而 2 跟 3 可以組合出所有的質數（<code class="language-plaintext highlighter-rouge">5=3+2</code> , <code class="language-plaintext highlighter-rouge">7=3+2+2</code> … ）所以<strong>出現次數大於等於 2 的</strong>數字都可以被刪除</p>
+
+<ol>
+  <li>求畜最小操作次數
+要求出清空該數字的最小操作數量，也就是盡可能的用<strong>3</strong>來表示該數字<strong>出現的次數</strong></li>
+</ol>
+
+<p>又一個數字<code class="language-plaintext highlighter-rouge">mod 3</code>可以分成以下 3 個情況：</p>
+
+<p>這邊設某個數字的出現次數為<code class="language-plaintext highlighter-rouge">Count</code></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Count%3 == 0 </code></li>
+</ul>
+
+<p>每次都刪去 3 個就是最小操作次數</p>
+
+<p>也就是刪除該數字需要 <code class="language-plaintext highlighter-rouge">Count/3</code> 次</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Count%3 == 2 </code></li>
+</ul>
+
+<p>我覺得<code class="language-plaintext highlighter-rouge">%3==2</code>的情況比較顯見</p>
+
+<p>最小操作次數是<code class="language-plaintext highlighter-rouge">Count/3 + 1</code></p>
+
+<p>因為最後餘<code class="language-plaintext highlighter-rouge">2</code>，而每次操作只能刪掉 2 或 3 個數字</p>
+
+<p>所以最後<code class="language-plaintext highlighter-rouge">+1</code> (代表刪除最後剩餘的 2 個數字)</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Count%3 == 1 </code></li>
+</ul>
+
+<p>這種情況代表<code class="language-plaintext highlighter-rouge">Count</code>可以被看成：</p>
+
+<p><code class="language-plaintext highlighter-rouge">Count = (3+3+3...3) + (3+1)</code></p>
+
+<p>而最後的<code class="language-plaintext highlighter-rouge">(3+1)</code>可以拆成<code class="language-plaintext highlighter-rouge">2+2</code></p>
+
+<p>數量剛好是<code class="language-plaintext highlighter-rouge">Count/3 +1 </code></p>
+
+<p><strong>綜合以上：</strong></p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Count%3 == 1</code> or <code class="language-plaintext highlighter-rouge">Count%3 == 2</code> 
+最小操作次數：都是<code class="language-plaintext highlighter-rouge">Count/3 + 1</code>次</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Count% == 0 </code>
+最小操作次數：<code class="language-plaintext highlighter-rouge">Count/3</code>次</p>
+  </li>
+</ul>
+
+<h2 id="solution-1">Solution：</h2>
+
+<p>一開始用<code class="language-plaintext highlighter-rouge">unordered_map</code>(Hash table)紀錄每個數字出現幾次</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">minimumRounds</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">tasks</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">M</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">:</span><span class="n">tasks</span><span class="p">){</span>
+            <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">i</span><span class="o">:</span><span class="n">M</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">cur</span> <span class="o">&lt;</span><span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+            <span class="kt">int</span> <span class="n">last</span> <span class="o">=</span> <span class="n">cur</span><span class="o">%</span><span class="mi">3</span><span class="p">;</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">last</span><span class="o">==</span><span class="mi">1</span> <span class="o">||</span> <span class="n">last</span><span class="o">==</span><span class="mi">2</span> <span class="p">){</span>
+                <span class="n">ans</span><span class="o">+=</span><span class="n">cur</span><span class="o">/</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">ans</span><span class="o">+=</span><span class="n">cur</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h2 id="maximum-trailing-zeros-in-a-cornered-path">Maximum Trailing Zeros in a Cornered Path</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-289/problems/maximum-trailing-zeros-in-a-cornered-path/">Maximum Trailing Zeros in a Cornered Path</a></p>
+
+<h3 id="description-">Description :</h3>
+<p>You are given a 2D integer array <code class="language-plaintext highlighter-rouge">grid</code> of size <code class="language-plaintext highlighter-rouge">m x n</code>, where each cell contains a positive integer.</p>
+
+<p>A <strong>cornered path</strong> is defined as a set of adjacent cells with <strong>at most</strong> one turn. More specifically, the path should exclusively move either <strong>horizontally</strong> or <strong>vertically</strong> up to the turn (if there is one), without returning to a previously visited cell. After the turn, the path will then move exclusively in the <strong>alternate</strong> direction: move vertically if it moved horizontally, and vice versa, also without returning to a previously visited cell.</p>
+
+<p>The <strong>product</strong> of a path is defined as the product of all the values in the path.</p>
+
+<p>Return the <strong>maximum</strong> number of <strong>trailing zeros</strong> in the product of a cornered path found in <code class="language-plaintext highlighter-rouge">grid</code>.</p>
+
+<p>Note:</p>
+
+<ul>
+  <li><strong>orizontal</strong> movement means moving in either the left or right direction.</li>
+  <li><strong>Vertical</strong> movement means moving in either the up or down direction.
+    <h3 id="exmample">Exmample:</h3>
+  </li>
+</ul>
+
+<p><strong>Example 1:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/23/ex1new2.jpg" alt="Ex 1" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: grid = [[23,17,15,3,20],[8,1,20,27,11],[9,4,6,2,21],[40,9,1,10,6],[22,7,4,5,3]]
+Output: 3
+Explanation: The grid on the left shows a valid cornered path.
+It has a product of 15 * 20 * 6 * 1 * 10 = 18000 which has 3 trailing zeros.
+It can be shown that this is the maximum trailing zeros in the product of a cornered path.
+
+The grid in the middle is not a cornered path as it has more than one turn.
+The grid on the right is not a cornered path as it requires a return to a previously visited cell.
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/25/ex2.jpg" alt="Ex 2" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: grid = [[4,3,2],[7,6,1],[8,8,8]]
+Output: 0
+Explanation: The grid is shown in the figure above.
+There are no cornered paths in the grid that result in a product with a trailing zero.
+</code></pre></div></div>
+
+<p><strong>cornered path</strong>：是在 grid 上最多轉一次彎的路徑</p>
+
+<p>題目要求合法的路經中的乘積<strong>尾數最多有幾個 0</strong></p>
+
+<p>例如：</p>
+
+<p>路徑上有<code class="language-plaintext highlighter-rouge">10 20 3 7 5 19</code></p>
+
+<p>這些的乘積是<code class="language-plaintext highlighter-rouge">399000</code></p>
+
+<p>所以要回傳 <code class="language-plaintext highlighter-rouge">3</code> （尾數有 3 個零）</p>
+
+<p><del>比賽時完全沒有想法</del></p>
+
+<h3 id="concept-2">Concept：</h3>
+
+<ol>
+  <li>位數要有 0 的條件</li>
+</ol>
+
+<p>尾數要有 0 ，勢必乘積中要有<code class="language-plaintext highlighter-rouge">2</code>和<code class="language-plaintext highlighter-rouge">5</code>，並且<code class="language-plaintext highlighter-rouge">2</code>和<code class="language-plaintext highlighter-rouge">5</code>以外的數字相乘並不會影響答案</p>
+
+<p>所以對於每一個的數字，只需要紀錄<code class="language-plaintext highlighter-rouge">2</code>和<code class="language-plaintext highlighter-rouge">5</code>的因數數量</p>
+
+<p>如：這格數字是<code class="language-plaintext highlighter-rouge">1500</code>可以紀錄成<code class="language-plaintext highlighter-rouge">{2,3}</code>（我用<code class="language-plaintext highlighter-rouge">pair</code>來表示：<code class="language-plaintext highlighter-rouge">first</code>是<code class="language-plaintext highlighter-rouge">2</code>的數量，<code class="language-plaintext highlighter-rouge">second</code>是<code class="language-plaintext highlighter-rouge">5</code>的數量）</p>
+
+<ol>
+  <li>要如何知道一條路徑的尾數有幾個 0 ?</li>
+</ol>
+
+<p>看了高手的解法，關鍵是：</p>
+
+<p><strong>前綴合</strong></p>
+
+<p>開 2 個 <code class="language-plaintext highlighter-rouge">mxn</code> 的陣列紀錄從<strong>上方</strong>累加的和從<strong>左方</strong>累加的前綴合</p>
+
+<p>紀錄從上個位置累加過來的<code class="language-plaintext highlighter-rouge">2</code>和<code class="language-plaintext highlighter-rouge">5</code>的數量</p>
+
+<ol>
+  <li>枚舉合法路徑</li>
+</ol>
+
+<p>合法路徑可以是 ：</p>
+
+<p>(以下<code class="language-plaintext highlighter-rouge">(i,j)</code>都代表座標)</p>
+<ul>
+  <li>Up-Left :</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">(0,j)</code>到<code class="language-plaintext highlighter-rouge">(i,j)</code>在從<code class="language-plaintext highlighter-rouge">(i,j)</code>到<code class="language-plaintext highlighter-rouge">(i,0)</code></p>
+<ul>
+  <li>Up-right :</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">(0,j)</code>到<code class="language-plaintext highlighter-rouge">(i,j)</code>在從<code class="language-plaintext highlighter-rouge">(i,j)</code>到<code class="language-plaintext highlighter-rouge">(i,n-1)</code></p>
+<ul>
+  <li>Down-Left :</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">(m-1,j)</code>到<code class="language-plaintext highlighter-rouge">(i,j)</code>在從<code class="language-plaintext highlighter-rouge">(i,j)</code>到<code class="language-plaintext highlighter-rouge">(i,0)</code></p>
+<ul>
+  <li>Down-Right :</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">(m-1,j)</code>到<code class="language-plaintext highlighter-rouge">(i,j)</code>在從<code class="language-plaintext highlighter-rouge">(i,j)</code>到<code class="language-plaintext highlighter-rouge">(i,n-1)</code></p>
+
+<p>然後雙層迴圈枚舉所有中間座標<code class="language-plaintext highlighter-rouge">( i , j )</code></p>
+
+<p>(並且要注意標界限制，對於<code class="language-plaintext highlighter-rouge">i==0</code>或是<code class="language-plaintext highlighter-rouge">j==0</code>需要特判)</p>
+
+<ol>
+  <li>尾數最多 0 的合法路徑</li>
+</ol>
+
+<p>藉由<code class="language-plaintext highlighter-rouge">2.</code>和<code class="language-plaintext highlighter-rouge">3.</code>的技巧：</p>
+
+<p>尾數最多<code class="language-plaintext highlighter-rouge">0</code>的合法 path 是枚舉到的<code class="language-plaintext highlighter-rouge">( i , j )</code>中</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Up-Left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Up-Right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Down-Left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Down-Right</code></li>
+</ul>
+
+<p>這 4 個路經的<code class="language-plaintext highlighter-rouge">max( min( factor 5 of ith path , factor 2 of ith path ) )</code></p>
+
+<h3 id="solution-2">Solution:</h3>
+
+<p>就算了解概念後，實做還是挺麻煩…（ 尤其是邊界的限制 ）</p>
+
+<p>也可以<code class="language-plaintext highlighter-rouge">overload operator</code>來降低實做的複雜度（在做<code class="language-plaintext highlighter-rouge">pair</code>的前綴合的時候）</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define pii pair&lt;int,int&gt;
+#define F first
+#define S second
+</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">pii</span> <span class="n">Get</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">factor2</span><span class="o">=</span><span class="mi">0</span> <span class="p">,</span><span class="n">factor5</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span> <span class="n">x</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span> <span class="p">){</span>
+            <span class="n">factor5</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">x</span><span class="o">/=</span><span class="mi">5</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">while</span><span class="p">(</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="p">){</span>
+            <span class="n">factor2</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">x</span><span class="o">/=</span><span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">{</span> <span class="n">factor2</span> <span class="p">,</span> <span class="n">factor5</span> <span class="p">}</span> <span class="p">;</span><span class="c1">// factor: 2,5 </span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">maxTrailingZeros</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">grid</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span>  <span class="n">m</span> <span class="o">=</span> <span class="n">grid</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="p">;</span> 
+        <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">pii</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">Hor</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pii</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">)</span> <span class="p">,</span> <span class="n">Ver</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pii</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">)</span> <span class="p">;</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">Hor</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">Get</span><span class="p">(</span> <span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// prefix sum</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">pii</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">Get</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+                <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span> <span class="o">=</span> <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span> <span class="o">+</span> <span class="n">cur</span><span class="p">.</span><span class="n">F</span><span class="p">;</span>
+                <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span> <span class="o">=</span> <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span> <span class="o">+</span> <span class="n">cur</span><span class="p">.</span><span class="n">S</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">Get</span><span class="p">(</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+        <span class="p">}</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">pii</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">Get</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+                <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span> <span class="o">=</span> <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">F</span> <span class="o">+</span> <span class="n">cur</span><span class="p">.</span><span class="n">F</span><span class="p">;</span>
+                <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span> <span class="o">=</span> <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">S</span> <span class="o">+</span> <span class="n">cur</span><span class="p">.</span><span class="n">S</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        
+        <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="kt">int</span> <span class="n">Up_2</span> <span class="o">=</span> <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">Down_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="n">Hor</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span> <span class="o">:</span><span class="n">Hor</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span> <span class="o">-</span> <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">Left_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="mi">0</span><span class="o">:</span><span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">F</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">Right_2</span> <span class="o">=</span> <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">F</span> <span class="o">-</span> <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">F</span><span class="p">;</span>
+                
+                <span class="kt">int</span> <span class="n">Up_5</span> <span class="o">=</span> <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">Down_5</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="n">Hor</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span> <span class="o">:</span><span class="n">Hor</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span> <span class="o">-</span> <span class="n">Hor</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">Left_5</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="mi">0</span><span class="o">:</span><span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">S</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">Right_5</span> <span class="o">=</span> <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">S</span> <span class="o">-</span> <span class="n">Ver</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">S</span><span class="p">;</span>
+                
+                <span class="kt">int</span> <span class="n">UL</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">Up_2</span><span class="o">+</span><span class="n">Left_2</span><span class="p">,</span><span class="n">Up_5</span><span class="o">+</span><span class="n">Left_5</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">UR</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">Up_2</span><span class="o">+</span><span class="n">Right_2</span><span class="p">,</span><span class="n">Up_5</span><span class="o">+</span><span class="n">Right_5</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">DL</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">Down_2</span><span class="o">+</span><span class="n">Left_2</span><span class="p">,</span><span class="n">Down_5</span><span class="o">+</span><span class="n">Left_5</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">DR</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">Down_2</span><span class="o">+</span><span class="n">Right_2</span><span class="p">,</span><span class="n">Down_5</span><span class="o">+</span><span class="n">Right_5</span><span class="p">);</span>
+                
+                <span class="n">ans</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">max</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">UL</span><span class="p">,</span><span class="n">UR</span><span class="p">),</span><span class="n">max</span><span class="p">(</span><span class="n">DL</span><span class="p">,</span><span class="n">DR</span><span class="p">)</span> <span class="p">));</span>
+                
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h2 id="longest-path-with-different-adjacent-characters">Longest Path With Different Adjacent Characters</h2>
+
+<p><a href="https://leetcode.com/contest/weekly-contest-289/problems/longest-path-with-different-adjacent-characters/">Longest Path With Different Adjacent Characters</a></p>
+
+<h3 id="description--1">Description :</h3>
+
+<p>You are given a <strong>tree</strong> (i.e. a connected, undirected graph that has no cycles) <strong>rooted</strong> at node <code class="language-plaintext highlighter-rouge">0</code> consisting of <code class="language-plaintext highlighter-rouge">n</code> nodes numbered from <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">n - 1</code>. The tree is represented by a <strong>0-indexed</strong> array <code class="language-plaintext highlighter-rouge">parent</code> of size <code class="language-plaintext highlighter-rouge">n</code>, where <code class="language-plaintext highlighter-rouge">parent[i]</code> is the parent of node <code class="language-plaintext highlighter-rouge">i</code>. Since node <code class="language-plaintext highlighter-rouge">0</code> is the root, <code class="language-plaintext highlighter-rouge">parent[0] == -1</code>.</p>
+
+<p>You are also given a string <code class="language-plaintext highlighter-rouge">s</code> of length <code class="language-plaintext highlighter-rouge">n</code>, where <code class="language-plaintext highlighter-rouge">s[i]</code> is the character assigned to node <code class="language-plaintext highlighter-rouge">i</code>.</p>
+
+<p>Return the length of the <strong>longest path</strong> in the tree such that no pair of <strong>adjacent</strong> nodes on the path have the same character assigned to them.</p>
+
+<h3 id="example-2">Example:</h3>
+
+<p><strong>Example 1:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/25/testingdrawio.png" alt="Ex 1 " /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: parent = [-1,0,0,1,1,2], s = "abacbe"
+Output: 3
+Explanation: The longest path where each two adjacent nodes have different characters in the tree is the path: 0 -&gt; 1 -&gt; 3. The length of this path is 3, so 3 is returned.
+It can be proven that there is no longer path that satisfies the conditions. 
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+
+<p><img src="https://assets.leetcode.com/uploads/2022/03/25/graph2drawio.png" alt=" Ex 2" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: parent = [-1,0,0,0], s = "aabc"
+Output: 3
+Explanation: The longest path where each two adjacent nodes have different characters is the path: 2 -&gt; 0 -&gt; 3. The length of this path is 3, so 3 is returned.
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">n == parent.length == s.length</code></li>
+  <li><code class="language-plaintext highlighter-rouge">1 &lt;= n &lt;= 105</code></li>
+  <li><code class="language-plaintext highlighter-rouge">0 &lt;= parent[i] &lt;= n - 1</code> for all <code class="language-plaintext highlighter-rouge">i &gt;= 1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">parent[0] == -1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">parent</code> represents a valid tree.</li>
+  <li><code class="language-plaintext highlighter-rouge">s</code> consists of only lowercase English letters.</li>
+</ul>
+
+<p>給一棵<strong>Tree</strong>，並且每個node都是char，又求由<strong>沒有相同char相鄰</strong>的<strong>最長路徑</strong></p>
+
+<h3 id="concept-3">Concept:</h3>
+
+<p>有想到<code class="language-plaintext highlighter-rouge">DFS</code>但是沒有想到完整的架構</p>
+
+<p>反而想到<code class="language-plaintext highlighter-rouge">樹壓平</code>＋<code class="language-plaintext highlighter-rouge">Sliding Window</code>的奇怪操作（但這是錯ㄉ ）</p>
+
+<p>看了別人的解法，其中的關鍵是：</p>
+
+<p>一棵<strong>樹</strong>中<strong>最長的合法路徑</strong>是：</p>
+
+<p><strong>「由該節點最長的兩個合法路徑所組成」</strong></p>
+
+<p>(好像很理所當然，但是知道這個關鍵就不需要將 <code class="language-plaintext highlighter-rouge">DFS</code> 的所有子path都枚舉過一遍)</p>
+
+<ol>
+  <li>建立 Tree</li>
+</ol>
+
+<p>原本只有給<code class="language-plaintext highlighter-rouge">parent</code>的關係，先還原成<code class="language-plaintext highlighter-rouge">Tree</code>（<code class="language-plaintext highlighter-rouge">Parent</code>指向<code class="language-plaintext highlighter-rouge">child</code>）</p>
+
+<ol>
+  <li>DFS</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">First</code>和<code class="language-plaintext highlighter-rouge">Second</code>分別紀錄的是對於該節點的<strong>最長路徑</strong>和<strong>次長路徑</strong></p>
+
+<p>並且要更新答案時要順變考慮<strong>子節點與當前節點是否為相同字元</strong>（題目要求要不同字元）</p>
+
+<p><code class="language-plaintext highlighter-rouge">ans</code>是開在 <code class="language-plaintext highlighter-rouge">class</code>的變數，紀錄DFS到當前<code class="language-plaintext highlighter-rouge">Max Path Length</code></p>
+
+<p>而<code class="language-plaintext highlighter-rouge">DFS</code>回傳的是<strong>包含當前節點的最長路徑</strong></p>
+
+<h3 id="solution-3">Solution:</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    
+    <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span> <span class="p">,</span> <span class="n">n</span> <span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">G</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">DFS</span><span class="p">(</span><span class="kt">int</span> <span class="n">cur</span><span class="p">,</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">First</span><span class="o">=</span><span class="mi">0</span> <span class="p">,</span> <span class="n">Second</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">nxt</span><span class="o">:</span><span class="n">G</span><span class="p">[</span><span class="n">cur</span><span class="p">]</span> <span class="p">){</span>
+            <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">DFS</span><span class="p">(</span><span class="n">nxt</span> <span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">s</span><span class="p">[</span><span class="n">cur</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">nxt</span><span class="p">]</span> <span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">res</span> <span class="o">&gt;</span> <span class="n">Second</span><span class="p">)</span> <span class="n">Second</span> <span class="o">=</span> <span class="n">res</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">Second</span> <span class="o">&gt;</span> <span class="n">First</span> <span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">First</span><span class="p">,</span><span class="n">Second</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+        <span class="n">ans</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span> <span class="n">ans</span> <span class="p">,</span> <span class="n">First</span><span class="o">+</span><span class="n">Second</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">First</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">longestPath</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">parent</span><span class="p">,</span> <span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">parent</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">G</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">G</span><span class="p">[</span> <span class="n">parent</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">DFS</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+        
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#c++/c">c++/c</a>
+          
+            <a href="/tags#notes">notes</a>
+          
+            <a href="/tags#Leetcode">Leetcode</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2022/04/16/leetcode-76-biweekly/" data-toggle="tooltip" data-placement="top" title="76th LeetCode Bi-Weekly Contest">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="page-item next">
+          <a class="page-link" href="/2022/04/24/leetcode-290-weekly/" data-toggle="tooltip" data-placement="top" title="290th LeetCode Weekly Contest">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'ljo424';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:ljo424@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.facebook.com/profile.php?id=100010981865378" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/jason810496" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.instagram.com/jason2004424" title="Instagram">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Instagram</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Jason Liu
+        &nbsp;&bull;&nbsp;
+      
+      2022
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">https://github.com/jason810496</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        <!-- Powered by -->
+        <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjason810496.github.io%2Fblog%2F&count_bg=%23999A97&title_bg=%23211919&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

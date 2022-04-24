@@ -10,6 +10,28 @@
     
     
       <item>
+        <title>290th LeetCode Weekly Contest</title>
+        <description>
+          Leetcode 290th 週賽 - 
+          290th LeetCode Weekly Contest 290th LeetCode Weekly Contest 這次解出 3 題啦 (不過是解出第四題的Hard而不是第三題的Medium www) 但整題還算有進步ㄅ 這次週賽的四個題目： Intersection of Multiple Arrays Count Lattice Points Inside a Circle Count Number of Rectangles Containing Each Point Number of Flowers in Full Bloom Intersection of Multiple Arrays Intersection of Multiple Arrays Description: Given a 2D...
+        </description>
+        <pubDate>Sun, 24 Apr 2022 09:20:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/04/24/leetcode-290-weekly/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/04/24/leetcode-290-weekly/</guid>
+      </item>
+    
+      <item>
+        <title>289th LeetCode Weekly Contest</title>
+        <description>
+          Leetcode 289th 週賽 - 
+          289th LeetCode Weekly Contest 289th LeetCode Weekly Contest 一樣解出前兩題 第三、四題真的很有深度（對我而言啦… 這次週賽的四個題目： Calculate Digit Sum of a String Minimum Rounds to Complete All Tasks Maximum Trailing Zeros in a Cornered Path Longest Path With Different Adjacent Characters Calculate Digit Sum of a String Calculate Digit Sum of a String Description: You...
+        </description>
+        <pubDate>Mon, 18 Apr 2022 14:30:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/04/18/leetcode-289-weekly/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/04/18/leetcode-289-weekly/</guid>
+      </item>
+    
+      <item>
         <title>76th LeetCode Bi-Weekly Contest</title>
         <description>
           Leetcode 76th 週賽 - 
