@@ -1,0 +1,94 @@
+<h1 id="how-to-connect-airpods-on-ubuntu-os">How to connect airpods on Ubuntu OS</h1>
+
+<p class="box-note"><strong>auther:</strong> It’s quite eazy , but I forget to push the setup button while connecting to PC  , which makes me confused for a afternoon LOL …</p>
+
+<h2 id="ui-interface">UI interface</h2>
+
+<p class="box-error"><strong>Hint:</strong> Make sure push the setup button on the back of charging case until the status light flash white !</p>
+
+<p><strong>1. open bluetooth setting on your laptop</strong></p>
+
+<p><strong>2. make sure status light flash white while connecting airpods</strong></p>
+
+<p><strong>3. connect your airpods!</strong></p>
+
+<p><img src="https://i.imgur.com/tBAtKyS.png" alt="ui-result" class="mx-auto d-block" /></p>
+
+<h2 id="command-line">Command line</h2>
+
+<p>As an Linux user , using UI interface</p>
+
+<p>to connect bluetooth devices is unacceptable (IJK 😂</p>
+
+<p>Overall , connecting airpods in command line is coooool !!! 😎</p>
+
+<h3 id="bluez">bluez</h3>
+
+<p><a href="http://www.bluez.org/"><strong>BlueZ</strong></a> is the official Linux Bluetooth stack. It provides, in it’s modular way, support for the core Bluetooth layers and protocols.</p>
+
+<h4 id="install-bluez-on-ubuntu">install bluez on Ubuntu</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>bluez 
+</code></pre></div></div>
+<h4 id="using-bluetoothctl-to-manage-bluetooth-devices">using <strong>bluetoothctl</strong> to manage bluetooth devices</h4>
+
+<p>run <code class="language-plaintext highlighter-rouge">bluetoothctl</code> in terminal</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bluetoothctl
+</code></pre></div></div>
+
+<p>result :</p>
+
+<p><img src="https://i.imgur.com/yHJRh2M.png" alt="terminal-result" class="mx-auto d-block" /></p>
+
+<p>Ask what it can do ! 👉 Run <code class="language-plaintext highlighter-rouge">help</code> command</p>
+
+<p><img src="https://i.imgur.com/aY4kIYW.png" alt="terminal-help" /></p>
+
+<p>To connect our headset , we need to first <strong>scan</strong> all the devices nearby , <strong>find</strong> our device ,<strong>pair</strong> the headset and PC, and <strong>connect</strong> it.</p>
+
+<p class="box-note"><strong>Note:</strong> the <code class="language-plaintext highlighter-rouge">[dev]</code> below means the MAC address of device</p>
+
+<p>MAC address :</p>
+
+<p>MAC address of my headset is <strong>4C:B9:10:47:C4:DD</strong> , MAC address of your device might in form of <strong>XX:XX:XX:XX:XX:XX</strong> . Every device has a unique MAC (Hovever , you can change it through software )</p>
+
+<h4 id="command">command:</h4>
+<ul>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">exit</code></strong>
+ It’s essential to know how to quit (especially in Vim 😈 )</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">deivices</code></strong>
+ List available devices</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">pair [dev]</code></strong>
+ Pair with device</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">paired-deivces</code></strong>
+ List paired devices</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">connect [dev]</code></strong>
+ Connect device</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">disconnect [dev]</code></strong>
+ Disconnect device</p>
+  </li>
+</ul>
+
+<p>connect airpods through command line :
+<img src="https://i.imgur.com/t9P8HAu.png" alt="final-result" /></p>
+
+<p>enjoy your music 🎧</p>
+
+<p>recommended song : <a href="https://music.youtube.com/watch?v=T7GvvbD6S2Y&amp;list=RDAMVMT7GvvbD6S2Y">1.5 hr study lofi </a></p>
+
+<h5 id="reference">reference</h5>
+<p><a href="https://www.makeuseof.com/manage-bluetooth-linux-with-bluetoothctl/">https://www.makeuseof.com/manage-bluetooth-linux-with-bluetoothctl/</a>
+<a href="https://ubuntu.com/core/docs/bluez/install-configure/install">https://ubuntu.com/core/docs/bluez/install-configure/install</a>
+<a href="https://unix.stackexchange.com/questions/96693/connect-to-a-bluetooth-device-via-terminal">https://unix.stackexchange.com/questions/96693/connect-to-a-bluetooth-device-via-terminal</a></p>
+

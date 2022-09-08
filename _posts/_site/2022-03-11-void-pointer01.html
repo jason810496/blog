@@ -1,0 +1,123 @@
+<h1 id="區區一個insertion-sort-">區區一個Insertion sort …</h1>
+<p>接到一個單純實作出<strong>Insertion sort</strong>的case，原本預計10-20min解決掉，沒想到花了一整天QQ</p>
+
+<p>題目： 作出一個通用類別的insertion sort function</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// InsertionSort algorithm for arrays of a generic type</span>
+<span class="c1">// the function gets an array of length n of objects of given size</span>
+<span class="c1">// it also get a compare function</span>
+<span class="c1">// and sorts the array using the compare function</span>
+
+<span class="kt">int</span> <span class="nf">Insertion_sort</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arr</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">,</span><span class="kt">size_t</span> <span class="n">s</span> <span class="p">,</span> <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">compare</span><span class="p">)(</span><span class="kt">void</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="kt">void</span> <span class="o">*</span><span class="n">b</span><span class="p">)){</span>
+
+	<span class="cm">/* implementation !*/</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>順帶一提，程式的作業評測方法也很酷，主要是寫在C的標頭檔(<code class="language-plaintext highlighter-rouge">algo.h</code> ,<code class="language-plaintext highlighter-rouge">algo.c</code>)，而確認程式正確性是直接寫在<code class="language-plaintext highlighter-rouge">main.c</code>( 也可能是大學大學作業都是這種形式 )</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── algo.c
+├── algo.h
+└── test.c
+
+</code></pre></div></div>
+
+<h2 id="generic-sort-function">generic sort function</h2>
+
+<p>通用性排序函式的必要參數：</p>
+<ul>
+  <li>void pointer</li>
+  <li>sizeof data type</li>
+  <li>compare function</li>
+</ul>
+
+<ol>
+  <li>
+    <p>void pointer
+<code class="language-plaintext highlighter-rouge">void pointer</code>可以裝入各種資料形態從 <code class="language-plaintext highlighter-rouge">int</code> ,<code class="language-plaintext highlighter-rouge">char</code> , <code class="language-plaintext highlighter-rouge">long long</code> 到<code class="language-plaintext highlighter-rouge">*int</code> , <code class="language-plaintext highlighter-rouge">*char</code> ,<code class="language-plaintext highlighter-rouge">*your_struct_type</code> 都可以，所以可以傳入各種資料形態的陣列。</p>
+  </li>
+  <li>
+    <p>sizeof data type
+先備知識：</p>
+  </li>
+</ol>
+
+<p>要知道<code class="language-plaintext highlighter-rouge">arr[i]</code>跟<code class="language-plaintext highlighter-rouge">arr[i+1</code>的memory address差<code class="language-plaintext highlighter-rouge">sizeof(data)</code></p>
+
+<p>以<code class="language-plaintext highlighter-rouge">int arr_int[N]</code> 為例： <code class="language-plaintext highlighter-rouge">sizeof(int)</code> = <code class="language-plaintext highlighter-rouge">4 byte</code> ( <code class="language-plaintext highlighter-rouge">sizeof()</code>的return type是<code class="language-plaintext highlighter-rouge">size_t</code> )</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+	<span class="n">cout</span><span class="o">&lt;&lt;&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>可以看到memory address都差4</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0x7ffcfd869c30
+0x7ffcfd869c34
+0x7ffcfd869c38
+0x7ffcfd869c3c
+0x7ffcfd869c40
+</code></pre></div></div>
+
+<ol>
+  <li>compare function</li>
+</ol>
+
+<p>搭配data type 的compare function在主要的<code class="language-plaintext highlighter-rouge">Sort</code>函式判斷<code class="language-plaintext highlighter-rouge">arr[i]</code>,<code class="language-plaintext highlighter-rouge">arr[j]</code>的優先順序</p>
+
+<h2 id="實作-inertion-sort">實作 inertion sort</h2>
+
+<p>完整的sort function</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">Sort</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">compare</span><span class="p">)(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span><span class="p">))</span> <span class="p">{</span>
+  
+  <span class="kt">int</span> <span class="n">cnt</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">t</span><span class="p">[</span><span class="n">s</span><span class="p">];</span>
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">arr</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="n">s</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">compare</span><span class="p">(</span> <span class="n">t</span><span class="p">,</span> <span class="p">(</span><span class="n">arr</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="n">s</span><span class="p">)</span> <span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">memcpy</span><span class="p">(</span> <span class="p">(</span><span class="n">arr</span> <span class="o">+</span> <span class="n">s</span><span class="o">*</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)),</span> <span class="p">(</span><span class="n">arr</span> <span class="o">+</span> <span class="n">s</span><span class="o">*</span><span class="n">j</span><span class="p">),</span> <span class="n">s</span><span class="p">);</span>
+      <span class="n">memcpy</span><span class="p">(</span><span class="n">arr</span> <span class="o">+</span> <span class="n">s</span> <span class="o">*</span><span class="n">s</span><span class="o">*</span><span class="n">j</span><span class="p">,</span><span class="n">temp</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+      <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+      <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">memcpy</span><span class="p">((</span><span class="n">arr</span><span class="o">+</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">s</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<p>call sort function :</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Sort</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span> <span class="n">len</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span> <span class="n">cmpr</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>實作細節</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">char t[s]</code> :</li>
+</ul>
+
+<p>是暫存<code class="language-plaintext highlighter-rouge">arr[i]</code>的的變數,因為<code class="language-plaintext highlighter-rouge">char</code>是<code class="language-plaintext highlighter-rouge">1 byte</code> 所以 <code class="language-plaintext highlighter-rouge">char t[s]</code>剛好可以存一個<code class="language-plaintext highlighter-rouge">arr[i]</code></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">arr+s*i</code> :</li>
+</ul>
+
+<p>要索引資料時，利用<code class="language-plaintext highlighter-rouge">arr[i]</code>與<code class="language-plaintext highlighter-rouge">arr[i+1]</code>差一個資料形態的大小的概念,所以原本<code class="language-plaintext highlighter-rouge">arr[i]</code>要寫成<code class="language-plaintext highlighter-rouge">arr+i*s</code>來索引</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">memcpy</code> :</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">memcpy</code>的用法 ：</p>
+
+<p>把<code class="language-plaintext highlighter-rouge">pointer_2</code>的資料搬到<code class="language-plaintext highlighter-rouge">pointer_1</code></p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">memcpy</span><span class="p">(</span><span class="n">pointer_1</span> <span class="p">,</span> <span class="n">pointer_2</span> <span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>因為實在是太不熟<code class="language-plaintext highlighter-rouge">pointer</code>了, 這個作業搞了超久</p>
+
+<p>不過終於搞懂<code class="language-plaintext highlighter-rouge">void pointer</code>的用法ㄌ</p>

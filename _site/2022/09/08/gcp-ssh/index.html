@@ -29,13 +29,13 @@
 
   
 
-  <title>程式競賽中的數論</title>
+  <title>用 MAC 但發現環境很難打 code</title>
 
   
   <meta name="author" content="Jason Liu">
   
 
-  <meta name="description" content="Math theory in CP">
+  <meta name="description" content="直接架 GCP 主機跑 Linux">
 
   
   <meta name="theme-color" content="#0085A1">
@@ -130,19 +130,19 @@
 
   
   <meta property="og:site_name" content="LJO's Blog">
-  <meta property="og:title" content="程式競賽中的數論">
-  <meta property="og:description" content="Math theory in CP">
+  <meta property="og:title" content="用 MAC 但發現環境很難打 code">
+  <meta property="og:description" content="直接架 GCP 主機跑 Linux">
 
   
-  <meta property="og:image" content="https://i.imgur.com/ugI4COy.png">
+  <meta property="og:image" content="https://i.imgur.com/HI3Q4Gj.png">
   
 
   
   <meta property="og:type" content="article">
   <meta property="og:article:author" content="Jason Liu">
-  <meta property="og:article:published_time" content="2022-04-10T07:50:00+00:00">
-  <meta property="og:url" content="http://localhost:4000/2022/04/10/math-theory-01-zh/">
-  <link rel="canonical" href="http://localhost:4000/2022/04/10/math-theory-01-zh/">
+  <meta property="og:article:published_time" content="2022-09-08T06:00:00+00:00">
+  <meta property="og:url" content="http://localhost:4000/2022/09/08/gcp-ssh/">
+  <link rel="canonical" href="http://localhost:4000/2022/09/08/gcp-ssh/">
   
 
   
@@ -151,11 +151,11 @@
   <meta name="twitter:site" content="@">
   <meta name="twitter:creator" content="@">
 
-  <meta property="twitter:title" content="程式競賽中的數論">
-  <meta property="twitter:description" content="Math theory in CP">
+  <meta property="twitter:title" content="用 MAC 但發現環境很難打 code">
+  <meta property="twitter:description" content="直接架 GCP 主機跑 Linux">
 
   
-  <meta name="twitter:image" content="https://i.imgur.com/ugI4COy.png">
+  <meta name="twitter:image" content="https://i.imgur.com/HI3Q4Gj.png">
   
 
   
@@ -463,7 +463,7 @@
     
     
       
-      data-img-src-1="https://i.imgur.com/ugI4COy.png"
+      data-img-src-1="https://i.imgur.com/HI3Q4Gj.png"
     
     
     
@@ -477,15 +477,15 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>程式競賽中的數論</h1>
+          <h1>用 MAC 但發現環境很難打 code</h1>
           
             
-              <h2 class="post-subheading">Math theory in CP</h2>
+              <h2 class="post-subheading">直接架 GCP 主機跑 Linux</h2>
             
           
 
           
-            <span class="post-meta">Posted on April 10, 2022</span>
+            <span class="post-meta">Posted on September 8, 2022</span>
             
             
               <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
@@ -496,7 +496,7 @@
 
 
   
-  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> &lt; 1 minute read</span>
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 2 minute read</span>
 
 
             
@@ -513,15 +513,15 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>程式競賽中的數論</h1>
+          <h1>用 MAC 但發現環境很難打 code</h1>
           
             
-              <h2 class="post-subheading">Math theory in CP</h2>
+              <h2 class="post-subheading">直接架 GCP 主機跑 Linux</h2>
             
           
 
           
-            <span class="post-meta">Posted on April 10, 2022</span>
+            <span class="post-meta">Posted on September 8, 2022</span>
             
             
               <!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
@@ -532,7 +532,7 @@
 
 
   
-  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> &lt; 1 minute read</span>
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> 2 minute read</span>
 
 
             
@@ -557,10 +557,173 @@
       
 
       <article role="main" class="blog-post">
-        <h1 id="程式競賽中的數論">程式競賽中的數論</h1>
+        <h2 id="起因">起因</h2>
+<p>換了安靜的 MAC 新筆電，原本以為不會跟 Ubuntu 的環境差太多。沒想到在打 FB HackerCup 才發現 MAC 是用 <code class="language-plaintext highlighter-rouge">clang</code> 而不是在 Linux 熟悉的 <code class="language-plaintext highlighter-rouge">g++</code> 。</p>
 
-<h2 id="mod">MOD</h2>
-<h2 id="gcd--lcm">GCD / LCM</h2>
+<p>一般在寫題目來說，最大的差別是 <code class="language-plaintext highlighter-rouge">#include&lt;bits/stdc++.h&gt;</code> 不能引入這個萬用標頭檔 ( 不過可以手動將這個 header file 加入系統的 include path )</p>
+
+<p><img src="https://i.imgur.com/PGpjetV.png" alt="" /></p>
+
+<p>不果最重要的是： 用<code class="language-plaintext highlighter-rouge">clang</code> compile 有時候會跑出一些奇怪的 Bug ( 也有可能是 M1 晶片的問題 ？ )</p>
+
+<h2 id="what-is-gcp">What is GCP</h2>
+
+<p>GCP 的全名是 Google Cloud Platform ， 提供各種雲端的服務 。 而這次是用其中的 <code class="language-plaintext highlighter-rouge">VM 執行個體服務</code> 來架設一個 Linux 主機當作我的外出工作環境。
+<img src="https://i.imgur.com/hh740fv.png" alt="" /></p>
+
+<h2 id="免費試用-gcp">免費試用 GCP</h2>
+
+<p>只要有金融卡（ 或信用卡 ） 就可試用 GCP ， 並且會提供 <strong>300 USD</strong> 為期 <strong>90 天</strong>的服務（ 當然在 90 天內用完 300 USD 會自動結束 ）</p>
+
+<p>在免費試用期間，GCP 並不會向使用者收費，所以可以放心使用。
+<img src="https://i.imgur.com/loDWLci.png" alt="" /></p>
+
+<h2 id="建立-linux-主機">建立 Linux 主機</h2>
+
+<p>進入 GCP 後，可以在左側 navbar 看到 <code class="language-plaintext highlighter-rouge">Compute Engine</code> ， 再選取 <code class="language-plaintext highlighter-rouge">VM 執行個體</code>
+<img src="https://i.imgur.com/z0rNjg4.png" alt="" /></p>
+
+<p>接著選取上方的<code class="language-plaintext highlighter-rouge">建立執行個體</code>
+<img src="https://i.imgur.com/2HqGdD9.png" alt="" /></p>
+
+<p>就可以配置自己的主機規格（ 費用也會根據硬體規格不同有所差別 ）
+<img src="https://i.imgur.com/D7BKunX.png" alt="" /></p>
+
+<p>然後這是我配置的主機規格：
+<img src="https://i.imgur.com/fJTQBWr.png" alt="" /></p>
+
+<p>在 <code class="language-plaintext highlighter-rouge">開機磁碟</code> 可以更改主機的 OS ( 如果選擇需要授權的 OS ， 在開機時間需要支付額外費用 )
+<img src="https://i.imgur.com/sOypuaU.png" alt="" /></p>
+
+<p>成功建立 Linux 主機後，應該可以在後台看到剛剛建立的 VM<br />
+<img src="https://i.imgur.com/lakRvfr.png" alt="" /></p>
+
+<h2 id="ssh-登入-gcp-主機">SSH 登入 GCP 主機</h2>
+
+<h3 id="固定外部-ip">固定外部 IP</h3>
+
+<p>原先 GCP 主機的對外 IP 是浮動的（ 每次對外 IP 可能不同，這會導致 SSH 連線設定很常需要更動 ）</p>
+
+<p>先選取 VM 右側的<code class="language-plaintext highlighter-rouge">其他操作項目</code>
+<img src="https://i.imgur.com/58SfkOZ.png" alt="" />
+再選取 <code class="language-plaintext highlighter-rouge">查看詳細網路資訊</code>
+<img src="https://i.imgur.com/1cMLyrs.png" alt="" /></p>
+
+<p>會開啟 <code class="language-plaintext highlighter-rouge">虛擬私有雲網路</code>，再選取左側的 <code class="language-plaintext highlighter-rouge">IP 位置</code> ， 再選取<code class="language-plaintext highlighter-rouge">外部 IP 位置</code> 做設定 （ 把對外 IP 連接到 VM ）</p>
+
+<p><img src="https://i.imgur.com/YSkjQUg.png" alt="" /></p>
+
+<h3 id="設定-ssh-key">設定 SSH Key</h3>
+
+<p>在 local 的電腦使用 <code class="language-plaintext highlighter-rouge">ssh-keygen</code> command ( Mac 內件就有了 ) 來產生 SSH 的私鑰和公鑰。</p>
+
+<p>因為 <code class="language-plaintext highlighter-rouge">ssh-keygen</code> 會在當前的檔案位置生成私鑰和公鑰，所以應該先進入<code class="language-plaintext highlighter-rouge">~/.ssh</code> 的 directory 再執行。</p>
+
+<p>執行結果如下：
+<img src="https://i.imgur.com/vDlJFkL.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>在 <code class="language-plaintext highlighter-rouge">Enter file in which to save the key ... .ssh/id_rsa):</code> 可以輸入自訂的公鑰私鑰名稱。（ 預設為 <code class="language-plaintext highlighter-rouge">Users/USERNAME/.ssh/id_rsa</code> ）</p>
+  </li>
+  <li>
+    <p>在 <code class="language-plaintext highlighter-rouge">Enter passphrase ...</code> 可以輸入SSH密碼 （ 可以 enter 略過 ）</p>
+  </li>
+</ul>
+
+<h3 id="將-public-key-加入-gcp-主機">將 Public Key 加入 GCP 主機</h3>
+
+<p>先在 GCP 後台的上方 navbar 搜尋 <code class="language-plaintext highlighter-rouge">ssh</code> ， 並選取 <code class="language-plaintext highlighter-rouge">SSH Keys</code>
+<img src="https://i.imgur.com/E49Al8p.png" alt="" /></p>
+
+<p>就可以將 SSH 的 public key 加入 GCP 主機了（ 把 <code class="language-plaintext highlighter-rouge">filename.pub</code> 的內容複製到後台 ）
+<img src="https://i.imgur.com/GPZm6Iy.png" alt="" /></p>
+
+<h3 id="ssh-進-gcp">SSH 進 GCP</h3>
+
+<p>設定完就可以用 SSH 登入 GCP 了， command 如下 ：
+<code class="language-plaintext highlighter-rouge">ssh -i ~/.ssh/SSH_NAME USSRNAME@EXTERNAL_IP</code>
+<img src="https://i.imgur.com/IspWGBU.png" alt="" /></p>
+
+<p>應該就可以成功進入 GCP 主機
+<img src="https://i.imgur.com/HI3Q4Gj.png" alt="" /></p>
+
+<h3 id="設定-ssh-config">設定 SSH config</h3>
+
+<p>剛剛的 SSH 登入方式還需要記得 UserName 和 IP 才能登入， 這對於使用者非常不方便。</p>
+
+<p>我們可以在 <code class="language-plaintext highlighter-rouge">~/.ssh</code> 的目錄下新增 <code class="language-plaintext highlighter-rouge">config</code> 設定檔，格式如下：
+( <code class="language-plaintext highlighter-rouge">#</code> 後是註解，不是設定檔內容 )</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host            GCP                 # host name
+Hostname        192.168.11.25       # IP or Domain name
+Port            22                  # ssh default port
+User            jason               # user name
+identityfile    ~/.ssh/id_rsa       # path to private key
+</code></pre></div></div>
+
+<p>現在只需要使用 <code class="language-plaintext highlighter-rouge">ssh Host</code> 就可以進入 GCP 主機了
+<img src="https://i.imgur.com/M5GIhO7.png" alt="" /></p>
+
+<h2 id="vscode-設定-ssh">VSCode 設定 SSH</h2>
+
+<p>在預設情況下，我們在 terminal 中 SSH 進入 GCP 的主機後，如果需要修改檔案時，只能透過 <code class="language-plaintext highlighter-rouge">vim</code> 或<code class="language-plaintext highlighter-rouge">nano</code> 這兩個可以在 terminal 運作的editor 。 如果要用 local 的電腦使用<code class="language-plaintext highlighter-rouge">Visual Studio Code</code> 來打 code 還需要額外設定：</p>
+
+<ol>
+  <li>
+    <p>在開始設定前，需要先下載好 <code class="language-plaintext highlighter-rouge">Remote- SSH</code> 這個 extension 
+<img src="https://i.imgur.com/jewrPHA.jpg" alt=" remote ssh extension  " /></p>
+  </li>
+  <li>
+    <p>首先選取左下角<strong>藍色 &gt;&lt; 字樣</strong>的 icon 
+<img src="https://i.imgur.com/uXzjgsi.jpg" alt=" connection icon " /></p>
+  </li>
+  <li>
+    <p>接著會在上方 navbar 跳出 remote connect 的選項</p>
+  </li>
+</ol>
+
+<p><img src="https://i.imgur.com/bJKOh2g.png" alt=" upper navbar " /></p>
+
+<p>並選取<strong>Connect Current Window to Host …</strong> ( 第二個 )</p>
+
+<p><img src="https://i.imgur.com/GrIdiOX.jpg" alt=" navbar option " /></p>
+
+<ol>
+  <li>選取先前設定好的 SSH</li>
+</ol>
+
+<p><img src="https://i.imgur.com/MXKOkgw.jpg" alt="" /></p>
+
+<p>結果 Vscode 就成功連線至的 GCP 主機了
+<img src="https://i.imgur.com/nKzqE2O.jpg" alt="" />
+( 這邊會顯示報錯是因為 Vscode 是根據 local 的 include path 做搜尋，而不是連限至的 GCP 主機 )</p>
+
+<p>在測試 C++ 環境的時候發現主機並沒有載 <code class="language-plaintext highlighter-rouge">g++</code> ， 所以也需要自己 <code class="language-plaintext highlighter-rouge">sudo apt install g++</code>一下 （ 有可能是因為那時候 image 選 <code class="language-plaintext highlighter-rouge">minimal</code> ）</p>
+
+<h2 id="其他注意事項">其他注意事項</h2>
+
+<h3 id="linux-關機">Linux 關機</h3>
+
+<p>如果從 GCP 後台關機的話會顯示<strong>可能會導致檔案損毀</strong>的警告，所以關機就使用 linux command ： <code class="language-plaintext highlighter-rouge">sudo shutdown -h 筍now</code> 就可以立即關機了 ( 必須使用 <code class="language-plaintext highlighter-rouge">sudo </code> 才能關機 )
+<img src="https://i.imgur.com/ohBwDHi.png" alt="" /></p>
+
+<p>開機的話一樣從 GCP 後台來開機
+<img src="https://i.imgur.com/RRY70dC.png" alt="" /></p>
+
+<p>( 如果要定時開機關機的話 ， 就可以從 GCP 設定 )</p>
+<h3 id="硬體儲存空間收費">硬體儲存空間收費</h3>
+
+<p>即使我們在每次使用都有關機，但是<strong>硬體空間</strong>還是<strong>持續收費</strong></p>
+
+<p><img src="https://i.imgur.com/DJWVJnj.png" alt="" /></p>
+
+<p>（不過沒有到很貴，開 10G 磁碟一個月約 1 USD ）</p>
+
+<h2 id="使用心得">使用心得</h2>
+
+<p>有第三台電腦了（ Ｘ
+過一個月再補ㄅ</p>
 
 
       </article>
@@ -569,11 +732,11 @@
         <div class="blog-tags">
           <span>Tags:</span>
           
-            <a href="/tags#c++/c">c++/c</a>
+            <a href="/tags#GCP">GCP</a>
+          
+            <a href="/tags#linux">linux</a>
           
             <a href="/tags#notes">notes</a>
-          
-            <a href="/tags#Math">Math</a>
           
         </div>
       
@@ -592,13 +755,9 @@
       <ul class="pagination blog-pager">
         
         <li class="page-item previous">
-          <a class="page-link" href="/2022/03/24/ZJstats0/" data-toggle="tooltip" data-placement="top" title="動態顯示的Zerojudge stats！">&larr; Previous Post</a>
+          <a class="page-link" href="/2022/05/25/cs-nctu/" data-toggle="tooltip" data-placement="top" title="111學測 交大資工 APCS組 二階面試心得">&larr; Previous Post</a>
         </li>
         
-        
-        <li class="page-item next">
-          <a class="page-link" href="/2022/04/10/leetcode-288-weekly/" data-toggle="tooltip" data-placement="top" title="288th LeetCode Weekly Contest">Next Post &rarr;</a>
-        </li>
         
       </ul>
       

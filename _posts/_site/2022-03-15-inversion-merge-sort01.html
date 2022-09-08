@@ -1,0 +1,98 @@
+<h1 id="逆序數對">逆序數對</h1>
+
+<p>在Merge sort的時候計算逆序數對</p>
+
+<p>先來觀察Merge sort 的過程：</p>
+
+<ol>
+  <li>分治 
+一直重複從中點把陣列切成兩半直到子陣列剩單個元素</li>
+  <li>合併</li>
+</ol>
+
+<p>我覺得Merge sort 的關鍵就在<strong>Merge</strong>的過程</p>
+
+<p>用圖演示Merge sort都無法把Merge 的精髓畫出來</p>
+
+<ul>
+  <li>條列式</li>
+  <li>one</li>
+  <li>another</li>
+  <li>the other</li>
+</ul>
+
+<p><em>Italics font</em></p>
+
+<p><del>Strikethrough</del></p>
+
+<p>這是^上標^</p>
+
+<p>這是~下標~</p>
+
+<p>==Marked text==</p>
+
+<p>Table example :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Number</th>
+      <th style="text-align: left">Next number</th>
+      <th style="text-align: left">Previous number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Five</td>
+      <td style="text-align: left">Six</td>
+      <td style="text-align: left">Four</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ten</td>
+      <td style="text-align: left">Eleven</td>
+      <td style="text-align: left">Nine</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Seven</td>
+      <td style="text-align: left">Eight</td>
+      <td style="text-align: left">Six</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Two</td>
+      <td style="text-align: left">Three</td>
+      <td style="text-align: left">One</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Code with syntax highlighting:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define int long long 
+#define INF 1e9
+</span>
+<span class="n">singed</span> <span class="nf">main</span><span class="p">(){</span>
+
+    <span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pq</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"112 to 112 ?!"</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Todo List</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />a Blog a day</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />solving a problem a day</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />participate a contest a week</li>
+</ul>
+
+<h3 id="notification">Notification</h3>
+
+<p class="box-note"><strong>Note:</strong> This is a notification box.</p>
+
+<h3 id="warning">Warning</h3>
+
+<p class="box-warning"><strong>Warning:</strong> This is a warning box.</p>
+
+<h3 id="error">Error</h3>
+
+<p class="box-error"><strong>Error:</strong> This is an error box.</p>

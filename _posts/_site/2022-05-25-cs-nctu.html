@@ -1,0 +1,190 @@
+<h1 id="111學測-交大資工-apcs組">111學測 交大資工 APCS組</h1>
+
+<p><strong>規則：</strong></p>
+
+<p>每個人只有 <strong>7 分鐘</strong> （ 自介 <strong>1 分鐘</strong></p>
+
+<p>然後 <strong>6 分</strong>時會<strong>敲門提醒</strong></p>
+
+<p>7 分時會直接開門</p>
+
+<h2 id="自介">自介</h2>
+
+<p>大概一分鐘，其實不會計時</p>
+
+<p>我自己練的大概都 1 分 10 ~ 20 秒</p>
+
+<p>（ 就大概 1 分鐘就可以</p>
+
+<h2 id="教室配置">教室配置</h2>
+
+<p>有 3 個教授 ( 離有點距離</p>
+
+<p>配置大概長這樣：</p>
+
+<p><img src="https://i.imgur.com/bGjcwIc.png" alt=" nycu room " /></p>
+
+<p>然後有椅子可以坐</p>
+
+<h2 id="教授提問">教授提問</h2>
+
+<p>全部都只有一個教授在問….</p>
+
+<p>（ 聽學長＆其他人的消息應該是謝旻錚教授(那時候坐在最右邊)</p>
+
+<p><strong>Q1 :</strong>
+<strong>我看到你的簡歷有 Github統計，其中的 PR 都是向哪些專案contribute ?</strong></p>
+
+<p>我回答的：</p>
+
+<p>都是一些小型的專案，像是朋友的小作品，然後去修改一些小東西…
+（ 教授有點頭</p>
+
+<p>我心裡想的：</p>
+
+<p>那個Github統計的其實是真的沒有經歷可以放了，但是我想弄滿兩面好看的表格</p>
+
+<p>有些 PR 是我自己在不同電腦打code要commit上去需要 merge 的時候的 ， 但是很像也一起算進去ㄌ ….</p>
+
+<p><strong>Q2 :</strong>
+<strong>那你是如何準備APCS的 ?</strong></p>
+
+<p>主要還是刷題，就像是今天主要以動態規劃的題目做練習，明天針對圖論，後天針對其他主題之類的。</p>
+
+<p><strong>Q3 :</strong>
+<strong>那在你練習過程中，最深刻的演算法是什麼？</strong></p>
+
+<p>應該是 <code class="language-plaintext highlighter-rouge">Dijkstra</code> 最短路徑演算法，因為這是感覺跟生活中最接近的演算法，可以實際運用。</p>
+
+<p><strong>Q3 :</strong>
+<strong>那Dijkstra 演算法的概念？</strong></p>
+
+<p>主要是以 <code class="language-plaintext highlighter-rouge">Greedy</code> 的想法，搭配<code class="language-plaintext highlighter-rouge">Priority_Queue</code>優化的單點源最短路徑。</p>
+
+<p><strong>Q4 :</strong>
+<strong>Dijkstra 的限制？</strong></p>
+
+<p>有負環就不行</p>
+
+<p><strong>Q5 :</strong>
+<strong>那有負邊可以嗎？</strong></p>
+
+<p>負邊也不行</p>
+
+<p><strong>Q6 :</strong>
+<strong>你有實際寫過 Dijkstra 嗎？</strong></p>
+
+<p>有</p>
+
+<p><strong>Q7 :</strong>
+<strong>用什麼寫的？</strong></p>
+
+<p>C++</p>
+
+<p>（ 這邊 <code class="language-plaintext highlighter-rouge">6</code> &amp; <code class="language-plaintext highlighter-rouge">7</code> 是接著問的，所以很短</p>
+
+<p><strong>Q8 :</strong>
+<strong>現在有 3 個點： <code class="language-plaintext highlighter-rouge">A</code>、<code class="language-plaintext highlighter-rouge">B</code>、<code class="language-plaintext highlighter-rouge">C</code> （ 教授一邊比劃圖形 ），然後邊權都是 1 ，<code class="language-plaintext highlighter-rouge">Dijkstra</code>會怎麼處理？</strong></p>
+
+<p><img src="https://i.imgur.com/S41PQJe.png" alt="" />
+( 如圖所示 )</p>
+
+<p>會有一個<code class="language-plaintext highlighter-rouge">Distance</code> 數組紀錄到該點的最短距離，如果 <code class="language-plaintext highlighter-rouge">當前的距離</code> + <code class="language-plaintext highlighter-rouge">連到Neighbor的邊權</code> &lt; <code class="language-plaintext highlighter-rouge">Neighbor的距離</code> 的話就更新距離 ， 然後放入 <code class="language-plaintext highlighter-rouge">PQ</code></p>
+
+<p>（ 要表達這個情況： <code class="language-plaintext highlighter-rouge">Dis [ neighbor] &gt; Dis[ current] + Edge weight( current to neighbor)</code> ）</p>
+
+<p>（ 這邊我應該還要說預設為 <code class="language-plaintext highlighter-rouge">INF</code> 然後起點為 <code class="language-plaintext highlighter-rouge">0</code> ）</p>
+
+<p><strong>Q9 :</strong>
+<strong>如果現在多一個 <code class="language-plaintext highlighter-rouge">a ——5—— c</code> 的 edge 會有什麼影響？</strong></p>
+
+<p><img src="https://i.imgur.com/vRPhD5O.png" alt="" />
+( 如圖所示 )</p>
+
+<p><strong>Me :</strong>
+那一樣檢查 <code class="language-plaintext highlighter-rouge">C</code> 附近有沒有可以更新的</p>
+
+<p>如果有的話 一樣放進 <code class="language-plaintext highlighter-rouge">PQ</code></p>
+
+<p><strong>Professor :</strong>
+可是現在 <code class="language-plaintext highlighter-rouge">PQ</code> 裡面會有兩個存兩個 <code class="language-plaintext highlighter-rouge">C</code> 欸</p>
+
+<p><strong>Me :</strong>
+？—？ （ 疑惑貌</p>
+
+<p><strong>Professor :</strong> （ 看的出我很疑惑</p>
+
+<p>現在 <code class="language-plaintext highlighter-rouge">PQ</code> 裡面會有 <code class="language-plaintext highlighter-rouge">( 2,c )</code> 、 <code class="language-plaintext highlighter-rouge">( 5,c )</code> 這兩個 Pair ，那 <code class="language-plaintext highlighter-rouge">PQ</code> 會怎麼處理？</p>
+
+<p>（ 我才懂教授的意思應該是 ： 直接在<code class="language-plaintext highlighter-rouge">PQ</code> 塞一個 <code class="language-plaintext highlighter-rouge">( 5,c )</code> 而不是建一個加上 <code class="language-plaintext highlighter-rouge">a ——5—— c</code> 的圖 )</p>
+
+<p><strong>Me :</strong> 那一樣會檢查可不可以更新Dis</p>
+
+<p>如果 ： <code class="language-plaintext highlighter-rouge">Dis [ neighbor] &gt; Dis[ current] + edge</code> 的話</p>
+
+<p>就更新 <code class="language-plaintext highlighter-rouge">Dis [ neighbor]</code> 然後放進 <code class="language-plaintext highlighter-rouge">PQ</code></p>
+
+<p>不能的話就 <code class="language-plaintext highlighter-rouge">POP</code> 掉</p>
+
+<p><strong>Professor :</strong> 這樣 <code class="language-plaintext highlighter-rouge">Dis</code> 數組不是會壞掉？</p>
+
+<p>我在想（ 為什麼會壞掉QQ ？</p>
+
+<p>然後時間就差不多到ㄌ</p>
+
+<p>反正這整段很鬼打牆…..</p>
+
+<p>但我還是沒有很懂教授的點在哪</p>
+
+<p>（ 看起來跟教授沒有同頻 ， 沒回答到教授覺得是答案或是問題關鍵點 …</p>
+
+<p>（ 向其他人詢問後，教授指的「數組壞掉」可能是指要證明greedy的正確性？</p>
+
+<h2 id="心得">心得</h2>
+
+<p>看起來應該是我覺得算是「作品」的東西不夠有料所以狂問程競</p>
+
+<p>或是今年交大擺明就是要收程競？</p>
+
+<p>真的從頭到尾都在問算法，然後就暴ㄌ</p>
+
+<h2 id="其他的事">其他🆒🆒的事</h2>
+
+<p>是 <a href="https://github.com/Sea-n">@Sean 學長</a>帶位去準備區 ！！</p>
+
+<p>（ 資訊圈應該都知道學長 ， 不是資訊圈的應該也都看過學長ㄉ<a href="https://img.sean.taipei/2019/05/nctu.pdf">備審</a></p>
+
+<p>本人很親切 可以聊天XD</p>
+
+<p>（ 雖然我 11 點就到考場休息室然後認出他 ， 但是我到 1 點面試準備前才跟他講話 www</p>
+
+<p>在我被叫到要去準備區的時候</p>
+
+<p><a href="https://hackmd.io/@gtcoding">@GTcoding</a> 剛好傳訊息問我到了沒 （ 然後我在他對面LOL</p>
+
+<p>休息室很冷，冷氣開超強（ 清大的超熱</p>
+
+<p><img src="https://i.imgur.com/jkdmkkz.png" alt="rest room" /></p>
+
+<p>（ 休息室 ）</p>
+
+<p>面試完還有麵包餐盒可以拿</p>
+
+<p><img src="https://i.imgur.com/Ugvi7zI.png" alt=" bread " /></p>
+
+<p>（ 超重的麵包餐盒 ）</p>
+
+<p>如果是開車到校園的：</p>
+
+<p>交大裡面很難停車</p>
+
+<p>需要繞到最裡面靠近籃球場的地方才有車位</p>
+
+<h2 id="別人的心得">別人的心得</h2>
+
+<p><a href="https://hackmd.io/@gtcoding/r1rAOOiwq">@GTcoding</a></p>
+
+<h3 id="reference-">Reference :</h3>
+
+<p><a href="https://jayinnn.ml/posts/gsat-apply/">Jayinn學長APCS面試心得</a></p>
+

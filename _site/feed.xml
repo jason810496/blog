@@ -10,6 +10,17 @@
     
     
       <item>
+        <title>用 MAC 但發現環境很難打 code</title>
+        <description>
+          直接架 GCP 主機跑 Linux - 
+          起因 換了安靜的 MAC 新筆電，原本以為不會跟 Ubuntu 的環境差太多。沒想到在打 FB HackerCup 才發現 MAC 是用 clang 而不是在 Linux 熟悉的 g++ 。 一般在寫題目來說，最大的差別是 #include&amp;lt;bits/stdc++.h&amp;gt; 不能引入這個萬用標頭檔 ( 不過可以手動將這個 header file 加入系統的 include path ) 不果最重要的是： 用clang compile 有時候會跑出一些奇怪的 Bug ( 也有可能是 M1 晶片的問題 ？ ) What is GCP GCP 的全名是 Google Cloud Platform ， 提供各種雲端的服務 。...
+        </description>
+        <pubDate>Thu, 08 Sep 2022 06:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2022/09/08/gcp-ssh/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/09/08/gcp-ssh/</guid>
+      </item>
+    
+      <item>
         <title>111學測 交大資工 APCS組 二階面試心得</title>
         <description>
           111GSAT NCTU CSIE - 
@@ -225,17 +236,6 @@ GCD / LCM
         <pubDate>Tue, 01 Feb 2022 14:52:00 +0000</pubDate>
         <link>http://localhost:4000/2022/02/01/markdown-tutorial01/</link>
         <guid isPermaLink="true">http://localhost:4000/2022/02/01/markdown-tutorial01/</guid>
-      </item>
-    
-      <item>
-        <title>Test 01</title>
-        <description>
-          check my setting - 
-          This is a demo post to show you how to write blog posts with markdown. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc. Here is some bold text Here is a secondary...
-        </description>
-        <pubDate>Tue, 01 Feb 2022 13:16:43 +0000</pubDate>
-        <link>http://localhost:4000/2022/02/01/test01/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/01/test01/</guid>
       </item>
     
   </channel>

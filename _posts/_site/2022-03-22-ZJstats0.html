@@ -1,0 +1,234 @@
+<h1 id="zerojudge-stats">Zerojudge stats</h1>
+
+<h2 id="動機">動機</h2>
+
+<p>繼上篇<a href="https://jason810496.github.io/blog/2022-02-08-github-profile-01-zh/">如何打造好看的Github Profile</a>，就是看到許多大佬的GH首頁都很炫炮的統計紀錄！</p>
+
+<p>又翻了翻GH，發現各大解題平台如：<a href="https://github.com/JacobLinCool/LeetCode-Stats-Card">leetcode</a>、<a href="https://github.com/SiriusKoan/codeforces-stats">codeforce</a>(<del>但我覺得沒有到很好看</del>)、<a href="https://github.com/JacobLinCool/TIOJ-Stats-Card">TIOJ</a>等都有人做過專門放在GH首頁好看的解題統計了</p>
+
+<p>唯獨<del>我刷最多水題的</del><a href="https://zerojudge.tw/">Zerojudge</a>沒有</p>
+
+<p>那只好自己做一個了(⊙ω⊙)</p>
+
+<h2 id="如何辦到的">如何辦到的？</h2>
+
+<p>但是仔細看一下發現：Profile page竟然是一個<code class="language-plaintext highlighter-rouge">README.md</code>，那他們是怎麼在靜態的頁面顯示即時的資料的？</p>
+
+<p>接著看一下他們的raw markdown，可以看到那些統計紀錄都是一個個圖片，而圖片的<code class="language-plaintext highlighter-rouge">src</code>則是連到某個網站的<code class="language-plaintext highlighter-rouge">url</code>。</p>
+
+<p>如：這個可以<a href="https://github.com/DenverCoder1/github-readme-streak-stats">顯示在Github活動狀態的project</a></p>
+
+<p>他的使用方法：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=DenverCoder1&amp;theme=dark)
+</code></pre></div></div>
+
+<p>大概揣摩一下，應該是：</p>
+
+<p>當瀏覽者訪問作者頁面時，將上面的<code class="language-plaintext highlighter-rouge">url</code>當作圖片source，並且透過<code class="language-plaintext highlighter-rouge">GET</code> parameter來查詢用戶資料或指定主題。而他的server在收到request後，就向Github查詢用戶資料再包成一個<code class="language-plaintext highlighter-rouge">SVG</code>顯示在頁面上，並且頁面的<code class="language-plaintext highlighter-rouge">content-type</code>要指定為<code class="language-plaintext highlighter-rouge">SVG</code>（這樣才能當成圖檔來用）。</p>
+
+<h2 id="為什麼zerojudge沒有人做">為什麼Zerojudge沒有人做？</h2>
+
+<p>我猜想應該是：</p>
+
+<ol>
+  <li>Zerojudge需要登入才能查詢用戶資料
+如：leetcode、TIOJ不需要登入，而codeforce則是提供API查詢</li>
+  <li>Zerojudge的登入方式
+目前ZJ的登入方式有兩種：
+    <ul>
+      <li>通過<code class="language-plaintext highlighter-rouge">recaptcha 2</code>驗證(防機器人ㄉ那個驗證)</li>
+      <li>登入google帳戶</li>
+    </ul>
+  </li>
+  <li><del>大佬都不想寫Zerojudge</del>(畢竟題目太雜了)</li>
+</ol>
+
+<p>而要讓<strong>server登入Zerojudge</strong>並讓某一個帳號持<strong>續維持登入狀態</strong>是最大的困難點</p>
+
+<h2 id="整體架構概念">整體架構概念</h2>
+
+<p>所以我要先搭建一個app能夠<strong>即時查詢Zerojudge的資料</strong>，並將統計資料包成SVG回傳，還有要能夠<strong>方便地登入Zerojudge</strong>並<strong>維持登入狀態</strong>。</p>
+
+<p>又因為比起PHP(我還沒學過)、Javascript(我沒有學過他的後端，也比較不熟悉它的語法)、Ruby(也沒學過)等我比較熟悉Python</p>
+
+<p>所以就用<a href="https://flask.palletsprojects.com/en/2.0.x/">flask</a>來寫這個專案的後端</p>
+
+<h3 id="登入zerojudge">登入Zerojudge</h3>
+
+<h4 id="通過recaptcha驗證">通過recaptcha驗證</h4>
+
+<p>目前要破解recaptcha最有效率的方式是透過音檔辨識(畢竟圖像辨識的技術沒有到音檔辨識那麼精準？而且還需要額外訓練一個模型才有辦法)</p>
+
+<p>音檔辨識的python library有<code class="language-plaintext highlighter-rouge">SpeechRecognition</code>(它可以接到Google Cloud Speech API，算是<del>以其人之道，還治其人之身</del>)</p>
+
+<h4 id="登入google帳號">登入google帳號</h4>
+
+<p>要透過python登入google帳號，我有試過<code class="language-plaintext highlighter-rouge">beautifulsoup 4</code>但是一直會有bug..</p>
+
+<p>另一種方式是透過selenium + webdriver(可以算是透過程式操控一個瀏覽器)但是也很容易被擋</p>
+
+<h4 id="嗯">嗯…</h4>
+<p>這兩個方式都會需要將webdriver塞到server裡面，登入方式算是透過程式操控一個瀏覽器然後在指定的位置按按鈕、送出張號密碼來登入</p>
+
+<p>我覺的這個這兩種方法都笨笨ㄉ而且效率也不高，但是在構思階段也沒有想到什麼好方法</p>
+
+<h4 id="靈光一閃">靈光一閃</h4>
+
+<p>突然想到：當一個帳號登入到Zerojudge時，會產生一個<code class="language-plaintext highlighter-rouge">JSESSIONID</code>並且發出request時只需要改變<code class="language-plaintext highlighter-rouge">header</code>的<code class="language-plaintext highlighter-rouge">JSESSIONID</code>就能以該登入帳號的身份進入網站。</p>
+
+<p>那代表：我只要拿一個帳號作為專門向Zerojudge查詢使用者資料的帳號，並且我可以在自己的電腦登入該查詢帳號再將<code class="language-plaintext highlighter-rouge">JSESSIONID</code>傳到我的app中，就可以讓我的server以登入帳號的身份發出request!</p>
+
+<h3 id="實做">實做</h3>
+
+<h4 id="工具">工具：</h4>
+
+<ul>
+  <li>
+    <p>Flask、Flask login (後端server)</p>
+  </li>
+  <li>
+    <p>beautiful soup 4 (解析向ZJ的request，擷取關鍵的解題數)</p>
+  </li>
+  <li>
+    <p>手刻<code class="language-plaintext highlighter-rouge">SVG</code>(那時候沒有找到什麼很好用的SVG online editor)</p>
+  </li>
+  <li>
+    <p><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">boostwrap 5</a>(因為手刻<code class="language-plaintext highlighter-rouge">css</code>、<code class="language-plaintext highlighter-rouge">js</code>並沒有比較好看…)</p>
+  </li>
+</ul>
+
+<p>為什麼不用<code class="language-plaintext highlighter-rouge">Node.js</code>、<code class="language-plaintext highlighter-rouge">PHP</code>、<code class="language-plaintext highlighter-rouge">rust</code>…</p>
+
+<p>因為我對python比較熟w</p>
+
+<h4 id="必要功能">必要功能：</h4>
+
+<ul>
+  <li>
+    <p>登入界面 (for Admin user)</p>
+  </li>
+  <li>
+    <p>Admin 界面 (讓我更改<code class="language-plaintext highlighter-rouge">JSSESSIONID</code>)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">GET</code> 回應點 (透過<code class="language-plaintext highlighter-rouge">query parameter</code>傳用戶id、主題…然後給好看的badge回來)</p>
+  </li>
+</ul>
+
+<h3 id="困難">困難：</h3>
+
+<p>大致的架構都寫好後，在最關鍵的<code class="language-plaintext highlighter-rouge">將圖片顯示在瀏覽者頁面</code>有問題</p>
+
+<p>我先將<code class="language-plaintext highlighter-rouge">SVG</code>的架構寫成模板，只要將用戶的name、解題數套入就可以生成新的圖片</p>
+
+<p>然而要將<code class="language-plaintext highlighter-rouge">GET回應點</code>顯示的<code class="language-plaintext highlighter-rouge">SVG</code>的<code class="language-plaintext highlighter-rouge">content-type</code>改成<code class="language-plaintext highlighter-rouge">image</code>相關的才有辦法讓瀏覽器以該url的回應點當成圖片的source</p>
+
+<p>(我那時候不知道，又因為<code class="language-plaintext highlighter-rouge">render_templates()</code>的預設<code class="language-plaintext highlighter-rouge">content-type</code>都是<code class="language-plaintext highlighter-rouge">html</code>，所以我在<code class="language-plaintext highlighter-rouge">localhost</code>試了幾百遍還是沒有辦法將<code class="language-plaintext highlighter-rouge">看的到的圖片</code>當成<code class="language-plaintext highlighter-rouge">圖檔</code>來用…)</p>
+
+<p>我看了Flask的document還是沒有找到解法(其實是<strong>技術知識不夠</strong>，那時候我還不知道<code class="language-plaintext highlighter-rouge">mime type</code>的相關知識，所以將<code class="language-plaintext highlighter-rouge">content-type</code>改成<code class="language-plaintext highlighter-rouge">image</code>就可以解決了，但是我大概卡了兩天…</p>
+
+<p>最後的解決方法：</p>
+
+<p>只好厚臉皮的去<a href="https://stackoverflow.com/"><code class="language-plaintext highlighter-rouge">Stackoverflow</code></a>問問題</p>
+
+<p><a href="https://stackoverflow.com/questions/71529064/is-there-any-solution-that-can-show-svg-without-html-tags-using-flask">https://stackoverflow.com/questions/71529064/is-there-any-solution-that-can-show-svg-without-html-tags-using-flask</a></p>
+
+<h3 id="部署app">部署app：</h3>
+
+<h4 id="heroku">Heroku</h4>
+
+<p><strong>免費的真香！</strong></p>
+
+<p><a href="https://www.heroku.com/">Heroku</a>就是最簡單可以部屬app的serverless雲端服務，它提供<strong>每個月500</strong>小時的免費時數(但是大概算一下就發現30×24=720 &gt; 500 ，它提供的免費時數<strong>不足</strong>夠讓你的server一整天都是開機的狀態)</p>
+
+<p>而且他的主機在美國，也就是在瀏覽者頁面顯示前，必須在台灣與美國經過四次來回！（Zerojudge的主機應該也在台灣吧？</p>
+
+<p>清況如下：</p>
+
+<p><a href="https://www.youtube.com/watch?v=8I1fOkicFvc">我從台灣美國</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=8I1fOkicFvc">我從台灣美國</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=8I1fOkicFvc">我從台灣美國</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=8I1fOkicFvc">我從台灣美國</a></p>
+
+<p><del>大概這種感覺</del></p>
+
+<hr />
+
+<ol>
+  <li>
+    <p>瀏覽者（Taiwan）→（瀏覽器加載圖片，<code class="language-plaintext highlighter-rouge">GET</code>我的app）→</p>
+  </li>
+  <li>
+    <p>我的app（USA）→（向ZJ查詢用戶解題統計）→</p>
+  </li>
+  <li>
+    <p>ZJ（Taiwan）→(回應請求，回傳給app)→</p>
+  </li>
+  <li>
+    <p>我的app（USA）→（將資料包成SVG圖檔回喘給使用者）→</p>
+  </li>
+  <li>
+    <p>瀏覽者（Taiwan）在瀏覽器看到<code class="language-plaintext highlighter-rouge">Zerojudge stats</code></p>
+  </li>
+</ol>
+
+<p>這樣造成嚴重的延遲，很常就runtime error了（而且應該不適合設定<code class="language-plaintext highlighter-rouge">CDN</code>，畢竟是要查詢即時的資料，預先加載到附近網路交換點很像沒什麼用？</p>
+
+<h3 id="缺點">缺點：</h3>
+
+<ul>
+  <li><strong>延遲</strong></li>
+</ul>
+
+<p>不用多說ㄌ</p>
+<ul>
+  <li><strong>程式穩地性</strong></li>
+</ul>
+
+<p>目前還是Beta版本，很常app就掛掉…還有許多細節可以調整！</p>
+
+<ul>
+  <li><strong>網頁暫存</strong></li>
+</ul>
+
+<p>跟同學測試後發現有這個問題，但也不知道要怎麼解決。</p>
+
+<p>畢竟瀏覽器為了加載速度會將曾經訪問過的資料暫存起來，那該使用者可能看到的還是舊的圖檔…</p>
+<h3 id="改進加強">改進＆加強：</h3>
+
+<p>目前想到的<strong>解決方案</strong>如下：</p>
+
+<ul>
+  <li><strong>Google Cloud Platform</strong></li>
+</ul>
+
+<p>可是在GCP弄一個server只為了，部屬類似API功能的app感覺有點浪費？</p>
+
+<ul>
+  <li><strong>自己架server</strong></li>
+</ul>
+
+<p>技術門檻高，還有供電、網路…要考慮</p>
+
+<ul>
+  <li><strong>在台灣有主機的cloud server</strong></li>
+</ul>
+
+<p>品質一定沒問題的只有GCP，其他太便宜的不敢用</p>
+
+<ul>
+  <li><strong>Google app script</strong></li>
+</ul>
+
+<p>目前還在研究，主要透過JS來寫，但是這還是比較適合跟Google提供的app做互動。目前遇到的問題的向其他網站request的時候沒辦法改header中的Cookie</p>
+
+<ul>
+  <li><strong>Worker</strong></li>
+</ul>
+
+<p>3/26更新，湊巧在查為什麼那麼多人的subdomain都是<code class="language-plaintext highlighter-rouge">worker.dev</code>看起來超帥？大概了解一下才知道：<a href="https://www.cloudflare.com/zh-tw/products/workers-kv/"><code class="language-plaintext highlighter-rouge">worker</code></a>是<a href="https://www.cloudflare.com/zh-tw/"><code class="language-plaintext highlighter-rouge">cloudflare</code></a>提供的serverless服務，但是完全支持的語言只有<code class="language-plaintext highlighter-rouge">Javascript</code>、<code class="language-plaintext highlighter-rouge">Typescript</code>（不過<a href="https://developers.cloudflare.com/workers/platform/languages/#compiled-to-javascript">官方</a>說也可以將<code class="language-plaintext highlighter-rouge">python</code>、<code class="language-plaintext highlighter-rouge">PHP</code>…編譯成Javascript，細節還需要再研究一下）</p>
+

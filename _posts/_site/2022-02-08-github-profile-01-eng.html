@@ -1,0 +1,155 @@
+<h2 id="github-profile">Github Profile</h2>
+
+<p>When I browse over expert’s Github profile page , I see numerous elaborate
+當我點開大神的Github首頁都會先看到有一堆炫炮徽章、activity統計紀錄的card…</p>
+
+<p>看起來就很專業，也可以提供一些簡單的個人資訊（最常使用哪個語言、commit次數、連續活躍天數…</p>
+
+<p>一方面是讓別人對自己有初步的了解，另一方面是<del>自己看了很開心</del></p>
+<h2 id="預處理">預處理：</h2>
+
+<p>首先，要知道在Github個人首頁顯示的頁面是在<code class="language-plaintext highlighter-rouge">username</code>的repository</p>
+
+<p>例如：</p>
+
+<p>我的用戶名稱是<code class="language-plaintext highlighter-rouge">jason810496</code></p>
+
+<p>那我的github首頁的ur;會是<code class="language-plaintext highlighter-rouge">https://github.com/jason810496</code></p>
+
+<p>而這個特別的repository的url會在<code class="language-plaintext highlighter-rouge">https://github.com/jason810496/jason810496</code></p>
+
+<p>所以需要先建一個跟你<code class="language-plaintext highlighter-rouge">username</code>一樣名字的repository</p>
+
+<p>像這樣：</p>
+
+<p><img src="https://i.imgur.com/29rPdRA.png" alt="screen shot of my repo " /></p>
+
+<p>(他有在右邊提示說這是一個特別的repository，其中的<code class="language-plaintext highlighter-rouge">README.md</code>會在個人首頁被看到)</p>
+
+<h2 id="好用的工具">好用的工具</h2>
+
+<h3 id="hackmd">Hackmd</h3>
+
+<p>我們已經知道其實個人首頁是一個<code class="language-plaintext highlighter-rouge">README.md</code></p>
+
+<p>就是以<code class="language-plaintext highlighter-rouge">Markdown</code>寫的</p>
+
+<p>如果不會<code class="language-plaintext highlighter-rouge">Markdown</code>？</p>
+
+<p>語法教學： <a href="https://hackmd.io/c/tutorials-tw/%2Fs%2Ffeatures-tw">Markdown語法教學(Hackmd)</a> （個人覺得不同種的Markdown都大同小異，常用的標題大小、url連結、圖片連結、列點式標題都是相通的</p>
+
+<p>那就可以開始把重要的個人資訊寫成MD，並放在<code class="language-plaintext highlighter-rouge">username</code>的respository了！</p>
+
+<p>編寫MD我推薦<a href="https://hackmd.io"><code class="language-plaintext highlighter-rouge">Hackmd</code></a></p>
+
+<p>原因如下：</p>
+
+<ol>
+  <li>線上編輯</li>
+</ol>
+
+<p>只要登入hackmd的帳號，無論在電腦還是手機都可以<strong>即時</strong>編輯檔案</p>
+
+<ol>
+  <li>同時預覽</li>
+</ol>
+
+<p>如下圖所示，可以同時編輯、預覽該MD的結果
+<img src="https://i.imgur.com/cbSRefz.png" alt="" /></p>
+
+<h3 id="github-profile-readme-generator">Github profile readme generator</h3>
+
+<p><a href="https://rahuldkjain.github.io/gh-profile-readme-generator/">Github首頁產生器</a></p>
+
+<p>真的沒什麼想法、不知道如何下手或<del>單純有點懶</del></p>
+
+<p>這是一個非常簡便的工具，只要將欄位都填好再勾選技能樹</p>
+
+<p>如圖：
+<img src="https://i.imgur.com/uiQR2Hz.png" alt="" /></p>
+
+<p><img src="https://i.imgur.com/e6g9Dc0.png" alt="" /></p>
+
+<p>不到5分鐘就完成你的Github Profile了</p>
+
+<p>結果：
+<img src="https://i.imgur.com/UpHSaev.png" alt="" /></p>
+
+<h2 id="那card呢">那card呢？</h2>
+
+<p>回歸今天的主題：</p>
+
+<p>在首頁顯示有炫炮統計資料的卡片</p>
+
+<p>而剛剛<code class="language-plaintext highlighter-rouge">README</code>中下方三個卡片的markdown如下：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+![LJO's GitHub stats](https://github-readme-stats.vercel.app/api?username=jason810496<span class="err">&amp;</span>show_icons=true<span class="err">&amp;</span>theme=tokyonight<span class="err">&amp;</span>hide_border=true)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jason810496<span class="err">&amp;</span>layout=compact<span class="err">&amp;</span>theme=tokyonight<span class="err">&amp;</span>hide_border=true)
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=jason810496<span class="err">&amp;</span>theme=tokyonight<span class="err">&amp;</span>hide_border=true<span class="err">&amp;</span>date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
+</code></pre></div></div>
+
+<p>可以看到都是一個個<strong>圖片</strong>所夠成的卡片（依我的理解應該是需要一個server來處理這些get request 並透過github api生成這些卡片的圖片，這可以突破在靜態網頁要顯示即時資訊的限制！）</p>
+
+<h2 id="其他相關的card">其他相關的card</h2>
+
+<h3 id="wakatime">Wakatime</h3>
+
+<p><a href="https://wakatime.com/">Wakatime</a>是一個可以在不同IDE統計使用時間的Plugin（可以紀錄在這個檔案、專案的時間，使用不同語言的時間，本週的使用總時間、從註冊至今的coding time…</p>
+
+<p>要使用以下的card都要先註冊Wakatime並且在常用的IDE裝好Plugin才能有資料</p>
+
+<p>如這個<a href="https://github.com/anuraghazra/github-readme-stats/">project</a>可以看到Wakatime紀錄不同語言的使用時間</p>
+
+<p><img src="https://github-readme-stats.vercel.app/api/wakatime?username=jason810496&amp;theme=tokyonight&amp;hide_border=true" alt="LJO's wakatime stats" /></p>
+
+<p>而這是註冊至今的總coding時間（登入後會在左邊navbar中的<a href="https://wakatime.com/share"><code class="language-plaintext highlighter-rouge">share</code></a></p>
+
+<p><a href="https://wakatime.com/@5c4d6a5b-0b6e-45b9-b81f-78e13584375d"><img src="https://wakatime.com/badge/user/5c4d6a5b-0b6e-45b9-b81f-78e13584375d.svg" alt="wakatime" /></a></p>
+
+<h3 id="各大解題系統的card">各大解題系統的card</h3>
+
+<p>如果身為一個專門打程式競賽的肯定在各大online judge刷過很多題</p>
+
+<h4 id="tioj">TIOJ</h4>
+<p>也只有找到一個，但是頗有質感ㄉ</p>
+
+<p><a href="https://github.com/JacobLinCool/TIOJ-Stats-Card">TIOJ stats card</a></p>
+<h4 id="leetcode">Leetcode</h4>
+<p>跟上面TIOJ是同一個作者</p>
+
+<p><a href="https://github.com/JacobLinCool/LeetCode-Stats-Card">Leetcode stats card</a></p>
+<h4 id="codeforce">Codeforce</h4>
+<p>查了Github但是很多為完成品，只有這個是完成而且還可以運作的(不過我覺得還可以加強，到時候應該會發個PR</p>
+
+<p><a href="https://cf-stats.siriuskoan.workers.dev/">Codeforce stats card</a></p>
+<h4 id="atcoder">Atcoder</h4>
+<p>只有找到這個：</p>
+
+<p><a href="https://github.com/KATO-Hiro/AtCoderTrophies">Atcoder Trophies</a></p>
+
+<h4 id="zerojudge">Zerojudge</h4>
+<p><strong>NULL</strong></p>
+
+<p>目前還沒有人做過</p>
+
+<p>（3/26更，所以<strong>我自己做了一個</strong><a href="https://github.com/jason810496/Zerojudge-stats">Zerojudge stats</a>不過目前是Beta版本，還有很多東西要加強</p>
+
+<h2 id="總結">總結</h2>
+
+<p>Github Profile是一個可以放入很多小巧思的地方</p>
+
+<p>可以提供些有用的簡述讓瀏覽者多認識你</p>
+
+<p>但是不要忘了美化首頁</p>
+
+<p>讓它看起來更上心悅目！</p>
+
+<h5 id="reference">reference</h5>
+<p>https://github.com/anuraghazra/github-readme-stats/discussions/1329
+https://github.com/denvercoder1/github-readme-streak-stats
+https://github-readme-streak-stats.herokuapp.com/demo/
+https://github.com/anuraghazra/github-readme-stats#repo-card-exclusive-options</p>
+

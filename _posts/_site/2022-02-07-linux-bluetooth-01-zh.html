@@ -1,0 +1,92 @@
+<h1 id="如何在ubuntu系統連接airpods">如何在Ubuntu系統連接airpods</h1>
+
+<p class="box-note"><strong>我 :</strong> 後來才發現超簡單ㄉ，其實是在連線的時候我沒有按著airpods充電盒子後面的按鈕才連不上 = = 害我搞了一個下午（怒</p>
+
+<h2 id="ui界面">UI界面</h2>
+
+<p class="box-error"><strong>提示:</strong> 記得先按著盒子後面的設定按鈕等它閃白燈時再連線！</p>
+
+<p><strong>1. 打開電腦的藍芽設定</strong> ( Ubuntu的界面很user friendly應該不會找不到ㄅ)</p>
+
+<p><strong>2. 確認airpods充電盒的燈有閃白光</strong></p>
+
+<p><strong>3. 從設定選取自己的裝置!</strong></p>
+
+<p><img src="https://i.imgur.com/tBAtKyS.png" alt="ui-result" class="mx-auto d-block" /></p>
+
+<h2 id="終端機">終端機</h2>
+
+<p>身為linux使用者，用UI界面來連藍芽裝置<del>太弱了</del>（誤</p>
+
+<p>無論如何，從終端機連上藍芽裝置超帥ㄉ😎(肯定是要在朋友面前秀一波操作！！</p>
+
+<h3 id="bluez">bluez</h3>
+
+<p><a href="http://www.bluez.org/"><strong>BlueZ</strong></a> 是官方 Linux Bluetooth 棧，由多層協定、服務以及配置工具組成。 ( from <a href="https://www.easyatm.com.tw/wiki/BlueZ">https://www.easyatm.com.tw/wiki/BlueZ</a> )</p>
+
+<h4 id="在ubuntu安裝bluez">在Ubuntu安裝bluez</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>bluez 
+</code></pre></div></div>
+<h4 id="用-bluetoothctl-管理藍芽裝置">用 <strong>bluetoothctl</strong> 管理藍芽裝置</h4>
+
+<p>在終端機執行<code class="language-plaintext highlighter-rouge">bluetoothctl</code></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bluetoothctl
+</code></pre></div></div>
+
+<p>結果 :</p>
+
+<p><img src="https://i.imgur.com/yHJRh2M.png" alt="terminal-result" class="mx-auto d-block" /></p>
+
+<p>問它可以做什麼 ! 👉 執行 <code class="language-plaintext highlighter-rouge">help</code> 來詢問</p>
+
+<p><img src="https://i.imgur.com/aY4kIYW.png" alt="terminal-help" /></p>
+
+<p>要連接我們的耳機，我們要先 <strong>scan</strong>附近的所有裝置，<strong>find</strong>自己的裝置,<strong>pair</strong>耳機跟電腦,最後 <strong>connect</strong>它.</p>
+
+<p class="box-note"><strong>Note:</strong> 下方的 <code class="language-plaintext highlighter-rouge">[dev]</code> 都是指裝置的 MAC address</p>
+
+<p>MAC地址：</p>
+
+<p>我耳機的<strong>MAC地址</strong>是 <strong>4C:B9:10:47:C4:DD</strong> ，MAC第都指是以 <strong>XX:XX:XX:XX:XX:XX</strong> 的形式呈現. 每個裝置都有自己獨一無二的MAC (當然可以透過軟體修改)</p>
+
+<h4 id="指令">指令：</h4>
+<ul>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">exit</code></strong>
+ 知道如何退出是很重要的 ( 尤其是在Vim 😈 )</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">deivices</code></strong>
+ 列出所有附近的裝置</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">pair [dev]</code></strong>
+ 配對裝置</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">paired-deivces</code></strong>
+ 列出配對過的裝置</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">connect [dev]</code></strong>
+ 連接裝置</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">disconnect [dev]</code></strong>
+ 與裝置取消連線</p>
+  </li>
+</ul>
+
+<p>透過終端機連接airpods :
+<img src="https://i.imgur.com/t9P8HAu.png" alt="final-result" /></p>
+
+<p>可以帥氣的聽音樂ㄌ 🎧</p>
+
+<p>推streetvoice上的歌 : <a href="https://streetvoice.com/konwang3/songs/666091/">好暈好暈</a></p>
+
+<h5 id="reference">reference</h5>
+<p><a href="https://www.makeuseof.com/manage-bluetooth-linux-with-bluetoothctl/">https://www.makeuseof.com/manage-bluetooth-linux-with-bluetoothctl/</a>
+<a href="https://ubuntu.com/core/docs/bluez/install-configure/install">https://ubuntu.com/core/docs/bluez/install-configure/install</a>
+<a href="https://unix.stackexchange.com/questions/96693/connect-to-a-bluetooth-device-via-terminal">https://unix.stackexchange.com/questions/96693/connect-to-a-bluetooth-device-via-terminal</a></p>
+
