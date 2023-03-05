@@ -134,7 +134,7 @@ https://www.wireguard.com/install/#freebsd-kmod-userspace-go-tools
 **Bug Situation:**
 After setting up `wiredGuard` and `authorized_keys` , the judge server could `ping` VM but can't ssh into MV .
 
-I have tried remove `.ssh/authorized_keys` and download `public key` from judge server serverl times , however the judge server still not can ssh into MV.
+I have tried remove `.ssh/authorized_keys` and download `public key` from judge server serverl times , however the judge server still not can ssh into VM.
 
 **Solution:**
 
