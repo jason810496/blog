@@ -3,7 +3,7 @@ title: Connect bluetooth device on Linux
 subtitle: connect airpods on Ubuntu OS 
 date:   2022-02-07 19:45:00 +0800
 
-tag: [linux,notes,eng]
+tag: [linux,notes,english]
 
 thumbnail-img: "https://i.imgur.com/VIQ7IAF.png" #1:1 (450:450)
 

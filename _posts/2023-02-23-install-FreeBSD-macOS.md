@@ -3,7 +3,7 @@ title: System Adminstration - Install FreeBSD&Application
 subtitle: Install FreeBSD on MacOS
 date:   2023-02-23 14:00:00 +0800
 
-tag: [SA,linux,notes]
+tag: [SA,linux,notes,english]
 
 thumbnail-img: "https://i.imgur.com/E9EPS9o.png" #1:1 (450:450)
 

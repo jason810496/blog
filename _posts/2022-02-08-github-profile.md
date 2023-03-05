@@ -3,7 +3,7 @@ title:  Build a eye-catching Github Profile !
 subtitle: How to make Github profile fancy !
 date:   2022-02-08 19:16:00 +0800
 
-tag: [github,notes,eng]
+tag: [github,notes,english]
 
 thumbnail-img: "https://i.imgur.com/fj8HzX8.png" #1:1 (450:450)
 
