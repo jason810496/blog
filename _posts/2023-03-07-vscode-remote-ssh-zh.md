@@ -50,7 +50,7 @@ readtime: true
 
 就可以像在 local 的 VsCode 進行開發了
 
-![](https://i.imgur.com/x2CbjGp.png)
+![](https://i.imgur.com/HnxzWSA.png)
 
 ## 使用情境
 
