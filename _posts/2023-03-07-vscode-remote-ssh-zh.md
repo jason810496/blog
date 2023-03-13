@@ -1,13 +1,13 @@
 ---
-title: VsCode Remote SSH
+title: VSCode Remote SSH
 subtitle: 用 VsCode 在遠端主機開發
 date:   2023-03-07 12:00:00 +0800
 
 tag: [ssh,notes]
 
-thumbnail-img: "https://i.imgur.com/E9EPS9o.png" #1:1 (450:450)
+thumbnail-img: "https://i.imgur.com/bTWmT5X.png" #1:1 (450:450)
 
-cover-img: "https://i.imgur.com/RpOgfcD.jpg"
+cover-img: "https://i.imgur.com/ovkKu9d.png"
 
 # cover-img : "https://i.imgur.com/Gmrglpd.jpg"
 
