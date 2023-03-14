@@ -1,13 +1,13 @@
 ---
 title: Dev Container
 subtitle: 把 Docker container 當作自己的開發環境！
-date:   2023-03-07 12:00:00 +0800
+date:   2023-03-14 12:00:00 +0800
 
 tag: [docker,notes]
 
-thumbnail-img: "https://i.imgur.com/E9EPS9o.png" #1:1 (450:450)
+thumbnail-img: "https://i.imgur.com/5JvtUhQ.png" #1:1 (450:450)
 
-cover-img: "https://i.imgur.com/RpOgfcD.jpg"
+cover-img: "https://i.imgur.com/Dwr5Hmf.png"
 
 # cover-img : "https://i.imgur.com/Gmrglpd.jpg"
 
