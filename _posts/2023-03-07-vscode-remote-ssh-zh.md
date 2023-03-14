@@ -20,8 +20,6 @@ readtime: true
 # test local : bundle exec jekyll serve
 ---
 
-# VsCode Remote SSH
-
 # 用 VsCode 在遠端主機開發
 
 ## VsCode 的 Remote SSH 功能
