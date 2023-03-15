@@ -7,7 +7,7 @@ tag: [docker,notes]
 
 thumbnail-img: "https://i.imgur.com/5JvtUhQ.png" #1:1 (450:450)
 
-cover-img: "https://i.imgur.com/Dwr5Hmf.png"
+cover-img: "https://i.imgur.com/CfjzRUA.png"
 
 # cover-img : "https://i.imgur.com/Gmrglpd.jpg"
 
