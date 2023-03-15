@@ -76,4 +76,4 @@ subtitle: Introduction of myself
 - Coding
 - Fitness
 - Drawing
-- Riding motorcycle
+- Motorcycling
