@@ -1,6 +1,6 @@
 ---
 title: VSCode Remote SSH
-subtitle: 用 VsCode 在遠端主機開發
+subtitle: 用 VSCode 在遠端主機開發
 date:   2023-03-07 12:00:00 +0800
 
 tag: [ssh,notes]
@@ -20,9 +20,9 @@ readtime: true
 # test local : bundle exec jekyll serve
 ---
 
-# 用 VsCode 在遠端主機開發
+# 用 VSCode 在遠端主機開發
 
-## VsCode 的 Remote SSH 功能
+## VSCode 的 Remote SSH 功能
 
 來介紹 VsCode 的其中一個強大的 extension : `Remote SSH `
 
