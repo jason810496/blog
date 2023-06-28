@@ -221,3 +221,47 @@ readtime: true
 
 ## 比賽
 
+### NCPC
+應該是因為 APCS 組進來的關係，剛好跟兩個競程特選大佬[@ColtenOuO](https://github.com/ColtenOuO/)跟[@erichung1113](https://github.com/erichung1113/) 是同一個導師（人超好的奇業教授！）<br>
+找我們去聊天的時候剛好聊到 [`ICPC`](https://ithelp.ithome.com.tw/m/articles/10294718) 跟 [`NCPC`](https://ncpc.ntnu.edu.tw/) 這兩個比賽 <br>
+原本大學沒有想要打比賽，不過好像講一講就報名了 <br>
+最後是 [@erichung1113](https://github.com/erichung1113/) 跟打字超爆快的另一個特選大佬[@jerrykal](https://github.com/jerrykal) 一隊<br>
+
+![ncpc](https://github.com/jason810496/blog/blob/main/_images/20230211_ncpc.png?raw=true)
+( 最後在 NCPC 拿佳作，差幾名就可以去比 ICPC 了 )
+
+### EOF CTF
+[@ColtenOuO](https://github.com/ColtenOuO/)某天突然問我要不要報 `EOF CTF` ， 說 [@bacon-cy](https://github.com/bacon-cy)學姊找他一起報 <br>
+要不要一起來玩 <br>
+結果還缺一個隊友 <br>
+（那時候我在 GDSC 密碼學資安組）剛好在裡面認識一個很強的學長 [@三腳蛇]() <br>
+就順便拉他一起來比了 <br>
+
+> 結果比賽第一天剛好騎車去嘉義阿里山 <br>
+> 後來也沒解出聲下的題目 <br>
+> （ 我只會 web ， 但那次的 web 都沒什麼頭緒，也有點舊沒有碰 CTF 了 ）<br>
+
+所以基本上沒有貢獻，跟隊友說抱歉 😢 <br>
+
+### HITCON CTF
+之前聊天的時候大二的 [@Vincent550102](https://github.com/Vincent550102) 學長有把我拉到 NCKU CTF 的 DC <br>
+裡面不定時會揪團打 CTF <br>
+一年一次的 `HITCON CTF` 學長們當然不會錯過 <br>
+
+結果看了第一題 web 題 <br>
+（ 主要是從前端 `js` bypass ， 好像要送到後端的 content 要符合長度限制還有一些 byte 操作 ）
+看了很久，測了很多方法，不過還是沒解讀出關鍵的 code <br>
+( 只能說對 `js` 的一些細節原生方法還不夠熟悉＠＠ ) <br>
+
+後來群內有其他大佬解出了！！！ <br>
+陸續也有其他大佬解出不少題 <br>
+最後 NCKU CTF 全球第 37 名 (台灣第2; 共 95 國，1243 個隊伍參賽) <br>
+
+> 這場也是打水漂，沒有貢獻 🥲 <br>
+> 學長們超強 Orz <br>
+> 只會 web 但遇到有難度的 web 又寫不出來，真的還缺蠻多經驗的 <br>
+
+![hitcon](https://github.com/jason810496/blog/blob/main/_images/20230211_hitcon.png?raw=true)
+（ 學長們真的超強 !!! ）
+
+## 課程
