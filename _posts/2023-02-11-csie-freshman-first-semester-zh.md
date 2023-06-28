@@ -5,9 +5,11 @@ date:   2023-06-23 12:00:00 +0800
 
 tag: [csie]
 
-thumbnail-img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJUt8wUbhe8qxSEK-0PTma9lypcE1AhPJrL58SICJPOQ&s" #1:1 (450:450)
+thumbnail-img: "https://oldsite.www.csie.ncku.edu.tw/ncku_csie/images/ncku/header5.png" #1:1 (450:450)
 
-cover-img: "https://oldsite.www.csie.ncku.edu.tw/ncku_csie/images/ncku/header5.png"
+# https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJUt8wUbhe8qxSEK-0PTma9lypcE1AhPJrL58SICJPOQ&s
+
+cover-img: "https://github.com/jason810496/blog/blob/main/_images/20230211_blur_calendar_dark.png?raw=true"
 
 comments: true
 
@@ -26,6 +28,12 @@ readtime: true
 其實我大一上的重心並不是在學科 <br>
 而是在接案、社團、偏實作的課程<br>
 還有我真的有興趣的課程上 <br>
+
+![blur calendar](https://github.com/jason810496/blog/blob/main/_images/20230211_blur_calendar.png?raw=true)
+( 模糊化的行事曆 )
+
+不過到期末發現好像接太多外務ㄌ <br>
+有點忙不過來，大概一週就有好幾個 Deadline <br>
 
 > 可能是因為高中後期對於學科疲乏 <br>
 > 覺得學到的知識都無法運用在未來的場景 <br>
@@ -51,20 +59,14 @@ readtime: true
 所以我就把時間花在作業和接案上 <br>
 盡量多累積一些實作經驗 <br>
 
-![blur calendar](https://github.com/jason810496/blog/blob/main/_images/20230211_blur_calendar.png?raw=true)
-(模糊化的行事曆 <br>)
-
-不過到期末發現好像接太多外務ㄌ <br>
-有點忙不過來，大概一週就有好幾個 Deadline <br>
-
 ### 作業
 
 其實在高三下我就有開始在接大學 DSA 相關的作業了 <br>
 主要是當作練功，也順變賺點小外快 <br>
 
-![repo screenshot]()
+![repo screenshot](https://github.com/jason810496/blog/blob/main/_images/20230211_repo.png?raw=true)
 
-[專門放接案作業的 repository ](https://github.com/jason810496/freelance)
+( [專門放接案作業的 repository ](https://github.com/jason810496/freelance) )
 
 在上學期間接了不少個作業，主要也是寫 C++ <br>
 偶爾有一些特別的作業：<br>
@@ -79,7 +81,7 @@ readtime: true
 對基本的前後端應該都有一些概念 <br>
 就去應徵看看 <br>
 
-![fb post](https://github.com/jason810496/blog/blob/main/_images/20230211_fb_post.png?raw=true)
+![fb post](https://github.com/jason810496/blog/blob/main/_images/20230211_fb_post.jpg?raw=true)
 
 
 案主是也是成大的大學長 <br>
@@ -102,10 +104,6 @@ readtime: true
     - `Self hosted Git server`: [`Gitea`](https://about.gitea.com/)
 - **CI/CD** :
     - null (?)
-
-> 這是算是我第一次接到的案子 <br>
-> 也是我第一次接觸到 `MVC` 的架構 <br>
-> 也是我認知到 `CI/CD` 的重要性的專案 <br>
 
 網頁的瀏覽人數不高，不過整體的網頁架構也蠻複雜的（ 有些 Code 不太好看，蠻難改的 ） <br>
 不過有蠻多 features 案主想要新增修改的 <br>
@@ -144,7 +142,7 @@ readtime: true
 ( 整合 `quill.js` 的 `wsywig` 編輯器到後台文章系統 )
 
 **遇到奇怪的事：**
-- `肉眼 + SMTP` 就是專案的 `CI/CD` ?_? :
+- `肉眼 + SMTP` = 專案的 `CI/CD` 🤯 :
     - 把當前 feature 弄好後，在 local 跑起來再開 `ngrok` 給案主測
     - 沒問題後把 code push 到 `Gitea` 上
     - 那要怎麼部署到 `Hostinger` 呢？
@@ -162,7 +160,7 @@ readtime: true
     - 也就是我跟學長必須要同時在現在才有辦法 push code ( 而且每次都需要加新的 remote )
     - 如果用 Github 就不會有這個問題，而且還可以用 Github 跑一些 CI/CD 的流程
 
-
+> 這是算是我第一次接到的案子 <br>
 > 這個案子我接了大概 3-4 個月 <br>
 > 也是我第一次接觸到 `CI/CD` 的重要性 <br>
 
@@ -181,4 +179,45 @@ readtime: true
 
 ## 社團
 
+在開學前，潛水到成大電機的 FB 社團 <br>
+結果剛好看到**GDCS**( Google Developer Student Club in NCKU ) 的推廣貼文 <br>
+就去報名了 <br>
+
+
+> 那時候以為要成為「核心成員」才能聽課 <br>
+> 結果是「核心成員」是要教課的 <br>
+> 開學才招募的「一般成員」才是聽課的 <br>
+> 誤打誤撞大一就當上核心成員了 🥵 <br>
+
+[上學期 NCKU GDSC 的組別](https://hackmd.io/@gdsc-pr/HkKvD0-Zj)
+
+結果就變成核心成員在教 `Flutter` <br>
+( 當時剛好加入 `Flutter` 組 ) <br>
+
+[Flutter 教學 repository ](https://github.com/jason810496/FlutterToturial)
+
+![flutter](https://media.discordapp.net/attachments/1024313348474552470/1029391286169509908/IMG_7280.jpg?width=1270&height=952)
+
+( 在 Flutter 組教學的狀況 )
+
+
+在學期初課程都還沒什麼壓力 <br>
+感覺還有點閒 <br>
+就額外加入其他組：<br>
+- `Solidity` 讀書會
+    - 學習 `Solidity` 和 `Ethereum` 相關的知識
+    - 組長會分配每次的 loading ， 大家要看過所有的 loading ， 下次讀書會的時後會輪流分享討論
+- 資安密碼學組
+    - 一開始是純密碼學
+    - 後來轉為偏實作的 CTF
+    - 但只有上過兩堂課就大家都進入期末週了
+
+> 但是在期末各種 Deadline 轟炸下 <br>
+> 就發現加太多組別了 <br>
+> 完全忙不太過來 <br>
+> 最後只有去在 `Flutter` 組 <br>
+> 對其他組的組長很砲歉 😥 <br>
+
+
+## 比賽
 
