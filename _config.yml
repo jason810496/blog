@@ -6,10 +6,10 @@
 # --- Required options --- #
 
 # Name of website
-title: JasonBigCow's Blog
+title: Zhu's Blog
 
 # Your name to show in the footer
-author: JasonBigCow(Liu Zhe You)
+author: Jason(Liu Zhe You)
 
 # --- List of links in the navigation bar --- #
 
@@ -158,7 +158,7 @@ gtm: "GTM-TM99SLZ"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-disqus: "ljo424"
+# disqus: "ljo424"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
@@ -192,16 +192,16 @@ disqus: "ljo424"
 # (2) Install the giscus app in your repository (details at https://giscus.app),
 # (3) Fill in *all* the parameters below 
 # See more details about giscus and each of the following parameters at https://giscus.app
-#giscus:
-#  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  repository-id: # ID of your repository, retrieve this info from https://giscus.app
-#  category: Announcements # Category name of your GitHub Discussion posts
-#  category-id: # ID of your category, retrieve this info from https://giscus.app
-#  mapping: pathname
-#  reactions-enabled: 1
-#  emit-metadata: 0
-#  theme: light
+giscus:
+ hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
+ repository: jason810496/blog # GitHub username/repository eg. "daattali/beautiful-jekyll"
+ repository-id: R_kgDOGzOX9Q # ID of your repository, retrieve this info from https://giscus.app
+ category: Q&A # Category name of your GitHub Discussion posts
+ category-id: DIC_kwDOGzOX9c4CZVZF # ID of your category, retrieve this info from https://giscus.app
+ mapping: pathname
+ reactions-enabled: 1
+ emit-metadata: 0
+ theme: dark
 
 # --- Misc --- #
 
