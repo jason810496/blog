@@ -196,12 +196,12 @@ giscus:
  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
  repository: jason810496/blog # GitHub username/repository eg. "daattali/beautiful-jekyll"
  repository-id: R_kgDOGzOX9Q # ID of your repository, retrieve this info from https://giscus.app
- category: Q&A # Category name of your GitHub Discussion posts
+ category: Announcements # Category name of your GitHub Discussion posts
  category-id: DIC_kwDOGzOX9c4CZVZF # ID of your category, retrieve this info from https://giscus.app
  mapping: pathname
  reactions-enabled: 1
  emit-metadata: 0
- theme: dark
+ theme: dark_dimmed
 
 # --- Misc --- #
 
