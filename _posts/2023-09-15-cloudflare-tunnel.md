@@ -5,9 +5,9 @@ date:   2023-09-15 16:00:00 +0800
 
 tag: [notes]
 
-thumbnail-img: "https://i.imgur.com/hATMpxZ.jpg" #1:1 (450:450)
+thumbnail-img: "https://raw.githubusercontent.com/jason810496/blog/main/_images/20230915_tunnel.png" #1:1 (450:450)
 
-cover-img: "https://i.imgur.com/CIZ4dC0.jpg"
+cover-img: "https://raw.githubusercontent.com/jason810496/blog/main/_images/20230915_start_tunnel.png"
 
 comments: true
 
