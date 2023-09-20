@@ -91,6 +91,9 @@ cloudflared tunnel --url http://localhost:8888
     ```
 - Create a Tunnel
     ```bash
+    cloudflared create <tunnel_name>
+    ```
+    ```bash
     cloudflared tunnel route dns <tunnel_name> <domain_name>
     ```
     會在 `~/.cloudflared/` 產生一個 `<tunnel_id>.json`
@@ -148,6 +151,7 @@ tmux new -s cloudflare-tunnel
 ## Command list
 
 - `cloudflared tunnel login`
+- `cloudflared create <tunnel_name>`
 - `cloudflared tunnel route dns <tunnel_name> <domain_name>` <br>
     > 會在 `~/.cloudflared/` 產生一個 `<tunnel_id>.json` 並在這邊加上 `config.yaml` <br>
     > 在 [cloudflare dashboard ](https://one.dash.cloudflare.com/) 中 `Access` 的 `tunnel` 可以看到 `<tunnel_id>`
