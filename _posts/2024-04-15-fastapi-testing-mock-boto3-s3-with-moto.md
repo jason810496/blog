@@ -5,7 +5,7 @@ date:   2023-09-15 16:00:00 +0800
 
 tag: [notes]
 
-thumbnail-img: "https://raw.githubusercontent.com/jason810496/blog/main/_images/2024-04-15-fastapi-testing-mock-boto3-s3-with-moto-banner.jpeg" #1:1 (450:450)
+thumbnail-img: "https://raw.githubusercontent.com/jason810496/blog/main/_images/2024-04-15-fastapi-testing-mock-boto3-s3-with-moto-thumbnail.jpeg" #1:1 (450:450)
 
 cover-img: "https://raw.githubusercontent.com/jason810496/blog/main/_images/2024-04-15-fastapi-testing-mock-boto3-s3-with-moto-banner.jpeg"
 
@@ -18,6 +18,8 @@ readtime: true
 # test local : bundle exec jekyll serve
 ---
 
+# FastAPI Testing: Mock boto3 S3 with moto
+
 * [test local : bundle exec jekyll serve](#test-local--bundle-exec-jekyll-serve)
 * [FastAPI Testing: Mock boto3 S3 with moto](#fastapi-testing-mock-boto3-s3-with-moto)
     * [Intro](#intro)
@@ -26,10 +28,6 @@ readtime: true
         * [Moto: Server Mode](#moto-server-mode)
         * [Recommended Usage &amp; Example(from official docs)](#recommended-usage--examplefrom-official-docs)
     * [override s3_client using dependency_overrides](#override-s3_client-using-dependency_overrides)
-
-# FastAPI Testing: Mock boto3 S3 with moto
-
-[TOC]
 
 ## Intro 
 
