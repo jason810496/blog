@@ -20,13 +20,17 @@ readtime: true
 
 # Kubernetes Cheat Sheet: Extract `ConfigMap` or `Secret` to .env file
 
+
 * [Kubernetes Cheat Sheet: Extract ConfigMap or Secret to .env file](#kubernetes-cheat-sheet-extract-configmap-or-secret-to-env-file)
     * [Extract from ConfigMap](#extract-from-configmap)
     * [Extract from Secret](#extract-from-secret)
     * [Extract from helm](#extract-from-helm)
-    * [refenece:](#refenece)
+    * [Refenece](#refenece)
+
+
 
 ## Extract from `ConfigMap`
+
 
 ```bash
 kubectl get configmap my-map --output json |
@@ -39,6 +43,7 @@ kubectl get configmap my-map --output json |
 
 ## Extract from `Secret`
 
+
 ```bash
 kubectl get secret my-secret --output json |
     # Extract the data section.
@@ -48,6 +53,7 @@ kubectl get secret my-secret --output json |
     # Replace each "key": "value" pair with "key=value"
     jq -r 'to_entries | map(.key + "=" + (.value)) | .[]' >> .env
 ```
+
 
 ## Extract from `helm`
 
@@ -61,5 +67,5 @@ awk '{if ($0 ~ /^configmap:$/) {triggered=1;}if (triggered) {print; if ($0 ~ /^$
     sed 's/  //;s/: /=/' >> .env
 ```
 
-## refenece:
+## Refenece
 - https://www.jujens.eu/posts/en/2021/Mar/21/kubectl-cfg-to-env/
