@@ -1,4 +1,4 @@
-# LJO's Blog
+# Blog
 用 github + jekyll (beautiful jekyll 5.0) 架設靜態Blog 
 當成學習歷程的一部份 ＆ 自己的心得或程式紀錄or筆記
 
