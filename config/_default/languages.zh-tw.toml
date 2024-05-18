@@ -1,0 +1,24 @@
+# config/_default/languages.zh-tw.toml
+languageCode = "zh-tw"
+languageName = "繁體中文"
+weight = 4
+title = "我的網站"
+
+[params]
+  displayName = "繁體中文"
+  isoCode = "zh-tw"
+  rtl = false
+  dateFormat = "2006-01-02"
+  logo = "img/blowfish_logo_transparent.png"
+  description = "這是我的網站"
+
+[author]
+name = "我的名字"
+image = "img/Profile.png"
+headline = "我的標語"
+bio = "一些關於我的介紹"
+links = [
+  { github = "https://github.com/jason810496" },
+  { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
+  { email = "mailto:810496@email.wlsh.tyc.edu.tw" }
+]

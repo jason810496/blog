@@ -1,0 +1,25 @@
+# config/_default/languages.en.toml
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "My awesome website"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/blowfish_logo_transparent.png"
+  description = "A powerful, lightweight theme for Hugo."
+
+[author]
+name = "My name"
+image = "img/Profile.png"
+headline = "A generally awesome human"
+bio = "A little bit about me"
+links = [
+  { github = "https://github.com/jason810496" },
+  { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
+  { email = "mailto:810496@email.wlsh.tyc.edu.tw" }
+]
+

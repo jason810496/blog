@@ -1,0 +1,49 @@
+# config/_default/menus.toml
+
+[[main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "主題"
+  pageRef = "topics"
+  weight = 20
+
+# Nested Menu for Topics
+[[main]]
+  name = "資料庫"
+  parent = "主題"
+  pageRef = "samples"
+  weight = 20
+
+[[main]]
+  name = "後端"
+  parent = "主題"
+  pageRef = "samples"
+  weight = 20
+
+[[main]]
+  name = "測試"
+  parent = "主題"
+  pageRef = "samples"
+  weight = 20
+
+
+[[main]]
+  pre = "github"
+#   name = "GitHub"
+  identifier = "github"
+  url = "https://github.com/jason810496/"
+  weight = 30
+
+[[main]]
+  pre = "linkedin"
+#   name = "LinkedIn"
+  identifier = "linkedin"
+  url = "https://www.linkedin.com/in/zhe-you-liu/"
+  weight = 40
+
+[[footer]]
+  name = "Privacy"
+  url = "https://external-link"
