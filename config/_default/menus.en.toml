@@ -15,20 +15,25 @@
   name = "Database"
   parent = "Topics"
   pageRef = "samples"
-  weight = 20
+  weight = 21
 
 [[main]]
   name = "Backend"
   parent = "Topics"
-  pageRef = "samples"
-  weight = 20
+  pageRef = "backend"
+  weight = 22
 
 [[main]]
   name = "Testing"
   parent = "Topics"
   pageRef = "samples"
-  weight = 20
+  weight = 23
 
+[[main]]
+  name = "Tags"
+  parent = "Topics"
+  pageRef = "tags"
+  weight = 24
 
 [[main]]
   pre = "github"
@@ -46,4 +51,4 @@
 
 [[footer]]
   name = "Privacy"
-  url = "https://external-link"
+  url = "https:/github.com/jason810496/"

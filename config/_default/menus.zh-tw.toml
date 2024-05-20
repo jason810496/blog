@@ -15,19 +15,25 @@
   name = "資料庫"
   parent = "主題"
   pageRef = "samples"
-  weight = 20
+  weight = 21
 
 [[main]]
   name = "後端"
   parent = "主題"
-  pageRef = "samples"
-  weight = 20
+  pageRef = "backend"
+  weight = 22
 
 [[main]]
   name = "測試"
   parent = "主題"
   pageRef = "samples"
-  weight = 20
+  weight = 23
+
+[[main]]
+  name = "所有標籤"
+  parent = "主題"
+  pageRef = "tags"
+  weight = 24
 
 
 [[main]]
