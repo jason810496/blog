@@ -8,7 +8,7 @@ title = "My awesome website"
   displayName = "English"
   isoCode = "en"
   rtl = false
-  dateFormat = "2 January 2006"
+  dateFormat = "2006-01-02"
   logo = "img/blowfish_logo_transparent.png"
   description = "A powerful, lightweight theme for Hugo."
 

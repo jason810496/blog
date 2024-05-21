@@ -6,32 +6,32 @@
   weight = 10
 
 [[main]]
-  name = "主題"
-  pageRef = "topics"
+  name = "分類"
+  pageRef = "categories"
   weight = 20
 
-# Nested Menu for Topics
+# Nested Menu for Categories
 [[main]]
   name = "資料庫"
-  parent = "主題"
-  pageRef = "samples"
+  parent = "分類"
+  pageRef = "tags/database"
   weight = 21
 
 [[main]]
   name = "後端"
-  parent = "主題"
-  pageRef = "backend"
+  parent = "分類"
+  pageRef = "tags/backend"
   weight = 22
 
 [[main]]
-  name = "測試"
-  parent = "主題"
-  pageRef = "samples"
+  name = "DevOps"
+  parent = "分類"
+  pageRef = "tags/devops"
   weight = 23
 
 [[main]]
   name = "所有標籤"
-  parent = "主題"
+  parent = "分類"
   pageRef = "tags"
   weight = 24
 
