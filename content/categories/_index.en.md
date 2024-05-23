@@ -12,3 +12,7 @@ cascade:
   hideFeatureImage: false
 draft: false
 ---
+
+<!-- https://blowfish.page/docs/shortcodes/#list -->
+
+{{< list limit=3 >}}

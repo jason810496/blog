@@ -1,8 +1,8 @@
 ---
-title: "分類首頁"
+title: "Backend Landing Page"
 summary: ""
 description: ""
-date: 2024-05-21T02:52:58+08:00
+date: 2024-05-21T17:29:36+08:00
 tags: []
 # series: ["Documentation"]
 # series_order: 9
@@ -13,6 +13,4 @@ cascade:
 draft: false
 ---
 
-<!-- https://blowfish.page/docs/shortcodes/#list -->
-
-{{< list limit=3 >}}
+Some articles about backend.
