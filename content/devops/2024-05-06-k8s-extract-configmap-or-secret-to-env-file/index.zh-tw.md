@@ -4,7 +4,7 @@ summary: "Kubernetes Cheat Sheet: 將 ConfigMap 或 Secret 輸出至 .env 格式
 description: "Kubernetes Cheat Sheet: 將 ConfigMap 或 Secret 輸出至 .env 格式"
 date: 2024-05-28T14:39:15+08:00
 slug: "k8s-extract-configmap-or-secret-to-env-file"
-tags: ["blog","en","devops","kubernetes"]
+tags: ["blog","zh-tw","devops","kubernetes"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:
