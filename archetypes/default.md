@@ -3,7 +3,7 @@ title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 summary: ""
 description: ""
 date: {{ .Date }}
-tags: []
+tags: ["blog"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:

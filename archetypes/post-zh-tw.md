@@ -1,10 +1,11 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
-summary: "Link to external site"
+summary: ""
 description: ""
 date: {{ .Date }}
-tags: []
-externalUrl: "https://example.com"
+tags: ["blog","zh-tw"]
+# series: ["Documentation"]
+# series_order: 9
 cascade:
   showEdit: true
   showSummary: true
