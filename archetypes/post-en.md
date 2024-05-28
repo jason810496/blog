@@ -11,5 +11,5 @@ cascade:
   showEdit: true
   showSummary: true
   hideFeatureImage: false
-draft: true
+draft: false
 ---
