@@ -15,4 +15,4 @@ draft: false
 
 <!-- https://blowfish.page/docs/shortcodes/#list -->
 
-{{< list limit=3 >}}
+{{< list where="Section" value="categories" limit=10 >}}
