@@ -10,8 +10,8 @@ mainSections = ["database","backend","devops"]
 disableImageOptimization = false
 disableTextInHeader = false
 
-defaultBackgroundImage = "/img/Background.svg"
-defaultFeaturedImage = "/img/DefaultFeatured.svg"
+defaultBackgroundImage = "/img/setting/Background.svg"
+defaultFeaturedImage = "/img/setting/DefaultFeatured.svg"
 
 highlightCurrentMenuArea = true
 smartTOC = true
@@ -29,7 +29,7 @@ smartTOCHideUnfocusedChildren = false
 
 [homepage]
   layout = "background" # valid options: page, profile, custom
-  #homepageImage = "img/background.jpg"
+  #homepageImage = "img/setting/background.jpg"
   showRecent = true # show recent items, show `mainSections` items
   showRecentItems = 12
   showMoreLink = true
