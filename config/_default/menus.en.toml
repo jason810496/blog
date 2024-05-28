@@ -2,7 +2,7 @@
 
 [[main]]
   name = "Blog"
-  pageRef = "posts"
+  pageRef = "tags/blog"
   weight = 10
 
 [[main]]
@@ -49,6 +49,6 @@
   url = "https://www.linkedin.com/in/zhe-you-liu/"
   weight = 40
 
-[[footer]]
-  name = "Privacy"
-  url = "https:/github.com/jason810496/"
+# [[footer]]
+#   name = "Privacy"
+#   url = "https:/github.com/jason810496/"

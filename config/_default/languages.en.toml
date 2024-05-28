@@ -2,21 +2,22 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "My awesome website"
+title = ""
 
 [params]
   displayName = "English"
   isoCode = "en"
   rtl = false
   dateFormat = "2006-01-02"
-  logo = "img/blowfish_logo_transparent.png"
+  logo = "img/LogoLight.png"
+  secondaryLogo = "img/LogoDark.png"
   description = "A powerful, lightweight theme for Hugo."
 
 [author]
-name = "My name"
-image = "img/Profile.png"
-headline = "A generally awesome human"
-bio = "A little bit about me"
+name = "Liu Zhe You"
+image = "img/Profile.jpeg"
+headline = "Intern @Appier / CSIE @NCKU"
+bio = "A little bit about me" # show in author avatar bottom
 links = [
   { github = "https://github.com/jason810496" },
   { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
