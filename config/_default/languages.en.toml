@@ -11,13 +11,14 @@ title = ""
   dateFormat = "2006-01-02"
   logo = "img/setting/LogoLight.png"
   secondaryLogo = "img/setting/LogoDark.png"
-  description = "A powerful, lightweight theme for Hugo."
+  description = "Liu Zhe You's Developer Blog"
 
 [author]
 name = "Liu Zhe You"
 image = "img/setting/Profile.jpeg"
 headline = "Intern @Appier / CSIE @NCKU"
-bio = "A little bit about me" # show in author avatar bottom
+# show in author avatar bottom
+bio = "Skilled in full-stack development and DevOps, currently focusing on Backend."
 links = [
   { github = "https://github.com/jason810496" },
   { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
