@@ -1,6 +1,6 @@
 ---
-title: "Devops 中文"
-summary: "Links to devops-related articles"
+title: "DevOps"
+summary: "DevOps 相關文章"
 description: ""
 date: 2024-05-21T19:02:18+08:00
 externalUrl: "/zh-tw/devops/"

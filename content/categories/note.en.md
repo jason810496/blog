@@ -1,6 +1,6 @@
 ---
 title: "Notes"
-summary: "Links to backend-related articles"
+summary: "Links to my notes"
 description: ""
 date: 2024-05-21T19:02:26+08:00
 externalUrl: "/note/"

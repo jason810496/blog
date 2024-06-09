@@ -1,6 +1,6 @@
 ---
-title: "Database 分類"
-summary: "Database 相關文章連結"
+title: "Database"
+summary: "Database 相關文章"
 description: ""
 date: 2024-05-21T18:41:22+08:00
 tags: []
