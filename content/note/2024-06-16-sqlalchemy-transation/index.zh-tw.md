@@ -37,9 +37,9 @@ Transaction 通常包含以下幾個步驟
   - 如果操作失敗，則 `Rollback` Transaction
 
 
-## 在 SqlAlchemy 中使用 Transaction
+## 在 `SqlAlchemy` 中使用 Transaction
 
-在 SqlAlchemy 中，Transaction 是透過 `Session` 來實現的
+在 `SqlAlchemy` 中，Transaction 是透過 `Session` 來實現的
 以下是一個簡單的 Transaction 範例
 
 ```python
@@ -62,7 +62,7 @@ def get_db():
         database.close()
 
 # service 層
-def create_user(db, user):
+def create_user(db:Session, user):
     """
     Create user
     """
@@ -100,11 +100,13 @@ def create_user_controller(user):
 如果在 `create_user` 中的任何一個操作失敗，則整個 Transaction 會 `Rollback`，並且不會對資料庫做任何更動
 
 
-## 在 FastAPI 中使用 SqlAlchemy Transaction
+## 在 `FastAPI` 中使用 `SqlAlchemy` Transaction
 
 在 FastAPI 中使用 SqlAlchemy Transaction 也是非常簡單的
 同時提供了 `Depends` 來實現 `Dependency Injection`
 可以將 Generator Function 作為 `Depends` 的參數，並在 `Depends` 中取得在 `get_db` 中 `yield` 的 `Session` instance
+> 不需要像上面的範例一樣使用 `next` 來取得 `Session` instance
+
 
 ```python
 from typing import List
@@ -129,11 +131,15 @@ def create_users(user_1: schemas.UserCreate, user_2: schemas.UserCreate, db: Ses
     Create two users
     """
     try:
-        user_1 = crud.create_user(db=db, user=user_1)
-        user_2 = crud.create_user(db=db, user=user_2)
+        user_1 = service.create_user(db=db, user=user_1)
+        user_2 = service.create_user(db=db, user=user_2)
         db.commit()
         return [user_1, user_2]
     except:
         db.rollback()
-        raise HTTPException(status_code=400, detail="Duplicated user")
+        raise HTTPException(status_code=500, detail="SqlAlchemy Transaction Error")
 ```
+
+## 參考資料
+- https://stackoverflow.com/questions/65699977/fastapi-sqlalchemy-how-to-manage-transaction-session-and-multiple-commits
+- https://docs.sqlalchemy.org/en/20/orm/session_basics.html#using-a-sessionmaker
