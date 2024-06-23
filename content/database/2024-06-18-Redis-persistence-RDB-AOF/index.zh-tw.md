@@ -11,7 +11,7 @@ cascade:
   showEdit: true
   showSummary: true
   hideFeatureImage: false
-draft: false
+draft: true
 ---
 
 # Redis 持久化設定：RDB 與 AOF
