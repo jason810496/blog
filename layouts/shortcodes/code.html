@@ -16,7 +16,7 @@
 {{ if ne $linenostart -1 }}
   {{ $codeConfig = $codeConfig |  append (printf "linenostart=%d" $linenostart) }}
 {{ else if ne $endLine -1 }}
-  {{ $codeConfig = $codeConfig |  append (printf "linenostart=%d" $startLine) }}
+  {{ $codeConfig = $codeConfig |  append (printf "linenostart=%d" ( add $startLine 1 ) ) }}
 {{ end }}
 {{ if ne $hl_lines "" }}
   {{ $hl_lines_slice := split $hl_lines "," }}
@@ -29,16 +29,13 @@
     {{ if strings.Contains . "-" }}
       {{ $range := split . "-" }}
       {{ $rangeStart := index $range 0 | int }}
-      {{ $rangeEnd := index $range 1 | int }}
       {{ $rangeStart = sub $rangeStart $startLine }}
-      {{ $rangeStart = add $rangeStart 1 }}
+      {{ $rangeEnd := index $range 1 | int }}
       {{ $rangeEnd = sub $rangeEnd $startLine }}
-      {{ $rangeEnd = add $rangeEnd 1 }}
       {{ $hl_lines = printf "%s\"%d-%d\"" $hl_lines $rangeStart $rangeEnd }}
     {{ else }}
       {{ $hl_line := int . }}
       {{ $hl_line = sub $hl_line $startLine  }}
-      {{ $hl_line = add $hl_line 1 }}
       {{ $hl_lines = printf "%s%d" $hl_lines $hl_line }}
     {{ end }}
   {{ end }}
