@@ -11,7 +11,7 @@ cascade:
   showEdit: true
   showSummary: true
   hideFeatureImage: false
-draft: true
+draft: false
 ---
 
 # Redis Persistence: `RDB` and `AOF`
@@ -39,13 +39,14 @@ They are **RDB** and **AOF**
   {{< /lead >}}
 - **RDB+AOF**: RDB and AOF
   {{< lead >}}
-  You can enable both RDB and AOF persistence to provide a more robust data protection mechanism.
+  You can enable both `RDB` and `AOF` persistence to provide a more robust data protection mechanism.
   {{< /lead >}}
 
 
 ## RDB: Redis Database
 
-`RDB` needs to `fork()` a child process to save the dataset to disk.
+In short, <br>
+`RDB` needs to `fork()` a child process to save the point-in-time snapshot of your dataset to disk.
 
 ### Advantages of `RDB`
 
@@ -66,7 +67,22 @@ They are **RDB** and **AOF**
 
 ### Detailed Implementation of `RDB`
 
-{{< code url="https://raw.githubusercontent.com/redis/redis/811c5d7aeb0b76494d78efe61e418f574c310ec0/src/rdb.c" type="c" startLine="3907" endLine="3942">}}
+We have mentioned that `RDB` needs to `fork()` a child process to save the dataset to disk. <br>
+
+Let's take a look at the implementation of `RDB` in Redis source code. <br>
+1. From `redis/src/rdb.c` : define `bgsaveCommand` command entry point function.
+{{< code url="https://raw.githubusercontent.com/redis/redis/811c5d7aeb0b76494d78efe61e418f574c310ec0/src/rdb.c" type="c" startLine="3907" endLine="3942" hl_lines="3936">}}
+
+2. And `bgsaveCommand` actually calls `rdbSaveBackground`. <br>
+   `rdbSaveBackground` will check if there is already a child process running, if not, it will calls `redisFork` to fork a child process to save the dataset to disk.
+{{< code url="https://raw.githubusercontent.com/redis/redis/811c5d7aeb0b76494d78efe61e418f574c310ec0/src/rdb.c" type="c" startLine="1612" endLine="1646" hl_lines="1614,1620" >}}
+
+{{< alert "circle-info">}}
+Since `fork()` is a system call, it **copies the entire memory space** of the parent process to the child process. This is why `fork()` can be slow if you have a large dataset!
+
+Additionally, it might result in **OOM (Out of Memory)** if you have a large dataset and **limited remaining memory**.
+
+{{< /alert >}}
 
 
 ## AOF: Append Only File
@@ -78,4 +94,8 @@ They are **RDB** and **AOF**
 
 ## Reference 
 
-- https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
+- redis: RDB and AOF
+  -  https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
+- Linux : `fork()` and `fsync()`
+  - [sysprog : history and detail of `fork()`](https://hackmd.io/@sysprog/unix-fork-exec)
+  - [CSDN : Linux I/O : Is data safe after calling `fsync()`?(fsync、fwrite、fflush、mmap、write barriers) ](https://blog.csdn.net/hilaryfrank/article/details/112200420)
