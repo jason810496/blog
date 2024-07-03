@@ -4,7 +4,7 @@ summary: "以 PgBouncer 解決 Django 後端 DB connection 過多的問題"
 description: "以 PgBouncer 解決 Django 後端 DB connection 過多的問題"
 date: 2024-06-09T11:36:25+08:00
 slug: "pgbouncer"
-tags: ["blog","database","zh-tw"]
+tags: ["blog","database","zh-tw","postgresql"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:

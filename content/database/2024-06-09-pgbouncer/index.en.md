@@ -4,7 +4,7 @@ summary: "Solving Django backend DB connection overload with PgBouncer"
 description: "Solving Django backend DB connection overload with PgBouncer"
 date: 2024-06-09T11:36:24+08:00
 slug: "pgbouncer"
-tags: ["blog","database","en"]
+tags: ["blog","database","en","postgresql"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:
