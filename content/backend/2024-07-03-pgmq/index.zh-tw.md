@@ -1,7 +1,7 @@
 ---
 title: "PGMQ(PostgreSQL Message Queue) 設定"
-summary: "使用 Docker Compose 設定 PGMQ 以 Python 客戶端連接"
-description: "使用 Docker Compose 設定 PGMQ 以 Python 客戶端連接"
+summary: "PGMQ 是一個運行在 Postgres 上的輕量級 Message Queue，類似於 AWS SQS 和 RSMQ。 本篇介紹如何使用使用 Docker Compose 設定 PGMQ 並以官方 Python 客戶端連接"
+description: "PGMQ 是一個運行在 Postgres 上的輕量級 Message Queue，類似於 AWS SQS 和 RSMQ。 本篇介紹如何使用使用 Docker Compose 設定 PGMQ 並以官方 Python 客戶端連接"
 date: 2024-07-03T21:46:28+08:00
 slug: "pgmq-docker-compose"
 tags: ["blog","zh-tw","database","postgresql"]

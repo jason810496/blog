@@ -1,7 +1,7 @@
 ---
 title: "PGMQ(PostgreSQL Message Queue) Setup"
-summary: "Setup PGMQ with Docker Compose to connect with Python client"
-description: "Setup PGMQ with Docker Compose to connect with Python client"
+summary: "PGMQ is a lightweight message queue. Like AWS SQS and RSMQ but on Postgres. The article is about how to setup PGMQ with Docker Compose to connect with official Python client"
+description: "PGMQ is a lightweight message queue. Like AWS SQS and RSMQ but on Postgres. The article is about how to setup PGMQ with Docker Compose to connect with official Python client"
 date: 2024-07-03T21:46:28+08:00
 slug: "pgmq-docker-compose"
 tags: ["blog","en","database","postgresql"]
