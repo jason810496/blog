@@ -12,6 +12,12 @@
 
 # Nested Menu for Categories
 [[main]]
+  name = "實習經歷"
+  parent = "分類"
+  pageRef = "tags/intern"
+  weight = 11
+
+[[main]]
   name = "資料庫"
   parent = "分類"
   pageRef = "tags/database"

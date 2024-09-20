@@ -12,6 +12,12 @@
 
 # Nested Menu for Categories
 [[main]]
+  name = "Internship"
+  parent = "Categories"
+  pageRef = "tags/intern"
+  weight = 11
+  
+[[main]]
   name = "Database"
   parent = "Categories"
   pageRef = "tags/database"
