@@ -47,7 +47,7 @@ Simply search with the keyword `Summer Intern` in the jobs tab, and you can casu
 Conferences like SITCON, COSCUP, and MOPCON are great places, not just for attending talks but also for directly chatting with full-time employees at company booths.  
 You can inquire about the actual work, technology focus, and interview process for summer internships.
 
-![SITCON]()
+![SITCON](sitcon.jpeg)
 
 At this year's SITCON, I asked full-time employees at booths from companies like Dcard, Line, and Trend Micro about their summer internships.  
 For instance, I learned at the Line booth that they only offer long-term internships that require in-office work, which isn't feasible for me since I still have to attend classes in Tainan.  

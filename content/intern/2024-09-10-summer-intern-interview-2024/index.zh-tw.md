@@ -51,7 +51,7 @@ draft: false
 除了單純聽議程之外，是一個不錯的機會直接與公司攤位的正職聊天 <br>
 可以問一下暑期實習可能會做的實際內容、技術方向、面試流程 <br>
 
-![SITCON](sitcon.png)
+![SITCON](sitcon.jpeg)
 
 
 <br>
