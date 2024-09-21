@@ -14,12 +14,6 @@ cascade:
 draft: false
 ---
 
-## 背景
-
-
-{{< article link="/intern/summer-intern-interview-2024" >}}
-
-
 ## 關於 Appier 
 
 在面試前對 Appier 的認識是「透過 AI 來廣告、行銷的 SaaS」 <br>

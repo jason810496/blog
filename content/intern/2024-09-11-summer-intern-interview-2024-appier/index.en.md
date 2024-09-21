@@ -14,9 +14,6 @@ cascade:
 draft: false
 ---
 
-## Background
-
-{{< article link="/intern/summer-intern-interview-2024" >}}
 
 ## About Appier
 
