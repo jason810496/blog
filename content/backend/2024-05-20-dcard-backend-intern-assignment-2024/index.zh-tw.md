@@ -14,18 +14,15 @@ cascade:
 draft: false
 ---
 
-關於面試 Dcard 的記錄放在： <br>
+> 封面的 Gopher 圖片來源：[gophers](https://github.com/egonelbre/gophers)
 
-{{< article link="/zh-tw/intern/summer-intern-interview-2024-appier/" >}}
+關於面試 Dcard 的記錄放在： <br>
+{{< article link="/zh-tw/intern/summer-intern-interview-2024-dcard/" >}}
 
 本篇著重在實際分析、設計、實作 Dcard 2024 後端暑期實習作業。 <br>
 最後的實作是放在： <br>
 
 {{< github repo="jason810496/Dcard-Advertisement-API" >}}
-
-- [直接跳到: Final Solution](#final-solution)
-- [直接跳到: 系統架構](#系統架構)
-- [直接跳到: 實作](#實作)
 
 ## 作業說明
 
@@ -41,7 +38,7 @@ https://github.com/jason810496/Dcard-Advertisement-API/blob/main/2024%20Backend%
 
 ### 詳細說明
 
-#### 管理者 API
+**管理者 API**
 
 > 只需要實作 Create 不用 List/ Update/ Delete <br>
 欄位結構：
@@ -57,7 +54,7 @@ https://github.com/jason810496/Dcard-Advertisement-API/blob/main/2024%20Backend%
     - `Country`: `enum:TW, JP, ...` 符合 ISO 3166-1
     - `Platform`: `enum:android, ios, web`
 
-#### 投放 API
+**投放 API**
 
 > 只需要實作 List 不用 Create/ Update/ Delete <br>
 - 列出符合條件的活躍廣告 ( `StartAt < Now < EndAt` )
@@ -129,7 +126,7 @@ curl -X GET -H "Content-Type: application/json" \
 }
 ```
 
-## 分析｀
+## 分析
 
 作業的需求可以被理解成： <br>
 **設計一個 read-heavy 的 API 能夠以多條件查詢特定時序區間的所有資料** 
@@ -139,7 +136,7 @@ curl -X GET -H "Content-Type: application/json" \
 但要如何設計低成本、有效率的 Cache 是一個只得思考的問題 <br>
 
 
-## Solution 1
+## 解法 1
 
 當建立廣告時，也會同步在建立在 Redis <br>
 開一個 `Gender:Platform:Country:AgeRange:uuid` 作為 Key 的 String <br>
@@ -183,7 +180,7 @@ TTL 會設的相對短，例如 5 ~ 10 分鐘 <br>
   - 在沒有搜尋 Cache 的情況下，每次的 `SCAN` 都是 `O(N)` 的時間複雜度
   - 並且對**年齡**這個條件的查詢還需要做額外的處理
 
-## Solution 2
+## 解法 2
 
 對 Age 做 Partition <br>
 開 101 個 Hash 來存 <br>
@@ -238,7 +235,7 @@ ad:all : {
 2. 資料冗余
    - 如果每個廣告**都沒有設定年齡**，所有 Partition 都會有這個廣告的資料 ( 同一份資料存了 101 次 )
 
-## Final Solution 
+## 最後解法
 
 直接到 DB 查詢不包含 offset, limit 的條件 <br>
 對條件搜尋的結果做 Cache <br>
@@ -283,7 +280,30 @@ ad:M:JP:android:* : {
 
 實際 Data Hotspot 可以限縮在 `18 ~ 35` 歲的年齡區間 <br>
 那組合數量就會變成：3 * 4 * 11 * (35-18+1) = **2,376** ! <br>
-這樣的組合數量就可以接受了 <br>
+
+## Redis Cache 
+
+
+當下 SQL Create 的廣告 **不一定** 會立即 **活躍** <br>
+> 最差的情況是當下 Create 的廣告都是未來的時間 <br>
+> 如果在 SQL Create 的當下就直接 Preheat 到 Redis 中 <br>
+> 反而會造成 Memory 的浪費 <br>
+
+<br>
+
+可以透過 **Corn Job** 來定期的更新 cache <br>
+每 M 分鐘枚舉過所有 Hotspot 的排列組合
+>  M 為可依實際運行狀況 fine tune 的時間 <br>
+> 設定為不影響實際 DB, Redis 的 Interval <br>
+> 並且可接受的短暫資料不一致時間 <br>
+
+<br>
+
+從 DB SELECT 當前活躍的廣告列表，並加入到 `Redis` 的 `ZSET` 中 <br>
+雖然會有短暫的資料不一致，但可以避免 **快取雪崩** 的問題和 **突發 preheat** 的問題 <br>
+> 如： 同時有多個廣告在同一個時間點活躍 <br>
+> 會造成 **大量的 Redis 更新** Block 住 <br>
+> 使用 **Corn Job** 可以 **平均分散**這些更新 <br>
 
 ## 系統架構
 
@@ -418,18 +438,57 @@ flowchart TD
     ( use **Lua** script for atomic operation )`" .-> Corn <-.-> PG
 {{< /mermaid >}}
 
+## 資料瓶頸: Postgres
 
-## 實作
+即使使用 Redis 作為 Server Side Cache <br>
+但是 QPS 還是沒有到預設目標 <br>
+並且還是有大量的流量打到 Postgres 上 <br>
+> 從 CPU/ Memory 的使用率來看 <br>
+> Postgres 的 CPU 使用率高達 90% <br>
 
+當時的解法是： <br>
+多加一層在 API Level 的 **Local Cache** <br>
+並有背景的 goroutine 來定期的更新 Local Cache <br>
 
-## 新問題: 還是不夠快
+多加這層 Local Cache 後 <br>
+就有在 Local 達到 10000 RPS 的目標 <br>
 
-## 資料瓶頸: Database
-
-## 可以改進的地方
+## 可以再優化的地方
 
 寫這篇回顧文章時其實是 2024 年的 9 月 <br>
 有發現一些當時實作沒有注意到的細節 <br>
 
 1. Database Index 
-2. 先從 Database 層面優化
+2. 系統穩定性
+3. Sharding
+
+### Database Index
+
+因為當時實作使用[Gorm](https://gorm.io/) ORM 來操作 Postgres<br>
+Gorm 本身只有對 Primary Key 做 Index <br>
+並沒有對其他欄位做 Index <br>
+
+應該可以 benchmark 一下各種 Index 組合 <br>
+看對哪些欄位加不同種類的 Index 會有比較好的效能 <br>
+
+### 系統穩定性
+
+當時發現單純 Redis Cache 還是有蠻多流量打到 Postgres 上時 <br>
+並沒有考慮**系統穩定性** <br>
+而是為了 QPS 目標，直接加了一層 Local Cache <br>
+
+應該要使用 **[singleFlight](https://github.com/golang/sync/tree/master)** <br>
+來避免 **大流量直接打到 Postgres** <br>
+( 至少可以過濾掉相同的查詢 ) <br>
+讓 Postgres 的 QPS 在一個合理的範圍內 <br>
+維持整體的系統穩定性 <br>
+
+### Sharding
+
+對於面試 follow up 的 Scalability 問題 <br>
+如: 國家變 30 個、平台變 5 個 <br>
+如何維持一樣的 QPS 目標 <br>
+
+直接講 Sharding 當然很簡單 <br>
+但真的要實作透過 Sharding 達到 Scalability 的穩定系統並沒有這麼容易 <br>
+有機會可以嘗試實作看看
