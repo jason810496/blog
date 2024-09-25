@@ -42,10 +42,6 @@ Final implementation GitHub Repository:
 
 {{< github repo="jason810496/Dcard-Advertisement-API" >}}
 
-Detailed design and implementation notes:
-
-{{< article link="/backend/dcard-backend-intern-assignment-2024/" >}}
-
 ## D+0: Assignment Submission
 
 I submitted the assignment by the deadline on April 8th.

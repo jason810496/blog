@@ -45,10 +45,6 @@ Dcard 是一個主要 TA 是年經族群的匿名交流平台，提供使用者�
 
 {{< github repo="jason810496/Dcard-Advertisement-API" >}}
 
-而詳細對作業的設計與實作紀錄在:
-
-{{< article link="/backend/dcard-backend-intern-assignment-2024/" >}}
-
 ## D+0: 送出作業
 
 作業是在表定的 4/8 送出
