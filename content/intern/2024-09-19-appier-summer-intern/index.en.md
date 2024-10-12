@@ -242,9 +242,7 @@ That day, we ordered a bunch of pizzas and Korean fried chicken! <br>
 
 {{< gallery >}}
   <img src="/intern/appier-summer-intern/club-fried-checken.jpeg" class="grid-w100 md:grid-w50" />
-  <
-
-img src="/intern/appier-summer-intern/club-pizza.jpeg" class="grid-w100 md:grid-w50" />
+  <img src="/intern/appier-summer-intern/club-pizza.jpeg" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 ## Company Culture
