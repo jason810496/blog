@@ -380,6 +380,19 @@ IaC 就有存在的必要性 <br>
 
 ### Senior 的角色
 
+- Review Code
+- Cost Reduction
+- Root Cause Analysis
+- Sprint Planning
+- Performance Tuning
+
+這些都是發現平常蠻難接觸到 <br>
+發現與 Senior 的差異 <br>
+
+之前只有比較有機會接觸到一些針對 OLTP 的 performance improvement <br>
+但這邊有很多針對 OLAP 、streaming 或 batch processing 的 tuning <br>
+都是之前都沒有碰過的主題 <br>
+
 ## 開發流程
 
 ### Scrum 和 Sprint
