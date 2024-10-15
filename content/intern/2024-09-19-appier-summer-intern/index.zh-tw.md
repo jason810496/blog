@@ -242,7 +242,7 @@ erDiagram
 
 ## Team 與 Mentor
 
-Data Platform Team 不到 10 人 <br>
+Data Platform Team <br>
 因為不算 Product Team 所以也沒有前端，都是 Backend、Data Engineer <br>
 
 算有 2 個 Mentor <br>

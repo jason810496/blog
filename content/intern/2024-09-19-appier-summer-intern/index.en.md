@@ -177,7 +177,7 @@ Each summer intern shares their project in the last week of their internship, wi
 
 ## Team and Mentorship
 
-The Data Platform Team consists of fewer than 10 people. <br>
+As for the Data Platform Team. <br>
 Since it isn't a Product Team, there are no frontend specialists, only Backend and Data Engineers. <br>
 
 I had two mentors: <br>
