@@ -13,14 +13,14 @@ title = ""
   secondaryLogo = "img/setting/LogoDark.png"
   description = "Liu Zhe You's Developer Blog"
 
-[author]
-name = "Liu Zhe You"
-image = "img/setting/Profile.jpeg"
-headline = "Intern @Appier / CSIE @NCKU"
-# show in author avatar bottom
-bio = "涉略全端、DevOps，目前專注在 Backend"
-links = [
-  { github = "https://github.com/jason810496" },
-  { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
-  { email = "mailto:810496@email.wlsh.tyc.edu.tw" }
-]
+  [author]
+    name = "Liu Zhe You"
+    image = "img/setting/Profile.jpeg"
+    headline = "Intern @Appier / CSIE @NCKU"
+    # show in author avatar bottom
+    bio = "涉略全端、DevOps，目前專注在 Backend"
+    links = [
+      { github = "https://github.com/jason810496" },
+      { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
+      { email = "mailto:810496@email.wlsh.tyc.edu.tw" }
+    ]
