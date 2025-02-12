@@ -1,10 +1,10 @@
 ---
-title: "Life Is Short Use `uv`"
+title: "Life Is Short Use 'uv'"
 summary: "How to use `uv` to manage Python packages and projects"
 description: "How to use `uv` to manage Python packages and projects"
 date: 2024-12-24T15:56:36+08:00
 slug: "life-is-short-use-uv"
-tags: ["blog","en"]
+tags: ["blog","en","python"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:

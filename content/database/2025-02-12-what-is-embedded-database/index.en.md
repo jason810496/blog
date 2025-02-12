@@ -4,7 +4,7 @@ summary: "A brief introduction to Embedded Database and concept of RocksDB"
 description: "A simple introduction to Embedded Database and RocksDB"
 date: 2025-02-12T00:57:41+08:00
 slug: "what-is-embedded-database"
-tags: ["blog","en"]
+tags: ["blog","en","database"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:

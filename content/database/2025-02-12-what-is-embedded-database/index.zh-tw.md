@@ -4,7 +4,7 @@ summary: "簡介 Embedded Database 和 RocksDB 的基本概念"
 description: "Embedded Database 與 RocksDB 的簡單介紹"
 date: 2025-02-12T00:57:41+08:00
 slug: "what-is-embedded-database"
-tags: ["blog","zh-tw"]
+tags: ["blog","zh-tw","database"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:

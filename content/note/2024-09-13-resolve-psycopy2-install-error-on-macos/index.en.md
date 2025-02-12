@@ -4,7 +4,7 @@ summary: "Resolve `psycopg2` Install Error on MacOS"
 description: "Resolve `psycopg2` Install Error on MacOS"
 date: 2024-09-13T15:48:30+08:00
 slug: "resolve-psycopy2-install-error-on-macos"
-tags: ["blog","en"]
+tags: ["blog","en","python"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:

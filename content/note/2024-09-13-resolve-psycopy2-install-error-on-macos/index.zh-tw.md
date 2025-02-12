@@ -4,7 +4,7 @@ summary: "解決 MacOS 安裝 `psycopg2` 常見的問題"
 description: "解決 MacOS 安裝 `psycopg2` 常見的問題"
 date: 2024-09-13T15:48:30+08:00
 slug: "resolve-psycopy2-install-error-on-macos"
-tags: ["blog","zh-tw"]
+tags: ["blog","zh-tw","python"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:

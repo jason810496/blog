@@ -1,10 +1,10 @@
 ---
-title: "Life Is Short Use `uv`"
+title: "Life Is Short Use 'uv'"
 summary: "如何使用 `uv` 來管理你的 Python 專案"
 description: "如何使用 `uv` 來管理你的 Python 專案"
 date: 2024-12-24T15:56:37+08:00
 slug: "life-is-short-use-uv"
-tags: ["blog","zh-tw"]
+tags: ["blog","zh-tw","python"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:
