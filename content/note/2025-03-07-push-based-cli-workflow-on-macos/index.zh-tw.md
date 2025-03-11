@@ -2,7 +2,7 @@
 title: "MacOS 上的 Push-based CLI 工作流"
 summary: "如何在 Mac 透過 Push-based 通知上減少 CLI 工作流中的 context switching"
 description: "如何在 Mac 透過 Push-based 通知上減少 CLI 工作流中的 context switching"
-date: 2025-03-07T23:56:05+08:00
+date: 2025-02-28T23:56:05+08:00
 slug: "push-based-cli-workflow-on-macos"
 tags: ["blog","zh-tw"]
 # series: ["Documentation"]

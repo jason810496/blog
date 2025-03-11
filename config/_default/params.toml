@@ -5,7 +5,7 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["database","backend","devops","note","intern"]
+mainSections = ["database","backend","devops","note","intern","open-source-contribution"]
 
 disableImageOptimization = false
 disableTextInHeader = false

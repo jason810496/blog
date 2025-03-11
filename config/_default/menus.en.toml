@@ -16,6 +16,13 @@
   parent = "Categories"
   pageRef = "tags/intern"
   weight = 11
+
+[[main]]
+  name = "OSS Contribution"
+  parent = "Categories"
+  pageRef = "tags/open-source-contribution"
+  weight = 20
+
   
 [[main]]
   name = "Database"

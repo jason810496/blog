@@ -18,6 +18,12 @@
   weight = 11
 
 [[main]]
+  name = "開源貢獻"
+  parent = "分類"
+  pageRef = "tags/open-source-contribution"
+  weight = 20
+
+[[main]]
   name = "資料庫"
   parent = "分類"
   pageRef = "tags/database"

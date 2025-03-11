@@ -2,7 +2,7 @@
 title: "Push-based CLI Workflow on MacOS"
 summary: "How to reduce context switching in CLI workflows on Mac through push-based notifications"
 description: "How to reduce context switching in CLI workflows on Mac through push-based notifications"
-date: 2025-03-07T23:56:05+08:00
+date: 2025-02-28T23:56:05+08:00
 slug: "push-based-cli-workflow-on-macos"
 tags: ["blog", "en"]
 # series: ["Documentation"]
