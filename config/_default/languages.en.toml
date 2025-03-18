@@ -16,12 +16,12 @@ title = ""
   [author]
     name = "Liu Zhe You"
     image = "img/setting/Profile.jpeg"
-    headline = "Intern @Appier / CSIE @NCKU"
+    headline = "Apache Airflow Committer / Intern @Appier / CSIE @NCKU"
     # show in author avatar bottom
-    bio = "Skilled in full-stack development and DevOps, currently focusing on Backend."
+    bio = "Focused on Contributing to open source, Distributed Systems, and Data Engineering."
     links = [
       { github = "https://github.com/jason810496" },
       { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
-      { email = "mailto:810496@email.wlsh.tyc.edu.tw" }
+      { email = "mailto:jasonliu@apache.org" }
     ]
 

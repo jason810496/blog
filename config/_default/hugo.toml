@@ -23,8 +23,12 @@ buildFuture = false
 
 googleAnalytics = "G-9Y57T5XFBH"
 
+# [imaging]
+# anchor = 'Center'
 [imaging]
-  anchor = 'Center'
+  quality = 100             # Set image quality (0-100, higher = better quality)
+  anchor = "smart"          # Crop anchor point (e.g., center, smart)
+  resampleFilter = "Lanczos" # High-quality resizing method
 
 [taxonomies]
   tag = "tags"
