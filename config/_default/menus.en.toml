@@ -43,10 +43,16 @@
   weight = 23
 
 [[main]]
+  name = "Data Engineering"
+  parent = "Categories"
+  pageRef = "tags/data-engineering"
+  weight = 24
+
+[[main]]
   name = "Tags"
   parent = "Categories"
   pageRef = "tags"
-  weight = 24
+  weight = 25
 
 [[main]]
   pre = "github"
