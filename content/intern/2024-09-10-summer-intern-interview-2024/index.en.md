@@ -23,7 +23,7 @@ The goal is to reduce information asymmetry and provide insights into the interv
 
 - Rising junior in Computer Science at National Cheng Kung University (NCKU)
 - [GitHub: jason810496](https://github.com/jason810496)
-- [LinkedIn: Liu Zhe You (Jason Liu)](https://www.linkedin.com/in/zhe-you-liu/)
+- [LinkedIn: Zhe-You Liu (Jason Liu)](https://www.linkedin.com/in/zhe-you-liu/)
 - Currently focused on backend development
 - Previous internship/part-time experience at two companies:
   - [PAIA - AI Gaming and Education Startup](https://app.paia-arena.com/)

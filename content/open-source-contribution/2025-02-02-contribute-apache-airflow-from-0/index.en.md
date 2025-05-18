@@ -36,7 +36,7 @@ Plus, I’m most familiar with Python.
 
 ## Background
 
-I'm [Liu Zhe You (Jason)](https://github.com/jason810496), a CSIE junior from Taiwan 🇹🇼 with a passion for OSS contributions and an interest in backend distributed systems.
+I'm [Zhe-You(Jason) Liu](https://github.com/jason810496), a CSIE junior from Taiwan 🇹🇼 with a passion for OSS contributions and an interest in backend distributed systems.
 
 Before I actually started contributing to Apache Airflow, I had only interned in a Data Engineering–related department for just over 3 months.  
 I didn’t even get a chance to write a DAG; I was mainly handling general backend tasks.

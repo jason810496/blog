@@ -11,10 +11,10 @@ title = ""
   dateFormat = "2006-01-02"
   logo = "img/setting/LogoLight.png"
   secondaryLogo = "img/setting/LogoDark.png"
-  description = "Liu Zhe You's Developer Blog"
+  description = "Zhe-You Liu's Developer Blog"
 
   [author]
-    name = "Liu Zhe You"
+    name = "Zhe-You Liu"
     image = "img/setting/Profile.jpeg"
     headline = "Apache Airflow Committer / Intern @Appier / CSIE @NCKU"
     # show in author avatar bottom

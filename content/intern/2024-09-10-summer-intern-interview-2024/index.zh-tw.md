@@ -24,7 +24,7 @@ draft: false
 
 - 成大資工大二升大三
 - [GitHub: jason810496](https://github.com/jason810496)
-- [LinkedIn: Liu Zhe You(Jason Liu)](https://www.linkedin.com/in/zhe-you-liu/)
+- [LinkedIn: Zhe-You Liu(Jason Liu)](https://www.linkedin.com/in/zhe-you-liu/)
 - 目前主要專注在 backend
 - 在這之前有在 2 間公司實習/ Part-time 工作過
   - [PAIA - AI 遊戲教育新創](https://app.paia-arena.com/)

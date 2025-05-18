@@ -115,11 +115,21 @@ draft: false
 {{< alert "circle-info" >}}
 以下的 AIP-XX 都是指 [Airflow Improvement Proposal](https://cwiki.apache.org/confluence/display/AIRFLOW) 的其中一個提案
 {{< /alert >}}
+
 ### AIP-84: Modern REST API
 
 剛好去年 10 月開出很多 AIP-84 的 Issues <br>
 主要是把 `legacy API` ( Flask 寫的 API ) migrate 到 FastAPI 的 API <br>
 因為當時最熟的就是 FastAPI 所以總共接了快 **10 個 API Migration**
+- [AIP-84 | Public list tags API #42959](https://github.com/apache/airflow/pull/42959)
+- [AIP-84: Add UI batch recent dag runs endpoint #43204](https://github.com/apache/airflow/pull/43204)
+- [AIP-84 Get Event Log #43406](https://github.com/apache/airflow/pull/43406)
+- [AIP-84 Get Event Logs #43407](https://github.com/apache/airflow/pull/43407)
+- [AIP-84 Get Import Error / Get Import Errors #43637](https://github.com/apache/airflow/pull/43637)
+- [AIP-84 Get Configs / Get Config Value #43841](https://github.com/apache/airflow/pull/43841)
+- [AIP-84 Add Lists Jobs with Filters API #43859](https://github.com/apache/airflow/pull/43859)
+- [AIP-81 Add Insert Multiple Pools API #44121](https://github.com/apache/airflow/pull/44121)
+
 
 在做這些 API Migration 的過程中也多少學到不少 Airflow 的架構 <br>
 還有寫 test 常用到的 pytest fixture 如 `dag_maker` 、 `dag_bag` 、 `create_dag_run`、`create_task_instances` 等等 <br>
@@ -128,6 +138,7 @@ draft: false
 
 - [AIP-84 Refactor Filter Query Parameters #43947](https://github.com/apache/airflow/pull/43947)
 - [AIP-84 Refactor SortParm #44345](https://github.com/apache/airflow/pull/44345)
+- [AIP-84 Refactor test cases with datetime_zulu_format #44323](https://github.com/apache/airflow/pull/44323)
 
 **Context** <br>
 在 FastAPI 架構下，每個 filter ( 竟更精確來說是 query parameter) 都會繼承 `BaseParam` <br>
@@ -172,10 +183,17 @@ draft: false
 
 接著遇到 [Removal of AIP-44 code #44436](https://github.com/apache/airflow/issues/44436) 的 Meta Issue <br>
 
-Internal API 可以理解為內部的 RPC ( 實際是使用 thrift RPC 實作 ) <br>
-這是第一個遇到需要 crowdsourcing 
+Internal API 可以理解為內部的 RPC <br>
+這是第一個遇到需要 crowd sourcing 的 meta issue ( 包括很多 sub-task 的 issue ) <br>
 以價值來說主要是為了 Airflow 3.0 開始
 TaskSDK、Operators 等**不應該直接存取到 Metadata Database** 
+
+- [Remove AIP-44 from models/trigger #44498](https://github.com/apache/airflow/pull/44498)
+- [Remove AIP-44 from models/serialized_dag #44501](https://github.com/apache/airflow/pull/44501)
+- [Remove AIP-44 from models/dag #44502](https://github.com/apache/airflow/pull/44502)
+- [Remove AIP-44 from models/skipmixin #44503](https://github.com/apache/airflow/pull/44503)
+- [Remove AIP-44 from models/xcom.py #44504](https://github.com/apache/airflow/pull/44504)
+- [Remove Pydantic classes from models/dag #44509](https://github.com/apache/airflow/pull/44509)
 
 而 Internal API 算是其中一部分**直接存取到 Metadata Database** 的 codebase <br>
 也被詬病不好 trace 
