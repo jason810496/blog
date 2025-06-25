@@ -34,8 +34,71 @@ draft: false
 是目前**最流行**的 Workflow Orchestration Tool 之一 <br>
 - 在 GitHub 上有**超過 40,000**顆星星
 - 是 Apache Software Foundation **第 5 大的專案**
-- 超過 **20,000 個企業**使用 Apache Airflow
-  > According to [HG Insight](https://discovery.hgdata.com/product/apache-airflow)
+- 超過 **80,0000 個企業**使用 Apache Airflow
+  > According to [Astronomer](https://www.astronomer.io/)
+
+```python
+# Example code for Apache Airflow
+import json
+
+import pendulum
+
+from airflow.sdk import dag, task
+@dag(
+    schedule=None,
+    start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
+    catchup=False,
+    tags=["example"],
+)
+def tutorial_taskflow_api():
+    """
+    ### TaskFlow API Tutorial Documentation
+    This is a simple data pipeline example which demonstrates the use of
+    the TaskFlow API using three simple tasks for Extract, Transform, and Load.
+    Documentation that goes along with the Airflow TaskFlow API tutorial is
+    located
+    [here](https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html)
+    """
+    @task()
+    def extract():
+        """
+        #### Extract task
+        A simple Extract task to get data ready for the rest of the data
+        pipeline. In this case, getting data is simulated by reading from a
+        hardcoded JSON string.
+        """
+        data_string = '{"1001": 301.27, "1002": 433.21, "1003": 502.22}'
+
+        order_data_dict = json.loads(data_string)
+        return order_data_dict
+    @task(multiple_outputs=True)
+    def transform(order_data_dict: dict):
+        """
+        #### Transform task
+        A simple Transform task which takes in the collection of order data and
+        computes the total order value.
+        """
+        total_order_value = 0
+
+        for value in order_data_dict.values():
+            total_order_value += value
+
+        return {"total_order_value": total_order_value}
+    @task()
+    def load(total_order_value: float):
+        """
+        #### Load task
+        A simple Load task which takes in the result of the Transform task and
+        instead of saving it to end user review, just prints it out.
+        """
+        print(f"Total order value is: {total_order_value:.2f}")
+
+    order_data = extract()
+    order_summary = transform(order_data)
+    load(order_summary["total_order_value"])
+
+tutorial_taskflow_api()
+```
 
 
 ## Apache Airflow 的 Feature
