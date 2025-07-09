@@ -17,7 +17,7 @@ draft: false
 {{< alert "circle-info">}}
 
 [**源來是你**](https://www.facebook.com/opensource4you) 是在台灣積極貢獻大型開與軟體的社群  
-接下還我會在以下時間地點主持 **Airflow 中文會議**
+接下來我會在以下時間地點主持 **Airflow 中文會議**
 
 **時間**： **7 月 2 日**起**隔週三晚上 20:30** (台灣時區 UTC+8)    
 **地點**： [airflow.opensource4you.tw](http://airflow.opensource4you.tw)  
