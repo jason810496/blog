@@ -20,8 +20,8 @@ draft: false
 I will be hosting the **Airflow Mandarin Meeting** at the following time and location:
 
 **Time**: Every other **Wednesday at 8:30 PM** starting **July 2nd** (Taiwan time UTC+8)  
-**Location**: [airflow.opensource4you.tw](http://airflow.opensource4you.tw)  
-**Calendar**: [calendar.opensource4you.tw](http://calendar.opensource4you.tw)  
+**Location**: [https://opensource4you.tw/airflow/meeting](https://opensource4you.tw/airflow/meeting)  
+**Calendar**: [https://opensource4you.tw/readme/calendar](https://opensource4you.tw/readme/calendar)  
 
 If you're interested in Airflow's latest technical developments or contributing to Airflow itself.  
 Welcome to join our Airflow meetings!

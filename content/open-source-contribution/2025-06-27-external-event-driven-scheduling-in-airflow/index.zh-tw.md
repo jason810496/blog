@@ -20,8 +20,8 @@ draft: false
 接下來我會在以下時間地點主持 **Airflow 中文會議**
 
 **時間**： **7 月 2 日**起**隔週三晚上 20:30** (台灣時區 UTC+8)    
-**地點**： [airflow.opensource4you.tw](http://airflow.opensource4you.tw)  
-**行事曆**： [calendar.opensource4you.tw](http://calendar.opensource4you.tw)  
+**地點**： [https://opensource4you.tw/airflow/meeting](https://opensource4you.tw/airflow/meeting)  
+**行事曆**： [https://opensource4you.tw/readme/calendar](https://opensource4you.tw/readme/calendar)  
 
 
 如果你也對 Airflow 的技術新知或對貢獻 Airflow 本身感興趣  
