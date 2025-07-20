@@ -190,7 +190,6 @@ draft: false
 ( 當時剛好加入 `Flutter` 組 ) <br>
 
 > [Flutter Tutorial 的 repository](github.com/jason810496/FlutterToturial)
-{{< github repo="jason810496/FlutterToturial" >}}
 
 
 在學期初課程都還沒什麼壓力 <br>
@@ -270,7 +269,6 @@ draft: false
 
 
 > [程式設計（一）的 repository](https://github.com/jason810496/CKJudge)
-{{< github repo="jason810496/CKJudge" >}}
 
 因為之前有 `C` 的經驗，所以作業都算還好 <br>
 最後 100 分過 <br>
@@ -294,7 +292,6 @@ draft: false
 期中考是上機考，不過也是刻 `WinForm` 跟作業差不多 <br>
 
 > [視窗程式設計的 repository](https://github.com/jason810496/Window-Programming)
-{{< github repo="jason810496/Window-Programming" >}}
 
 **課程中期**
 
@@ -303,7 +300,6 @@ draft: false
 然後教大概 3 週後，就要做一個包含蠻多 features 的遊戲 <br>
 
 > [Legend of Viking](https://github.com/jason810496/Legend-of-Viking)
-{{< github repo="jason810496/Legend-of-Viking" >}}
 （ Unity 大作業 repository ）
 
 [Github Page Demo](https://jason810496.github.io/Legend-of-Viking/)
@@ -327,7 +323,6 @@ Tech stack：
 
 成果：
 > [Live Share IDE 的 repository](github.com/jason810496/Live-Share-IDE)
-{{< github repo="jason810496/Live-Share-IDE" >}}
 
 {{< youtubeLite id="9qjtwq9A4FM" label="Live Share IDE Demo" >}}
 

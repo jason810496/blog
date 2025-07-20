@@ -1,7 +1,7 @@
 ---
 title: "深入研究 Apache Airflow 的 Dag Processing 機制"
-summary: "本篇文章會深入研究 Airflow 2 的 Dag Processing 機制，並總結與 Dag Processing 有關的最佳實踐。"
-description: "本篇文章會深入研究 Airflow 2 的 Dag Processing 機制，並總結與 Dag Processing 有關的最佳實踐。"
+summary: "本篇文章會深入研究 Airflow 2 的 Dag Processing 機制，並總結與 Dag Processing 有關的最佳實踐"
+description: "本篇文章會深入研究 Airflow 2 的 Dag Processing 機制，並總結與 Dag Processing 有關的最佳實踐"
 date: 2025-07-20T10:39:02+08:00
 slug: "dag-processing-in-apache-airflow"
 tags: ["blog","zh-tw","open-source-contribution","data-engineering"]
@@ -17,6 +17,7 @@ draft: false
 
 {{< alert "circle-info">}}
 
+
 [**源來是你**](https://www.facebook.com/opensource4you) 是在台灣積極貢獻大型開與軟體的社群  
 接下來我會在以下時間地點主持 **Airflow 中文會議**
 
@@ -28,7 +29,9 @@ draft: false
 如果你也對 Airflow 的技術新知或對貢獻 Airflow 本身感興趣  
 歡迎來 Airflow 會議共襄盛舉！
 
+
 {{< /alert >}}
+
 
 ## Python 撰寫的 Dag File 是如何被 Airflow 解析的？
 

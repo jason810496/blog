@@ -184,7 +184,6 @@ So I ended up being a core member teaching `Flutter`.
 (Joined the `Flutter` group at the time)
 
 > [Flutter Tutorial 的 repository](github.com/jason810496/FlutterToturial)
-{{< github repo="jason810496/FlutterToturial" >}}
 
 At the beginning of the semester, there wasn't much pressure from courses.
 Feeling a bit idle, I joined additional groups:
@@ -258,7 +257,6 @@ The exams are over 100 points, which can be tough for beginners.
 > But the professor is quite nice, giving a square root times 10 boost for scores below 60.
 
 > [程式設計（一）的 repository](https://github.com/jason810496/CKJudge)
-{{< github repo="jason810496/CKJudge" >}}
 
 Since I had prior experience with `C`, the homework was manageable.  
 Ended up passing with 100 points.  
@@ -281,7 +279,6 @@ For Mac M1 users, you had to set up a Windows VM to complete `WinForm` assignmen
 The midterm exam was an on-site exam, similar to the `WinForm` assignments.  
 
 > [視窗程式設計的 repository](https://github.com/jason810496/Window-Programming)
-{{< github repo="jason810496/Window-Programming" >}}
 
 **Mid-Course**
 
@@ -290,7 +287,6 @@ If you didn't follow the TA closely, it was hard to understand the operations.
 After about 3 weeks of instruction, we had to create a game with quite a few features.  
 
 > [Legend of Viking](https://github.com/jason810496/Legend-of-Viking)
-{{< github repo="jason810496/Legend-of-Viking" >}}
 （ Big project of Unity 3D ）
 
 [Github Page Demo](https://jason810496.github.io/Legend-of-Viking/)
@@ -312,7 +308,6 @@ Just used these to build it ouo.
 
 Result:  
 > [Live Share IDE 的 repository](github.com/jason810496/Live-Share-IDE)
-{{< github repo="jason810496/Live-Share-IDE" >}}
 
 {{< youtubeLite id="9qjtwq9A4FM" label="Live Share IDE Demo" >}}
 (Looks similar to `VSCode` interface but natively supports a chatroom)
