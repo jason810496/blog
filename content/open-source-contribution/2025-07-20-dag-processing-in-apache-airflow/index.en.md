@@ -159,7 +159,10 @@ The overall Dag Processing workflow is as follows:
     - Reads from `.py` files [self._load_modules_from_file](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L335)
     - Or reads from `.zip` archives [self._load_modules_from_zip](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L337)
     - [self._process_modules](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L348)
-        - After actually reading modules from Python files, gets Dag instances with `isinstance(o, (Dag, SDKDag))`
+        - This is the **most time and resource-intensive part** of the entire Dag Processing
+            - Not only does it need to load modules, but it also performs various processing and checks on Dag objects
+            - This is why I believe subprocess handling is necessary
+        - After actually reading modules from Python files, gets Dag instances with `isinstance(o, (DAG, SDKDAG))`
         - `top_level_dags = {(o, m) for m in mods for o in m.__dict__.values() if isinstance(o, (Dag, SDKDag))}`
         - And uses [self.bag_dag](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L538) to check if the Dag is valid
             1. Whether there are cycles
@@ -176,6 +179,9 @@ Here are several key points I think are worth noting:
   - Acts as a dispatcher and manages all `DagFileProcessorProcess` subprocesses
 2. **Each file path is handled by one `DagFileProcessorProcess`**: 
   - This process gets Dag instances and error messages through `DagBag`
+      - This step is the **most time and resource-intensive part**!
+        - A single Python file might contain just 1 Dag instance or potentially 1,000 Dag instances
+        - And each Dag instance needs to undergo various checks!
   - And synchronizes this information to the Metadata DB
 3. **`DagBag` is the final interface for getting Dag instances**: Whether Read-Only or Read-Write, all go through `DagBag` to obtain them
 
@@ -217,7 +223,27 @@ for customer in customers:
 
 This approach causes  
 these **1,000** Dag instances to be processed by only **1** `DagFileProcessorProcess`  
+> This also means  
+> This 1 process has to handle 1,000 Dag instances alone!  
+>  
+> Because **1 Python file** is handled by **1 DagFileProcessorProcess**  
+> Airflow cannot predict in advance how many Dag instances this Python file will generate  
+
 This is one of the reasons why **some Dags occasionally disappear suddenly** when using Dynamic Dags **to generate large numbers of Dags** in a **single Python file**  
+
+> For example:  
+> When loading the 800th Dag instance  
+> `DagFileProcessorManager` determines that `DagFileProcessorProcess` has been running too long and times out  
+> It directly terminates this process  
+>   
+> Then proceeds to the next round of Dag Processing  
+> Causing the remaining 200 Dags to be judged as **"deleted"!**  
+> So you see 200 fewer Dags in the UI  
+>  
+> But it's possible that in the next round of Dag Processing, it doesn't exceed the timeout  
+> And you can see all 1,000 Dags in the UI again  
+>  
+> This creates the phenomenon of "Dags occasionally disappearing suddenly"
 
 ![partition-parsing](partition-parsing.png)
 

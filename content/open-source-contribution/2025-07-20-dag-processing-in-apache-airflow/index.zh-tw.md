@@ -162,6 +162,9 @@ Airflow **3** 會牽涉 [AIP-72 TaskSDK](https://cwiki.apache.org/confluence/dis
     - 從 `.py` 檔案讀取[self._load_modules_from_file](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L335)
     - 或 `.zip` 壓縮檔讀取 [self._load_modules_from_zip](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L337)
     - [self._process_modules](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L348)
+        - 是整個 Dag Processing 中**最花時間與資源的部分**
+            - 不只要 load modules 也會對 Dag objects 做各種處理與檢查
+            - 這也是我認為 為什麼需要用 subprocess 來處理的原因
         - 實際從 Python 檔案讀 modules 後，以 `isinstance(o, (DAG, SDKDAG))` 拿到 Dags 的 instance
         - `top_level_dags = {(o, m) for m in mods for o in m.__dict__.values() if isinstance(o, (DAG, SDKDAG))}`
         - 並以 [self.bag_dag](https://github.com/apache/airflow/blob/7654e1a49b074d5dc06dd1218369399430dfcfc9/airflow-core/src/airflow/models/dagbag.py#L538) 檢查該 Dag 是否合法
@@ -179,6 +182,9 @@ Airflow **3** 會牽涉 [AIP-72 TaskSDK](https://cwiki.apache.org/confluence/dis
   - 擔任 dispatcher 的角色，並管理所有的 `DagFileProcessorProcess` subprocesses
 2. **每一個 file path 都是由一個 `DagFileProcessorProcess` 來處理**: 
   - 這個 process 會透過 `DagBag` 來拿到 Dag instance 和錯誤訊息
+      - 這個步驟會是 **最花時間與資源的部分** !
+        - 單一個 python file 內，可能只有 1 個 Dag instance 也有可能有 1,000 個 Dag instances  
+        - 而且需要對每個 Dag instance 去做各種檢查！
   - 並把這些資訊同步到 Metadata DB 中
 3. **`DagBag` 是最後拿到 Dag instance 的介面**: 無論是 Read-Only 還是 Read-Write 都會透過 `DagBag` 來取得
 
@@ -221,9 +227,29 @@ for customer in customers:
 
 
 這樣的寫法會導致  
-這 **1,000** 個 Dag instances 只被 **1 個** `DagFileProcessorProcess` 來處理  
+這 **1,000** 個 Dag instances 只被 **1 個** `DagFileProcessorProcess` 來處理    
+> 這也代表  
+> 這 1 個 process 要單獨處理 1,000 個 Dag instances!  
+>  
+> 因為 **1 個 Python 檔** 是由 **1 個 DagFileProcessorProcess** 處理的  
+> Airflow 沒有辦法預先知道這個 Python 檔會產生多少個 Dag instances  
+
 這也是在 **單一 Python 檔** 使用 Dynamic Dag **去產生大量 Dags** 時  
 **有些 Dags 會偶爾突然消失**的原因之一  
+> 例如：  
+> 在 load 到第 800 個 Dag instance 時   
+> `DagFileProcessorManager` 認為 `DagFileProcessorProcess` 跑太久 timeout 了   
+> 就直接 terminate 這個 process  
+>   
+> 又進行下一輪的 Dag Processing   
+> 導致剩下的 200 個 Dag 被判斷為 **"被刪除"！**   
+> 所以就在 UI 看到怎麼少了 200 個 Dag  
+>  
+> 但有可能再下一輪的 Dag Processing 沒有超過 timeout  
+> 又可以在 UI 上看到 1,000 個 Dags  
+>  
+> 就會有這種「 Dags 偶爾突然消失」的現象發生  
+
 
 ![partition-parsing](partition-parsing.png)
 
