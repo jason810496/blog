@@ -7,6 +7,7 @@ baseURL = "http://localhost:1313"
 # baseURL = "https://jason810496.github.io/blog/"
 defaultContentLanguage = "en"
 disableLanguages = [] #to allow translation work requiring shipping to production
+timeout = "300s" # timeout for the server to respond, default is 60
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
