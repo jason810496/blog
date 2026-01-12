@@ -7,6 +7,9 @@ build:
 	hugo
 .PHONY: build
 
+serve:
+	hugo server
+
 new-en:
 	if [ -z "$(POST)" ];then echo "Usage: make new-en POST=my-post-name"; exit 1; fi
 	# create directory if not exists
