@@ -280,7 +280,7 @@ jobs:
       run: breeze ci selective-check 2>> ${GITHUB_OUTPUT}
 ```
 
-Using [Remove experimental note from EdgeExecutor #10714](https://github.com/apache/airflow/actions/runs/20952103684/job/60207742385?pr=60446) as an example, below is what the `build-info` job produced.
+Using [Remove experimental note from EdgeExecutor #60446](https://github.com/apache/airflow/actions/runs/20952103684/job/60207742385?pr=60446) as an example, below is what the `build-info` job produced.
 
 > [!note]+ Output from `breeze ci get-workflow-info 2>> ${GITHUB_OUTPUT}`
 >
@@ -324,9 +324,7 @@ Using [Remove experimental note from EdgeExecutor #10714](https://github.com/apa
 > disable-airflow-repo-cache = false
 > prod-image-build = false
 > provider-dependency-bump = false
-> providers-compatibility-tests-matrix = [{"python-version": "3.10", "airflow-version": "2.11.0", "remove-providers": "common.messaging edge3 fab git keycloak", "run-unit-tests": "true"}, 
-> {"python-version": "3.10", "airflow-version": "3.0.6", "remove-providers": "", "run-unit-tests": "true"}, {"python-version": "3.10", "airflow-version": "3.1.5", "remove-providers": "", "run-unit-tests":
-> "true"}]
+> providers-compatibility-tests-matrix = [{"python-version": "3.10", "airflow-version": "2.11.0", "remove-providers": "common.messaging edge3 fab git keycloak", "run-unit-tests": "true"}, {"python-version": "3.10", "airflow-version": "3.0.6", "remove-providers": "", "run-unit-tests": "true"}, {"python-version": "3.10", "airflow-version": "3.1.5", "remove-providers": "", "run-unit-tests": "true"}]
 > providers-test-types-list-as-strings-in-json = null
 > pyproject-toml-changed = false
 > python-versions = ['3.10']
@@ -383,7 +381,7 @@ Using [Remove experimental note from EdgeExecutor #10714](https://github.com/apa
 > FileGroupForCi.ALL_PROVIDERS_DISTRIBUTION_CONFIG_FILES did not match any file.
 > FileGroupForCi.ALWAYS_TESTS_FILES did not match any file.
 > Remaining non test/always files: 1
-> We should run all core tests except providers.There are 1 changed files that seems to fall into Core/Other category
+> We should run all core tests except providers. There are 1 changed files that seems to fall into Core/Other category
 > {'airflow-core/docs/core-concepts/executor/index.rst'}
 > Selected core test type candidates to run:
 > ['API', 'Always', 'CLI', 'Core', 'Other', 'Serialization']

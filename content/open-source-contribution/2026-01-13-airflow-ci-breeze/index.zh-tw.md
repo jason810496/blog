@@ -1,7 +1,7 @@
 ---
 title: "大型開源軟體如何實現高效的持續整合 (CI) 系統？以 Apache Airflow 為例"
 summary: "拆解 Airflow CI 架構：用 Docker 保證一致性、用 Breeze 統一本機與雲端流程、用 Selective Checks 精準挑測試。"
-description: " Apache Airflow 每月大量 PR 仍能維持穩定與效率，關鍵在「環境可重現」與「依變更挑測試」。本文用 Breeze 與 Selective Checks 帶你看懂 Airflow CI 的設計思路。"
+description: "Apache Airflow 每月大量 PR 仍能維持穩定與效率，關鍵在「環境可重現」與「依變更挑測試」。本文用 Breeze 與 Selective Checks 帶你看懂 Airflow CI 的設計思路。"
 date: 2026-01-13T11:46:19+08:00
 slug: "airflow-ci-breeze"
 tags: ["blog","zh-tw","devops","open-source-contribution"]
@@ -17,13 +17,13 @@ draft: false
 
 # Apache Airflow 的持續整合系統
 
-持續整合作 (CI, Continuous Integration) 是作為保證大型軟體品質的重要一環，任何微小的 fix, new feature 或即使是修改一行文件都會經過規模大小不一的整合測試 (integration tests) 來確保不會破壞現有的功能，保證軟體的穩定性與可靠性。
+持續整合 (CI, Continuous Integration) 是作為保證大型軟體品質的重要一環，任何微小的 fix, new feature 或即使是修改一行文件都會經過規模大小不一的整合測試 (integration tests) 來確保不會破壞現有的功能，保證軟體的穩定性與可靠性。
 
 以上個月 (2025 年 12 月) 到今天 (2026 年 1 月 14 日) 為例，**即使是在聖誕和新年假期**，Apache Airflow 合併**超過 600 個 PR**，而每個 PR 都會觸發 CI 系統來執行測試。這些測試涵蓋了從單元測試 (unit tests) 到系統測試 (system tests)，確保每一個改動都不會引入新的錯誤。
 
 ![weekly-contribution](weekly-contribution.png)
 
-在個一個月內，總共跑了超過 **兩十萬 次 GitHub Action Jobs**，跑了接近 **三百萬分鐘的測試時間 (約等於 2000 天)**。這代表每一個對 CI 的優化都能夠大幅減少整體的測試時間和資源消耗，讓開發者能夠更快地收到回饋，提升開發效率。
+在一個月內，總共跑了超過 **二十萬 次 GitHub Action Jobs**，跑了接近 **三百萬分鐘的測試時間 (約等於 2000 天)**。這代表每一個對 CI 的優化都能夠大幅減少整體的測試時間和資源消耗，讓開發者能夠更快地收到回饋，提升開發效率。
 
 這篇文章將介紹 Apache Airflow 的 CI 系統架構，並說明 Apache Airflow 的 CI 是如何達到
 
@@ -57,7 +57,7 @@ draft: false
 
 ![docker_and_breeze](docker_and_breeze.png)
 
-[Breeze](https://github.com/apache/airflow/tree/main/dev/breeze) 就是達到以上概念 **專門為貢獻 Apache Airflow 而設計的 CLI 工具**，它提供了一個統一的介面來管理開發和測試環境。Breeze 允許開發者在本地機器上模擬 CI 環境、一鍵啟動 Airflow 並且能夠執行各種測試和檢查.
+[Breeze](https://github.com/apache/airflow/tree/main/dev/breeze) 就是達到以上概念 **專門為貢獻 Apache Airflow 而設計的 CLI 工具**，它提供了一個統一的介面來管理開發和測試環境。Breeze 允許開發者在本地機器上模擬 CI 環境、一鍵啟動 Airflow 並且能夠執行各種測試和檢查。
 
 - 提供簡單的命令來啟動和管理開發環境
 - 自動化常見靜態檢查和測試流程
@@ -264,7 +264,7 @@ jobs:
       run: breeze ci selective-check 2>> ${GITHUB_OUTPUT}
 ```
 
-[Remove experimental note from EdgeExecutor #10714](https://github.com/apache/airflow/actions/runs/20952103684/job/60207742385?pr=60446) 以這個 PR 為例，`build-info` job 的詳細執行結果:
+[Remove experimental note from EdgeExecutor #60446](https://github.com/apache/airflow/actions/runs/20952103684/job/60207742385?pr=60446) 以這個 PR 為例，`build-info` job 的詳細執行結果:
 
 > [!note]+ `breeze ci get-workflow-info 2>> ${GITHUB_OUTPUT}` 拿到的實際內容
 > 
@@ -309,9 +309,7 @@ jobs:
 > disable-airflow-repo-cache = false
 > prod-image-build = false
 > provider-dependency-bump = false
-> providers-compatibility-tests-matrix = [{"python-version": "3.10", "airflow-version": "2.11.0", "remove-providers": "common.messaging edge3 fab git keycloak", "run-unit-tests": "true"}, 
-> {"python-version": "3.10", "airflow-version": "3.0.6", "remove-providers": "", "run-unit-tests": "true"}, {"python-version": "3.10", "airflow-version": "3.1.5", "remove-providers": "", "run-unit-tests":
-> "true"}]
+> providers-compatibility-tests-matrix = [{"python-version": "3.10", "airflow-version": "2.11.0", "remove-providers": "common.messaging edge3 fab git keycloak", "run-unit-tests": "true"}, {"python-version": "3.10", "airflow-version": "3.0.6", "remove-providers": "", "run-unit-tests": "true"}, {"python-version": "3.10", "airflow-version": "3.1.5", "remove-providers": "", "run-unit-tests": "true"}]
 > providers-test-types-list-as-strings-in-json = null
 > pyproject-toml-changed = false
 > python-versions = ['3.10']
@@ -501,7 +499,7 @@ jobs:
 | 場景 | 修改內容 | 判斷結果 | 執行的測試 |
 |------|---------|---------|---------|
 | **只修改 UI 檔案** | `frontend/src/App.tsx` | 非完整測試 + 僅 UI 檔案 | 跳過單元測試<br/>執行 UI 測試、UI E2E 測試 |
-| **修改 Python 原始碼** | `airflow-core/src/airflow/operators/bash.py` | 非完整測試 + 源代碼檔案符合 | 執行單元測試<br/>執行型態檢查 (MyPy) |
+| **修改 Python 原始碼** | `airflow-core/src/airflow/operators/bash.py` | 非完整測試 + 原始碼檔案符合 | 執行單元測試<br/>執行型態檢查 (MyPy) |
 | **修改 pyproject.toml** | `airflow-core/pyproject.toml` | 相依性設定檔被修改 | 完整測試<br/>所有版本 |
 | **定時觸發 (Schedule)** | SCHEDULE 事件 | GitHub 事件符合 | 完整測試<br/>所有版本<br/>所有 providers |
 
