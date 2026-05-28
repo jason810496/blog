@@ -1,6 +1,6 @@
 # config/_default/languages.zh-tw.toml
-languageCode = "zh-tw"
-languageName = "繁體中文"
+locale = "zh-tw"
+label = "繁體中文"
 weight = 4
 title = ""
 
