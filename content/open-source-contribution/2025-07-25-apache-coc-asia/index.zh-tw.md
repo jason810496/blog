@@ -1,7 +1,7 @@
 ---
 title: "從 Apache CommunityOverCode Asia 2025 看亞洲開源與資料基礎設施"
-summary: "在 Apache CommunityOverCode Asia 2025 觀察到的亞洲開源生態：中國在地化 data stack、streaming-first 資料基礎設施、Ray、企業開源投入、Open Governance、OSS 創業，以及台灣技術社群可以帶走的啟發。"
-description: "在 Apache CommunityOverCode Asia 2025 觀察到的亞洲開源生態：中國在地化 data stack、streaming-first 資料基礎設施、Ray、企業開源投入、Open Governance、OSS 創業，以及台灣技術社群可以帶走的啟發。"
+summary: "中國在地化 data stack、streaming-first 資料基礎設施、企業開源投入、Open Governance，以及台灣技術社群可以帶走的啟發。"
+description: 中國在地化 data stack、streaming-first 資料基礎設施、企業開源投入、Open Governance，以及台灣技術社群可以帶走的啟發。"
 date: 2026-05-28T11:51:30+08:00
 slug: "apache-coc-asia"
 tags: ["blog","zh-tw","open-source-contribution","data-engineering"]
