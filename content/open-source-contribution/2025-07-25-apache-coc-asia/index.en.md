@@ -15,7 +15,7 @@ draft: false
 ---
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/coc-asia-attendee-badge.jpeg" alt="Badge" class="grid-w100 md:grid-w50" />
+  <img src="coc-asia-attendee-badge.jpeg" alt="Badge" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 ## Introduction
@@ -38,9 +38,9 @@ Real-time computing is heavily centered around [Apache Flink](https://flink.apac
 This is not simply a matter of different technical preferences. Many of these projects grew out of Chinese enterprises' own scenarios and were then adopted by other Chinese enterprises. Based on conversations on site, case studies, and booth materials, the user distribution of some projects was also clearly concentrated inside China. Their visibility among users outside China was much lower.
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/open-source-developer-trends-slide.jpeg" alt="Open source developer trends presentation" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/apache-openrank-project-ranking-slide.jpeg" alt="Apache OpenRank project ranking presentation" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/apache-openrank-project-table-closeup.jpeg" alt="Close-up of the Apache OpenRank project table" class="grid-w100 md:grid-w50" />
+  <img src="open-source-developer-trends-slide.jpeg" alt="Open source developer trends presentation" class="grid-w100 md:grid-w50" />
+  <img src="apache-openrank-project-ranking-slide.jpeg" alt="Apache OpenRank project ranking presentation" class="grid-w100 md:grid-w50" />
+  <img src="apache-openrank-project-table-closeup.jpeg" alt="Close-up of the Apache OpenRank project table" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 An open source project can live under Apache and operate through English documentation, GitHub issues, and mailing lists, but its actual users, contributors, commercial companies, and best practices can still be highly concentrated in a specific language, industry, or region. The Apache brand is global, but technical adoption is not always evenly globalized. Although these projects still follow "The Apache Way", most user discussions and development contributions **happen in Chinese on WeChat groups**.
@@ -95,8 +95,8 @@ In my memory of Apache CommunityOverCode North America, streaming compute engine
 Large internet companies in China have many high-frequency scenarios: short-video recommendations, live-streaming interaction, live commerce, flash-sale events, ad delivery, and real-time risk control. These scenarios naturally push engineering teams toward streaming-first architectures because of their requirements for latency, throughput, stability, and data freshness. A message queue is not only a buffer layer between systems. It is the entry point for the entire real-time data flow. Stream processing is not merely a supplement to batch pipelines. It is the core of whether many business capabilities can exist at all.
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/mq.jpeg" alt="Message Queue" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/flink-sql-ai-talk.jpeg" alt="Flink SQL AI Talk" class="grid-w100 md:grid-w50" />
+  <img src="mq.jpeg" alt="Message Queue" class="grid-w100 md:grid-w50" />
+  <img src="flink-sql-ai-talk.jpeg" alt="Flink SQL AI Talk" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 This also explains why graph computing appeared more often than I had expected. The core problems of many large internet services are not single-table analytics, but networks of relationships: users, products, livestreamers, content, transactions, devices, IP addresses, risk-control events, recommendation paths, all connected to one another. When the data relationships themselves are complex and must also be processed in real time, graph and streaming naturally get discussed together.
@@ -154,8 +154,8 @@ Several sessions in this year's agenda discussed OSS, commercialization, and sta
 - The Three Things That Make or Break a Software Startup by Rui Su
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/open-source-startup-journey-talk.jpeg" alt="From Commits to Capital session" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/software-startup-success-factors-talk.jpeg" alt="The Three Things That Make or Break a Software Startup session" class="grid-w100 md:grid-w50" />
+  <img src="open-source-startup-journey-talk.jpeg" alt="From Commits to Capital session" class="grid-w100 md:grid-w50" />
+  <img src="software-startup-success-factors-talk.jpeg" alt="The Three Things That Make or Break a Software Startup session" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 I found this type of topic very interesting because it was not simply about project governance or a technical roadmap. It directly asked: how can an OSS project driven by engineers and contributors become a startup that can survive?
@@ -206,8 +206,8 @@ I was also very happy to meet and talk with TAC friends such as Owen, Peter, Rya
 Congratulations as well to Simon and Nick, whose careers have both been going very smoothly recently.
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/coc-asia-tac.jpeg" alt="Apache CommunityOverCode Asia TAC friends group photo" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/coc-asia-group-photo.jpeg" alt="Apache CommunityOverCode Asia group photo" class="grid-w100 md:grid-w50" />
+  <img src="coc-asia-tac.jpeg" alt="Apache CommunityOverCode Asia TAC friends group photo" class="grid-w100 md:grid-w50" />
+  <img src="coc-asia-group-photo.jpeg" alt="Apache CommunityOverCode Asia group photo" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 ## OpenSource4You Apache Kafka and Apache Gravitino Gathering
@@ -221,9 +221,9 @@ ChiaPing also invited people who were in Beijing and active in the OpenSource4Yo
 The buffet provided at the venue was much richer than I expected. The food was good, with flavors I rarely get to try, but it was still not too unfamiliar to enjoy.
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/conference-buffet-cold-dishes.jpeg" alt="Conference buffet cold dishes" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/braised-yellow-croaker-buffet.jpeg" alt="Conference buffet yellow croaker dish" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/conference-buffet-plate.jpeg" alt="Conference buffet plate" class="grid-w100 md:grid-w33" />
+  <img src="conference-buffet-cold-dishes.jpeg" alt="Conference buffet cold dishes" class="grid-w100 md:grid-w33" />
+  <img src="braised-yellow-croaker-buffet.jpeg" alt="Conference buffet yellow croaker dish" class="grid-w100 md:grid-w33" />
+  <img src="conference-buffet-plate.jpeg" alt="Conference buffet plate" class="grid-w100 md:grid-w33" />
 {{< /gallery >}}
 
 ## Walking Around Beijing and Food
@@ -231,29 +231,29 @@ The buffet provided at the venue was much richer than I expected. The food was g
 Outside the conference, I also took the chance to walk around Beijing. I went to the Old Summer Palace, Peking University, and the Qianmen area. As a reminder to friends who might go next time: apply for each attraction visit one month in advance, or you may end up like us, only able to stare at Peking University from outside the gate.
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/old-summer-palace.jpeg" alt="Old Summer Palace" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/peking-university.jpeg" alt="Peking University" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/xibei-restaurant-group-selfie.jpeg" alt="Group selfie at Xibei restaurant" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/qianmen-history-map.jpeg" alt="Qianmen historical map" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/qianmen-starbucks-reserve.jpeg" alt="Qianmen Starbucks Reserve" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/zhengyangmen-gate.jpeg" alt="Zhengyangmen Gate" class="grid-w100 md:grid-w33" />
+  <img src="old-summer-palace.jpeg" alt="Old Summer Palace" class="grid-w100 md:grid-w33" />
+  <img src="peking-university.jpeg" alt="Peking University" class="grid-w100 md:grid-w33" />
+  <img src="xibei-restaurant-group-selfie.jpeg" alt="Group selfie at Xibei restaurant" class="grid-w100 md:grid-w33" />
+  <img src="qianmen-history-map.jpeg" alt="Qianmen historical map" class="grid-w100 md:grid-w33" />
+  <img src="qianmen-starbucks-reserve.jpeg" alt="Qianmen Starbucks Reserve" class="grid-w100 md:grid-w33" />
+  <img src="zhengyangmen-gate.jpeg" alt="Zhengyangmen Gate" class="grid-w100 md:grid-w33" />
 {{< /gallery >}}
 
 We also ate quite a lot on our own during this trip, including spicy fish, lamb skewers, yogurt, and finally roast duck at Quanjude. But I forgot to try douzhi.
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/spicy-fish.jpeg" alt="Spicy fish" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/spicy-fish-hotpot.jpeg" alt="Spicy fish hotpot" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/spicy-intestine-hotpot.jpeg" alt="Spicy intestine hotpot" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/lamb-skewers-and-noodle-soup.jpeg" alt="Lamb skewers and noodle soup" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/bubble-milk-tea.jpeg" alt="Bubble milk tea" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/beijing-pastry-gift-box.jpeg" alt="Beijing pastry gift box" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/beijing-yogurt-cups.jpeg" alt="Beijing yogurt" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/souvenir-cake.jpeg" alt="Souvenir pastry" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/beijing-meat-pie.jpeg" alt="Beijing meat pie" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/quanjude-roast-duck-platter.jpeg" alt="Quanjude roast duck platter" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/quanjude-roast-duck-restaurant.jpeg" alt="Quanjude roast duck restaurant" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/peking-duck-pancake-bites.jpeg" alt="Peking duck pancake bites" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="spicy-fish.jpeg" alt="Spicy fish" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="spicy-fish-hotpot.jpeg" alt="Spicy fish hotpot" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="spicy-intestine-hotpot.jpeg" alt="Spicy intestine hotpot" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="lamb-skewers-and-noodle-soup.jpeg" alt="Lamb skewers and noodle soup" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="bubble-milk-tea.jpeg" alt="Bubble milk tea" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="beijing-pastry-gift-box.jpeg" alt="Beijing pastry gift box" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="beijing-yogurt-cups.jpeg" alt="Beijing yogurt" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="souvenir-cake.jpeg" alt="Souvenir pastry" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="beijing-meat-pie.jpeg" alt="Beijing meat pie" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="quanjude-roast-duck-platter.jpeg" alt="Quanjude roast duck platter" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="quanjude-roast-duck-restaurant.jpeg" alt="Quanjude roast duck restaurant" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="peking-duck-pancake-bites.jpeg" alt="Peking duck pancake bites" class="grid-w100 md:grid-w33 xl:grid-w25" />
 {{< /gallery >}}
 
 ## Special Thanks

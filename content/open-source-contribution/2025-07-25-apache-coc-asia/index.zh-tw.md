@@ -1,7 +1,7 @@
 ---
 title: "從 Apache CommunityOverCode Asia 2025 看亞洲開源與資料基礎設施"
 summary: "中國在地化 data stack、streaming-first 資料基礎設施、企業開源投入、Open Governance，以及台灣技術社群可以帶走的啟發。"
-description: 中國在地化 data stack、streaming-first 資料基礎設施、企業開源投入、Open Governance，以及台灣技術社群可以帶走的啟發。"
+description: "中國在地化 data stack、streaming-first 資料基礎設施、企業開源投入、Open Governance，以及台灣技術社群可以帶走的啟發。"
 date: 2026-05-28T11:51:30+08:00
 slug: "apache-coc-asia"
 tags: ["blog","zh-tw","open-source-contribution","data-engineering"]
@@ -15,7 +15,7 @@ draft: false
 ---
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/coc-asia-attendee-badge.jpeg" alt="Badge" class="grid-w100 md:grid-w50" />
+  <img src="coc-asia-attendee-badge.jpeg" alt="Badge" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 ## 前言
@@ -38,9 +38,9 @@ draft: false
 這背後不是單純的「技術偏好不同」。這些專案很多是從中國企業自己的場景長出來，再被其他中國企業採用。從現場交流、案例分享和攤位資料來看，某些專案的使用者分布也明顯集中在中國境內；中國地區以外的使用者能見度相對低很多。
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/open-source-developer-trends-slide.jpeg" alt="開源開發者趨勢簡報" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/apache-openrank-project-ranking-slide.jpeg" alt="Apache OpenRank 專案排名簡報" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/apache-openrank-project-table-closeup.jpeg" alt="Apache OpenRank 專案表格近照" class="grid-w100 md:grid-w50" />
+  <img src="open-source-developer-trends-slide.jpeg" alt="開源開發者趨勢簡報" class="grid-w100 md:grid-w50" />
+  <img src="apache-openrank-project-ranking-slide.jpeg" alt="Apache OpenRank 專案排名簡報" class="grid-w100 md:grid-w50" />
+  <img src="apache-openrank-project-table-closeup.jpeg" alt="Apache OpenRank 專案表格近照" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 開源專案可以放在 Apache，也可以用英文文件、GitHub issue 和 mailing list 運作，但實際使用者、貢獻者、商業公司和最佳實踐，仍然可能高度集中在某個語言、產業或區域裡。Apache 的品牌是全球的，技術採用卻不一定平均地全球化。雖然也都有按照著 "The Apache Way" 進行，但多數的用戶討論和開發貢獻**都是在微信群以中文討論**。
@@ -95,8 +95,8 @@ Day 1 下午最讓我印象深的是這場：
 中國大型網路公司的高頻場景太多了：短影音推薦、直播互動、直播電商、秒殺活動、廣告投放、即時風控。這些場景對延遲、吞吐量、穩定性和資料新鮮度的要求，會自然把工程團隊推向 streaming-first 的架構。Message queue 不只是系統之間的緩衝層，而是整個即時資料流的入口；stream processing 也不只是 batch pipeline 的補充，而是很多業務功能能不能成立的核心。
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/mq.jpeg" alt="Message Queue" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/flink-sql-ai-talk.jpeg" alt="Flink SQL AI Talk" class="grid-w100 md:grid-w50" />
+  <img src="mq.jpeg" alt="Message Queue" class="grid-w100 md:grid-w50" />
+  <img src="flink-sql-ai-talk.jpeg" alt="Flink SQL AI Talk" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 這也解釋了為什麼 Graph Computing 比我想像中更常出現。很多大型網路服務的核心問題本來就不是單表分析，而是關係網路：使用者、商品、主播、內容、交易、設備、IP、風控事件、推薦鏈路，全部都互相連在一起。當資料關係本身很複雜，而且還要即時處理時，graph 和 streaming 就很自然地被放在一起討論。
@@ -154,8 +154,8 @@ Day 1 下午最讓我印象深的是這場：
 - The Three Things That Make or Break a Software Startup by Rui Su
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/open-source-startup-journey-talk.jpeg" alt="From Commits to Capital 議程現場" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/software-startup-success-factors-talk.jpeg" alt="The Three Things That Make or Break a Software Startup 議程現場" class="grid-w100 md:grid-w50" />
+  <img src="open-source-startup-journey-talk.jpeg" alt="From Commits to Capital 議程現場" class="grid-w100 md:grid-w50" />
+  <img src="software-startup-success-factors-talk.jpeg" alt="The Three Things That Make or Break a Software Startup 議程現場" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 這類議題讓我覺得很有意思，因為它不是單純講專案治理或技術 roadmap，而是直接問：一個由工程師和 contributor 推動的 OSS project，要怎麼變成可以活下來的 startup？
@@ -206,8 +206,8 @@ Day 1 下午最讓我印象深的是這場：
 也恭喜 Simon 和 Nick 最近都在事業發展的非常順利！
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/coc-asia-tac.jpeg" alt="Apache CommunityOverCode Asia TAC 夥伴合照" class="grid-w100 md:grid-w50" />
-  <img src="/open-source-contribution/apache-coc-asia/coc-asia-group-photo.jpeg" alt="Apache CommunityOverCode Asia 大合照" class="grid-w100 md:grid-w50" />
+  <img src="coc-asia-tac.jpeg" alt="Apache CommunityOverCode Asia TAC 夥伴合照" class="grid-w100 md:grid-w50" />
+  <img src="coc-asia-group-photo.jpeg" alt="Apache CommunityOverCode Asia 大合照" class="grid-w100 md:grid-w50" />
 {{< /gallery >}}
 
 ## Open Source 4 You 的 Apache Kafka, Apache Gravitino 聚會
@@ -221,9 +221,9 @@ Day 1 下午最讓我印象深的是這場：
 會場提供的 buffet 也比我預期豐富很多，都很不錯吃都是不太有吃過的口味但也不會吃的太不習慣。
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/conference-buffet-cold-dishes.jpeg" alt="會場 buffet 冷盤" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/braised-yellow-croaker-buffet.jpeg" alt="會場 buffet 黃魚料理" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/conference-buffet-plate.jpeg" alt="會場 buffet 餐盤" class="grid-w100 md:grid-w33" />
+  <img src="conference-buffet-cold-dishes.jpeg" alt="會場 buffet 冷盤" class="grid-w100 md:grid-w33" />
+  <img src="braised-yellow-croaker-buffet.jpeg" alt="會場 buffet 黃魚料理" class="grid-w100 md:grid-w33" />
+  <img src="conference-buffet-plate.jpeg" alt="會場 buffet 餐盤" class="grid-w100 md:grid-w33" />
 {{< /gallery >}}
 
 ## 北京走走與吃的東西
@@ -231,29 +231,29 @@ Day 1 下午最讓我印象深的是這場：
 會議之外，也趁這次去北京走了一些地方。去了圓明園、北京大學、前門附近 (順便提醒下一次會去的夥伴們要一個月前提早申請各個景點參訪，不然會像我們只能在北京大學前面乾瞪眼)
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/old-summer-palace.jpeg" alt="圓明園" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/peking-university.jpeg" alt="北京大學" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/xibei-restaurant-group-selfie.jpeg" alt="西貝餐廳聚餐自拍" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/qianmen-history-map.jpeg" alt="前門歷史地圖" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/qianmen-starbucks-reserve.jpeg" alt="前門 Starbucks Reserve" class="grid-w100 md:grid-w33" />
-  <img src="/open-source-contribution/apache-coc-asia/zhengyangmen-gate.jpeg" alt="正陽門" class="grid-w100 md:grid-w33" />
+  <img src="old-summer-palace.jpeg" alt="圓明園" class="grid-w100 md:grid-w33" />
+  <img src="peking-university.jpeg" alt="北京大學" class="grid-w100 md:grid-w33" />
+  <img src="xibei-restaurant-group-selfie.jpeg" alt="西貝餐廳聚餐自拍" class="grid-w100 md:grid-w33" />
+  <img src="qianmen-history-map.jpeg" alt="前門歷史地圖" class="grid-w100 md:grid-w33" />
+  <img src="qianmen-starbucks-reserve.jpeg" alt="前門 Starbucks Reserve" class="grid-w100 md:grid-w33" />
+  <img src="zhengyangmen-gate.jpeg" alt="正陽門" class="grid-w100 md:grid-w33" />
 {{< /gallery >}}
 
 這趟我們也自己吃蠻多的像是麻辣魚、羊肉串、酸奶，到最後去全聚德吃烤鴨，但是忘記喝到豆汁了。
 
 {{< gallery >}}
-  <img src="/open-source-contribution/apache-coc-asia/spicy-fish.jpeg" alt="麻辣魚" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/spicy-fish-hotpot.jpeg" alt="麻辣魚火鍋" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/spicy-intestine-hotpot.jpeg" alt="麻辣肥腸火鍋" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/lamb-skewers-and-noodle-soup.jpeg" alt="羊肉串與湯麵" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/bubble-milk-tea.jpeg" alt="珍珠奶茶" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/beijing-pastry-gift-box.jpeg" alt="北京糕點禮盒" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/beijing-yogurt-cups.jpeg" alt="北京酸奶" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/souvenir-cake.jpeg" alt="伴手禮糕點" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/beijing-meat-pie.jpeg" alt="北京肉餅" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/quanjude-roast-duck-platter.jpeg" alt="全聚德烤鴨盤" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/quanjude-roast-duck-restaurant.jpeg" alt="全聚德烤鴨店" class="grid-w100 md:grid-w33 xl:grid-w25" />
-  <img src="/open-source-contribution/apache-coc-asia/peking-duck-pancake-bites.jpeg" alt="北京烤鴨捲餅" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="spicy-fish.jpeg" alt="麻辣魚" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="spicy-fish-hotpot.jpeg" alt="麻辣魚火鍋" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="spicy-intestine-hotpot.jpeg" alt="麻辣肥腸火鍋" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="lamb-skewers-and-noodle-soup.jpeg" alt="羊肉串與湯麵" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="bubble-milk-tea.jpeg" alt="珍珠奶茶" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="beijing-pastry-gift-box.jpeg" alt="北京糕點禮盒" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="beijing-yogurt-cups.jpeg" alt="北京酸奶" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="souvenir-cake.jpeg" alt="伴手禮糕點" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="beijing-meat-pie.jpeg" alt="北京肉餅" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="quanjude-roast-duck-platter.jpeg" alt="全聚德烤鴨盤" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="quanjude-roast-duck-restaurant.jpeg" alt="全聚德烤鴨店" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="peking-duck-pancake-bites.jpeg" alt="北京烤鴨捲餅" class="grid-w100 md:grid-w33 xl:grid-w25" />
 {{< /gallery >}}
 
 ## 特別感謝
@@ -275,5 +275,4 @@ Day 1 下午最讓我印象深的是這場：
 我原本只是想來聽 Apache 相關技術，但我從 CoC Asia 看到的是，開源不只是程式碼，也不只是基金會治理。它同時是公司戰略、人才訓練、商業模式、區域產業結構和工程文化。
 
 對我來說，這也是繼續貢獻 [Apache Airflow](https://airflow.apache.org/docs/) 很大的動力。因為當 data pipeline 變得越來越即時、越來越複雜、越來越需要 AI 協作和自我修復，Airflow 這種 open governance 的 workflow orchestration system 還有很多值得往前推的地方。
-
 
