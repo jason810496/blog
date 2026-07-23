@@ -1,4 +1,4 @@
-{{ if eq .Site.Params.languageCode "zh-TW" }}
+{{ if eq (lower (.Site.Language.Locale | default .Site.Language.Lang)) "zh-tw" }}
 <script src="https://giscus.app/client.js"
         data-repo="jason810496/blog"
         data-repo-id="R_kgDOGzOX9Q"

@@ -1,6 +1,6 @@
 # config/_default/languages.en.toml
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 weight = 1
 title = ""
 
@@ -24,4 +24,3 @@ title = ""
       { linkedin = "https://linkedin.com/in/zhe-you-liu/" },
       { email = "mailto:jasonliu@apache.org" }
     ]
-

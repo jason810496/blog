@@ -65,7 +65,20 @@ That’s why there should be a simple script to actively notify you once a CLI c
 
 For example, check out this snippet from my [dotfiles/.zshrc at ee0772 · jason810496/dotfiles](https://github.com/jason810496/dotfiles/blob/ee0772e86bf881878b1e3aa3f5b3df6ad36b40f2/zsh/.zshrc#L144-L156):
 
-{{< code url="https://raw.githubusercontent.com/jason810496/dotfiles/ee0772e86bf881878b1e3aa3f5b3df6ad36b40f2/zsh/.zshrc" type="bash" startLine="144" endLine="156" >}}
+```bash {linenos=table,linenostart=144}
+# Utils
+notify() {
+  # Usage: <your long-running command>; notify
+  # Useful for docker build, etc.
+  if [[ $? -eq 0 ]]; then
+    osascript -e 'display notification "✅ Success!" with title "Command Completed"'
+    afplay /System/Library/Sounds/Glass.aiff
+  else
+    osascript -e 'display notification "❌ Failed!" with title "Command Failed"'
+    afplay /System/Library/Sounds/Basso.aiff
+  fi
+}
+```
 
 Currently, I add the `notify` script to my `.zshrc` (which uses macOS’s `osascript` to invoke `display notification`).
 
