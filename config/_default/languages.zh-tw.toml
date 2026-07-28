@@ -14,10 +14,10 @@ title = "Zhe-You Liu 的開發者部落格"
   description = "Zhe-You Liu 的開發者部落格"
 
   [params.author]
-    name = "Zhe-You Liu"
+    name = "Jason(Zhe-You) Liu"
     email = "jasonliu@apache.org"
     image = "img/setting/Profile.jpeg"
-    headline = "Apache Airflow Committer / Intern @Appier / CSIE @NCKU"
+    headline = "Apache Airflow Committer / OSS Team @Astronomer"
     # show in author avatar bottom
     bio = "專注在貢獻開源、Distributed System、Data Engineering"
     links = [

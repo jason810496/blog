@@ -1,21 +1,14 @@
 # config/_default/menus.toml
 
 [[main]]
-  name = "Blog"
-  pageRef = "tags/blog"
+  name = "Resume"
+  url = "https://www.zhu424.dev/Resume/LIU_ZHE_YOU.pdf"
   weight = 10
 
 [[main]]
   name = "分類"
   pageRef = "categories"
   weight = 20
-
-# Nested Menu for Categories
-[[main]]
-  name = "實習經歷"
-  parent = "分類"
-  pageRef = "tags/intern"
-  weight = 11
 
 [[main]]
   name = "開源貢獻"
