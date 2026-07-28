@@ -68,6 +68,13 @@
   url = "https://www.linkedin.com/in/zhe-you-liu/"
   weight = 40
 
+[[main]]
+  pre = "rss"
+  title = "RSS"
+  identifier = "rss"
+  url = "/zh-tw/index.xml"
+  weight = 50
+
 # [[footer]]
 #   name = "Privacy"
 #   url = "https://external-link"

@@ -1,0 +1,64 @@
+{{- $page := . -}}
+{{- $pages := .RegularPages -}}
+{{- if .IsHome -}}
+  {{- $pages = where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+{{- end -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+  {{- $pages = first $limit $pages -}}
+{{- end -}}
+{{- $feedTitle := .Site.Title -}}
+{{- if not .IsHome -}}
+  {{- $feedTitle = printf "%s · %s" .Title .Site.Title -}}
+{{- end -}}
+{{- $description := .Site.Params.description -}}
+{{- if not .IsHome -}}
+  {{- $description = printf "Recent content in %s on %s" .Title .Site.Title -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>{{ $feedTitle | transform.XMLEscape | safeHTML }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ $description | transform.XMLEscape | safeHTML }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>{{ .Site.Language.Locale }}</language>
+    {{- with .Site.Params.author.email }}
+    <managingEditor>{{ . }}{{ with $page.Site.Params.author.name }} ({{ . | transform.XMLEscape | safeHTML }}){{ end }}</managingEditor>
+    <webMaster>{{ . }}{{ with $page.Site.Params.author.name }} ({{ . | transform.XMLEscape | safeHTML }}){{ end }}</webMaster>
+    {{- end }}
+    {{- with .Site.Params.author.name }}
+    <copyright>© {{ now.Year }} {{ . | transform.XMLEscape | safeHTML }}</copyright>
+    {{- end }}
+    {{- with $pages.ByLastmod.Reverse }}
+    <lastBuildDate>{{ (index . 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="{{ .MediaType.Type }}" />
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title | transform.XMLEscape | safeHTML }}</title>
+      <link>{{ .Permalink }}</link>
+      {{- if not .PublishDate.IsZero }}
+      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      {{- end }}
+      {{- with .Site.Params.author.email }}
+      <author>{{ . }}{{ with $page.Site.Params.author.name }} ({{ . | transform.XMLEscape | safeHTML }}){{ end }}</author>
+      {{- end }}
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+      {{- $images := .Resources.ByType "image" }}
+      {{- $featured := $images.GetMatch "*feature*" }}
+      {{- if not $featured }}
+        {{- $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
+      {{- end }}
+      {{- with $featured }}
+      <media:content url="{{ .Permalink }}" />
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>

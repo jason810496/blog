@@ -8,7 +8,7 @@ enableCodeCopy = true
 mainSections = ["database","backend","devops","note","intern","open-source-contribution","data-engineering"]
 
 disableImageOptimization = false
-disableTextInHeader = false
+disableTextInHeader = true
 
 defaultBackgroundImage = "/img/setting/Background.svg"
 defaultFeaturedImage = "/img/setting/DefaultFeatured.svg"

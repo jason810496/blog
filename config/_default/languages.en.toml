@@ -2,7 +2,7 @@
 locale = "en"
 label = "English"
 weight = 1
-title = ""
+title = "Zhe-You Liu's Developer Blog"
 
 [params]
   displayName = "English"
@@ -13,8 +13,9 @@ title = ""
   secondaryLogo = "img/setting/LogoDark.png"
   description = "Zhe-You Liu's Developer Blog"
 
-  [author]
+  [params.author]
     name = "Zhe-You Liu"
+    email = "jasonliu@apache.org"
     image = "img/setting/Profile.jpeg"
     headline = "Apache Airflow Committer / Intern @Appier / CSIE @NCKU"
     # show in author avatar bottom

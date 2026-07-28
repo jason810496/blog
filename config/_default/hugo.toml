@@ -3,8 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "http://localhost:1313"
-# baseURL = "https://jason810496.github.io/blog/"
+baseURL = "https://blog.zhu424.dev/"
 defaultContentLanguage = "en"
 disableLanguages = [] #to allow translation work requiring shipping to production
 timeout = "300s" # timeout for the server to respond, default is 60
@@ -12,17 +11,16 @@ timeout = "300s" # timeout for the server to respond, default is 60
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
-# paginate = 100
-[pagination]
-  pagerSize = 100
 summaryLength = 30
 hasCJKLanguage = true
 
 buildDrafts = false
 buildFuture = false
 
-
 googleAnalytics = "G-9Y57T5XFBH"
+
+[pagination]
+  pagerSize = 100
 
 # [imaging]
 # anchor = 'Center'

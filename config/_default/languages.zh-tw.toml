@@ -2,7 +2,7 @@
 locale = "zh-tw"
 label = "繁體中文"
 weight = 4
-title = ""
+title = "Zhe-You Liu 的開發者部落格"
 
 [params]
   displayName = "繁體中文"
@@ -11,10 +11,11 @@ title = ""
   dateFormat = "2006-01-02"
   logo = "img/setting/LogoLight.png"
   secondaryLogo = "img/setting/LogoDark.png"
-  description = "Zhe-You Liu's Developer Blog"
+  description = "Zhe-You Liu 的開發者部落格"
 
-  [author]
+  [params.author]
     name = "Zhe-You Liu"
+    email = "jasonliu@apache.org"
     image = "img/setting/Profile.jpeg"
     headline = "Apache Airflow Committer / Intern @Appier / CSIE @NCKU"
     # show in author avatar bottom
