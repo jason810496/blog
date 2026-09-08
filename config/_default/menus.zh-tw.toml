@@ -6,6 +6,11 @@
   weight = 10
 
 [[main]]
+  name = "Talks"
+  url = "https://www.zhu424.dev/slides"
+  weight = 15
+
+[[main]]
   name = "分類"
   pageRef = "categories"
   weight = 20
