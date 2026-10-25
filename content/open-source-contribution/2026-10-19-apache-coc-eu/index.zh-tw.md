@@ -1,10 +1,10 @@
 ---
-title: "Apache CommunityOverCode Europe 2026 參與心得"
-summary: ""
-description: ""
+title: "Apache CommunityOverCode Europe 2026 參與心得：Airflow Contributor Day、多語言 SDK 與 Lakehouse 趨勢"
+summary: "在格拉斯哥的 CommunityOverCode EU 2026，首屆 Airflow Contributor Day、分享 Airflow 的非 Python SDK，以及 Lakehouse Day 上關於 Agent、權限控制、semantic catalog 與 REST Catalog 的觀察。"
+description: "記錄 2026 年 Apache CommunityOverCode Europe（Glasgow）的參與心得：Airflow Contributor Day 與 Community over Code 的實踐、Airflow Beyond Python 議程、Lakehouse Day 的所見所聞，以及 OpenAI、LinkedIn、Apple 等團隊的 Data Infra 實戰分享。"
 date: 2026-10-24T18:52:40+08:00
 slug: "apache-coc-eu"
-tags: ["blog","zh-tw"]
+tags: ["blog","zh-tw","open-source-contribution","data-engineering","airflow","lakehouse","apache-iceberg","conference"]
 # series: ["Documentation"]
 # series_order: 9
 cascade:
@@ -16,36 +16,38 @@ draft: false
 
 ## 前言
 
-
+> ![featured](featured.jpg)
+> 這次一同從台灣出發的夥伴們，從左到右：[KuanHao](https://github.com/rich7420)、我、[Peter](https://github.com/peterxcli)、[GuanMing](https://github.com/guan404ming)  
+> 最右邊的 [李唯](https://github.com/Lee-W) 是從日本出發的 XD  
 
 在今年 Lakehouse 相關議程討論到許多 Agent 在 Data Infra 扮演的角色或 Agent 對 Data Infra 的影響  
 當然也有長年以來大家如何解決擴展性的問題  
 
 今年也有第一次的 Airflow Contributor Day  
-有需多的 Airflow PMC 成員、Committer、Contributor 以及使用者聚集在一起討論 Airflow 的未來
+有許多的 Airflow PMC 成員、Committer、Contributor 以及使用者聚集在一起討論 Airflow 的未來
 
 
 ## Airflow Contributor Day：真正的 Community over Code 
 
-很不幸在前一段時間，Airflow 的其中一位 PMC 成員 Jen 出了一些狀況
-所以他沒辦法參與今年的 Airflow Submit 和 CommunityOverCode  
-不過好消息是 Jen 目前狀況好很多了！
+很不幸在前一段時間，Airflow 的其中一位 PMC 成員 [Jens](https://github.com/jscheffl) 出了一些狀況
+所以他沒辦法參與今年的 Airflow Summit 和 CommunityOverCode  
+不過好消息是 Jens 目前狀況好很多了！
 
 > ![airflow-contributor-day-group-photo](airflow-contributor-day-group-photo.jpeg)
 > [One picture worth more than 1000 words: this is the summary of the Airflow](https://lists.apache.org/thread.html/5b0ok7fr6tc6lzslvcgx4nhbxkfcwq22)
 
-我們的資深成員 Jarek 把 Jen 「帶」來會場，他甚至在我們大部分人出發前就已經到會場了  
-大約在 CoC 的前一個月，Jarek 邀請大家一行人在 CoC 後再一起飛去德國拜訪 Jen  
-所以除了 Jarek 之外，其他人都沒辦法把調整行程，只能帶一些小禮物與卡片  
-再由 Jarek 送給 Jen並且把 Jen 的近況帶回來給大家！
+我們的資深成員 [Jarek](https://github.com/potiuk) 把 Jens 「帶」來會場，他甚至在我們大部分人出發前就已經到會場了  
+大約在 CoC 的前一個月，Jarek 邀請大家一行人在 CoC 後再一起飛去德國拜訪 Jens  
+所以除了 Jarek 之外，其他人都沒辦法調整行程，只能帶一些小禮物與卡片  
+再由 Jarek 送給 Jens 並且把 Jens 的近況帶回來給大家！
 
 這也是真正體現了「Community over Code」的精神  
 大家最一開始確實是為了專案技術本身而聚集在一起  
 但更長期來說大家早已經把彼此當作朋友  
 
-題外話是，在去年的 Airflow Submit 跟 Jen 一行人還有在西雅圖騎腳踏車  
+題外話是，在去年的 Airflow Summit 跟 Jens 一行人還有在西雅圖騎腳踏車  
 結果都是爬坡路，我真的追不到大家
-希望 Jen 今年可以早日康復後
+希望 Jens 今年可以早日康復後
 大家有機會可以再一起去騎腳踏車（但下次先不要上坡路了，我真的追不上大家！）
 
 
@@ -68,47 +70,45 @@ draft: false
 
 [李唯](https://github.com/Lee-W) 這邊就從用自然語言與 Airflow 溝通來說到 [Common AI Provider](https://airflow.apache.org/blog/common-ai-provider-1.0/)，讓 Airflow 可以打造 AI native workflow
 
+![wei-lee-common-ai](wei-lee-common-ai.jpg)
+
 簡報：[Airflow-Beyond-Python-New-Languages-for-Tasks-and-Workflows](https://www.zhu424.dev/slides/2026-10-11-Airflow-Beyond-Python-New-Languages-for-Tasks-and-Workflows.pdf)
 
-這是是在一個月前才敲定的議程，因為 Airflow Track 有人臨時取消，加上 non-Python SDKs 在當時架構已經有具體的方向了
+這是在一個月前才敲定的議程，因為 Airflow Track 有人臨時取消，加上 non-Python SDKs 在當時架構已經有具體的方向了
 最後由 Jarek 幫忙排進 Airflow Track 的議程中  
-再次感謝 Jarek 的幫忙，讓我們有機會在 CoC EU 分享這個議！
+再次感謝 [Jarek](https://github.com/potiuk) 的幫忙，讓我們有機會在 CoC EU 分享這個議！
 
 
-## Lakehouse 的所見所聞
+## Lakehouse Day 的所見所聞：Agent 時代的 Lakehouse
 
-**更精細的資料權限控制**
+### Agent 帶來更精細的資料權限控制
 
-在 Lakehouse round table 議程中，講者們談到
-- The impact for Lakehouse from the Agent workload: much higher security concern and more granular access control. Not only the human access or write the table anymore, the agents interact with the table as will now.
-- New on prem trend consider as another kind of security. The Lakehouse stack needs to consider not only the cloud based infrastructure but also the on prem infrastructure.
-- From data file and in memory format level point of view, there’re some new data file format emerging for different use cases (e.g. lance, not just parquet)，but they need to reach the consensus and be standardized to avoid fragmentation.
+Lakehouse round table 的主軸是當 Agent 開始成為資料的使用者時，整個 Lakehouse stack 需要跟著改變什麼，講者們談到幾個觀察：
+- **Agent workload 的衝擊**：過去只有人會讀寫資料表，現在 Agent 也會隨時與資料表互動，因此對安全性的要求更高，也需要更細粒度的存取控制
+- **On-prem 的回潮**：On-prem 也被視為安全策略的一種，Lakehouse stack 不能只考慮雲端，也要能在地端部署
+- **新的檔案格式**：在資料檔與 in-memory format 層面，針對不同使用情境開始出現 Parquet 以外的選擇（例如 Lance），但這些格式需要達成共識並標準化，避免生態系分裂
 
 ![lakehouse-day-round-table-wide](lakehouse-day-round-table-wide.jpeg)
 
-**當開源專案與公司業務對標時的影響力**
+### 當開源專案與公司業務對標時的影響力
 
-這是由 Sean 大大與同事們在 Lakehouse Day 的 talk，分享 Apple 在 Lakehouse 的經驗與實作
-- Apple Lakehouse
-- 從 HDFS 到 Lakehouse 的一系列搬遷與架構取捨
-- 主要用 DataFusion comet, 當組織在專案有足夠的影響力時, 可以決定專案的功能和 release 週期, 讓組織內的目標與專案功能對齊
-- 需要達到盡可能的覆蓋率來避免 JVM based execution fallback 或冗余的資料搬遷
-- 具體可以帶來的效益： 對 xx% 的 pipeline 快了 xx%
+這場是 Sean 大大與同事們在 Lakehouse Day 的 talk，分享 Apple 在 Lakehouse 上的經驗與實作：
+- 從 HDFS 遷移到 Lakehouse 的過程中，一系列搬遷與架構上的取捨
+- 主要使用 [Apache DataFusion Comet](https://github.com/apache/datafusion-comet)。當組織在專案中有足夠的影響力時，可以影響專案的功能與 release 週期，讓組織內的目標與專案功能對齊
+- 需要盡可能提高 Comet 的 operator 覆蓋率，避免退回 JVM-based execution（fallback）或產生多餘的資料搬遷
 
 ![lakehouse-day-apple-iceberg-at-scale-talk](lakehouse-day-apple-iceberg-at-scale-talk.jpeg)
 
-**Lakehouse stack unification 和 semantic catalog 的重要性**
+### Lakehouse stack 的整合與 semantic catalog
 
-- 各個 Table format 和 compute engine 的分歧與整合
-- 該如何定義我的 revenue 和你的 revenue 是一樣的？如何讓 Agent access tables 時，有一個統一化的標準？就像是 timezone UTC 的定義一樣，大家都要遵守同一個標準
-- Apache Ossie
-- 對於商業邏輯的開放標準
-- 各個 Data infra vendor 和 catalog services 都在投入
-- Apache Polaris 已經做了整合
+- Table format 與 compute engine 各自分歧，如何整合是共同的課題
+- 當 Agent 存取資料表時，需要一個統一的標準：我的 revenue 和你的 revenue 是同一個東西嗎？就像 UTC 讓大家有共同的時間基準，大家需要遵守同一份定義
+- [Apache Ossie](https://github.com/apache/ossie) 正是針對這個問題，提出商業語意的開放標準；各個 Data infra vendor 與 catalog service 都有投入，Apache Polaris 也已經完成整合
 
-**Rest Catalog 對於整體 Lakehouse 的效能影響**
+### REST Catalog 對 Lakehouse 效能的影響
 
-- Apache Polaris can impact the throughput of the Lakehouse a lot by speed up the metadata lookup. Without the REST catalog implementation, the engine needs to lookup via xxx, which is extremely costly.
+Apache Polaris 這類 REST Catalog 的實作，能加速 metadata lookup，對整體 Lakehouse 的 throughput 有相當大的影響。  
+沒有 REST Catalog 時，engine 必須自行處理 metadata 的查找，這個成本相當高。
 
 ## 有印象的 Talks
 
@@ -133,7 +133,7 @@ draft: false
 ### Zero downtime Kubernetes cluster migration for Airflow at LinkedIn
 
 LinkedIn 一直都是全球最大的其中一個 Airflow cluster  
-LinkedIn 的 Data Infra 團隊 的[Stefan](https://github.com/1fanwang) 分享他們如何在 Airflow 2 上做 zero downtime 的 Kubernetes cluster migration  
+LinkedIn 的 Data Infra 團隊的 [Stefan](https://github.com/1fanwang) 分享他們如何在 Airflow 2 上做 zero downtime 的 Kubernetes cluster migration  
 這邊是單純升級 Kubernetes cluster 的版本，而不是升級 Airflow 版本  
 
 ![airflow-contributor-day-linkedin-airflow-talk.jpeg](airflow-contributor-day-linkedin-airflow-talk.jpeg)
@@ -149,9 +149,9 @@ LinkedIn 的 Data Infra 團隊 的[Stefan](https://github.com/1fanwang) 分享�
 這一場比較晚進去沒有聽到最一開頭的上下文，不過是在講 OpenAI 內部如何在 Lakehouse 上做優化  
 不論是對 Delta table 或是 Iceberg table 都有做一些優化，主要是針對小檔案的問題  
 
-單因為業務時程壓力，都是不可能等社群的下一個 patch 或 minor release  
+但因為業務時程壓力，都是不可能等社群的下一個 patch 或 minor release  
 必須要在內部 fork 來改自己的 in-house solution，我覺得某種程度呼應了我在 [Apache CommunityOverCode Asia 2025](https://blog.zhu424.dev/open-source-contribution/apache-coc-asia/) 的感想  
-但這長期也會照成組織無法按照 upstream 的 release 週期來做升級
+但這長期也會造成組織無法按照 upstream 的 release 週期來做升級
 甚至可能會造成技術債的累積  
 
 ### Apache Mahout 
@@ -167,29 +167,68 @@ LinkedIn 的 Data Infra 團隊 的[Stefan](https://github.com/1fanwang) 分享�
 
 ## 路上的新朋友、食物與風景
 
-### ASF Pokemon
+### ASF Pokémon
 
 在會議第一天，附近剛好有[寶可夢展](https://www.facebook.com/TheVideoGameMarket/posts/glasgow-gaming-market-starts-at-1100am-tomorrow-at-the-glasgow-club-bellahouston/1443770044600684/)
-所以 CoC 籌辦出了 ASF 版的寶可夢
+所以 CoC 籌辦出了 ASF 版的寶可夢「Inframon」
 
-![coc-inframon-cards-and-stickers](coc-inframon-cards-and-stickers.jpeg)
-![coc-inframon-cards-and-stickers-face](coc-inframon-cards-and-stickers-face.jpeg)
+{{< gallery >}}
+  <img src="coc-inframon-cards-and-stickers.jpeg" alt="ASF 版寶可夢 Inframon 卡片與貼紙" class="grid-w50" />
+  <img src="coc-inframon-cards-and-stickers-face.jpeg" alt="ASF 版寶可夢 Inframon 卡片與貼紙（卡面）" class="grid-w50" />
+{{< /gallery >}}
 
 或許下次 [Apache Taipei](https://github.com/opensource4you/) 辦活動可以出一下！
 
-### 沒有人可以告你在 Apache 專案寫的 code
+### ICLA 會保護你
 
-我們剛好跟負責當 Committer 時需要簽 ICLA 的秘書 Craig 聊到天，學到一個些冷知識： 
+我們剛好跟負責當 Committer 時需要簽 ICLA 的秘書 Craig 聊到天，學到一些冷知識： 
 - 大約有 1/3 的 ICLA 被拒絕，因為大家在 id 填 GitHub id，但 GitHub id 不能代表一個 「人」 
 - 如果有公司因為你在 Apache 專案寫的 code 要告你時，ICLA 可以保護你不被告，公司只有辦法起訴 ASF
 
-### Apache Taipei 的小夥伴們
+### Apache Taipei 的夥伴們
 
 ![team-dinner-steakhouse](team-dinner-steakhouse.jpeg)
 
 感謝 [嘉平](https://github.com/chia7712) 在台灣即使公務纏身，也還是贊助我們 Apache Taipei 夥伴們的大聚餐  
 也在這邊感謝 Sean 大大在會場帶我們認識許多水果的 Data Infra 團隊，讓我們有機會與更多在 Lakehouse 的專家們交流  
 
+### 會場與蘇格蘭的食物
+
+![conference-lunch-scottish-beef-pie](conference-lunch-scottish-beef-pie.jpeg)
+
+會場的中餐的 buffet 都還不錯吃  
+比較特別的是今年的晚宴舉辦在一個科學博物館  
+
+{{< gallery >}}
+  <img src="glasgow-science-centre-entrance.jpeg" alt="格拉斯哥科學中心入口" class="grid-w50" />
+  <img src="glasgow-science-centre-interior.jpeg" alt="格拉斯哥科學中心內部" class="grid-w50" />
+{{< /gallery >}}
+
+我們在蘇格蘭的吃到的食物都蠻好吃的
+
+{{< gallery >}}
+  <img src="pub-steak-and-fries.jpeg" alt="牛排與薯條" class="grid-w100 md:grid-w33" />
+  <img src="steakhouse-t-bone-steak.jpeg" alt="牛排館的 T-bone 牛排" class="grid-w100 md:grid-w33" />
+  <img src="hotel-breakfast.jpeg" alt="飯店早餐" class="grid-w100 md:grid-w33" />
+{{< /gallery >}}
+
+### 路上的一些風景
+
+{{< gallery >}}
+  <img src="airport-mirror-selfie.jpeg" alt="機場玻璃倒影的合照" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="flight-seat-entertainment-system.jpeg" alt="飛機座位上的娛樂系統" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="glasgow-airport-wall-mural-group-photo.jpeg" alt="在格拉斯哥機場彩繪牆前的合照" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="supermarket-security-monitor.jpeg" alt="超市裡的監視器畫面" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="glasgow-church-tower.jpeg" alt="格拉斯哥街頭的教堂鐘塔" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="glasgow-red-sandstone-building.jpeg" alt="格拉斯哥的紅砂岩建築" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="edinburgh-scott-monument.jpeg" alt="愛丁堡的史考特紀念塔" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="lakehouse-day-conference-hall.jpeg" alt="Lakehouse Day 會場" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="lakehouse-day-collaboration-is-the-architecture-slide.jpeg" alt="Lakehouse Day 的 Collaboration is the architecture 簡報" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="lakehouse-day-round-table-panelists.jpeg" alt="Lakehouse round table 的講者們" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="airflow-contributor-day-opening-and-cardboard-cutout.jpeg" alt="Airflow Contributor Day 開場與立牌" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="airflow-contributor-day-our-talk-airflow-beyond-python.jpeg" alt="Airflow Beyond Python 議程的簡報首頁" class="grid-w100 md:grid-w33 xl:grid-w25" />
+  <img src="airflow-contributor-day-durable-execution-talk.jpeg" alt="The evolution of durable execution in Airflow 議程" class="grid-w100 md:grid-w33 xl:grid-w25" />
+{{< /gallery >}}
 
 ## 參與感想
 
@@ -211,7 +250,7 @@ LinkedIn 的 Data Infra 團隊 的[Stefan](https://github.com/1fanwang) 分享�
 現在有很多新功能是因為把其他類調度引擎作為競爭對手，但或許從既有用戶角度或從對方調度引擎用戶角度角度出發，這些新功能在某些情境下可能不一定完全合理  
 換句話說，有可能解決一些 Airflow 既有的問題或許比增加新功能可以帶來更多價值  
 
-或是跟同行的 [Peter](https://github.com/peterxcli) 聊到 Ozone 都會先在 contributor fork 上跑 CI runner，再在 main repo 上跑實際的測試，這樣可以確保代碼的品質和安全性。還有各個 repo 應該要有自己的 workflow 來做類似 GitHub copilot、code rabbit 的自動 AI review，能對 harness 設定有更好的控制不會被 vendor 綁死
+或是跟同行的 [Peter](https://github.com/peterxcli) - Apache Ozone PMC 成員，聊到 Ozone 都會先在 contributor fork 上跑 CI runner，再在 main repo 上跑實際的測試，這樣可以確保代碼的品質和安全性。還有各個 repo 應該要有自己的 workflow 來做類似 GitHub copilot、code rabbit 的自動 AI review，能對 harness 設定有更好的控制不會被 vendor 綁死
 
 
 ## 特別感謝
