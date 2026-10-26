@@ -26,6 +26,8 @@ draft: false
 今年也有第一次的 Airflow Contributor Day  
 有許多的 Airflow PMC 成員、Committer、Contributor 以及使用者聚集在一起討論 Airflow 的未來
 
+很多有趣的技術題目或是專案治理方法都是在現場談出來的，也這也是為什麼必須要參加實體的會議最重要的原因。  
+線上非同步的交流大家多少都被身上的進度壓力綁住，沒辦法好好討論長遠的題目，只有在現場大家也不可能手拿電腦站著，更能激盪出對專案的長期有價值的議題。
 
 ## Airflow Contributor Day：真正的 Community over Code 
 
@@ -179,11 +181,10 @@ LinkedIn 的 Data Infra 團隊的 [Stefan](https://github.com/1fanwang) 分享�
 
 或許下次 [Apache Taipei](https://github.com/opensource4you/) 辦活動可以出一下！
 
-### ICLA 會保護你
+### Apache ICLA 的冷知識
 
 我們剛好跟負責當 Committer 時需要簽 ICLA 的秘書 Craig 聊到天，學到一些冷知識： 
 - 大約有 1/3 的 ICLA 被拒絕，因為大家在 id 填 GitHub id，但 GitHub id 不能代表一個 「人」 
-- 如果有公司因為你在 Apache 專案寫的 code 要告你時，ICLA 可以保護你不被告，公司只有辦法起訴 ASF
 
 ### Apache Taipei 的夥伴們
 

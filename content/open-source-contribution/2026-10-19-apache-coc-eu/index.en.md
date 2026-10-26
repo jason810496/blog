@@ -181,11 +181,10 @@ so the CoC organizers came up with an ASF edition of Pokémon called "Inframon".
 
 Maybe [Apache Taipei](https://github.com/opensource4you/) can do something like this at our next event!
 
-### Your ICLA Protects You
+### A Fun Fact About the Apache ICLA
 
-We happened to chat with Craig, the secretary who handles the ICLAs you sign when becoming a committer, and picked up some fun facts:
-- About one-third of ICLAs get rejected, because people enter their GitHub ID where a legal name is expected, but a GitHub ID doesn't identify a real person.
-- If a company wants to sue you over code you wrote for an Apache project, the ICLA protects you. The company can only sue the ASF.
+We happened to chat with Craig, the secretary who handles the ICLAs you sign when becoming a committer, and picked up a fun fact:
+- About one-third of ICLAs get rejected, because people enter their GitHub ID in the ID field, but a GitHub ID doesn't identify a "person".
 
 ### The Apache Taipei Crew
 
