@@ -30,8 +30,8 @@ draft: false
 
 {{< article link="/open-source-contribution/becoming-an-apache-airflow-committer-from-0/" showSummary=true compactSummary=true >}}
 
-在去年三月拿到 Committer 後，又過了約一年又八個月  
-**在 2026 年 11 月 13 日正式拿到 PMC member！**
+在去年三月拿到 [Committer](https://www.apache.org/foundation/how-it-works/#committers) 後，又過了約一年又八個月  
+**在 2026 年 11 月 13 日正式拿到 [PMC member](https://www.apache.org/foundation/how-it-works/#pmc-members)！**
 
 > ![dev-list-jason-liu-pmc-member-announce](dev-list-jason-liu-pmc-member-announce.png)
 > [[ANNOUNCE] New PMC member: Jason (Zhe You) Liu](https://lists.apache.org/thread.html/8n7xlg0hmlmbb7owkq9hom6j151sp8zv)
@@ -43,7 +43,7 @@ review 的數量是 merged PR 的三倍。
 
 ![merged-prs](merged-prs.png)
 
-LFX Insights 的 Contributors leaderboard 統計過去 365 天的活動，review、comment 這類 collaboration 也有算進去  
+[LFX Insights](https://insights.linuxfoundation.org/project/apache-airflow) 的 Contributors leaderboard 統計過去 365 天的活動，review、comment 這類 collaboration 也有算進去  
 我目前排第五，前四位都是長期維護 Airflow 的 PMC members
 
 ![lfx-leaderboard](lfx-leaderboard.png)
@@ -74,9 +74,13 @@ LFX Insights 的 Contributors leaderboard 統計過去 365 天的活動，review
 
 **參與 Dev call 和年會**  
 
-無論是 Airflow Summit 還是 CommunityOverCode，線下活動才有機會和長期一起合作的夥伴當面交流，當面聊也比線上親切，大家也有更多時間聊到更深遠的議題。
+無論是 [Airflow Summit](https://airflowsummit.org/) 還是 [CommunityOverCode](https://communityovercode.org/)，線下活動才有機會和長期一起合作的夥伴當面交流，當面聊也比線上親切，大家也有更多時間聊到更深遠的議題。
 
 線上的 Dev call 當然也有幫助，不過性質偏向進度報告和解決當前的 blockers，不適合一次討論太多主題。
+
+今年在格拉斯哥參加 CommunityOverCode EU 2026 和首屆 Airflow Contributor Day 的心得也整理在這篇
+
+{{< article link="/open-source-contribution/apache-coc-eu/" showSummary=true compactSummary=true >}}
 
 
 ## 成為 Committer 與加入 OSS Team 後，開始在意的事
@@ -85,7 +89,7 @@ LFX Insights 的 Contributors leaderboard 統計過去 365 天的活動，review
 
 - 這個版本要進的各個 feature 的 timeline：會影響用戶與各個 stakeholders 的測試時程和正式發行日期
 - 某個 feature 能不能趕上這個版本，還是要再晚一個週期
-- 有新的大功能要如何考慮 release management lifecycle: 這會影響到不同元件、發布、功能這些之間的相容性還有長期的維護成本
+- 有新的大功能要如何考慮 [release management lifecycle](https://github.com/apache/airflow/blob/main/dev/README_RELEASE_AIRFLOW.md): 這會影響到不同元件、發布、功能這些之間的相容性還有長期的維護成本
 
 **在有 Fix 或 Improvement 的 PR 會特別著重在**
 
@@ -107,24 +111,24 @@ LFX Insights 的 Contributors leaderboard 統計過去 365 天的活動，review
 
 ### Airflow 3.0 到 non-Python SDK
 
-最早的幾個 PR 與在當 Committer 前的時間都是在 Airflow 3.0 前的大 refactor  
-有參與到 API server 的一些 refactor 與 authorization 介面的設計  
+最早的幾個 PR 與在當 Committer 前的時間都是在 [Airflow 3.0](https://airflow.apache.org/blog/airflow-three-point-oh-is-here/) 前的大 refactor  
+有參與到 API server 的一些 refactor，以及 API server 與 [authorization 介面](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/auth-manager/index.html)相關的設計  
 
-在成為 Committer 後到進入 Astronomer 的這段期間   
+在成為 Committer 後到進入 Astronomer 前的這段期間   
 在收尾最後 3.0 相關的 API server refactor 後主要都著重在 code review 和研究端對端路徑  
-以及 Event Driven Scheduling (Common MessageQueue interface) 的 provider 整合、提升 Breeze k8s 的可用性、Remote IO 的端對端改善、Triggerer 在擴展性的效能改善
+以及 [Event Driven Scheduling](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/event-scheduling.html) ([Common MessageQueue interface](https://airflow.apache.org/docs/apache-airflow-providers-common-messaging/stable/index.html)) 的 provider 整合、提升 [Breeze](https://github.com/apache/airflow/blob/main/dev/breeze/doc/README.rst) k8s 的可用性、[Remote logging](https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/logging-tasks.html) 的端對端改善、[Triggerer](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/deferring.html) 在擴展性的效能改善
 
-在 Astronomer 的這八個月都主要與 [TP](https://github.com/uranusjr) 一起合作 non-Python SDK，最一開始的 Java SDK、捨棄由 Edge Worker 驅動的 Go SDK 變成現在由 coordinator 介面驅動達到可以在不限 Executor 執行的架構，到由社群驅動 ([Shivam](https://github.com/shivaam)) 的 TypeScript SDK  
+在 Astronomer 的這八個月都主要與 [TP](https://github.com/uranusjr) 一起合作 [non-Python SDK](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/index.html)，最一開始的 [Java SDK](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/java.html)、捨棄由 [Edge Worker](https://airflow.apache.org/docs/apache-airflow-providers-edge3/stable/index.html) 驅動的 [Go SDK](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/go.html) 變成現在由 [coordinator](https://airflow.apache.org/docs/task-sdk/stable/api.html) 介面驅動達到可以在不限 [Executor](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/index.html) 執行的架構，到由社群驅動 ([Shivam](https://github.com/shivaam)) 的 [TypeScript SDK](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/typescript.html)  
 再進一步支援到不需要 Python 只用該程式語言就可以描述整個 Dag  
 來打破 Airflow 過去十年都只能寫 Python 的限制  
 
 ![author-entire-dag-in-other-languages-without-python](author-entire-dag-in-other-languages-without-python.png)
 
-所以有機會重新看一個 Dag、Task 在 Airflow 的本質是什麼  
+所以有機會重新看一個 [Dag](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html)、[Task](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html) 在 Airflow 的本質是什麼  
 需要先了解具體一個 Task 如何被定義的、還有是如何被執行的整段流程  
 才能設計出各個 SDK 都能重複利用的寫入和讀取路徑  
 
-在 Airflow 3.3.0 有各個 Language SDK 發布 Beta 到 Airflow 3.4.0 時各個 Language SDK 1.0.0 正式發行。  
+在 [Airflow 3.3.0](https://airflow.apache.org/docs/apache-airflow/3.3.0/release_notes.html) 有各個 Language SDK 發布 Beta 到 [Airflow 3.4.0](https://airflow.apache.org/docs/apache-airflow/3.4.0/release_notes.html) 時各個 Language SDK 1.0.0 正式發行。  
 當然還有許多重大功能都還在討論階段  
 無論如何，我非常期待 TypeScript, Go, Java SDK 能解決 orchestration framework 因為所支援的程式語言本身所造成的 fragmentation
 
@@ -134,15 +138,15 @@ LFX Insights 的 Contributors leaderboard 統計過去 365 天的活動，review
 
 ![ai-coding-stages](ai-coding-stages.svg)
 
-從最一開始貢獻都是使用免費的 GitHub Copilot 單字推薦為主  
+從最一開始貢獻都是使用免費的 [GitHub Copilot](https://github.com/features/copilot) 單字推薦為主  
 還是需要親自走過所有 module 來了解端對端路徑後  
 找到確切的模組、function，即使在 Copilot 的單字推薦輔助下，大部分的 code 應該還是可以說是親自寫的  
 還有對於 unit test 和 design pattern、interface design 在當時都需要花許多心力琢磨  
 
 在進 Astronomer 前 GitHub Copilot 有了多行推薦、到多檔案同時編輯  
-在進去後的初期都是使用 Cursor 直到大概今年四月左右才開始使用 Claude Code
+在進去後的初期都是使用 [Cursor](https://cursor.com/) 直到大概今年四月左右才開始使用 [Claude Code](https://claude.com/product/claude-code)
 
-當然演進到現在 Opus 5.5 的時代  
+當然演進到現在 [Opus 5.5](https://www.anthropic.com/claude/opus) 的時代  
 現在也不用描述到 function 或是哪個 module  
 只需要在正確的 domain 下專注在描述大致需要達成功能的想法及意圖  
 描述哪些功能需要放在 control plane 那些功能需要放在 data plane  
@@ -191,16 +195,16 @@ PR 數量雖然不能代表直接的影響力，不過許多夥伴已經從修�
 ## Airflow 與未來
 
 雖然近期我都會著重在 non-Python SDK 的發展  
-但目前還有許多由社群驅動的 AIP (Airflow Improvement Proposal) 在醞釀  
+但目前還有許多由社群驅動的 [AIP (Airflow Improvement Proposal)](https://cwiki.apache.org/confluence/spaces/AIRFLOW/pages/89066602/AIP+-+Airflow+Improvement+Proposals) 在醞釀  
 希望能解決用戶們的痛點也讓用戶更好控制 workflow  
 
 與 agentic workflow 相關的 [Common AI provider](https://airflow.apache.org/docs/apache-airflow-providers-common-ai/stable/index.html) 也在近期正式 GA，目前還在持續擴展新功能  
 其他 AI 框架也開始把 Airflow 當作 durable execution 的選項，例如 [Pydantic AI](https://pydantic.dev/docs/ai/capabilities/durable_execution/airflow/) 已經支援，[OpenAI Agents SDK](https://github.com/openai/openai-agents-python/issues/6071) 的文件整合也在進行中  
 
 在 Project Infra 本身  
-現在主要由 Jarek 和 Shahar 推動在 contributor 的 fork 跑 CI 還有使用 RunsOn 的 spot instances 當 CI runners  
-或是更長遠的 maintainer 目標: 用 Airflow 本身來建立給 maintainer 的 triage, review, release workflow 使用 Common AI provider 和 Human In The Loop 功能等，同時 dogfooding 我們自己，不讓維護者與使用者的角色脫鉤。  
-又或是一些基本但重要的 trust release，研究目前還在 beta 的 Apache Trusted Releases (ATR) 讓整個 package release 更安全也更少人為介入。
+現在主要由 Jarek 和 Shahar 推動在 contributor 的 fork 跑 CI 還有使用 [RunsOn](https://runs-on.com/) 的 spot instances 當 CI runners  
+或是更長遠的 maintainer 目標: 用 Airflow 本身來建立給 maintainer 的 triage, review, release workflow 使用 Common AI provider 和 [Human In The Loop](https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/hitl.html) 功能等，同時 dogfooding 我們自己，不讓維護者與使用者的角色脫鉤。  
+又或是一些基本但重要的 trust release，研究目前還在 beta 的 [Apache Trusted Releases (ATR)](https://github.com/apache/tooling-trusted-releases) 讓整個 package release 更安全也更少人為介入。
 
 ## 特別感謝
 
@@ -221,9 +225,9 @@ PR 數量雖然不能代表直接的影響力，不過許多夥伴已經從修�
 ## 相關連結
 
 - [**Airflow non-Python SDKs**](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/index.html)
-  - [TypeScript SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/typescript.html), [TS-SDK API Reference](https://airflow.apache.org/docs/ts-sdk/stable/), [npm: @apache-airflow/ts-sdk](https://www.npmjs.com/package/@apache-airflow/ts-sdk)
-  - [Go SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/go.html), [pkg.go.dev: github.com/apache/airflow/go-sdk](https://pkg.go.dev/github.com/apache/airflow/go-sdk)
-  - [Java SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/java.html), [Maven Central: org.apache.airflow:airflow-sdk](https://central.sonatype.com/artifact/org.apache.airflow/airflow-sdk)
+  - [TypeScript SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/typescript.html), [TypeScript SDK API Reference](https://airflow.apache.org/docs/ts-sdk/stable/), [npm: @apache-airflow/ts-sdk](https://www.npmjs.com/package/@apache-airflow/ts-sdk)
+  - [Go SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/go.html), [Go SDK API Reference (pkg.go.dev)](https://pkg.go.dev/github.com/apache/airflow/go-sdk)
+  - [Java SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/java.html), [Java SDK API Reference](https://airflow.apache.org/docs/java-sdk/stable/), [Maven Central: org.apache.airflow:airflow-sdk](https://central.sonatype.com/artifact/org.apache.airflow/airflow-sdk)
 - **Agentic workflow in Airflow**
   - [Airflow Common AI provider](https://airflow.apache.org/docs/apache-airflow-providers-common-ai/stable/index.html)
   - [Airflow Registry - AI/ML](https://airflow.apache.org/registry/providers/?category=ai-ml)

@@ -30,9 +30,9 @@ Check out the post I wrote last year:
 
 {{< article link="/open-source-contribution/becoming-an-apache-airflow-committer-from-0/" showSummary=true compactSummary=true >}}
 
-I became a Committer in March 2025. About one year and eight months later:
+I became a [Committer](https://www.apache.org/foundation/how-it-works/#committers) in March 2025. About one year and eight months later:
 
-**On November 13, 2026, I officially became an Apache Airflow PMC member!**
+**On November 13, 2026, I officially became an Apache Airflow [PMC member](https://www.apache.org/foundation/how-it-works/#pmc-members)!**
 
 > ![dev-list-jason-liu-pmc-member-announce](dev-list-jason-liu-pmc-member-announce.png)
 > [[ANNOUNCE] New PMC member: Jason (Zhe You) Liu](https://lists.apache.org/thread.html/8n7xlg0hmlmbb7owkq9hom6j151sp8zv)
@@ -43,7 +43,7 @@ As of the day I joined the PMC, I have [454 merged PRs](https://github.com/apach
 
 ![merged-prs](merged-prs.png)
 
-The LFX Insights Contributors leaderboard covers the past 365 days and also counts collaboration, such as reviews and comments. I'm currently fifth, and the four people ahead of me are all PMC members who have maintained Airflow for years.
+The [LFX Insights](https://insights.linuxfoundation.org/project/apache-airflow) Contributors leaderboard covers the past 365 days and also counts collaboration, such as reviews and comments. I'm currently fifth, and the four people ahead of me are all PMC members who have maintained Airflow for years.
 
 ![lfx-leaderboard](lfx-leaderboard.png)
 
@@ -67,9 +67,13 @@ When I see the same pattern that needs fixing in many places, I open a meta issu
 
 **Dev calls and conferences**
 
-Whether it's Airflow Summit or CommunityOverCode, in-person events are my chance to talk face to face with people I've worked with for a long time. It feels more personal than talking online, and there's more time for longer-term topics.
+Whether it's [Airflow Summit](https://airflowsummit.org/) or [CommunityOverCode](https://communityovercode.org/), in-person events are my chance to talk face to face with people I've worked with for a long time. It feels more personal than talking online, and there's more time for longer-term topics.
 
 Online dev calls help too, but they focus on progress updates and current blockers, so they aren't a good place to cover many topics at once.
+
+I wrote about CommunityOverCode EU 2026 in Glasgow and the first Airflow Contributor Day here:
+
+{{< article link="/open-source-contribution/apache-coc-eu/" showSummary=true compactSummary=true >}}
 
 ## What I started caring about after becoming a Committer and joining the OSS Team
 
@@ -77,7 +81,7 @@ Online dev calls help too, but they focus on progress updates and current blocke
 
 - The timeline for each feature planned for a release. It affects when users and stakeholders can test and when the release ships.
 - Whether a feature makes this release or slips to the next cycle.
-- How a large new feature fits into the release management lifecycle. This affects compatibility across components, releases and features, as well as the long-term maintenance cost.
+- How a large new feature fits into the [release management lifecycle](https://github.com/apache/airflow/blob/main/dev/README_RELEASE_AIRFLOW.md). This affects compatibility across components, releases and features, as well as the long-term maintenance cost.
 
 **What I look for in fix or improvement PRs**
 
@@ -99,27 +103,27 @@ Online dev calls help too, but they focus on progress updates and current blocke
 
 ### From Airflow 3.0 to the non-Python SDKs
 
-My first PRs, and most of my time before becoming a Committer, went into the big refactor ahead of Airflow 3.0. I worked on parts of the API server refactor and on the design of the authorization interface.
+My first PRs, and most of my time before becoming a Committer, went into the big refactor ahead of [Airflow 3.0](https://airflow.apache.org/blog/airflow-three-point-oh-is-here/). I worked on parts of the API server refactor and on the design of the [authorization interface](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/auth-manager/index.html).
 
-Between becoming a Committer and joining Astronomer, I first wrapped up the last 3.0 API server refactors, then mostly focused on code review and studying end-to-end paths. I also worked on provider integration for event-driven scheduling (the Common MessageQueue interface), made Breeze k8s easier to use, improved Remote IO end to end, and improved Triggerer performance at scale.
+Between becoming a Committer and joining Astronomer, I first wrapped up the last 3.0 API server refactors, then mostly focused on code review and studying end-to-end paths. I also worked on provider integration for [event-driven scheduling](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/event-scheduling.html) (the [Common MessageQueue interface](https://airflow.apache.org/docs/apache-airflow-providers-common-messaging/stable/index.html)), made [Breeze](https://github.com/apache/airflow/blob/main/dev/breeze/doc/README.rst) k8s easier to use, improved [remote logging](https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/logging-tasks.html) end to end, and improved [Triggerer](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/deferring.html) performance at scale.
 
-In my eight months at Astronomer, I've mostly worked with [TP](https://github.com/uranusjr) on the non-Python SDKs. It started with the Java SDK. The Go SDK then moved from being driven by the Edge Worker to using the coordinator interface, so it can now run on any Executor. Next came the TypeScript SDK, a community initiative started by [Shivam](https://github.com/shivaam). We then went further: you can now write an entire Dag in these languages without any Python, breaking the Python-only limit Airflow has had for the past ten years.
+In my eight months at Astronomer, I've mostly worked with [TP](https://github.com/uranusjr) on the [non-Python SDKs](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/index.html). It started with the [Java SDK](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/java.html). The [Go SDK](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/go.html) then moved from being driven by the [Edge Worker](https://airflow.apache.org/docs/apache-airflow-providers-edge3/stable/index.html) to using the [coordinator](https://airflow.apache.org/docs/task-sdk/stable/api.html) interface, so it can now run on any [Executor](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/index.html). Next came the [TypeScript SDK](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/typescript.html), a community initiative started by [Shivam](https://github.com/shivaam). We then went further: you can now write an entire Dag in these languages without any Python, breaking the Python-only limit Airflow has had for the past ten years.
 
 ![author-entire-dag-in-other-languages-without-python](author-entire-dag-in-other-languages-without-python.png)
 
-This gave me a chance to revisit what a Dag and a Task really are in Airflow. Before I could design write and read paths that every SDK can reuse, I had to understand exactly how a Task is defined and how it gets executed from start to finish.
+This gave me a chance to revisit what a [Dag](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html) and a [Task](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html) really are in Airflow. Before I could design write and read paths that every SDK can reuse, I had to understand exactly how a Task is defined and how it gets executed from start to finish.
 
-The Language SDKs shipped as beta in Airflow 3.3.0, and each reached 1.0.0 with Airflow 3.4.0. Many major features are still under discussion. Even so, I'm looking forward to the TypeScript, Go and Java SDKs reducing the fragmentation that comes from orchestration frameworks being tied to the languages they support.
+The Language SDKs shipped as beta in [Airflow 3.3.0](https://airflow.apache.org/docs/apache-airflow/3.3.0/release_notes.html), and each reached 1.0.0 with [Airflow 3.4.0](https://airflow.apache.org/docs/apache-airflow/3.4.0/release_notes.html). Many major features are still under discussion. Even so, I'm looking forward to the TypeScript, Go and Java SDKs reducing the fragmentation that comes from orchestration frameworks being tied to the languages they support.
 
 ### From AI-assisted contributions to working with agents
 
 ![ai-coding-stages](ai-coding-stages.svg)
 
-When I started contributing, I mostly used the free GitHub Copilot for short inline suggestions. I still had to walk through every module myself to understand the end-to-end path and find the exact module and function to change. Even with Copilot's help, I'd say I wrote most of the code by hand. Unit tests, design patterns and interface design all took a lot of effort back then.
+When I started contributing, I mostly used the free [GitHub Copilot](https://github.com/features/copilot) for short inline suggestions. I still had to walk through every module myself to understand the end-to-end path and find the exact module and function to change. Even with Copilot's help, I'd say I wrote most of the code by hand. Unit tests, design patterns and interface design all took a lot of effort back then.
 
-Before I joined Astronomer, GitHub Copilot had added multi-line suggestions and multi-file editing. In my early days at Astronomer I used Cursor, and I only started using Claude Code around April this year.
+Before I joined Astronomer, GitHub Copilot had added multi-line suggestions and multi-file editing. In my early days at Astronomer I used [Cursor](https://cursor.com/), and I only started using [Claude Code](https://claude.com/product/claude-code) around April this year.
 
-Now, with Opus 5.5, I no longer need to point at a specific function or module. In a domain I know well, I only need to describe the intent and roughly what the feature should do: what belongs in the control plane, what belongs in the data plane, where the boundaries between modules are, and the rough control flow. That gets the implementation 70 to 80 percent of the way there, or at least to a basic end-to-end feature.
+Now, with [Opus 5.5](https://www.anthropic.com/claude/opus), I no longer need to point at a specific function or module. In a domain I know well, I only need to describe the intent and roughly what the feature should do: what belongs in the control plane, what belongs in the data plane, where the boundaries between modules are, and the rough control flow. That gets the implementation 70 to 80 percent of the way there, or at least to a basic end-to-end feature.
 
 Whether I'm designing a new feature, implementing part of one, or reviewing a PR, the most time-consuming and most valuable part is still judgment. And good judgment comes from understanding the whole system deeply over a long time.
 
@@ -149,11 +153,11 @@ Apart from companies that offer Airflow as a service, OpenSource4You is one of t
 
 ## Airflow and the future
 
-I'll keep focusing on the non-Python SDKs for now, but many community-driven AIPs (Airflow Improvement Proposals) are in the works. They aim to address users' pain points and give users more control over their workflows.
+I'll keep focusing on the non-Python SDKs for now, but many community-driven [AIPs (Airflow Improvement Proposals)](https://cwiki.apache.org/confluence/spaces/AIRFLOW/pages/89066602/AIP+-+Airflow+Improvement+Proposals) are in the works. They aim to address users' pain points and give users more control over their workflows.
 
 The [Common AI provider](https://airflow.apache.org/docs/apache-airflow-providers-common-ai/stable/index.html) for agentic workflows recently went GA, and it's still gaining new features. Other AI frameworks are also starting to use Airflow for durable execution: [Pydantic AI](https://pydantic.dev/docs/ai/capabilities/durable_execution/airflow/) already supports it, and docs integration for the [OpenAI Agents SDK](https://github.com/openai/openai-agents-python/issues/6071) is in progress.
 
-On project infrastructure, Jarek and Shahar are leading work to run CI on contributors' forks and to use RunsOn spot instances as CI runners. A longer-term goal for maintainers is to build triage, review and release workflows on Airflow itself, using the Common AI provider and Human-in-the-Loop features. That way we dogfood our own project and keep the maintainer and user roles connected. There's also basic but important work on trusted releases: we're looking at Apache Trusted Releases (ATR), still in beta, to make package releases safer and less dependent on manual steps.
+On project infrastructure, Jarek and Shahar are leading work to run CI on contributors' forks and to use [RunsOn](https://runs-on.com/) spot instances as CI runners. A longer-term goal for maintainers is to build triage, review and release workflows on Airflow itself, using the Common AI provider and [Human-in-the-Loop](https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/hitl.html) features. That way we dogfood our own project and keep the maintainer and user roles connected. There's also basic but important work on trusted releases: we're looking at [Apache Trusted Releases (ATR)](https://github.com/apache/tooling-trusted-releases), still in beta, to make package releases safer and less dependent on manual steps.
 
 ## Special thanks
 
@@ -172,9 +176,9 @@ My family and my girlfriend, who have supported me all along.
 ## Related links
 
 - [**Airflow non-Python SDKs**](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/index.html)
-  - [TypeScript SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/typescript.html), [TS-SDK API Reference](https://airflow.apache.org/docs/ts-sdk/stable/), [npm: @apache-airflow/ts-sdk](https://www.npmjs.com/package/@apache-airflow/ts-sdk)
-  - [Go SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/go.html), [pkg.go.dev: github.com/apache/airflow/go-sdk](https://pkg.go.dev/github.com/apache/airflow/go-sdk)
-  - [Java SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/java.html), [Maven Central: org.apache.airflow:airflow-sdk](https://central.sonatype.com/artifact/org.apache.airflow/airflow-sdk)
+  - [TypeScript SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/typescript.html), [TypeScript SDK API Reference](https://airflow.apache.org/docs/ts-sdk/stable/), [npm: @apache-airflow/ts-sdk](https://www.npmjs.com/package/@apache-airflow/ts-sdk)
+  - [Go SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/go.html), [Go SDK API Reference (pkg.go.dev)](https://pkg.go.dev/github.com/apache/airflow/go-sdk)
+  - [Java SDK Doc](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/language-sdks/java.html), [Java SDK API Reference](https://airflow.apache.org/docs/java-sdk/stable/), [Maven Central: org.apache.airflow:airflow-sdk](https://central.sonatype.com/artifact/org.apache.airflow/airflow-sdk)
 - **Agentic workflow in Airflow**
   - [Airflow Common AI provider](https://airflow.apache.org/docs/apache-airflow-providers-common-ai/stable/index.html)
   - [Airflow Registry - AI/ML](https://airflow.apache.org/registry/providers/?category=ai-ml)
