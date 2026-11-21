@@ -18,7 +18,7 @@ draft: false
 {{< alert "circle-info">}}
 
 
-[**源來是你**](https://www.facebook.com/opensource4you) 是在台灣積極貢獻大型開與軟體的社群  
+[**源來適你**](https://www.facebook.com/opensource4you) 是在台灣積極貢獻大型開源軟體的社群  
 接下來我會在以下時間地點主持 **Airflow 中文會議**
 
 **時間**： **7 月 2 日**起**隔週三晚上 20:30** (台灣時區 UTC+8)    
@@ -48,6 +48,10 @@ Airflow **3** 會牽涉 [AIP-72 TaskSDK](https://cwiki.apache.org/confluence/dis
 再進一步深入到各個核心概念的細節  
 最後總結 Airflow Dag Processing 流程與最佳實踐
 
+## 為什麼 Airflow 需要有 Dag Processing 機制？
+
+
+
 ## 概述 Dag Processing 機制
 
 > ![dag-parsing-in-high-level](dag-parsing-in-high-level.png)
@@ -67,11 +71,12 @@ Airflow **3** 會牽涉 [AIP-72 TaskSDK](https://cwiki.apache.org/confluence/dis
   - 實際與 Dag File 互動的介面
   - 回傳實際的 Dag instances
 
-整個 Dag Processing 大致的流程如下：
-1. 把待解析的 Dag File 路徑放到 `DagFileProcessorManager` 的 queue 中
-2. & 3. `DagFileProcessorManager` 會 fork 出 `DagFileProcessorProcess` subprocess 並存在 `DagFileProcessorManager` 中
-4. `DagFileProcessorProcess` 透過 `DagBag` 拿到 Dag instances 和錯誤訊息
-5. `DagFileProcessorProcess` 會把 Dag instances 和錯誤訊息同步到 Metadata DB
+
+**整個 Dag Processing 大致的流程如下**：  
+1.把待解析的 Dag File 路徑放到 `DagFileProcessorManager` 的 queue 中  
+2.& 3. `DagFileProcessorManager` 會對每個路徑都 fork 出 `DagFileProcessorProcess` subprocess 來處理  
+4.`DagFileProcessorProcess` 透過 `DagBag` 拿到 Dag instances 和錯誤訊息  
+5.`DagFileProcessorProcess` 會把 Dag instances 和錯誤訊息同步到 Metadata DB  
 
 ## DagFileProcessorManager
 
@@ -79,6 +84,12 @@ Airflow **3** 會牽涉 [AIP-72 TaskSDK](https://cwiki.apache.org/confluence/dis
 
 
 **[_run_parsing_loop](https://github.com/apache/airflow/blob/b3a3591c946326467cf9c54115b9b514d89e7645/airflow/dag_processing/manager.py#L555) 是整個 Manager 的核心**
+
+### Trace code
+
+<details>
+<summary>How do I dropdown?</summary>
+
 
 - Manager 會以 `_file_paths`, `_file_path_queue`, `_file_stats` 這 3 個屬性來記錄 Dag File 的狀態
     - [self._file_paths: list[str]](https://github.com/apache/airflow/blob/b3a3591c946326467cf9c54115b9b514d89e7645/airflow/dag_processing/manager.py#L381) 記錄所有 Dag File 的路徑
@@ -123,6 +134,8 @@ Airflow **3** 會牽涉 [AIP-72 TaskSDK](https://cwiki.apache.org/confluence/dis
               self._processors.pop(processor.file_path)
               self._collect_results_from_processor(processor)
       ```
+
+</details>
 
 ## DagFileProcessorProcess
 
