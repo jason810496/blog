@@ -198,7 +198,7 @@ a(f'<text x="{lx}" y="{ly+28}" class="meta">{os4y_total:,} commits, incl. member
 
 a(f'<text x="40" y="{H-56}" class="note">Affiliation: public astronomer GitHub org members, then commit email domain or GitHub profile company; '
   f'opensource4you = public members of the</text>')
-a(f'<text x="40" y="{H-30}" class="note">opensource4you GitHub org not at a vendor. Elad Kalif counted as AWS before 2026-04, Astronomer after. '
+a(f'<text x="40" y="{H-30}" class="note">opensource4you GitHub org not at a vendor. '
   f'Bots excluded. main @ {data["head"][:10]}.</text>')
 a("</svg>")
 with open(OUT, "w") as f:
