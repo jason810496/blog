@@ -37,6 +37,10 @@ I became a [Committer](https://www.apache.org/foundation/how-it-works/#committer
 > ![dev-list-jason-liu-pmc-member-announce](dev-list-jason-liu-pmc-member-announce.png)
 > [[ANNOUNCE] New PMC member: Jason (Zhe You) Liu](https://lists.apache.org/thread.html/8n7xlg0hmlmbb7owkq9hom6j151sp8zv)
 
+I've always tried to take on bigger, more impactful work to make Airflow better, and becoming a Committer and then a PMC member are milestones along the way. My responsibilities won't change much in the short term, and I'll keep contributing the way I have been. I also agree with what others before me have shared: what stays with you is not the moment you get a new title, but the steady work that led there.
+
+For me, the most direct benefit of joining the PMC is that I can now handle some of the release prep myself, such as SVN access and binding release votes, without relying on others.
+
 ## Some contribution stats
 
 As of the day I joined the PMC, I have [454 merged PRs](https://github.com/apache/airflow/pulls?q=is%3Apr+author%3Ajason810496+is%3Amerged+merged%3A%3C%3D2026-11-13) in apache/airflow and have reviewed [1,362 PRs from other people](https://github.com/apache/airflow/pulls?q=is%3Apr+reviewed-by%3Ajason810496+-author%3Ajason810496+created%3A%3C%3D2026-11-13). That's three times as many reviews as merged PRs.
@@ -169,7 +173,7 @@ My manager, [Phani](https://github.com/phanikumv).
 
 [Chia-Ping Tsai](https://github.com/chia7712), who founded OpenSource4You.
 
-My family and my girlfriend, who have supported me all along.
+My girlfriend Iting and my family, who have supported me all along.
 
 > The views in this post are my own and do not represent my employer.
 
@@ -185,3 +189,4 @@ My family and my girlfriend, who have supported me all along.
   - [Pydantic AI - Durable Execution with Apache Airflow](https://pydantic.dev/docs/ai/capabilities/durable_execution/airflow/)
 - [How to keep contribution quality when using AI tools (zh-tw)](https://github.com/opensource4you/readme/blob/main/articles/mindset-ai-assisted-contribution/README.md)
 - [Join OpenSource4You Slack](https://github.com/opensource4you/readme/tree/main#%E5%BF%AB%E9%80%9F%E5%85%A5%E5%8F%A3)
+- [Astronomer](https://www.astronomer.io/)

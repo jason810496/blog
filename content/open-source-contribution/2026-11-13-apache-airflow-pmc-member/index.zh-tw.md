@@ -16,7 +16,7 @@ draft: false
 
 ## 背景
 
-我是[劉哲佑 (Jason)](https://github.com/jason810496)，目前在 [Astronomer](https://www.astronomer.io/) 的 Airflow OSS Team 擔任 Software Engineer  
+我是 [劉哲佑 (Jason)](https://github.com/jason810496)，目前在 [Astronomer](https://www.astronomer.io/) 的 Airflow OSS Team 擔任 Software Engineer  
 專注在貢獻開源，對 Distributed System 和 Data Engineering 領域有興趣  
 
 如果想了解：
@@ -35,6 +35,11 @@ draft: false
 
 > ![dev-list-jason-liu-pmc-member-announce](dev-list-jason-liu-pmc-member-announce.png)
 > [[ANNOUNCE] New PMC member: Jason (Zhe You) Liu](https://lists.apache.org/thread.html/8n7xlg0hmlmbb7owkq9hom6j151sp8zv)
+
+一直以來都有在往更大、更有影響力的題目做，希望能讓 Airflow 更好。Committer 和 PMC member 當然是在這一路上的里程碑。即使有了新身分，短期內負責的任務不會有所改變，接下來也是持續一直以來的貢獻。  
+也非常認同其他前輩分享的心得：比起拿到新身分的時刻，印象最深的還是中間不間斷的過程。  
+
+目前對我來說當上 PMC member 最直接的好處，其實是 release 的一些前置工作都可以自己來，像是 SVN 和 release binding vote 的權限不用再依靠他人幫忙。
 
 ## 一些貢獻統計
 
@@ -208,7 +213,6 @@ PR 數量雖然不能代表直接的影響力，不過許多夥伴已經從修�
 
 ## 特別感謝
 
-
 所有我有合作過的 PMC members 們：[Amogh Desai](https://github.com/amoghrajesh), [Ash Berlin-Taylor](https://github.com/ashb), [Brent Bovenzi](https://github.com/bbovenzi), [Buğra Öztürk](https://github.com/bugraoz93), [Daniel Standish](https://github.com/dstandish), [Elad Kalif](https://github.com/eladkal), [Ephraim Anierobi](https://github.com/ephraimbuddy), [Hussein Awala](https://github.com/hussein-awala), [Jarek Potiuk](https://github.com/potiuk), [Jed Cunningham](https://github.com/jedcunningham), [Jens Scheffler](https://github.com/jscheffl), [Kaxil Naik](https://github.com/kaxil), [Niko Oliveira](https://github.com/o-nikolas), [Pavan Kumar Gopidesu](https://github.com/gopidesupavan), [Pierre Jeambrun](https://github.com/pierrejeambrun), [Rahul Vats](https://github.com/vatsrahul1001), [Shahar Epstein](https://github.com/shahar1), [Tzu-ping Chung](https://github.com/uranusjr), [Vikram Koka](https://github.com/vikramkoka), [Vincent Beck](https://github.com/vincbeck), [Wei Lee](https://github.com/Lee-W), [Xiaodong Deng](https://github.com/XD-DENG)
 
 感謝大家一直以來的信任與鼓勵  
@@ -218,7 +222,7 @@ PR 數量雖然不能代表直接的影響力，不過許多夥伴已經從修�
 
 建立 OpenSource4You 的 [Chia-Ping Tsai](https://github.com/chia7712)
 
-在一路上支持我的家人們和女友
+在一路上支持女友 Iting 和我的家人們
 
 > 本篇以上觀點屬於個人立場不代表公司立場
 
@@ -234,3 +238,4 @@ PR 數量雖然不能代表直接的影響力，不過許多夥伴已經從修�
   - [Pydantic AI - Durable Execution with Apache Airflow](https://pydantic.dev/docs/ai/capabilities/durable_execution/airflow/)
 - [使用 AI 工具時如何維持貢獻品質](https://github.com/opensource4you/readme/blob/main/articles/mindset-ai-assisted-contribution/README.md)
 - [Join OpenSource4You Slack](https://github.com/opensource4you/readme/tree/main#%E5%BF%AB%E9%80%9F%E5%85%A5%E5%8F%A3)
+- [Astronomer](https://www.astronomer.io/)
