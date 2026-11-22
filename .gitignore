@@ -12,3 +12,9 @@ node_modules
 # Hugo
 public
 resources
+# PMC post: raw data and contributor drafts
+content/open-source-contribution/2026-11-13-apache-airflow-pmc-member/github_cache.json
+content/open-source-contribution/2026-11-13-apache-airflow-pmc-member/prs.json
+content/open-source-contribution/2026-11-13-apache-airflow-pmc-member/share.json
+content/open-source-contribution/2026-11-13-apache-airflow-pmc-member/opensource4you-airflow-contributors.md
+content/open-source-contribution/2026-11-13-apache-airflow-pmc-member/pmc-top70-contributors.md

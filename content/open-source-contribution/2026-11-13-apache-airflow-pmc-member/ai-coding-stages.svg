@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 640" width="2000" height="640" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+<style>
+ .label { font-size: 26px; font-weight: 700; fill: #1f2328; }
+ .sub { font-size: 20px; fill: #5f6672; }
+ .mono { font-family: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 19px; white-space: pre; }
+ .tab { font-size: 17px; fill: #5f6672; }
+ .tabon { font-size: 17px; fill: #1f2328; font-weight: 600; }
+</style>
+<rect width="2000" height="640" rx="18" fill="#fbfaf7"/>
+<text x="50" y="68" class="label">1  Inline suggestion</text>
+<text x="50" y="100" class="sub">GitHub Copilot</text>
+<rect x="50" y="120" width="600" height="470" rx="14" fill="#ffffff" stroke="#d9d4c9" stroke-width="2"/>
+<path d="M50,166 V134 a14,14 0 0 1 14,-14 H636 a14,14 0 0 1 14,14 V166 Z" fill="#f1eee7"/>
+<circle cx="76" cy="143" r="7" fill="#ff5f57"/>
+<circle cx="98" cy="143" r="7" fill="#febc2e"/>
+<circle cx="120" cy="143" r="7" fill="#28c840"/>
+<text x="350.0" y="149" text-anchor="middle" class="tab" style="fill:#5f6672">dags.py</text>
+<text x="90" y="220" class="mono" fill="#a3a9b3" text-anchor="end">1</text>
+<text x="112" y="220" class="mono" xml:space="preserve"><tspan fill="#24292f">@router.get(</tspan><tspan fill="#0a7f55">&quot;/dags/{dag_id}&quot;</tspan><tspan fill="#24292f">)</tspan></text>
+<text x="90" y="251" class="mono" fill="#a3a9b3" text-anchor="end">2</text>
+<text x="112" y="251" class="mono" xml:space="preserve"><tspan fill="#8250df">def </tspan><tspan fill="#24292f">get_dag(dag_id: str, session):</tspan></text>
+<text x="90" y="282" class="mono" fill="#a3a9b3" text-anchor="end">3</text>
+<text x="112" y="282" class="mono" xml:space="preserve"><tspan fill="#24292f">    dag = session.get(DagModel, dag_id)</tspan></text>
+<text x="90" y="313" class="mono" fill="#a3a9b3" text-anchor="end">4</text>
+<text x="112" y="313" class="mono" xml:space="preserve"><tspan fill="#8250df">    if </tspan><tspan fill="#24292f">dag </tspan><tspan fill="#8250df">is None</tspan><tspan fill="#24292f">:</tspan></text>
+<text x="90" y="344" class="mono" fill="#a3a9b3" text-anchor="end">5</text>
+<text x="112" y="344" class="mono" xml:space="preserve"><tspan fill="#8250df">        raise </tspan><tspan fill="#24292f">HTTPException(</tspan><tspan fill="#a3a9b3">404, &quot;Not found&quot;)</tspan></text>
+<text x="90" y="375" class="mono" fill="#a3a9b3" text-anchor="end">6</text>
+<text x="112" y="375" class="mono" xml:space="preserve"><tspan fill="#8250df">    return </tspan><tspan fill="#24292f">dag</tspan></text>
+<rect x="433" y="324" width="2.5" height="25" fill="#1f2328"/>
+<rect x="80" y="320" width="540" height="33" rx="4" fill="#0969da" opacity="0.06"/>
+<rect x="260.0" y="526" width="64" height="38" rx="7" fill="#f1eee7" stroke="#d9d4c9" stroke-width="2"/>
+<text x="292.0" y="552" text-anchor="middle" style="font-size:19px;font-weight:600;fill:#1f2328">Tab</text>
+<text x="336.0" y="552" class="sub">to accept</text>
+<text x="700" y="68" class="label">2  Multi-line, multi-file</text>
+<text x="700" y="100" class="sub">Copilot Edits · Cursor</text>
+<rect x="700" y="120" width="600" height="470" rx="14" fill="#ffffff" stroke="#d9d4c9" stroke-width="2"/>
+<path d="M700,166 V134 a14,14 0 0 1 14,-14 H1286 a14,14 0 0 1 14,14 V166 Z" fill="#f1eee7"/>
+<circle cx="726" cy="143" r="7" fill="#ff5f57"/>
+<circle cx="748" cy="143" r="7" fill="#febc2e"/>
+<circle cx="770" cy="143" r="7" fill="#28c840"/>
+<rect x="800" y="128" width="101" height="38" rx="6" fill="#ffffff"/>
+<text x="851" y="153" text-anchor="middle" class="tabon">dags.py</text>
+<circle cx="892" cy="136" r="4" fill="#1a7f37"/>
+<rect x="907.2" y="128" width="120" height="38" rx="6" fill="#f1eee7"/>
+<text x="967" y="153" text-anchor="middle" class="tab">models.py</text>
+<circle cx="1019" cy="136" r="4" fill="#1a7f37"/>
+<rect x="1033.6000000000001" y="128" width="149" height="38" rx="6" fill="#f1eee7"/>
+<text x="1108" y="153" text-anchor="middle" class="tab">test_dags.py</text>
+<circle cx="1174" cy="136" r="4" fill="#1a7f37"/>
+<text x="740" y="220" class="mono" fill="#a3a9b3" text-anchor="end">1</text>
+<text x="762" y="220" class="mono" xml:space="preserve"><tspan fill="#24292f">@router.delete(</tspan><tspan fill="#0a7f55">&quot;/dags/{dag_id}&quot;</tspan><tspan fill="#24292f">)</tspan></text>
+<text x="740" y="251" class="mono" fill="#a3a9b3" text-anchor="end">2</text>
+<text x="762" y="251" class="mono" xml:space="preserve"><tspan fill="#8250df">def </tspan><tspan fill="#24292f">delete_dag(dag_id: str, session):</tspan></text>
+<text x="740" y="282" class="mono" fill="#a3a9b3" text-anchor="end">3</text>
+<text x="762" y="282" class="mono" xml:space="preserve"><tspan fill="#a3a9b3">    dag = session.get(DagModel, dag_id)</tspan></text>
+<text x="740" y="313" class="mono" fill="#a3a9b3" text-anchor="end">4</text>
+<text x="762" y="313" class="mono" xml:space="preserve"><tspan fill="#a3a9b3">    if dag is None:</tspan></text>
+<text x="740" y="344" class="mono" fill="#a3a9b3" text-anchor="end">5</text>
+<text x="762" y="344" class="mono" xml:space="preserve"><tspan fill="#a3a9b3">        raise HTTPException(404, &quot;Not found&quot;)</tspan></text>
+<text x="740" y="375" class="mono" fill="#a3a9b3" text-anchor="end">6</text>
+<text x="762" y="375" class="mono" xml:space="preserve"><tspan fill="#a3a9b3">    session.delete(dag)</tspan></text>
+<rect x="750" y="258" width="4" height="124" fill="#1a7f37"/>
+<line x1="730" y1="465" x2="1270" y2="465" stroke="#d9d4c9" stroke-width="1.5"/>
+<text x="740" y="495" class="mono" style="font-size:17px" fill="#24292f">dags.py</text>
+<text x="960" y="495" class="mono" style="font-size:17px" fill="#1a7f37">+18</text>
+<text x="1020" y="495" class="mono" style="font-size:17px" fill="#cf222e">-2</text>
+<text x="740" y="525" class="mono" style="font-size:17px" fill="#24292f">models.py</text>
+<text x="960" y="525" class="mono" style="font-size:17px" fill="#1a7f37">+6</text>
+<text x="1020" y="525" class="mono" style="font-size:17px" fill="#cf222e">-1</text>
+<text x="740" y="555" class="mono" style="font-size:17px" fill="#24292f">test_dags.py</text>
+<text x="960" y="555" class="mono" style="font-size:17px" fill="#1a7f37">+42</text>
+<text x="1350" y="68" class="label">3  Agent</text>
+<text x="1350" y="100" class="sub">Claude Code · Opus 5.5 / Fable</text>
+<rect x="1350" y="120" width="600" height="470" rx="14" fill="#1f2328" stroke="#1f2328" stroke-width="2"/>
+<path d="M1350,166 V134 a14,14 0 0 1 14,-14 H1936 a14,14 0 0 1 14,14 V166 Z" fill="#2d333b"/>
+<circle cx="1376" cy="143" r="7" fill="#ff5f57"/>
+<circle cx="1398" cy="143" r="7" fill="#febc2e"/>
+<circle cx="1420" cy="143" r="7" fill="#28c840"/>
+<text x="1650.0" y="149" text-anchor="middle" class="tab" style="fill:#8b949e">claude</text>
+<text x="1380" y="212" class="mono" xml:space="preserve"><tspan fill="#d97757">&gt; </tspan><tspan fill="#e6e6e6">Run Go tasks through the coordinator</tspan></text>
+<text x="1380" y="243" class="mono" xml:space="preserve"><tspan fill="#e6e6e6">  so they work on any executor</tspan></text>
+<text x="1380" y="305" class="mono" xml:space="preserve"><tspan fill="#d97757">● </tspan><tspan fill="#e6e6e6">Read </tspan><tspan fill="#8b949e">task-sdk/coordinators/</tspan></text>
+<text x="1380" y="336" class="mono" xml:space="preserve"><tspan fill="#d97757">● </tspan><tspan fill="#e6e6e6">Update </tspan><tspan fill="#8b949e">go-sdk/worker.go </tspan><tspan fill="#3fb950">+148 </tspan><tspan fill="#cf222e">-36</tspan></text>
+<text x="1380" y="367" class="mono" xml:space="preserve"><tspan fill="#d97757">● </tspan><tspan fill="#e6e6e6">Update </tspan><tspan fill="#8b949e">5 more files</tspan></text>
+<text x="1380" y="398" class="mono" xml:space="preserve"><tspan fill="#d97757">● </tspan><tspan fill="#e6e6e6">Bash </tspan><tspan fill="#8b949e">go test ./... </tspan><tspan fill="#3fb950">✓ passed</tspan></text>
+<text x="1380" y="429" class="mono" xml:space="preserve"><tspan fill="#d97757">● </tspan><tspan fill="#e6e6e6">Fix </tspan><tspan fill="#8b949e">CI lint and rebase conflict</tspan></text>
+<text x="1380" y="460" class="mono" xml:space="preserve"><tspan fill="#d97757">✻ </tspan><tspan fill="#e6e6e6">Ready for review</tspan></text>
+<rect x="1374" y="534" width="552" height="40" rx="6" fill="none" stroke="#444c56" stroke-width="1.5"/>
+<text x="1390" y="561" class="mono" xml:space="preserve"><tspan fill="#8b949e">&gt; </tspan></text>
+<rect x="1414" y="543" width="11" height="22" fill="#e6e6e6"/>
+<path d="M659,341.0 L689,355.0 L659,369.0 Z" fill="#5f6672"/>
+<path d="M1309,341.0 L1339,355.0 L1309,369.0 Z" fill="#5f6672"/>
+</svg>

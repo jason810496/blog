@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1030" width="1600" height="1030" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', sans-serif">
+<style>
+ text { fill: #1f2328; }
+ .h1 { font-size: 40px; font-weight: 750; }
+ .h2 { font-size: 22px; fill: #5f6672; }
+ .name { font-size: 25px; font-weight: 650; }
+ .pct { font-size: 25px; font-weight: 750; }
+ .meta { font-size: 19px; fill: #5f6672; }
+ .co { font-size: 19px; fill: #1f2328; }
+ .center { font-size: 54px; font-weight: 750; }
+ .note { font-size: 18px; fill: #5f6672; }
+</style>
+<rect width="1600" height="1030" rx="18" fill="#fbfaf7"/>
+<text x="40" y="60" class="h1">Who builds Apache Airflow?</text>
+<text x="40" y="96" class="h2">Share of commits to apache/airflow main since 2024-10 by contributor affiliation</text>
+<path d="M500.0,210.0 A330,330 0 0 1 789.4,698.6 L671.0,633.7 A195,195 0 0 0 500.0,345.0 Z" fill="#2a78d6" stroke="#fbfaf7" stroke-width="3"/>
+<path d="M789.4,698.6 A330,330 0 0 1 703.1,800.1 L620.0,693.7 A195,195 0 0 0 671.0,633.7 Z" fill="#eda100" stroke="#fbfaf7" stroke-width="3"/>
+<path d="M703.1,800.1 A330,330 0 0 1 687.6,811.5 L610.8,700.4 A195,195 0 0 0 620.0,693.7 Z" fill="#1baf7a" stroke="#fbfaf7" stroke-width="3"/>
+<path d="M687.6,811.5 A330,330 0 0 1 676.4,818.9 L604.3,704.8 A195,195 0 0 0 610.8,700.4 Z" fill="#6250d6" stroke="#fbfaf7" stroke-width="3"/>
+<path d="M676.4,818.9 A330,330 0 0 1 290.8,795.2 L376.4,690.8 A195,195 0 0 0 604.3,704.8 Z" fill="#e87ba4" stroke="#fbfaf7" stroke-width="3"/>
+<path d="M290.8,795.2 A330,330 0 0 1 204.2,393.7 L325.2,453.6 A195,195 0 0 0 376.4,690.8 Z" fill="#d3d0c7" stroke="#fbfaf7" stroke-width="3"/>
+<path d="M204.2,393.7 A330,330 0 0 1 360.6,240.9 L417.6,363.2 A195,195 0 0 0 325.2,453.6 Z" fill="#8f8b80" stroke="#fbfaf7" stroke-width="3"/>
+<path d="M360.6,240.9 A330,330 0 0 1 500.0,210.0 L500.0,345.0 A195,195 0 0 0 417.6,363.2 Z" fill="#eb6834" stroke="#fbfaf7" stroke-width="3"/>
+<text x="500" y="548" text-anchor="middle" class="center">16,601</text>
+<text x="500" y="584" text-anchor="middle" class="meta">commits</text>
+<rect x="960" y="144" width="24" height="24" rx="5" fill="#2a78d6"/>
+<text x="998" y="165" class="name">Astronomer</text>
+<text x="1540" y="165" text-anchor="end" class="pct">33.0%</text>
+<text x="998" y="193" class="meta">5,475 commits · 63 authors · incl. 810 by OS4Y members</text>
+<rect x="960" y="222" width="24" height="24" rx="5" fill="#eda100"/>
+<text x="998" y="243" class="name">AWS</text>
+<text x="1540" y="243" text-anchor="end" class="pct">6.5%</text>
+<text x="998" y="271" class="meta">1,074 commits · 20 authors</text>
+<rect x="960" y="300" width="24" height="24" rx="5" fill="#1baf7a"/>
+<text x="998" y="321" class="name">Google</text>
+<text x="1540" y="321" text-anchor="end" class="pct">0.9%</text>
+<text x="998" y="349" class="meta">154 commits · 13 authors</text>
+<rect x="960" y="378" width="24" height="24" rx="5" fill="#6250d6"/>
+<text x="998" y="399" class="name">Other vendors</text>
+<text x="1540" y="399" text-anchor="end" class="pct">0.6%</text>
+<text x="998" y="427" class="meta">107 commits · 28 authors · incl. 9 by OS4Y members</text>
+<rect x="960" y="456" width="24" height="24" rx="5" fill="#e87ba4"/>
+<text x="998" y="477" class="name">Other companies</text>
+<text x="1540" y="477" text-anchor="end" class="pct">19.9%</text>
+<text x="998" y="505" class="meta">3,305 commits · 330 authors</text>
+<text x="998" y="533" class="co">Bosch 651 · Experian 405 · NCR Voyix 294</text>
+<text x="998" y="559" class="co">Qualcomm 228 · Mollie 217 · Datadog 170</text>
+<text x="998" y="585" class="co">Arxtrus 146 · Visa 120 · Samsung 94 …</text>
+<rect x="960" y="612" width="24" height="24" rx="5" fill="#d3d0c7"/>
+<text x="998" y="633" class="name">Independent &amp; unaffiliated</text>
+<text x="1540" y="633" text-anchor="end" class="pct">21.4%</text>
+<text x="998" y="661" class="meta">3,549 commits · 970 authors</text>
+<rect x="960" y="690" width="24" height="24" rx="5" fill="#8f8b80"/>
+<text x="998" y="711" class="name">Jarek Potiuk (independent)</text>
+<text x="1540" y="711" text-anchor="end" class="pct">10.8%</text>
+<text x="998" y="739" class="meta">1,785 commits · 1 author</text>
+<rect x="960" y="768" width="24" height="24" rx="5" fill="#eb6834"/>
+<text x="998" y="789" class="name">opensource4you</text>
+<text x="1540" y="789" text-anchor="end" class="pct">6.9%</text>
+<text x="998" y="817" class="meta">1,152 commits · 25 authors</text>
+<line x1="960" y1="835" x2="1540" y2="835" stroke="#e4dfd4" stroke-width="2"/>
+<text x="960" y="873" class="name">All opensource4you members</text>
+<text x="1540" y="873" text-anchor="end" class="pct">11.9%</text>
+<text x="960" y="901" class="meta">1,971 commits, incl. members working at a company above</text>
+<text x="40" y="974" class="note">Affiliation: public astronomer GitHub org members, then commit email domain or GitHub profile company; opensource4you = public members of the</text>
+<text x="40" y="1000" class="note">opensource4you GitHub org not at a vendor. Bots excluded. main @ 3b35135afe.</text>
+</svg>

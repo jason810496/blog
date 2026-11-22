@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 960" width="2000" height="960" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', sans-serif">
+<style>
+ text { fill: #1f2328; }
+ .halo { paint-order: stroke; stroke: #fbfaf7; stroke-width: 7px; stroke-linejoin: round; }
+ .lbl { font-size: 24px; font-weight: 650; }
+ .big { font-size: 28px; font-weight: 700; }
+ .num { font-size: 24px; font-weight: 700; }
+ .date { font-size: 19px; fill: #5f6672; }
+ .pdate { font-size: 16.5px; fill: #5f6672; }
+ .stat { font-size: 19px; font-weight: 600; fill: #d4572a; }
+ .sub { font-size: 19px; fill: #5f6672; font-style: italic; }
+ .lane { font-size: 22px; font-weight: 650; }
+ .tick { font-size: 19px; fill: #5f6672; }
+ .year { font-size: 21px; font-weight: 700; }
+ .h1 { font-size: 40px; font-weight: 750; }
+ .h2 { font-size: 22px; fill: #5f6672; }
+</style>
+<rect width="2000" height="960" rx="18" fill="#fbfaf7"/>
+<text x="40" y="60" class="h1">Growing with Apache Airflow, alongside AI coding tools</text>
+<text x="40" y="96" class="h2">Top: Airflow releases &amp; my contributions to apache/airflow · Bottom: the evolution of AI coding tools</text>
+<rect x="650.0" y="130" width="269.5" height="450" fill="#0f8a83" opacity="0.035"/>
+<rect x="919.5" y="130" width="1000.9" height="450" fill="#d4572a" opacity="0.05"/>
+<line x1="630" y1="505" x2="1950" y2="505" stroke="#e4dfd4" stroke-width="1.5" stroke-dasharray="2 6"/>
+<circle cx="50" cy="505" r="8" fill="#0f8a83"/>
+<text x="68" y="513" class="lane">Airflow releases</text>
+<line x1="630" y1="415" x2="1950" y2="415" stroke="#e4dfd4" stroke-width="1.5" stroke-dasharray="2 6"/>
+<circle cx="50" cy="415" r="8" fill="#2f3fb0"/>
+<text x="68" y="423" class="lane">Merged PRs</text>
+<line x1="630" y1="325" x2="1950" y2="325" stroke="#e4dfd4" stroke-width="1.5" stroke-dasharray="2 6"/>
+<circle cx="50" cy="325" r="8" fill="#6d5bd0"/>
+<text x="68" y="333" class="lane">Reviewed PRs</text>
+<line x1="630" y1="225" x2="1950" y2="225" stroke="#e4dfd4" stroke-width="1.5" stroke-dasharray="2 6"/>
+<circle cx="50" cy="225" r="8" fill="#d4572a"/>
+<text x="68" y="233" class="lane">Milestones</text>
+<line x1="983.6" y1="580" x2="983.6" y2="505" stroke="#0f8a83" stroke-width="2" opacity="0.9"/>
+<line x1="1240.0" y1="580" x2="1240.0" y2="505" stroke="#0f8a83" stroke-width="2" opacity="0.9"/>
+<line x1="1558.8" y1="580" x2="1558.8" y2="505" stroke="#0f8a83" stroke-width="2" opacity="0.9"/>
+<line x1="1706.8" y1="580" x2="1706.8" y2="505" stroke="#0f8a83" stroke-width="2" opacity="0.9"/>
+<line x1="1908.9" y1="580" x2="1908.9" y2="505" stroke="#0f8a83" stroke-width="2" opacity="0.9"/>
+<line x1="1141.4" y1="580" x2="1141.4" y2="415" stroke="#2f3fb0" stroke-width="2" opacity="0.55"/>
+<line x1="1655.8" y1="580" x2="1655.8" y2="415" stroke="#2f3fb0" stroke-width="2" opacity="0.55"/>
+<line x1="1767.6" y1="580" x2="1767.6" y2="415" stroke="#2f3fb0" stroke-width="2" opacity="0.55"/>
+<line x1="1869.5" y1="580" x2="1869.5" y2="415" stroke="#2f3fb0" stroke-width="2" opacity="0.55"/>
+<line x1="1029.6" y1="580" x2="1029.6" y2="325" stroke="#6d5bd0" stroke-width="2" opacity="0.55"/>
+<line x1="1200.6" y1="580" x2="1200.6" y2="325" stroke="#6d5bd0" stroke-width="2" opacity="0.55"/>
+<line x1="1363.3" y1="580" x2="1363.3" y2="325" stroke="#6d5bd0" stroke-width="2" opacity="0.55"/>
+<line x1="1530.9" y1="580" x2="1530.9" y2="325" stroke="#6d5bd0" stroke-width="2" opacity="0.55"/>
+<line x1="1698.5" y1="580" x2="1698.5" y2="325" stroke="#6d5bd0" stroke-width="2" opacity="0.55"/>
+<line x1="1835.0" y1="580" x2="1835.0" y2="325" stroke="#6d5bd0" stroke-width="2" opacity="0.55"/>
+<line x1="664.8" y1="580" x2="664.8" y2="225" stroke="#d4572a" stroke-width="3" opacity="0.9"/>
+<line x1="919.5" y1="580" x2="919.5" y2="225" stroke="#d4572a" stroke-width="3" opacity="0.9"/>
+<line x1="1499.7" y1="580" x2="1499.7" y2="225" stroke="#d4572a" stroke-width="3" opacity="0.9"/>
+<line x1="1920.4" y1="580" x2="1920.4" y2="225" stroke="#d4572a" stroke-width="3" opacity="0.9"/>
+<circle cx="983.6" cy="505" r="7.5" fill="#0f8a83" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="983.6" y="485" text-anchor="middle" class="date halo">2025-04-22</text>
+<text x="983.6" y="457" text-anchor="middle" class="lbl halo">Airflow 3.0</text>
+<circle cx="1240.0" cy="505" r="7.5" fill="#0f8a83" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1240.0" y="485" text-anchor="middle" class="date halo">2025-09-25</text>
+<text x="1240.0" y="457" text-anchor="middle" class="lbl halo">Airflow 3.1</text>
+<circle cx="1558.8" cy="505" r="7.5" fill="#0f8a83" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1558.8" y="485" text-anchor="middle" class="date halo">2026-04-07</text>
+<text x="1558.8" y="457" text-anchor="middle" class="lbl halo">Airflow 3.2</text>
+<circle cx="1706.8" cy="505" r="7.5" fill="#0f8a83" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1706.8" y="485" text-anchor="middle" class="date halo">2026-07-06</text>
+<text x="1706.8" y="457" text-anchor="middle" class="lbl halo">Airflow 3.3</text>
+<circle cx="1908.9" cy="505" r="7.5" fill="#0f8a83" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1922.9" y="485" text-anchor="end" class="date halo">2026-11-06</text>
+<text x="1922.9" y="457" text-anchor="end" class="lbl halo">Airflow 3.4</text>
+<circle cx="1141.4" cy="415" r="7.5" fill="#2f3fb0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1141.4" y="395" text-anchor="middle" class="pdate halo">Jul &#x27;25</text>
+<text x="1141.4" y="367" text-anchor="middle" class="num halo">100</text>
+<circle cx="1655.8" cy="415" r="7.5" fill="#2f3fb0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1655.8" y="395" text-anchor="middle" class="pdate halo">Jun &#x27;26</text>
+<text x="1655.8" y="367" text-anchor="middle" class="num halo">200</text>
+<circle cx="1767.6" cy="415" r="7.5" fill="#2f3fb0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1767.6" y="395" text-anchor="middle" class="pdate halo">Aug &#x27;26</text>
+<text x="1767.6" y="367" text-anchor="middle" class="num halo">300</text>
+<circle cx="1869.5" cy="415" r="7.5" fill="#2f3fb0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1883.5" y="395" text-anchor="end" class="pdate halo">Oct &#x27;26</text>
+<text x="1883.5" y="367" text-anchor="end" class="num halo">400</text>
+<circle cx="1029.6" cy="325" r="7.5" fill="#6d5bd0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1029.6" y="305" text-anchor="middle" class="pdate halo">May &#x27;25</text>
+<text x="1029.6" y="277" text-anchor="middle" class="num halo">100</text>
+<circle cx="1200.6" cy="325" r="7.5" fill="#6d5bd0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1200.6" y="305" text-anchor="middle" class="pdate halo">Sep &#x27;25</text>
+<text x="1200.6" y="277" text-anchor="middle" class="num halo">250</text>
+<circle cx="1363.3" cy="325" r="7.5" fill="#6d5bd0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1363.3" y="305" text-anchor="middle" class="pdate halo">Dec &#x27;25</text>
+<text x="1363.3" y="277" text-anchor="middle" class="num halo">500</text>
+<circle cx="1530.9" cy="325" r="7.5" fill="#6d5bd0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1530.9" y="305" text-anchor="middle" class="pdate halo">Mar &#x27;26</text>
+<text x="1530.9" y="277" text-anchor="middle" class="num halo">750</text>
+<circle cx="1698.5" cy="325" r="7.5" fill="#6d5bd0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1698.5" y="305" text-anchor="middle" class="pdate halo">Jul &#x27;26</text>
+<text x="1698.5" y="277" text-anchor="middle" class="num halo">1,000</text>
+<circle cx="1835.0" cy="325" r="7.5" fill="#6d5bd0" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1835.0" y="305" text-anchor="middle" class="pdate halo">Sep &#x27;26</text>
+<text x="1835.0" y="277" text-anchor="middle" class="num halo">1,250</text>
+<circle cx="664.8" cy="225" r="11" fill="#d4572a" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="664.8" y="205" text-anchor="middle" class="date halo">2024-10-10</text>
+<text x="664.8" y="177" text-anchor="middle" class="big halo">First PR (#42902)</text>
+<circle cx="919.5" cy="225" r="11" fill="#d4572a" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="919.5" y="205" text-anchor="middle" class="stat halo">76 merged · 11 reviewed PRs</text>
+<text x="919.5" y="180" text-anchor="middle" class="date halo">2025-03-14</text>
+<text x="919.5" y="152" text-anchor="middle" class="big halo">Airflow Committer</text>
+<circle cx="1499.7" cy="225" r="11" fill="#d4572a" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1499.7" y="205" text-anchor="middle" class="date halo">2026-03-02</text>
+<text x="1499.7" y="177" text-anchor="middle" class="big halo">Joined Astronomer</text>
+<circle cx="1920.4" cy="225" r="11" fill="#d4572a" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1934.4" y="205" text-anchor="end" class="date halo">2026-11-13</text>
+<text x="1934.4" y="177" text-anchor="end" class="big halo">Airflow PMC Member</text>
+<line x1="140.1" y1="580" x2="140.1" y2="660" stroke="#4b5563" stroke-width="2.2" opacity="0.8"/>
+<line x1="280.0" y1="580" x2="280.0" y2="775" stroke="#4b5563" stroke-width="2.2" opacity="0.8"/>
+<line x1="384.2" y1="580" x2="384.2" y2="660" stroke="#4b5563" stroke-width="2.2" opacity="0.8"/>
+<line x1="565.9" y1="580" x2="565.9" y2="775" stroke="#c15f3c" stroke-width="2.2" opacity="0.8"/>
+<line x1="696.0" y1="580" x2="696.0" y2="660" stroke="#4b5563" stroke-width="2.2" opacity="0.8"/>
+<line x1="889.9" y1="580" x2="889.9" y2="775" stroke="#c15f3c" stroke-width="2.2" opacity="0.8"/>
+<line x1="1032.9" y1="580" x2="1032.9" y2="660" stroke="#c15f3c" stroke-width="2.2" opacity="0.8"/>
+<line x1="1662.4" y1="580" x2="1662.4" y2="775" stroke="#c15f3c" stroke-width="2.2" opacity="0.8"/>
+<line x1="1835.0" y1="580" x2="1835.0" y2="660" stroke="#c15f3c" stroke-width="2.2" opacity="0.8"/>
+<circle cx="140.1" cy="660" r="9" fill="#4b5563" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="140.1" y="696" text-anchor="middle" class="lbl halo">Copilot preview</text>
+<text x="140.1" y="720" text-anchor="middle" class="date halo">2021-06-29</text>
+<text x="140.1" y="744" text-anchor="middle" class="sub halo">word / line suggestions</text>
+<circle cx="280.0" cy="775" r="9" fill="#4b5563" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="280.0" y="811" text-anchor="middle" class="lbl halo">Copilot GA</text>
+<text x="280.0" y="835" text-anchor="middle" class="date halo">2022-06-21</text>
+<text x="280.0" y="859" text-anchor="middle" class="sub halo">multi-line completions</text>
+<circle cx="384.2" cy="660" r="9" fill="#4b5563" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="384.2" y="696" text-anchor="middle" class="lbl halo">Cursor</text>
+<text x="384.2" y="720" text-anchor="middle" class="date halo">2023-03-14</text>
+<text x="384.2" y="744" text-anchor="middle" class="sub halo">AI-native editor</text>
+<circle cx="565.9" cy="775" r="9" fill="#c15f3c" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="565.9" y="811" text-anchor="middle" class="lbl halo">Claude 3.5 Sonnet</text>
+<text x="565.9" y="835" text-anchor="middle" class="date halo">2024-06-20</text>
+<text x="565.9" y="859" text-anchor="middle" class="sub halo">first strong coding model</text>
+<circle cx="696.0" cy="660" r="9" fill="#4b5563" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="696.0" y="696" text-anchor="middle" class="lbl halo">Copilot Edits</text>
+<text x="696.0" y="720" text-anchor="middle" class="date halo">2024-10-29</text>
+<text x="696.0" y="744" text-anchor="middle" class="sub halo">multi-file editing</text>
+<circle cx="889.9" cy="775" r="9" fill="#c15f3c" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="889.9" y="811" text-anchor="middle" class="lbl halo">Claude Code preview</text>
+<text x="889.9" y="835" text-anchor="middle" class="date halo">2025-02-24</text>
+<text x="889.9" y="859" text-anchor="middle" class="sub halo">+ Claude 3.7 Sonnet</text>
+<circle cx="1032.9" cy="660" r="9" fill="#c15f3c" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1032.9" y="696" text-anchor="middle" class="lbl halo">Claude Code GA</text>
+<text x="1032.9" y="720" text-anchor="middle" class="date halo">2025-05-22</text>
+<text x="1032.9" y="744" text-anchor="middle" class="sub halo">+ Claude Opus 4</text>
+<circle cx="1662.4" cy="775" r="9" fill="#c15f3c" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1662.4" y="811" text-anchor="middle" class="lbl halo">Claude Fable 5</text>
+<text x="1662.4" y="835" text-anchor="middle" class="date halo">2026-06-09</text>
+<text x="1662.4" y="859" text-anchor="middle" class="sub halo">Mythos-class model</text>
+<circle cx="1835.0" cy="660" r="9" fill="#c15f3c" stroke="#fbfaf7" stroke-width="2.5"/>
+<text x="1835.0" y="696" text-anchor="middle" class="lbl halo">Claude Opus 5.5</text>
+<text x="1835.0" y="720" text-anchor="middle" class="date halo">2026-09-22</text>
+<text x="40" y="930" class="tick">apache/airflow only · merged by merge date, reviewed by first review date · data as of 2026-11-21</text>
+<circle cx="1550" cy="923" r="8" fill="#c15f3c"/>
+<text x="1566" y="930" class="tick">Anthropic Claude</text>
+<circle cx="1740" cy="923" r="8" fill="#4b5563"/>
+<text x="1756" y="930" class="tick">Other AI coding tools</text>
+<line x1="40" y1="580" x2="612" y2="580" stroke="#1f2328" stroke-width="2.5" stroke-dasharray="7 6"/>
+<line x1="638" y1="580" x2="1970" y2="580" stroke="#1f2328" stroke-width="3.5"/>
+<path d="M1970,571 L1988,580 L1970,589 Z" fill="#1f2328"/>
+<line x1="611.0" y1="594" x2="625.0" y2="566" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="625.0" y1="594" x2="639.0" y2="566" stroke="#1f2328" stroke-width="2.5"/>
+<text x="335.0" y="536" text-anchor="middle" class="tick">(compressed scale)</text>
+<line x1="70.0" y1="573" x2="70.0" y2="587" stroke="#1f2328" stroke-width="2.5"/>
+<text x="76.0" y="566" class="year halo">2021</text>
+<line x1="213.0" y1="573" x2="213.0" y2="587" stroke="#1f2328" stroke-width="2.5"/>
+<text x="219.0" y="566" class="year halo">2022</text>
+<line x1="356.0" y1="573" x2="356.0" y2="587" stroke="#1f2328" stroke-width="2.5"/>
+<text x="362.0" y="566" class="year halo">2023</text>
+<line x1="498.9" y1="573" x2="498.9" y2="587" stroke="#1f2328" stroke-width="2.5"/>
+<text x="504.9" y="566" class="year halo">2024</text>
+<line x1="650.0" y1="574" x2="650.0" y2="586" stroke="#1f2328" stroke-width="2"/>
+<text x="656.0" y="607" class="tick halo">Oct 2024</text>
+<line x1="801.2" y1="570" x2="801.2" y2="590" stroke="#1f2328" stroke-width="3"/>
+<text x="808.2" y="566" class="year halo">2025</text>
+<line x1="949.1" y1="574" x2="949.1" y2="586" stroke="#1f2328" stroke-width="2"/>
+<text x="955.1" y="607" class="tick halo">Apr</text>
+<line x1="1098.7" y1="574" x2="1098.7" y2="586" stroke="#1f2328" stroke-width="2"/>
+<text x="1104.7" y="607" class="tick halo">Jul</text>
+<line x1="1249.9" y1="574" x2="1249.9" y2="586" stroke="#1f2328" stroke-width="2"/>
+<text x="1255.9" y="607" class="tick halo">Oct</text>
+<line x1="1401.1" y1="570" x2="1401.1" y2="590" stroke="#1f2328" stroke-width="3"/>
+<text x="1408.1" y="566" class="year halo">2026</text>
+<line x1="1549.0" y1="574" x2="1549.0" y2="586" stroke="#1f2328" stroke-width="2"/>
+<text x="1555.0" y="607" class="tick halo">Apr</text>
+<line x1="1698.5" y1="574" x2="1698.5" y2="586" stroke="#1f2328" stroke-width="2"/>
+<text x="1704.5" y="607" class="tick halo">Jul</text>
+<line x1="1849.7" y1="574" x2="1849.7" y2="586" stroke="#1f2328" stroke-width="2"/>
+<text x="1855.7" y="607" class="tick halo">Oct</text>
+</svg>
