@@ -17,7 +17,7 @@ title = "Zhe-You Liu's Developer Blog"
     name = "Jason(Zhe-You) Liu"
     email = "jasonliu@apache.org"
     image = "img/setting/Profile.jpeg"
-    headline = "Apache Airflow Committer / OSS Team @Astronomer"
+    headline = "Apache Airflow PMC Member & Committer / OSS Team @Astronomer"
     # show in author avatar bottom
     bio = "Focused on Contributing to open source, Distributed Systems, and Data Engineering."
     links = [
